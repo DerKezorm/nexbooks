@@ -42,7 +42,7 @@ function serve(): void {
       const found = answers[`${method} ${url}`]
       if (found === 204) return new Response(null, { status: 204 })
       if (found && typeof found === 'object' && 'refused' in found) {
-        return new Response(JSON.stringify({ detail: { code: (found as { refused: string }).refused } }), { status: 404, headers: { 'Content-Type': 'application/json' } })
+        return new Response(JSON.stringify({ detail: { code: (found as { refused: string }).refused } }), { status: (found as { status?: number }).status ?? 404, headers: { 'Content-Type': 'application/json' } })
       }
       return new Response(JSON.stringify(found ?? {}), { status: 200, headers: { 'Content-Type': 'application/json' } })
     }),
@@ -174,6 +174,17 @@ describe('the page of the link', () => {
     await submit(box.querySelector('form'))
     expect(calls.find((call) => call.method === 'POST')!.body).toEqual({ password: 'a long enough password' })
     expect(box.querySelector('h1')!.textContent).toBe('Passwort gespeichert')
+  })
+
+  it('does not call a link invalid because of too many tries, or a server that is away', async () => {
+    for (const [refused, status] of [['too_many_attempts', 429], ['internal_error', 500]] as const) {
+      answers[`GET /api/v1/reset/${'a'.repeat(30)}`] = { refused, status }
+      await show(<ResetPage />, at, '/reset/:token')
+      expect(box.querySelector('h1')!.textContent).toBe('Das hat gerade nicht geklappt')
+      expect(box.querySelector('[data-testid="link-trouble"]')!.textContent).not.toBe('')
+      act(() => root.unmount())
+      box.remove()
+    }
   })
 
   it('says so when the link does not hold, at once and after trying', async () => {

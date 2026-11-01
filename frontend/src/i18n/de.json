@@ -594,6 +594,8 @@
     "password": "Passwort",
     "passwordHint": "Mindestens 12 Zeichen.",
     "backToLogin": "Zur Anmeldung",
+    "linkTrouble": "Das hat gerade nicht geklappt",
+    "linkAgain": "Noch einmal versuchen",
     "setup": {
       "title": "nexbooks einrichten",
       "text": "Das erste Konto betreibt diesen Server: Es lädt Leute ein und darf jede Einstellung ändern. Was die anderen lesen und hören, sieht es nicht.",

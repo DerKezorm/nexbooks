@@ -9,7 +9,7 @@
  * of the module (`oidc.error.*`), never as the raw code.
  */
 import { Fingerprint } from 'lucide-react'
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 
@@ -57,6 +57,32 @@ function Problem({ code }: { code: string | null }) {
     <p role="alert" className="rounded-xl border border-bad/40 bg-bad/10 px-3 py-2 text-sm text-bad">
       {errorText(code)}
     </p>
+  )
+}
+
+/** What opening a link gave. Too many tries or a server that is away say nothing about the link: only a refusal makes it
+ * one that does not hold. */
+function useLinkOutcome() {
+  const [invalid, setInvalid] = useState(false)
+  const [trouble, setTrouble] = useState<string | null>(null)
+  const fail = useCallback((error: unknown) => {
+    if (error instanceof ApiError && error.status !== 429 && error.status < 500) setInvalid(true)
+    else setTrouble(error instanceof ApiError ? errorText(error.code, error.values) : errorText('internal_error', {}))
+  }, [])
+  return { invalid, setInvalid, trouble, fail }
+}
+
+function LinkTrouble({ text }: { text: string }) {
+  const { t } = useTranslation()
+  return (
+    <AuthFrame title={t('auth.linkTrouble')}>
+      <p role="alert" className="text-sm text-ink-2" data-testid="link-trouble">
+        {text}
+      </p>
+      <button type="button" className={OUTLINE + ' mt-5'} onClick={() => window.location.reload()}>
+        {t('auth.linkAgain')}
+      </button>
+    </AuthFrame>
   )
 }
 
@@ -407,7 +433,7 @@ export function InvitePage() {
   const { setMe } = useAuth()
   const navigate = useNavigate()
   const [state, setState] = useState<InviteState | null>(null)
-  const [invalid, setInvalid] = useState(false)
+  const { invalid, trouble, fail } = useLinkOutcome()
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
   const [busy, setBusy] = useState(false)
@@ -415,9 +441,9 @@ export function InvitePage() {
   const [methods, setMethods] = useState<Methods | null>(null)
 
   useEffect(() => {
-    api<InviteState>(`/api/v1/invite/${encodeURIComponent(token)}`).then(setState, () => setInvalid(true))
+    api<InviteState>(`/api/v1/invite/${encodeURIComponent(token)}`).then(setState, fail)
     authApi.methods().then(setMethods, () => undefined)
-  }, [token])
+  }, [token, fail])
 
   if (invalid) {
     return (
@@ -429,6 +455,7 @@ export function InvitePage() {
       </AuthFrame>
     )
   }
+  if (trouble) return <LinkTrouble text={trouble} />
   if (!state) return null
 
   if (state.signed_in_as) {
@@ -557,7 +584,7 @@ export function ResetPage() {
   const { t } = useTranslation()
   const { token = '' } = useParams()
   const [state, setState] = useState<ResetState | null>(null)
-  const [invalid, setInvalid] = useState(false)
+  const { invalid, setInvalid, trouble, fail } = useLinkOutcome()
   const [password, setPassword] = useState('')
   const [again, setAgain] = useState('')
   const [busy, setBusy] = useState(false)
@@ -565,8 +592,8 @@ export function ResetPage() {
   const [done, setDone] = useState(false)
 
   useEffect(() => {
-    api<ResetState>(`/api/v1/reset/${encodeURIComponent(token)}`).then(setState, () => setInvalid(true))
-  }, [token])
+    api<ResetState>(`/api/v1/reset/${encodeURIComponent(token)}`).then(setState, fail)
+  }, [token, fail])
 
   if (invalid) {
     return (
@@ -590,6 +617,7 @@ export function ResetPage() {
       </AuthFrame>
     )
   }
+  if (trouble) return <LinkTrouble text={trouble} />
   if (!state) return null
   return (
     <AuthFrame title={t('auth.reset.title')} text={t('auth.reset.text', { name: state.name })}>
@@ -631,15 +659,15 @@ export function MailConfirmPage() {
   const { token = '' } = useParams()
   const { status } = useAuth()
   const [state, setState] = useState<MailState | null>(null)
-  const [invalid, setInvalid] = useState(false)
+  const { invalid, setInvalid, trouble, fail } = useLinkOutcome()
   const [busy, setBusy] = useState(false)
   const [done, setDone] = useState(false)
   const [told, setTold] = useState(false)
   const [problem, setProblem] = useState<string | null>(null)
 
   useEffect(() => {
-    api<MailState>(`/api/v1/email/confirm/${encodeURIComponent(token)}`).then(setState, () => setInvalid(true))
-  }, [token])
+    api<MailState>(`/api/v1/email/confirm/${encodeURIComponent(token)}`).then(setState, fail)
+  }, [token, fail])
 
   const next = status === 'signedIn' ? { to: '/account', label: t('auth.mail.toAccount') } : { to: '/login', label: t('auth.backToLogin') }
   if (invalid) {
@@ -665,6 +693,7 @@ export function MailConfirmPage() {
       </AuthFrame>
     )
   }
+  if (trouble) return <LinkTrouble text={trouble} />
   if (!state) return null
   return (
     <AuthFrame title={t('auth.mail.title')} text={t('auth.mail.text', { name: state.name, address: state.address })}>

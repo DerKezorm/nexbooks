@@ -594,6 +594,8 @@
     "password": "Password",
     "passwordHint": "At least 12 characters.",
     "backToLogin": "To the sign-in",
+    "linkTrouble": "That did not work just now",
+    "linkAgain": "Try again",
     "setup": {
       "title": "Set up nexbooks",
       "text": "The first account runs this server: it invites people and may change every setting. It does not see what the others read and hear.",
