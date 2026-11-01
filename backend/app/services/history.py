@@ -21,6 +21,8 @@ database and comes back with the edition.
 Taking an entry away ("Not finished") keeps the claim of the pass: the rule does not enter the same pass again
 at the next report. Only a new pass, or "Finished" by hand, makes a new entry.
 
+A book that is finished, either way, leaves the person's list "for later" (``later``) in the same transaction.
+
 The day is the day in the person's time zone (``services/timezones.py``); nothing here compares the clock of a
 device with the server's.
 """
@@ -49,7 +51,7 @@ from ..models import (
     Progress,
     Work,
 )
-from . import timezones, works
+from . import later, timezones, works
 from .progress import seconds_of
 
 #: The end of an e-book: this share of it read. The end of a recording: what is left is less than this many seconds or
@@ -138,9 +140,11 @@ def add(db: Session, uid: int, edition_id: int, finished_on: str | None = None) 
     if day >= here.isoformat():
         db.execute(update(Progress).where(Progress.user_id == uid, Progress.edition_id == edition.id)
                    .values(pass_done=True))
-    db.commit()
     row = db.scalar(select(HistoryEntry).where(HistoryEntry.user_id == uid, HistoryEntry.edition_id == edition.id,
                                                HistoryEntry.finished_on == day))
+    if row is not None:
+        later.finished(db, uid, edition.work_id)
+    db.commit()
     if row is None:
         raise error("history_limit", "There are too many books in the reading stack.", 409, max=MAX_ENTRIES)
     return row, made
@@ -169,6 +173,7 @@ def after_report(db: Session, uid: int, edition: Edition, locator: str, fraction
             account = db.get(Account, uid)
             zone = timezones.zone_of(account) if account is not None else None
             days = max(0, (here - began.astimezone(zone).date()).days) if began is not None else None
+            later.finished(db, uid, edition.work_id)
             return _insert(db, uid, edition, here.isoformat(), "auto", days)
     elif fraction < NEW_PASS_FRACTION:
         # Back before half of the book: the pass is over, and the next one begins now (when the place is near the start

@@ -64,7 +64,7 @@ _settings.data_dir.mkdir(parents=True, exist_ok=True)
 BUSY_SECONDS = 15
 
 #: The version of the schema the models describe.
-SCHEMA_VERSION = 30
+SCHEMA_VERSION = 31
 
 #: ``MIGRATIONS[n]`` brings a database from version ``n - 1`` to ``n``. Version 1 is the first schema; it has no step.
 #: Later steps are written out as the tables stood then, not taken from the models, which move on.
@@ -431,6 +431,18 @@ def _step_v30(connection: Connection) -> None:
 
 
 MIGRATIONS[30] = _step_v30
+
+
+def _step_v31(connection: Connection) -> None:
+    """The list "for later" of the apps: a new table, so empty, and the trigger that takes an entry along with its
+    book."""
+    from .step_v31_schema import V31_STATEMENTS
+
+    for statement in V31_STATEMENTS:
+        connection.exec_driver_sql(statement)
+
+
+MIGRATIONS[31] = _step_v31
 
 
 # No pool with an upper bound: with the default pool the sixteenth concurrent request would block the event

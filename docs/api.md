@@ -853,6 +853,9 @@ file name; a file is sent as `<id>.<format>`).
 | `PUT /api/app/1/editions/{id}/progress` | Body `{locator, percent, age, device}` (and `chapter`, `chapter_count`, `chapter_title`). Answer `{kept, current}`: `kept` false means another device was there later, `current` says where. The rule of the browser: `age` counts back from the moment the report arrives, at most 7 days. |
 | `GET`, `POST /api/app/1/editions/{id}/bookmarks`; `PATCH`, `DELETE /api/app/1/bookmarks/{id}` | As in the browser (`fraction` 0 to 1). |
 | `POST /api/app/1/editions/{id}/finished`; `GET /api/app/1/history`; `DELETE /api/app/1/history/{id}` | As in the browser. |
+| `GET /api/app/1/later` | The person's list for later, books on their own shelves (the wish list is for books that are not): `{"items": [{"work_id", "added_at"}]}`, the newest first, only works the person sees. An entry for a work they do not see at the moment stays and comes back with it; when works are joined it goes with the book. The list is the person's own, no operator sees it. A book that is finished, by the rule at the end of the book or by hand, on any device, leaves the list in the same transaction. The server has it when `features` holds `later`. |
+| `PUT /api/app/1/later/{work_id}` | Puts the book on the list (`204`); a book that is on it stays as it is. `404` for a work the person does not see. `409 later_full` past 500 entries. |
+| `DELETE /api/app/1/later/{work_id}` | Takes it off (`204`), the same for a book that is not on it. |
 
 **The marker.** Without `after` (or with 0) the whole library comes, oldest change first, `limit` works at a time; while
 `marker` is below `latest`, ask again at once with `after=<marker>`. Starting from nothing, `removed` is empty: keep the

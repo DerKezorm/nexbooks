@@ -41,6 +41,7 @@ from ..models import Account, AppRequest, BookFile, Library, LibraryMember
 from ..security import brake
 from ..services import app_changes, chapter_groups, device_request, pairing
 from ..services import history as history_service
+from ..services import later as later_service
 from ..services import progress as progress_service
 from ..services import works as works_service
 from ..services.works import MEDIA_TYPES, EditionView, WorkView
@@ -71,12 +72,14 @@ PROMISED = (
     "/api/app/1/editions/{edition_id}/finished",
     "/api/app/1/history",
     "/api/app/1/history/{entry_id}",
+    "/api/app/1/later",
+    "/api/app/1/later/{work_id}",
 )
 
 #: What this server can do for the app, so that an app newer than the server knows what it may ask for. A name is
 #: never taken away while ``app/1`` stands.
 FEATURES = ("pairing", "library", "works", "covers", "files", "progress", "bookmarks", "history", "pairing_request",
-            "pairing_request_confirm", "pairing_request_preview")
+            "pairing_request_confirm", "pairing_request_preview", "later")
 
 
 #: A name is judged by the service (``devices.clean_name``: 1 to 80 characters after the spaces are gathered, no control
@@ -945,5 +948,41 @@ def list_history(response: Response, account: Device, db: DbSession,
                summary="Takes one of the person's own entries away (the book counts as not finished on that day)")
 def remove_history(entry_id: Annotated[int, Path(ge=1, le=2**62)], account: Device, db: DbSession) -> Response:
     history_service.remove(db, account.id, entry_id)
+    return Response(status_code=204)
+
+
+# --- The list "for later": books on the person's own shelves ----------------------------------------------------------
+
+
+class AppLaterEntry(BaseModel):
+    work_id: int
+    added_at: datetime
+
+
+class AppLaterList(BaseModel):
+    items: list[AppLaterEntry]
+
+
+@router.get("/later", response_model=AppLaterList, responses=_TOKEN_ERRORS,
+            summary="The books on the person's list for later that they see, the newest first")
+def list_later(account: Device, db: DbSession) -> AppLaterList:
+    """An entry for a work the person does not see at the moment stays and comes back with the work. A book that is
+    finished, on whichever device, leaves the list by itself."""
+    return AppLaterList(items=[AppLaterEntry(work_id=row.work_id, added_at=row.added_at)
+                               for row in later_service.listing(db, account.id)])
+
+
+@router.put("/later/{work_id}", status_code=204, responses={
+    **_CHANGING, 409: {"description": "`later_full`: the list holds as many books as it may (500)."}},
+            summary="Puts a book on the person's list for later; a book that is on it stays as it is")
+def add_later(work_id: Annotated[int, Path(ge=1, le=2**62)], account: Device, db: DbSession) -> Response:
+    later_service.add(db, account.id, work_id)
+    return Response(status_code=204)
+
+
+@router.delete("/later/{work_id}", status_code=204, responses={**_TOKEN_ERRORS, **_CHANGES},
+               summary="Takes a book off the person's list for later; a book that is not on it is no error")
+def remove_later(work_id: Annotated[int, Path(ge=1, le=2**62)], account: Device, db: DbSession) -> Response:
+    later_service.remove(db, account.id, work_id)
     return Response(status_code=204)
 

@@ -398,8 +398,8 @@ def test_a_database_of_version_eight_with_a_listener_gains_pen_names_and_the_rea
         connection.execute("PRAGMA user_version = 8")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         assert connection.execute("SELECT count(*) FROM person_aliases").fetchone() == (0,)
     _the_place_the_mark_and_a_finished_pass_after(scratch)
@@ -423,8 +423,8 @@ def test_a_database_of_version_nine_keeps_its_pen_names_and_gains_the_reading_st
         connection.execute("PRAGMA user_version = 9")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         assert connection.execute("SELECT person_id, name, source FROM person_aliases").fetchall() == [
             (3, "R. Falk", "isbn")]
@@ -453,8 +453,8 @@ def test_a_database_of_version_ten_keeps_its_members_and_gains_the_tables_of_fet
         connection.execute("PRAGMA user_version = 10")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         assert connection.execute('SELECT user_id, "right" FROM library_members ORDER BY user_id').fetchall() == [
@@ -489,8 +489,8 @@ def test_a_database_of_version_eleven_keeps_its_indexers_and_gains_searches_bloc
         connection.execute("PRAGMA user_version = 11")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         assert connection.execute("SELECT name FROM indexers").fetchall() == [("Shelf",)]
@@ -565,8 +565,8 @@ def test_a_database_of_version_twelve_keeps_its_downloads_and_gains_wishes_and_t
         connection.execute("PRAGMA user_version = 12")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         assert connection.execute("SELECT state, progress, problem_code, missing_count, removal_pending, seed_state "
@@ -637,8 +637,8 @@ def test_a_database_of_version_thirteen_keeps_its_downloads_and_gains_the_filing
         connection.execute("PRAGMA user_version = 13")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         assert connection.execute("SELECT state, place_step, source_path, decision, edition_id, replaced "
@@ -681,8 +681,8 @@ def test_a_database_of_version_fourteen_keeps_its_indexers_and_wishes_and_gains_
         connection.execute("PRAGMA user_version = 14")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         assert connection.execute("SELECT grab_day, grab_count, rss_checked_at, rss_error FROM indexers").fetchall() == [
@@ -708,8 +708,8 @@ def test_a_database_of_version_fifteen_keeps_its_books_and_gains_the_moves_into_
         connection.execute("PRAGMA user_version = 15")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         assert connection.execute("SELECT title FROM editions").fetchall() == [("Kept",)]
@@ -780,8 +780,8 @@ def test_a_database_of_version_sixteen_gains_what_was_wished_and_sets_a_wrong_bo
         connection.execute("PRAGMA user_version = 16")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         for table in ("procure_wishes", "downloads", "procure_history"):
             assert {row[0] for row in connection.execute(f'SELECT wished FROM "{table}"')} == {None}, table  # noqa: S608
@@ -812,8 +812,8 @@ def test_a_database_of_version_seventeen_keeps_its_devices_and_gains_the_codes_t
         connection.execute("PRAGMA user_version = 17")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         assert connection.execute("SELECT name FROM devices").fetchall() == [("Kept phone",)]
@@ -846,8 +846,8 @@ def test_a_database_of_version_twenty_gains_the_requests_a_device_without_a_came
         connection.execute("PRAGMA user_version = 20")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     insert = ("INSERT INTO app_requests (id, secret_hash, code_hash, device_name, state, sender, created_at, expires_at"
               "{extra}) VALUES ('{ident}', 's', '{code}', 'TV', '{state}', 'x', 'x', 'x'{values})")
     with closing(sqlite3.connect(scratch)) as connection:
@@ -881,8 +881,8 @@ def test_a_database_of_version_twenty_one_gains_the_catalogue_of_authors_and_kee
         connection.execute("PRAGMA user_version = 21")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         assert connection.execute("SELECT name FROM people").fetchall() == [("Rune Falkner",)]
@@ -937,8 +937,8 @@ def test_a_database_of_version_twenty_two_keeps_its_devices_and_learns_where_a_d
         connection.execute("PRAGMA user_version = 22")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         assert connection.execute("SELECT name, via_device_id FROM devices").fetchall() == [("Kept phone", None)]
@@ -1003,8 +1003,8 @@ def test_a_database_of_version_twenty_three_gains_the_themed_shelves_and_the_day
         connection.execute("PRAGMA user_version = 23")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         assert connection.execute("SELECT locator, pass_done, pass_started_at FROM progress").fetchall() == [
@@ -1043,8 +1043,8 @@ def test_a_database_of_version_twenty_four_keeps_its_trash_and_gains_the_states_
         connection.execute("PRAGMA user_version = 24")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     _the_place_the_mark_and_a_finished_pass_after(scratch)
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
@@ -1071,8 +1071,8 @@ def test_a_database_of_version_twenty_five_gains_watching_and_keeps_its_people(s
         connection.execute("PRAGMA user_version = 25")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         assert connection.execute("SELECT name FROM people").fetchall() == [("Rune Falkner",)]
@@ -1131,8 +1131,8 @@ def test_a_database_of_version_twenty_six_gains_the_generation_of_the_check_at_z
         connection.execute("PRAGMA user_version = 26")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         assert connection.execute("SELECT title, problem_code, check_rev FROM downloads").fetchall() == [
             ("Die Nebelbahn", "runtime", 0)]
@@ -1154,8 +1154,8 @@ def test_a_database_of_version_twenty_seven_keeps_its_people_and_gains_the_conne
         connection.execute("PRAGMA user_version = 27")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         assert connection.execute("SELECT name, kindle_address FROM users").fetchall() == [("ada", "")]
@@ -1188,8 +1188,8 @@ def test_a_database_of_version_twenty_eight_keeps_its_files_and_places_and_gains
         connection.execute("PRAGMA user_version = 28")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         assert connection.execute("SELECT path, partial_md5 FROM files").fetchall() == [("a.epub", "")]
         assert connection.execute("SELECT locator, koreader FROM progress").fetchall() == [("epubcfi(/6/4)", "")]
@@ -1219,8 +1219,8 @@ def test_a_database_of_version_twenty_nine_keeps_its_connections_and_places_and_
         connection.execute("PRAGMA user_version = 29")
         connection.commit()
     database.init_db()
-    assert version_of(scratch) == database.SCHEMA_VERSION == 30
-    assert made == ["before schema 30"]
+    assert version_of(scratch) == database.SCHEMA_VERSION == 31
+    assert made == ["before schema 31"]
     with closing(sqlite3.connect(scratch)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         assert connection.execute("SELECT name, sync_batch FROM ereader_links").fetchall() == [("Reader", 0)]

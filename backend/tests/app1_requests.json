@@ -21,6 +21,17 @@
     "required_body": [],
     "required_parameters": []
   },
+  "DELETE /api/app/1/later/{work_id}": {
+    "body": [],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [],
+    "required_parameters": []
+  },
   "DELETE /api/app/1/pairing/request/{request_id}": {
     "body": [],
     "headers": {
@@ -102,6 +113,17 @@
       "query offset",
       "query work"
     ],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "GET /api/app/1/later": {
+    "body": [],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
     "required_body": [],
     "required_parameters": []
   },
@@ -351,6 +373,17 @@
       "locator",
       "percent"
     ],
+    "required_parameters": []
+  },
+  "PUT /api/app/1/later/{work_id}": {
+    "body": [],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [],
     "required_parameters": []
   }
 }

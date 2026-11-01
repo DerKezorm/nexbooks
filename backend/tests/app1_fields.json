@@ -5,6 +5,9 @@
   "DELETE /api/app/1/history/{entry_id}": [
     "<204 empty>"
   ],
+  "DELETE /api/app/1/later/{work_id}": [
+    "<204 empty>"
+  ],
   "DELETE /api/app/1/pairing/request/{request_id}": [
     "<204 empty>"
   ],
@@ -32,6 +35,10 @@
     "[].kind",
     "[].source",
     "[].work_id"
+  ],
+  "GET /api/app/1/later": [
+    "items[].added_at",
+    "items[].work_id"
   ],
   "GET /api/app/1/library": [
     "items[].authors[].id",
@@ -210,5 +217,8 @@
     "current.this_device",
     "current.work_id",
     "kept"
+  ],
+  "PUT /api/app/1/later/{work_id}": [
+    "<204 empty>"
   ]
 }

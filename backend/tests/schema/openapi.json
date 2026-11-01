@@ -566,6 +566,41 @@
         "title": "AppFile",
         "type": "object"
       },
+      "AppLaterEntry": {
+        "properties": {
+          "added_at": {
+            "format": "date-time",
+            "title": "Added At",
+            "type": "string"
+          },
+          "work_id": {
+            "title": "Work Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "work_id",
+          "added_at"
+        ],
+        "title": "AppLaterEntry",
+        "type": "object"
+      },
+      "AppLaterList": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/AppLaterEntry"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "title": "AppLaterList",
+        "type": "object"
+      },
       "AppLibrary": {
         "properties": {
           "id": {
@@ -16516,6 +16551,178 @@
           }
         ],
         "summary": "Takes one of the person's own entries away (the book counts as not finished on that day)",
+        "tags": [
+          "app"
+        ]
+      }
+    },
+    "/api/app/1/later": {
+      "get": {
+        "description": "An entry for a work the person does not see at the moment stays and comes back with the work. A book that is\nfinished, on whichever device, leaves the list by itself.",
+        "operationId": "list_later_api_app_1_later_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppLaterList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "description": "`token_invalid`: the token is wrong or revoked, or the account is blocked; `device_token_required`: no device token (a cookie is no way in here); `token_wrong_kind`: an API key, not a device token; `sign_in_required`: nothing to sign in with at all."
+          },
+          "403": {
+            "description": "`second_factor_setup_required`: the operator asks for a second factor, and the account has to set it up in a browser first."
+          },
+          "429": {
+            "description": "`too_many_attempts`: a token that does not exist, tried too often from this address; wait for `Retry-After`. A token that exists is never turned away by it, and the same wrong token again counts once: an app with a revoked token keeps hearing 401, not 429.",
+            "headers": {
+              "Retry-After": {
+                "description": "Seconds to wait before the next try.",
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "The books on the person's list for later that they see, the newest first",
+        "tags": [
+          "app"
+        ]
+      }
+    },
+    "/api/app/1/later/{work_id}": {
+      "delete": {
+        "operationId": "remove_later_api_app_1_later__work_id__delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "work_id",
+            "required": true,
+            "schema": {
+              "maximum": 4611686018427387904,
+              "minimum": 1,
+              "title": "Work Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "400": {
+            "description": "`client_required`: a change without any token (with a device token it is none of the browser's business)."
+          },
+          "401": {
+            "description": "`token_invalid`: the token is wrong or revoked, or the account is blocked; `device_token_required`: no device token (a cookie is no way in here); `token_wrong_kind`: an API key, not a device token; `sign_in_required`: nothing to sign in with at all."
+          },
+          "403": {
+            "description": "`second_factor_setup_required`: the operator asks for a second factor, and the account has to set it up in a browser first."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          },
+          "429": {
+            "description": "`too_many_attempts`: a token that does not exist, tried too often from this address; wait for `Retry-After`. A token that exists is never turned away by it, and the same wrong token again counts once: an app with a revoked token keeps hearing 401, not 429.",
+            "headers": {
+              "Retry-After": {
+                "description": "Seconds to wait before the next try.",
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Takes a book off the person's list for later; a book that is not on it is no error",
+        "tags": [
+          "app"
+        ]
+      },
+      "put": {
+        "operationId": "add_later_api_app_1_later__work_id__put",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "work_id",
+            "required": true,
+            "schema": {
+              "maximum": 4611686018427387904,
+              "minimum": 1,
+              "title": "Work Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "400": {
+            "description": "`client_required`: a change without any token (with a device token it is none of the browser's business)."
+          },
+          "401": {
+            "description": "`token_invalid`: the token is wrong or revoked, or the account is blocked; `device_token_required`: no device token (a cookie is no way in here); `token_wrong_kind`: an API key, not a device token; `sign_in_required`: nothing to sign in with at all."
+          },
+          "403": {
+            "description": "`second_factor_setup_required`: the operator asks for a second factor, and the account has to set it up in a browser first."
+          },
+          "404": {
+            "description": "`not_found`: there is no such thing, or it lies only in libraries the person is not in (the same answer)."
+          },
+          "409": {
+            "description": "`later_full`: the list holds as many books as it may (500)."
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          },
+          "429": {
+            "description": "`too_many_attempts`: a token that does not exist, tried too often from this address; wait for `Retry-After`. A token that exists is never turned away by it, and the same wrong token again counts once: an app with a revoked token keeps hearing 401, not 429.",
+            "headers": {
+              "Retry-After": {
+                "description": "Seconds to wait before the next try.",
+                "schema": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Puts a book on the person's list for later; a book that is on it stays as it is",
         "tags": [
           "app"
         ]

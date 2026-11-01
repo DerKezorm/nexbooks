@@ -210,6 +210,7 @@ def cases() -> list[Case]:
         Case("POST", "/api/app/1/editions/{ebook}/finished", {}, owner=(200, 201), device=True),
         Case("DELETE", "/api/app/1/history/{history2}", owner=(200, 204), device=True),
         Case("DELETE", "/api/app/1/bookmarks/{bookmark2}", owner=(200, 204), device=True),
+        Case("PUT", "/api/app/1/later/{work}", owner=(200, 204), device=True),
         # An edition in the trash (last: the owner takes the recording off the shelf).
         Case("POST", "/api/v1/editions/{audio}/trash", owner=(200,)),
     ]
@@ -316,6 +317,9 @@ NOT_OF_A_LIBRARY = {
     # A move into another library is shown and tried again only for who manages its source or its target
     # (``test_relocate`` tries it with the owner, a reader, a stranger and the operator who is no member).
     "/api/v1/moves/{move_id}", "/api/v1/moves/{move_id}/retry",
+    # The list for later: taking a book off it names the person's own entry and is no error for any number, so it says
+    # nothing about a work (``test_app_later``). Putting one on it is tried above.
+    "/api/app/1/later/{work_id}",
     # Connecting the iPhone app: a code is the person's own (looked up among their codes, another person's is
     # not found) and the claim of the app is open on purpose, its proof is the secret (``test_pairing``,
     # ``test_pairing_claim`` try them with the owner, another person and a stranger).

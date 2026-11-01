@@ -1133,6 +1133,20 @@ HISTORY_LISTENED = "listened"
 HISTORY_KINDS = (HISTORY_READ, HISTORY_LISTENED)
 
 
+class LaterEntry(Base):
+    """A book on the person's own shelves they mean to read or hear (``services/later.py``). **The person's own**: no
+    query reads it for anybody else, the operator included. It hangs on the work and follows the book
+    (``LATER_STATEMENTS``); a work the person does not see at the moment keeps its entry, and a work that goes for good
+    takes it along."""
+
+    __tablename__ = "later"
+    __table_args__ = (Index("ix_later_person", "user_id", "added_at"), Index("ix_later_work", "work_id"))
+
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), primary_key=True)
+    work_id: Mapped[int] = mapped_column(ForeignKey("works.id", ondelete="CASCADE"), primary_key=True)
+    added_at: Mapped[datetime] = mapped_column(UtcDateTime)
+
+
 class HistoryEntry(Base):
     """A book a person finished (``services/history.py``): the e-book read or the recording heard to its end, once for
     each pass. **The person's own**: no query reads it for anybody else, the operator included. It hangs on the edition
@@ -2287,10 +2301,21 @@ APP_CHANGE_STATEMENTS = (
 )
 
 
+#: An entry of the list "for later" goes with its book: a work that lost its last edition to another work is about to go
+#: away and would take the entry with it. A trigger, for the reason above: whatever moves editions is caught. ``OR
+#: IGNORE``: an entry the person has for that work already stays the one.
+LATER_STATEMENTS = (
+    _trigger("later_follows_the_book",
+             "AFTER UPDATE OF work_id ON editions WHEN OLD.work_id IS NOT NEW.work_id "
+             "AND NOT EXISTS (SELECT 1 FROM editions WHERE work_id = OLD.work_id)",
+             "UPDATE OR IGNORE later SET work_id = NEW.work_id WHERE work_id = OLD.work_id;"),
+)
+
+
 @event.listens_for(Base.metadata, "after_create")
 def _app_change_triggers(_target: Any, connection: Any, **_kw: Any) -> None:
     """A new database gets the triggers with its tables, the same as a migrated one (``step_v19_schema``)."""
-    for statement in APP_CHANGE_STATEMENTS:
+    for statement in (*APP_CHANGE_STATEMENTS, *LATER_STATEMENTS):
         connection.exec_driver_sql(statement)
 
 
@@ -2316,6 +2341,7 @@ __all__ = [
     "KIND_AUDIO",
     "KIND_BOTH",
     "KIND_EBOOK",
+    "LATER_STATEMENTS",
     "LIBRARY_KINDS",
     "LIBRARY_RIGHTS",
     "MANAGE",
@@ -2364,6 +2390,7 @@ __all__ = [
     "Indexer",
     "Invite",
     "Job",
+    "LaterEntry",
     "Library",
     "LibraryMember",
     "LibraryProblem",

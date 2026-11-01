@@ -265,7 +265,7 @@ def test_a_place_that_does_not_fit_is_bad_place(shelf: Shelf) -> None:
 
 def test_no_name_of_what_the_server_can_do_goes(shelf: Shelf) -> None:
     """Gap (d): a name in ``features`` is never taken away while ``app/1`` stands."""
-    promised = {"pairing", "library", "works", "covers", "files", "progress", "bookmarks", "history"}
+    promised = {"pairing", "library", "works", "covers", "files", "progress", "bookmarks", "history", "later"}
     assert promised <= set(FEATURES)
     assert promised <= set(shelf.ada_app.get("/api/app/1/me").json()["features"])
 

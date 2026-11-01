@@ -39,6 +39,23 @@
       "too_many_attempts"
     ]
   },
+  "DELETE /api/app/1/later/{work_id}": {
+    "400": [
+      "client_required"
+    ],
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
   "DELETE /api/app/1/pairing/request/{request_id}": {
     "403": [
       "origin_refused"
@@ -107,6 +124,20 @@
     ]
   },
   "GET /api/app/1/history": {
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "GET /api/app/1/later": {
     "401": [
       "device_token_required",
       "sign_in_required",
@@ -423,6 +454,29 @@
     ],
     "422": [
       "bad_place"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "PUT /api/app/1/later/{work_id}": {
+    "400": [
+      "client_required"
+    ],
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "not_found"
+    ],
+    "409": [
+      "later_full"
     ],
     "429": [
       "too_many_attempts"

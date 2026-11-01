@@ -75,6 +75,9 @@ def _every_address(edition: int, work: int, file_id: int) -> list[tuple[str, str
         ("POST", f"/api/app/1/editions/{edition}/finished", {}),
         ("GET", "/api/app/1/history", None),
         ("DELETE", "/api/app/1/history/1", None),
+        ("GET", "/api/app/1/later", None),
+        ("PUT", f"/api/app/1/later/{work}", None),
+        ("DELETE", f"/api/app/1/later/{work}", None),
     ]
 
 
