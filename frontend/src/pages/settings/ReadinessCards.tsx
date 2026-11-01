@@ -31,7 +31,7 @@ export function ReadinessCard() {
   const open = found.open
   return (
     <Card icon={Shield} title={t('ready.title')} text={t('ready.text')}>
-      <div data-testid="ready-summary" className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm font-semibold ${open ? 'bg-warn/15 text-warn' : 'bg-accent-soft text-accent'}`}>
+      <div data-testid="ready-summary" className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm font-semibold ${open ? 'bg-warn/15 text-warn' : 'bg-ok-soft text-ok'}`}>
         {open ? <AlertTriangle size={14} aria-hidden /> : <Check size={14} aria-hidden />}
         {open ? t('ready.open', { count: open }) : t('ready.allGood')}
       </div>
@@ -41,7 +41,7 @@ export function ReadinessCard() {
           return (
             <li key={point.key} data-state={point.state} className="flex gap-3 rounded-xl border border-line bg-sheet-2/50 px-4 py-3 text-sm">
               <span
-                className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${point.state === 'ok' ? 'bg-accent text-accent-ink' : point.state === 'warn' ? 'bg-warn text-white' : 'bg-bad text-white'}`}
+                className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${point.state === 'ok' ? 'bg-ok text-sheet' : point.state === 'warn' ? 'bg-warn text-white' : 'bg-bad text-white'}`}
                 aria-label={t(`ready.state.${point.state}`)}
               >
                 {point.state === 'ok' ? <Check size={12} strokeWidth={3} /> : point.state === 'warn' ? <AlertTriangle size={11} strokeWidth={3} /> : <X size={12} strokeWidth={3} />}
