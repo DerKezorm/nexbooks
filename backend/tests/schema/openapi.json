@@ -2326,6 +2326,13 @@
             "title": "Title",
             "type": "string"
           },
+          "titles": {
+            "items": {
+              "$ref": "#/components/schemas/TitleOut"
+            },
+            "title": "Titles",
+            "type": "array"
+          },
           "token": {
             "title": "Token",
             "type": "string"
@@ -2375,6 +2382,7 @@
           "wished",
           "series",
           "series_pos",
+          "titles",
           "description",
           "year",
           "forms_known",
@@ -13389,6 +13397,24 @@
           "fan"
         ],
         "title": "TileOut",
+        "type": "object"
+      },
+      "TitleOut": {
+        "properties": {
+          "language": {
+            "title": "Language",
+            "type": "string"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "text",
+          "language"
+        ],
+        "title": "TitleOut",
         "type": "object"
       },
       "TokenIn": {

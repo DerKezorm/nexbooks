@@ -146,6 +146,21 @@ def family(db: Session, row: ForeignBook) -> list[ForeignBook]:
     return [row, *named(db, row.title, mine, MAX_FAMILY - 1, skip=row.id)]
 
 
+def titles_of(row: ForeignBook, rows: list[ForeignBook]) -> list[dict[str, str]]:
+    """The titles of a book with their languages: of its rows, and, for a work of the catalogue of an author, the one it
+    came out under in each language."""
+    data = row.data if isinstance(row.data, dict) else {}
+    named_ones = [(item.title, item.language) for item in rows]
+    named_ones += [(str(item.get("text") or ""), str(item.get("language") or "")) for item in data.get("titles") or []
+                   if isinstance(item, dict)]
+    titles: list[dict[str, str]] = []
+    for text, language in named_ones:
+        text = " ".join((text or "").split())[:300]
+        if text and not any(entry["text"] == text and entry["language"] == (language or "") for entry in titles):
+            titles.append({"text": text, "language": language or ""})
+    return titles
+
+
 def named(db: Session, title: str, authors: list[str], limit: int = MAX_FAMILY, *, skip: int = 0) -> list[ForeignBook]:
     """The rows of the book of this title and these authors (``family`` for a book that has no row of its own, a work
     of a library)."""

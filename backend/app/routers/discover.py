@@ -168,7 +168,15 @@ class ForYouOut(BaseModel):
     authors: list[AuthorMoreOut]
 
 
+class TitleOut(BaseModel):
+    text: str
+    #: Empty when the source does not say.
+    language: str
+
+
 class BookOut(CardOut):
+    #: The titles the book is known by, each with its language: the title above is the one of its source.
+    titles: list[TitleOut]
     description: str
     year: int | None
     #: Every form the sources know the book in.
@@ -327,7 +335,8 @@ def read_book(token: str, account: Reader, db: DbSession) -> BookOut:
     view.lay_covers(db, account.id, [shown.card])
     card = card_out(shown.card, today, rank=False)
     return BookOut(
-        **card.model_dump(), description=shown.description, year=shown.year,
+        **card.model_dump(), titles=foreign.titles_of(row, foreign.family(db, row)), description=shown.description,
+        year=shown.year,
         forms_known=[_form(f) for f in shown.forms if f.get("kind") in ("ebook", "audio")],
         volumes=_volumes(shown.volumes, shown.own_series_works, today), series_pending=shown.series_pending,
         more=[brief_of(v) for v in shown.more], pending=shown.pending,

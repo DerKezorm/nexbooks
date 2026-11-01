@@ -76,6 +76,21 @@ def test_the_page_of_a_book_says_what_the_source_says_and_looks_for_the_other_fo
     assert jobs_of("fenrich") == before
 
 
+def test_the_page_of_a_book_names_its_titles_with_their_languages(shelves: Shelves) -> None:
+    carol = shelves.client(shelves.carol)
+    token = token_of(carol, "Orbit Null")
+    with SessionLocal() as db:
+        row = db.scalars(select(ForeignBook).where(ForeignBook.token == token)).one()
+        row.language = "sv"
+        row.data = {**(row.data or {}), "titles": [{"text": "Bana Noll", "language": "sv"},
+                                                   {"text": "  Die Null  Bahn ", "language": "de"}, "not one", {"text": ""}]}
+        db.commit()
+    page = carol.get(f"/api/v1/discover/books/{token}").json()
+    assert page["title"] == "Orbit Null"
+    assert page["titles"] == [{"text": "Orbit Null", "language": "sv"}, {"text": "Bana Noll", "language": "sv"},
+                              {"text": "Die Null Bahn", "language": "de"}]
+
+
 def test_with_the_main_switch_off_the_page_of_a_book_queues_nothing_and_does_not_wait_for_anything(
         shelves: Shelves) -> None:
     carol = shelves.client(shelves.carol)

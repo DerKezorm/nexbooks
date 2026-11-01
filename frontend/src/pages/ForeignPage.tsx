@@ -84,6 +84,10 @@ function ForeignView({ token }: { token: string }) {
   const [again, setAgain] = useState(0)
 
   const brief: DiscoverCard | null = book ?? state?.card ?? null
+  // The title in the person's language, as the tile that led here says it; the one of the source goes under it.
+  const language = i18n.language.split('-')[0]
+  const inLanguage = book?.titles?.find((item) => item.language === language)?.text
+  const title = inLanguage ?? brief?.title ?? ''
 
   useEffect(() => {
     let live = true
@@ -227,7 +231,7 @@ function ForeignView({ token }: { token: string }) {
 
   return (
     <>
-      <section ref={root} className={`detail ${shown ? 'show' : ''}`} style={style} role="dialog" aria-modal="true" aria-label={brief?.title ?? t('discover.book.loading')} tabIndex={-1} data-testid="foreign">
+      <section ref={root} className={`detail ${shown ? 'show' : ''}`} style={style} role="dialog" aria-modal="true" aria-label={title || t('discover.book.loading')} tabIndex={-1} data-testid="foreign">
         <div className="d-glow" />
         <div className="d-wrap">
           <div className="d-bar">
@@ -255,8 +259,13 @@ function ForeignView({ token }: { token: string }) {
                     </p>
                   )}
                   <h1 className="d-title" dir="auto">
-                    {brief.title}
+                    {title}
                   </h1>
+                  {title !== brief.title && (
+                    <p className="d-original" dir="auto" data-testid="original-title">
+                      {t('author.originalTitle', { title: brief.title })}
+                    </p>
+                  )}
                   {author && (
                     <p className="d-by">
                       {t('work.by')}{' '}
@@ -435,7 +444,7 @@ function ForeignView({ token }: { token: string }) {
         </div>
       </div>
       {releases && brief && (
-        <ReleasesDialog book={brief.token} title={brief.title} author={brief.authors[0] ?? ''} kind={releases} onClose={() => setReleases(null)} onLoaded={setSaid} />
+        <ReleasesDialog book={brief.token} title={title} author={brief.authors[0] ?? ''} kind={releases} onClose={() => setReleases(null)} onLoaded={setSaid} />
       )}
     </>
   )

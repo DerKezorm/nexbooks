@@ -1403,6 +1403,8 @@ export type SeriesGap = {
 export type AuthorMore = { person_id: number; name: string; on_shelf: number; pending: boolean; books: DiscoverCard[] }
 export type ForYou = { state: 'ready' | 'main_off' | 'no_source'; sources: SourceId[]; pending: boolean; gaps: SeriesGap[]; authors: AuthorMore[] }
 export type BookPage = DiscoverCard & {
+  /** Every title the book is known by, each with its language. `title` is the one of its source. */
+  titles?: { text: string; language: string }[]
   description: string
   year: number | null
   forms_known: FormOut[]

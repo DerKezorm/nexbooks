@@ -96,6 +96,21 @@ describe('fetching the book', () => {
 })
 
 describe('the words of the page', () => {
+  it('says the title in the language of the person, with the one of the source under it', async () => {
+    serve(arvel({ title: 'Glas och aska', language: 'sv', titles: [{ text: 'Glas och aska', language: 'sv' }, { text: 'Glas und Asche', language: 'de' }] }))
+    await page.show(app(), at('g2'))
+    expect(q('.d-title')!.textContent).toBe('Glas und Asche')
+    expect(q('[data-testid="original-title"]')!.textContent).toBe('Original: Glas och aska')
+    expect(q('[data-testid="foreign"]')!.getAttribute('aria-label')).toBe('Glas und Asche')
+  })
+
+  it('shows no second title when the book has none in the language of the person', async () => {
+    serve(arvel({ title: 'Glas och aska', titles: [{ text: 'Glas och aska', language: 'sv' }] }))
+    await page.show(app(), at('g2'))
+    expect(q('.d-title')!.textContent).toBe('Glas och aska')
+    expect(q('[data-testid="original-title"]')).toBeNull()
+  })
+
   it('names the genre and the series with the volume, the title, the author, the description and the facts', async () => {
     serve()
     await page.show(app(), at('g2'))

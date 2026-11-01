@@ -281,16 +281,7 @@ def subject_of_foreign(db: Session, row: ForeignBook, languages: Sequence[str],
     """A book of the sources: its titles and forms as the sources know them (the same for everybody). With ``uid`` the
     titles of the other books of the author take in the works of the libraries that person sees."""
     rows = foreign.family(db, row)
-    titles: list[dict[str, str]] = []
-    named = [(item.title, item.language) for item in rows]
-    # A work of the catalogue of an author knows its title in every language it came out in.
-    data = row.data if isinstance(row.data, dict) else {}
-    named += [(str(item.get("text") or ""), str(item.get("language") or "")) for item in data.get("titles") or []
-              if isinstance(item, dict)]
-    for text, language in named:
-        text = " ".join((text or "").split())[:300]
-        if text and not any(entry["text"] == text and entry["language"] == (language or "") for entry in titles):
-            titles.append({"text": text, "language": language or ""})
+    titles = foreign.titles_of(row, rows)
     authors = [name for name in (row.authors or []) if isinstance(name, str)][:6]
     duration = None
     for form in foreign.forms_of(rows):

@@ -539,6 +539,11 @@ body.lock {
     letter-spacing: -0.015em;
     text-wrap: balance;
   }
+  .d-original {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 6px 0 0;
+  }
   .d-by {
     font: italic 400 20px var(--serif);
     color: var(--muted);
