@@ -141,10 +141,10 @@ def test_the_step_keeps_every_row_with_its_number_and_makes_what_a_new_database_
         assert rows(connection) == before
         assert connection.execute("PRAGMA integrity_check").fetchall() == [("ok",)]
         assert connection.execute("PRAGMA foreign_key_check").fetchall() == []
-        # Tables, indexes, the 22 triggers, the full-text table: word for word what a new database holds.
+        # Tables, indexes, the 23 triggers, the full-text table: word for word what a new database holds.
         assert everything(connection) == fresh(tmp_path)
         triggers = connection.execute("SELECT count(*) FROM sqlite_master WHERE type = 'trigger'").fetchone()[0]
-        assert triggers == 22
+        assert triggers == 23
         assert database._foreign_objects(connection) == []
         assert connection.execute("SELECT rowid FROM book_fts WHERE book_fts MATCH 'mara' ORDER BY rowid").fetchall() \
             == fts_before
