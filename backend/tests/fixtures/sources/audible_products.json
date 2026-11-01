@@ -1,0 +1,53 @@
+{
+  "products": [
+    {
+      "asin": "B0EXAMPL01",
+      "title": "Die Uhrmacherin",
+      "subtitle": "Roman",
+      "authors": [{"asin": "B0AUTHOR01", "name": "Ada Feldkamp"}],
+      "narrators": [{"name": "Ben Hollister"}, {"name": "Sina Voss"}],
+      "runtime_length_min": 600,
+      "format_type": "unabridged",
+      "language": "german",
+      "series": [{"asin": "B0SERIES01", "sequence": "2", "title": "Uhrwerk-Reihe", "url": "/pd/x"}],
+      "publisher_name": "Beispiel Hoerbuch Verlag",
+      "release_date": "2018-05-14",
+      "merchandising_summary": "<p>Eine Uhrmacherin, <b>ein Turm</b> und die Zeit.</p><p>Zweiter Absatz.</p>",
+      "product_images": {"500": "https://m.media-amazon.com/images/I/example500._SL500_.jpg", "1024": "https://m.media-amazon.com/images/I/example1024._SL1024_.jpg"}
+    },
+    {
+      "asin": "B0EXAMPL02",
+      "title": "Die Uhrmacherin",
+      "authors": [{"name": "Ada Feldkamp"}],
+      "narrators": [{"name": "Ben Hollister"}],
+      "runtime_length_min": 283,
+      "format_type": "abridged",
+      "language": "german",
+      "release_date": "2018-05-14"
+    },
+    {
+      "asin": "B0EXAMPL03",
+      "title": "Die Uhrmacherin (Hörspiel)",
+      "authors": [{"name": "Ada Feldkamp"}],
+      "narrators": [{"name": "Ensemble Beispiel"}],
+      "runtime_length_min": 359,
+      "format_type": "abridged",
+      "language": "german",
+      "publisher_name": "Beispiel Hörspiel Studio"
+    },
+    {
+      "asin": "B0EXAMPL04",
+      "title": "The Clockmaker",
+      "authors": [{"name": "Ada Feldkamp"}],
+      "narrators": [{"name": "Ruth Example"}],
+      "runtime_length_min": 590,
+      "format_type": "unabridged",
+      "language": "english"
+    },
+    {
+      "asin": "bad",
+      "title": "Not an ASIN"
+    },
+    "not a product"
+  ]
+}

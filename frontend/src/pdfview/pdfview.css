@@ -1,0 +1,28 @@
+/* The frame that draws a PDF: the pages on the ground of the theme. The colours come from the page; the pages stay as the
+   PDF draws them (a dark theme dims them, it does not redraw them). */
+:root {
+  --ground: #fffdf8;
+  --ink: #2a241d;
+  color-scheme: light;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--ground);
+  color: var(--ink);
+  font: 15px/1.5 system-ui, -apple-system, 'Segoe UI', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+#box {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+}
+body.dark .pdfViewer .page canvas {
+  filter: invert(0.9) hue-rotate(180deg);
+}
+body.sepia .pdfViewer .page canvas {
+  filter: sepia(0.35) brightness(0.97);
+}

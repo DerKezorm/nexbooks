@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<caps>
+  <server version="1.0" title="Example Newznab" strapline="made up for the tests" email="admin@example.com" url="https://indexer.example.com/" image="https://indexer.example.com/logo.png"/>
+  <limits max="100" default="50"/>
+  <searching>
+    <search available="yes" supportedParams="q,group,limit,cat"/>
+    <tv-search available="yes" supportedParams="q,rid,season,ep"/>
+    <movie-search available="yes" supportedParams="q,imdbid"/>
+    <audio-search available="yes" supportedParams="q,artist,album"/>
+    <book-search available="yes" supportedParams="q,author,isbn"/>
+  </searching>
+  <categories>
+    <category id="3000" name="Audio">
+      <subcat id="3010" name="Audio/MP3"/>
+      <subcat id="3030" name="Audio/Audiobook"/>
+      <subcat id="3040" name="Audio/Lossless"/>
+      <subcat id="3130" name="Audio/Audiobook German"/>
+      <subcat id="3330" name="Audio/Audiobook French"/>
+    </category>
+    <category id="5000" name="TV">
+      <subcat id="5030" name="TV/SD"/>
+    </category>
+    <category id="7000" name="Books">
+      <subcat id="7010" name="Books/Mags"/>
+      <subcat id="7020" name="Books/EBook"/>
+      <subcat id="7030" name="Books/Comics"/>
+      <subcat id="7040" name="Books/Technical"/>
+      <subcat id="7050" name="Books/Other"/>
+      <subcat id="7120" name="Books/EBook German"/>
+      <subcat id="7320" name="Books/EBook French"/>
+    </category>
+  </categories>
+</caps>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<caps>
+  <server version="1.0" title="Lantern Index" strapline="made up for the tests, in the shape of a real one" email="admin@example.com" url="https://lantern.example.com/"/>
+  <limits max="100" default="100"/>
+  <searching>
+    <search available="yes" supportedParams="q"/>
+    <book-search available="yes" supportedParams="q,author,title"/>
+    <audio-search available="no" supportedParams="q"/>
+  </searching>
+  <categories>
+    <category id="3000" name="Audio">
+      <subcat id="3030" name="Audiobook"/>
+      <subcat id="3130" name="Audiobook - DE"/>
+      <subcat id="3230" name="Audiobook - ES"/>
+      <subcat id="3330" name="Audiobook - FR"/>
+    </category>
+    <category id="7000" name="Books">
+      <subcat id="7020" name="Ebook"/>
+    </category>
+    <category id="7100" name="Books - DE">
+      <subcat id="7120" name="Ebook"/>
+    </category>
+    <category id="7300" name="Books - FR">
+      <subcat id="7320" name="Ebook"/>
+    </category>
+  </categories>
+</caps>

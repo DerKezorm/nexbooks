@@ -1,0 +1,214 @@
+{
+  "DELETE /api/app/1/bookmarks/{bookmark_id}": [
+    "<204 empty>"
+  ],
+  "DELETE /api/app/1/history/{entry_id}": [
+    "<204 empty>"
+  ],
+  "DELETE /api/app/1/pairing/request/{request_id}": [
+    "<204 empty>"
+  ],
+  "DELETE /api/app/1/pairing/request/{request_id}/confirm": [
+    "<204 empty>"
+  ],
+  "GET /api/app/1/editions/{edition_id}/bookmarks": [
+    "[].chapter_title",
+    "[].created_at",
+    "[].edition_id",
+    "[].fraction",
+    "[].id",
+    "[].locator",
+    "[].note",
+    "[].position"
+  ],
+  "GET /api/app/1/files/{file_id}/content": [
+    "<200 application/octet-stream>"
+  ],
+  "GET /api/app/1/history": [
+    "[].created_at",
+    "[].edition_id",
+    "[].finished_on",
+    "[].id",
+    "[].kind",
+    "[].source",
+    "[].work_id"
+  ],
+  "GET /api/app/1/library": [
+    "items[].authors[].id",
+    "items[].authors[].name",
+    "items[].color",
+    "items[].cover_etag",
+    "items[].editions[].duration",
+    "items[].editions[].formats",
+    "items[].editions[].id",
+    "items[].editions[].kind",
+    "items[].editions[].language",
+    "items[].editions[].library_id",
+    "items[].editions[].narrators",
+    "items[].editions[].pages",
+    "items[].editions[].size",
+    "items[].editions[].variant",
+    "items[].genre",
+    "items[].id",
+    "items[].library_ids[]",
+    "items[].series.id",
+    "items[].series.name",
+    "items[].series.pos",
+    "items[].title",
+    "items[].year",
+    "latest",
+    "marker",
+    "removed[]"
+  ],
+  "GET /api/app/1/me": [
+    "account.id",
+    "account.language",
+    "account.name",
+    "device.may_confirm",
+    "device.name",
+    "features[]",
+    "installation_id",
+    "libraries[].id",
+    "libraries[].kind",
+    "libraries[].name",
+    "libraries[].right",
+    "server.version"
+  ],
+  "GET /api/app/1/pairing/request/{request_id}": [
+    "account.name",
+    "server.version",
+    "state",
+    "token"
+  ],
+  "GET /api/app/1/progress": [
+    "items[].age",
+    "items[].chapter_title",
+    "items[].device",
+    "items[].edition_id",
+    "items[].locator",
+    "items[].moved_at",
+    "items[].percent",
+    "items[].position",
+    "items[].received_at",
+    "items[].this_device",
+    "items[].work_id",
+    "until"
+  ],
+  "GET /api/app/1/works/{work_id}": [
+    "authors[].id",
+    "authors[].name",
+    "color",
+    "cover_etag",
+    "description",
+    "editions[].chapters[].number",
+    "editions[].chapters[].start",
+    "editions[].chapters[].title",
+    "editions[].duration",
+    "editions[].files[].duration",
+    "editions[].files[].format",
+    "editions[].files[].id",
+    "editions[].files[].mime",
+    "editions[].files[].part",
+    "editions[].files[].sha256",
+    "editions[].files[].size",
+    "editions[].formats[]",
+    "editions[].id",
+    "editions[].isbn",
+    "editions[].kind",
+    "editions[].language",
+    "editions[].library_id",
+    "editions[].narrators[]",
+    "editions[].pages",
+    "editions[].published",
+    "editions[].publisher",
+    "editions[].size",
+    "editions[].subtitle",
+    "editions[].title",
+    "editions[].translators[]",
+    "editions[].variant",
+    "genre",
+    "id",
+    "library_ids[]",
+    "original_language",
+    "original_title",
+    "series.id",
+    "series.name",
+    "series.pos",
+    "title",
+    "year"
+  ],
+  "GET /api/app/1/works/{work_id}/cover": [
+    "<200 image/webp>"
+  ],
+  "PATCH /api/app/1/bookmarks/{bookmark_id}": [
+    "chapter_title",
+    "created_at",
+    "edition_id",
+    "fraction",
+    "id",
+    "locator",
+    "note",
+    "position"
+  ],
+  "POST /api/app/1/editions/{edition_id}/bookmarks": [
+    "chapter_title",
+    "created_at",
+    "edition_id",
+    "fraction",
+    "id",
+    "locator",
+    "note",
+    "position"
+  ],
+  "POST /api/app/1/editions/{edition_id}/finished": [
+    "created_at",
+    "edition_id",
+    "finished_on",
+    "id",
+    "kind",
+    "source",
+    "work_id"
+  ],
+  "POST /api/app/1/pairing/claim": [
+    "account.name",
+    "server.version",
+    "token"
+  ],
+  "POST /api/app/1/pairing/request": [
+    "code",
+    "expires_at",
+    "id",
+    "poll_seconds",
+    "secret"
+  ],
+  "POST /api/app/1/pairing/request/confirm": [
+    "device_name",
+    "expires_at",
+    "state"
+  ],
+  "POST /api/app/1/pairing/request/preview": [
+    "device_name",
+    "expires_at",
+    "requested_at",
+    "state"
+  ],
+  "POST /api/app/1/pairing/{pairing_id}/claim": [
+    "account.name",
+    "server.version",
+    "token"
+  ],
+  "PUT /api/app/1/editions/{edition_id}/progress": [
+    "current.age",
+    "current.chapter_title",
+    "current.device",
+    "current.edition_id",
+    "current.locator",
+    "current.moved_at",
+    "current.percent",
+    "current.position",
+    "current.received_at",
+    "current.this_device",
+    "current.work_id",
+    "kept"
+  ]
+}

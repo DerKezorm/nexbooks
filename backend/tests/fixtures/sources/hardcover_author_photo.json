@@ -1,0 +1,4 @@
+{"data": {"authors": [
+  {"id": 9000001, "slug": "ada-feldkamp", "name": "Ada Feldkamp", "bio": "<p>An invented novelist.</p>", "image": {"url": "https://assets.hardcover.app/authors/9000001/photo.jpg"},
+   "contributions": [{"book": {"title": "Alpha"}}, {"book": {"title": "Beta"}}]}
+]}}

@@ -1,0 +1,2613 @@
+[
+ {
+  "source": "audible",
+  "key": "audible-0",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2025,
+  "released": "2025-03-31",
+  "isbns": [],
+  "asin": "",
+  "pages": null,
+  "runtime_min": 2316,
+  "variant": "unabridged",
+  "form": "audio",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 0,
+   "subtitle": "",
+   "variant": "unabridged"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "audible",
+  "key": "audible-1",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2024,
+  "released": "2024-09-12",
+  "isbns": [],
+  "asin": "",
+  "pages": null,
+  "runtime_min": 1105,
+  "variant": "abridged",
+  "form": "audio",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 1,
+   "subtitle": "",
+   "variant": "abridged"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "audible",
+  "key": "audible-3",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer",
+   "Ulf Lamm"
+  ],
+  "via": "",
+  "year": 2023,
+  "released": "2023-02-27",
+  "isbns": [],
+  "asin": "",
+  "pages": null,
+  "runtime_min": 517,
+  "variant": "dramatized",
+  "form": "audio",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 3,
+   "subtitle": "Das Hörspiel",
+   "variant": "dramatized"
+  },
+  "authors_count": 2,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "audible",
+  "key": "audible-4",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "2026-07-08",
+  "isbns": [],
+  "asin": "",
+  "pages": null,
+  "runtime_min": 1348,
+  "variant": "unabridged",
+  "form": "audio",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 4,
+   "subtitle": "Zweiter Band",
+   "variant": "unabridged"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "audible",
+  "key": "audible-5",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "2026-05-11",
+  "isbns": [],
+  "asin": "",
+  "pages": null,
+  "runtime_min": 1197,
+  "variant": "unabridged",
+  "form": "audio",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 5,
+   "subtitle": "Erster Band",
+   "variant": "unabridged"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "audible",
+  "key": "audible-11",
+  "title": "Die großen Erzählungen",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2013,
+  "released": "2013-09-23",
+  "isbns": [],
+  "asin": "",
+  "pages": null,
+  "runtime_min": 835,
+  "variant": "unabridged",
+  "form": "audio",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 11,
+   "subtitle": "",
+   "variant": "unabridged"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "audible",
+  "key": "audible-14",
+  "title": "Gero Wendt liest Hanno Seer",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2016,
+  "released": "2016-11-21",
+  "isbns": [],
+  "asin": "",
+  "pages": null,
+  "runtime_min": 1600,
+  "variant": "unabridged",
+  "form": "audio",
+  "series": "Gero Wendt liest",
+  "series_pos": null,
+  "signals": {
+   "rank": 14,
+   "subtitle": "",
+   "variant": "unabridged"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "audible",
+  "key": "audible-24",
+  "title": "Der Diener",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Konrad Seer"
+  ],
+  "via": "",
+  "year": 2014,
+  "released": "2014-07-28",
+  "isbns": [],
+  "asin": "",
+  "pages": null,
+  "runtime_min": 970,
+  "variant": "unabridged",
+  "form": "audio",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 24,
+   "subtitle": "",
+   "variant": "unabridged"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-25",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2027,
+  "released": "",
+  "isbns": [
+   "9783003791472"
+  ],
+  "asin": "",
+  "pages": 1184,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "Beispiel Klassiker",
+  "series_pos": null,
+  "signals": {
+   "rank": 0,
+   "subtitle": "Beispiel Klassiker - Mit Übersetzung der französischen Textstellen und der autobiografischen Erzählung »Pilgerweg« von Susa Sonn",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-27",
+  "title": "A floresta da montanha",
+  "language": "pt",
+  "work_key": "",
+  "original_title": "Der Bergwald",
+  "original_language": "de",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783006527078"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "Dois mundos",
+  "series_pos": null,
+  "signals": {
+   "rank": 2,
+   "subtitle": "",
+   "full_title": "A floresta da montanha",
+   "credits": "Hanno Seer ; tradução de Hugo Carr",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-28",
+  "title": "Bergskogen 1",
+  "language": "sv",
+  "work_key": "",
+  "original_title": "Der Bergwald",
+  "original_language": "de",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783008934003"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "Modernista klassiker",
+  "series_pos": null,
+  "signals": {
+   "rank": 3,
+   "subtitle": "",
+   "full_title": "Bergskogen 1",
+   "credits": "Hanno Seer, Kara Boe"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-29",
+  "title": "Bergskogen 2",
+  "language": "sv",
+  "work_key": "",
+  "original_title": "Der Bergwald",
+  "original_language": "de",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783008395064"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "Modernista klassiker",
+  "series_pos": null,
+  "signals": {
+   "rank": 4,
+   "subtitle": "",
+   "full_title": "Bergskogen 2",
+   "credits": "Hanno Seer, Kara Boe"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-30",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783002958340"
+  ],
+  "asin": "",
+  "pages": 1267,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 5,
+   "subtitle": "",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-31",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783004608212"
+  ],
+  "asin": "",
+  "pages": 768,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 6,
+   "subtitle": "",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-32",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783004608212"
+  ],
+  "asin": "",
+  "pages": 768,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 7,
+   "subtitle": "",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-33",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "Der Bergwald",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783003292375"
+  ],
+  "asin": "",
+  "pages": 992,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 8,
+   "subtitle": "",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-34",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783008414291"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 9,
+   "subtitle": "Die Stille vor dem Sturm",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-35",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783008487264"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 10,
+   "subtitle": "Die Stille vor dem Sturm",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-36",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "Der Bergwald",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783001887979"
+  ],
+  "asin": "",
+  "pages": 1008,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 11,
+   "subtitle": "Der Jahrhundert-Roman prachtvoll illustriert in einer exklusiven Schmuckausgabe",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-37",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "Der Bergwald",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783009692445"
+  ],
+  "asin": "",
+  "pages": 987,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 12,
+   "subtitle": "Roman",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-38",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "Der Bergwald",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783009776978"
+  ],
+  "asin": "",
+  "pages": 1021,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 13,
+   "subtitle": "Roman",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-39",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783009450588"
+  ],
+  "asin": "",
+  "pages": 987,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "Beispiels besondere Klassiker",
+  "series_pos": null,
+  "signals": {
+   "rank": 14,
+   "subtitle": "Roman",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-40",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "Der Bergwald",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783004377392"
+  ],
+  "asin": "",
+  "pages": 1001,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 15,
+   "subtitle": "Roman",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer ; illustriert von Jo Hull",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-41",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783004469387"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "Hanno Seer, Werke",
+  "series_pos": 4.0,
+  "signals": {
+   "rank": 16,
+   "subtitle": "Roman (Mit Bildern von Ernst Kirch)",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-42",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "Der Bergwald",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783001134233"
+  ],
+  "asin": "",
+  "pages": 640,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 17,
+   "subtitle": "Vollständige Hanno Seer eBook Ausgabe (Beispielhaus)",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-43",
+  "title": "Der Bergwald Band 1",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783008010547"
+  ],
+  "asin": "",
+  "pages": 484,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 18,
+   "subtitle": "",
+   "full_title": "Der Bergwald Band 1",
+   "credits": "Hanno Seer"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-44",
+  "title": "Der Bergwald Band 2",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783003378024"
+  ],
+  "asin": "",
+  "pages": 532,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 19,
+   "subtitle": "",
+   "full_title": "Der Bergwald Band 2",
+   "credits": "Hanno Seer"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-45",
+  "title": "Der Bergwald Erster Band",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783008010547"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 20,
+   "subtitle": "",
+   "full_title": "Der Bergwald Erster Band",
+   "credits": "Hanno Seer"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-46",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783001425454"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 21,
+   "subtitle": "Band 1 von 2",
+   "full_title": "Der Bergwald (Großdruck)",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-47",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783006136645"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 22,
+   "subtitle": "Band 1 von 2",
+   "full_title": "Der Bergwald (Großdruck)",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-48",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783004647150"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 23,
+   "subtitle": "Band 2 von 2",
+   "full_title": "Der Bergwald (Großdruck)",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-49",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783006479391"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 24,
+   "subtitle": "Band 2 von 2",
+   "full_title": "Der Bergwald (Großdruck)",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-50",
+  "title": "Der Bergwald Zweiter Band",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783003378024"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 25,
+   "subtitle": "",
+   "full_title": "Der Bergwald Zweiter Band",
+   "credits": "Hanno Seer"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-51",
+  "title": "Der Bergwald. Band I",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783009002190"
+  ],
+  "asin": "",
+  "pages": 599,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 26,
+   "subtitle": "",
+   "full_title": "Der Bergwald. Band I",
+   "credits": "Hanno Seer"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-52",
+  "title": "Der Bergwald. Band I",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783003743624"
+  ],
+  "asin": "",
+  "pages": 364,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "Klassische Moderne",
+  "series_pos": 1.0,
+  "signals": {
+   "rank": 27,
+   "subtitle": "",
+   "full_title": "Der Bergwald. Band I",
+   "credits": "Hanno Seer"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-53",
+  "title": "Der Bergwald. Band II",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783009270636"
+  ],
+  "asin": "",
+  "pages": 396,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "Klassische Moderne",
+  "series_pos": 2.0,
+  "signals": {
+   "rank": 28,
+   "subtitle": "",
+   "full_title": "Der Bergwald. Band II",
+   "credits": "Hanno Seer"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-54",
+  "title": "Der Bergwald. Band II",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783004680867"
+  ],
+  "asin": "",
+  "pages": 666,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 29,
+   "subtitle": "",
+   "full_title": "Der Bergwald. Band II",
+   "credits": "Hanno Seer"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-55",
+  "title": "Der Bergwald. Beide Bände in einer Ausgabe",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783009686130"
+  ],
+  "asin": "",
+  "pages": 680,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 30,
+   "subtitle": "Eine Reise von drei Wochen - ein Aufenthalt fürs Leben",
+   "full_title": "Der Bergwald. Beide Bände in einer Ausgabe",
+   "credits": "Hanno Seer"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-57",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "Der Bergwald",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783005514765"
+  ],
+  "asin": "",
+  "pages": 992,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 32,
+   "subtitle": "\"Hanno Seers Jahrhundertroman\" Beispielsender",
+   "full_title": "Der Bergwald. Roman",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-60",
+  "title": "Mtis tqe",
+  "language": "und",
+  "work_key": "",
+  "original_title": "Der Bergwald",
+  "original_language": "de",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783001773845"
+  ],
+  "asin": "",
+  "pages": 904,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 35,
+   "subtitle": "= Der Bergwald <georgisch>",
+   "full_title": "Mtis tqe",
+   "language_assumed": true
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-61",
+  "title": "Klassische Moderne/Der Bergwald. Band I",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783003743624"
+  ],
+  "asin": "",
+  "pages": 364,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "Klassische Moderne",
+  "series_pos": 1.0,
+  "signals": {
+   "rank": 36,
+   "subtitle": "",
+   "full_title": "Klassische Moderne/Der Bergwald. Band I",
+   "credits": "Hanno Seer"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-62",
+  "title": "Klassische Moderne/Der Bergwald. Band II",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783009270636"
+  ],
+  "asin": "",
+  "pages": 396,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "Klassische Moderne",
+  "series_pos": 2.0,
+  "signals": {
+   "rank": 37,
+   "subtitle": "",
+   "full_title": "Klassische Moderne/Der Bergwald. Band II",
+   "credits": "Hanno Seer"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-63",
+  "title": "El bosque del monte",
+  "language": "es",
+  "work_key": "",
+  "original_title": "Der Bergwald",
+  "original_language": "de",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783003583077"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 38,
+   "subtitle": "",
+   "full_title": "El bosque del monte"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-65",
+  "title": "Hanno Seer",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783002012295"
+  ],
+  "asin": "",
+  "pages": 992,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 40,
+   "subtitle": "",
+   "full_title": "Hanno Seer: Der Bergwald",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-67",
+  "title": "Vier Bände im Schuber. Die Uhrmacher. Der Bergwald. Die Erzählungen. Lorenz Kalt",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783009709747"
+  ],
+  "asin": "",
+  "pages": 3104,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 42,
+   "subtitle": "Das Wichtigste von Hanno Seer. Über 3.000 Seiten",
+   "full_title": "Vier Bände im Schuber. Die Uhrmacher. Der Bergwald. Die Erzählungen. Lorenz Kalt",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-68",
+  "title": "Vier Bände in einem E-Book. Die Uhrmacher. Der Bergwald. Die Erzählungen. Lorenz Kalt",
+  "language": "de",
+  "work_key": "",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2026,
+  "released": "",
+  "isbns": [
+   "9783002602410"
+  ],
+  "asin": "",
+  "pages": 3104,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 43,
+   "subtitle": "Das Wichtigste von Hanno Seer. Über 3.000 Seiten",
+   "full_title": "Vier Bände in einem E-Book. Die Uhrmacher. Der Bergwald. Die Erzählungen. Lorenz Kalt",
+   "credits": "Hanno Seer",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "dnb",
+  "key": "dnb-73",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "",
+  "original_title": "Der Bergwald",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2025,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": null,
+  "runtime_min": 1106,
+  "variant": "",
+  "form": "audio",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "rank": 48,
+   "subtitle": "",
+   "full_title": "Der Bergwald",
+   "credits": "Hanno Seer ; Lesung mit Gero Wendt",
+   "gnd": "100000003X"
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 0,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-75",
+  "title": "Der Bergwald",
+  "language": "",
+  "work_key": "OL9300W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 1924,
+  "released": "",
+  "isbns": [
+   "9783002157682",
+   "9783003178044",
+   "9783004451696",
+   "9783001759535",
+   "9783002424869",
+   "9783009829209",
+   "9783003378093",
+   "9783008471102",
+   "9783008940837",
+   "9783005034706",
+   "9783002471160",
+   "9783007206941",
+   "9783004111446",
+   "9783003862561",
+   "9783008910557",
+   "9783007735205",
+   "9783008554959",
+   "9783004968491",
+   "9783009128357",
+   "9783007909606",
+   "9783001515841",
+   "9783004709940",
+   "9783001261816",
+   "9783008772995",
+   "9783006582213",
+   "9783006123140",
+   "9783005642710",
+   "9783004753554",
+   "9783006920763",
+   "9783002890473",
+   "9783002757752",
+   "9783009797829",
+   "9783008709144",
+   "9783002708389",
+   "9783009972035",
+   "9783003921701",
+   "9783002928244",
+   "9783009518394",
+   "9783003852777",
+   "9783001131720",
+   "9783007450726",
+   "9783006339541",
+   "9783002526174",
+   "9783007802112",
+   "9783006885222",
+   "9783002803824",
+   "9783007957539",
+   "9783002313750",
+   "9783008008247",
+   "9783009982218",
+   "9783003058322",
+   "9783009448943",
+   "9783003123549",
+   "9783007595557",
+   "9783005792767",
+   "9783004334333",
+   "9783006726419",
+   "9783006836057",
+   "9783003966009",
+   "9783004665147"
+  ],
+  "asin": "",
+  "pages": 729,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1924,
+   "work_title": "Der Bergwald",
+   "rank": 0,
+   "work_level": true,
+   "languages": [
+    "de",
+    "fr",
+    "ru",
+    "es",
+    "en"
+   ]
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 188,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-76",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "OL9301W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 1964,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": 763,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1964,
+   "work_title": "Der Bergwald",
+   "rank": 1,
+   "work_level": true,
+   "languages": [
+    "de"
+   ]
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 2,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-77",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "OL9301W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": null,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": 763,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1964,
+   "work_title": "Der Bergwald",
+   "rank": 1
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 2,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-78",
+  "title": "Selbstkommentare: Der Bergwald",
+  "language": "de",
+  "work_key": "OL9302W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 1993,
+  "released": "",
+  "isbns": [
+   "9783009409180"
+  ],
+  "asin": "",
+  "pages": 207,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1993,
+   "work_title": "Selbstkommentare: Der Bergwald",
+   "rank": 2,
+   "work_level": true,
+   "languages": [
+    "de"
+   ]
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 1,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-79",
+  "title": "Selbstkommentare: Der Bergwald",
+  "language": "de",
+  "work_key": "OL9302W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": null,
+  "released": "",
+  "isbns": [
+   "9783009409180",
+   "9783009409180"
+  ],
+  "asin": "",
+  "pages": 207,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1993,
+   "work_title": "Selbstkommentare: Der Bergwald",
+   "rank": 2
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 1,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-80",
+  "title": "Der Bergwald",
+  "language": "",
+  "work_key": "OL9303W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2024,
+  "released": "",
+  "isbns": [
+   "9783007957539"
+  ],
+  "asin": "",
+  "pages": 1112,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 2024,
+   "work_title": "Der Bergwald",
+   "rank": 3,
+   "work_level": true,
+   "languages": []
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 1,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-81",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "OL9304W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 1959,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": 993,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1959,
+   "work_title": "Der Bergwald",
+   "rank": 4,
+   "work_level": true,
+   "languages": [
+    "de"
+   ]
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 2,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-82",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "OL9304W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": null,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": 993,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1959,
+   "work_title": "Der Bergwald",
+   "rank": 4
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 2,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-83",
+  "title": "Der Bergwald",
+  "language": "en",
+  "work_key": "OL9305W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 1924,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": 676,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1924,
+   "work_title": "Der Bergwald",
+   "rank": 5,
+   "work_level": true,
+   "languages": [
+    "en"
+   ]
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 1,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-84",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "OL9306W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 1927,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": 938,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1927,
+   "work_title": "Der Bergwald",
+   "rank": 6,
+   "work_level": true,
+   "languages": [
+    "de"
+   ]
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 2,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-85",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "OL9306W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": null,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": 938,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1927,
+   "work_title": "Der Bergwald",
+   "rank": 6
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 2,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-86",
+  "title": "Het Bergwoud",
+  "language": "nl",
+  "work_key": "OL9307W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 1980,
+  "released": "",
+  "isbns": [
+   "9783002064706"
+  ],
+  "asin": "",
+  "pages": 972,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1980,
+   "work_title": "Het Bergwoud",
+   "rank": 7,
+   "work_level": true,
+   "languages": [
+    "nl"
+   ]
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 1,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-87",
+  "title": "Der Bergwald, Roman",
+  "language": "de",
+  "work_key": "OL9308W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 1924,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1924,
+   "work_title": "Der Bergwald, Roman",
+   "rank": 8,
+   "work_level": true,
+   "languages": [
+    "de"
+   ]
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 1,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-88",
+  "title": "Der Bergwald, Roman",
+  "language": "de",
+  "work_key": "OL9308W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": null,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1924,
+   "work_title": "Der Bergwald, Roman",
+   "rank": 8
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 1,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-89",
+  "title": "Der Bergwald Roman",
+  "language": "",
+  "work_key": "OL9309W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 1954,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": 834,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1954,
+   "work_title": "Der Bergwald Roman",
+   "rank": 9,
+   "work_level": true,
+   "languages": [
+    "de",
+    "en"
+   ]
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 2,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-91",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "OL9310W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2002,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": 990,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 2002,
+   "work_title": "Der Bergwald",
+   "rank": 11,
+   "work_level": true,
+   "languages": [
+    "de"
+   ]
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 1,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-92",
+  "title": "Der Bergwald",
+  "language": "de",
+  "work_key": "OL9310W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": null,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": 990,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 2002,
+   "work_title": "Der Bergwald",
+   "rank": 11
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 1,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-98",
+  "title": "Der Bergwald. 8 Cassetten",
+  "language": "de",
+  "work_key": "OL9311W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": 2000,
+  "released": "",
+  "isbns": [
+   "9783002975811"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 2000,
+   "work_title": "Der Bergwald. 8 Cassetten",
+   "rank": 17,
+   "work_level": true,
+   "languages": [
+    "de"
+   ]
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 1,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-99",
+  "title": "Der Bergwald. 8 Cassetten.",
+  "language": "de",
+  "work_key": "OL9311W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": null,
+  "released": "",
+  "isbns": [
+   "9783002975811",
+   "9783002975811"
+  ],
+  "asin": "",
+  "pages": null,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 2000,
+   "work_title": "Der Bergwald. 8 Cassetten",
+   "rank": 17
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 1,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-104",
+  "title": "The mountain wood",
+  "language": "en",
+  "work_key": "OL9300W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": null,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": 729,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1924,
+   "work_title": "Der Bergwald",
+   "rank": 0
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 188,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-105",
+  "title": "Der Bergwald",
+  "language": "en",
+  "work_key": "OL9305W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": null,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": 676,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1924,
+   "work_title": "Der Bergwald",
+   "rank": 5
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 1,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ },
+ {
+  "source": "openlibrary",
+  "key": "openlibrary-106",
+  "title": "Der Bergwald Roman",
+  "language": "en",
+  "work_key": "OL9309W",
+  "original_title": "",
+  "original_language": "",
+  "authors": [
+   "Hanno Seer"
+  ],
+  "via": "",
+  "year": null,
+  "released": "",
+  "isbns": [],
+  "asin": "",
+  "pages": 834,
+  "runtime_min": null,
+  "variant": "",
+  "form": "text",
+  "series": "",
+  "series_pos": null,
+  "signals": {
+   "first_year": 1954,
+   "work_title": "Der Bergwald Roman",
+   "rank": 9
+  },
+  "authors_count": 1,
+  "compilation": false,
+  "weight": 2,
+  "cover_url": "",
+  "person": "",
+  "who": ""
+ }
+]

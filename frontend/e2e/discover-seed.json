@@ -1,0 +1,335 @@
+{
+ "books": [
+  {
+   "id": "b1",
+   "title": "Der Leuchtturmwaerter",
+   "author": "Mara Feldkamp",
+   "genre": "roman",
+   "color": "#5e2027",
+   "language": "de",
+   "released": "2011-04-01",
+   "series": null,
+   "seriesNo": null,
+   "pages": 300,
+   "blurb": "Eine erfundene Geschichte.",
+   "forms": [
+    {
+     "kind": "ebook",
+     "language": "de",
+     "pages": 300
+    },
+    {
+     "kind": "audio",
+     "variant": "ungekürzt",
+     "language": "de",
+     "minutes": 540,
+     "narrator": "Ben Hollister"
+    }
+   ]
+  },
+  {
+   "id": "b2",
+   "title": "Die Salzwiese",
+   "author": "Ilse Marwitz",
+   "genre": "krimi",
+   "color": "#3d4752",
+   "language": "de",
+   "released": "2026-05-02",
+   "series": null,
+   "seriesNo": null,
+   "pages": 300,
+   "blurb": "Eine erfundene Geschichte.",
+   "forms": [
+    {
+     "kind": "ebook",
+     "language": "de",
+     "pages": 300
+    }
+   ]
+  },
+  {
+   "id": "b3",
+   "title": "Orbit Null",
+   "author": "Theo Valcourt",
+   "genre": "scifi",
+   "color": "#215258",
+   "language": "de",
+   "released": "2025-11-20",
+   "series": null,
+   "seriesNo": null,
+   "pages": 300,
+   "blurb": "Eine erfundene Geschichte.",
+   "forms": [
+    {
+     "kind": "ebook",
+     "language": "de",
+     "pages": 300
+    },
+    {
+     "kind": "audio",
+     "variant": "gekürzt",
+     "language": "de",
+     "minutes": 240,
+     "narrator": "Ben Hollister"
+    }
+   ]
+  },
+  {
+   "id": "b4",
+   "title": "The Salt Orchard",
+   "author": "Quentin Hartwig",
+   "genre": "fantasy",
+   "color": "#4f2b47",
+   "language": "en",
+   "released": "2022-01-20",
+   "series": null,
+   "seriesNo": null,
+   "pages": 300,
+   "blurb": "Eine erfundene Geschichte.",
+   "forms": [
+    {
+     "kind": "ebook",
+     "language": "en",
+     "pages": 300
+    },
+    {
+     "kind": "audio",
+     "variant": "ungekürzt",
+     "language": "de",
+     "minutes": 540,
+     "narrator": "Ben Hollister"
+    }
+   ]
+  },
+  {
+   "id": "b5",
+   "title": "Nebel ueber dem Deich",
+   "author": "Jonas Lindholm",
+   "genre": "krimi",
+   "color": "#1f304b",
+   "language": "de",
+   "released": "2015-09-10",
+   "series": "Die Deich-Krimis",
+   "seriesNo": 1,
+   "pages": 300,
+   "blurb": "Eine erfundene Geschichte.",
+   "forms": [
+    {
+     "kind": "ebook",
+     "language": "de",
+     "pages": 300
+    }
+   ]
+  },
+  {
+   "id": "b6",
+   "title": "Kaltes Licht",
+   "author": "Vera Brenner",
+   "genre": "krimi",
+   "color": "#7d2f2b",
+   "language": "de",
+   "released": "2026-10-09",
+   "series": null,
+   "seriesNo": null,
+   "pages": 300,
+   "blurb": "Eine erfundene Geschichte.",
+   "forms": [
+    {
+     "kind": "audio",
+     "variant": "ungekürzt",
+     "language": "de",
+     "minutes": 540,
+     "narrator": "Ben Hollister"
+    }
+   ]
+  },
+  {
+   "id": "b7",
+   "title": "Das Echo am Ende der Strasse",
+   "author": "Edda Hellwig",
+   "genre": "roman",
+   "color": "#a3762c",
+   "language": "de",
+   "released": "2026-12-04",
+   "series": null,
+   "seriesNo": null,
+   "pages": 300,
+   "blurb": "Eine erfundene Geschichte.",
+   "forms": [
+    {
+     "kind": "audio",
+     "variant": "ungekürzt",
+     "language": "de",
+     "minutes": 540,
+     "narrator": "Ben Hollister"
+    }
+   ]
+  },
+  {
+   "id": "b8",
+   "title": "Kalter Strom",
+   "author": "Jonas Lindholm",
+   "genre": "krimi",
+   "color": "#1d2a3a",
+   "language": "de",
+   "released": "2019-03-01",
+   "series": "Die Deich-Krimis",
+   "seriesNo": 3,
+   "pages": 300,
+   "blurb": "Eine erfundene Geschichte.",
+   "forms": [
+    {
+     "kind": "ebook",
+     "language": "de",
+     "pages": 300
+    }
+   ]
+  },
+  {
+   "id": "b9",
+   "title": "Der Fährmann schweigt",
+   "author": "Jonas Lindholm",
+   "genre": "krimi",
+   "color": "#2f4b3b",
+   "language": "de",
+   "released": "2027-02-01",
+   "series": "Die Deich-Krimis",
+   "seriesNo": 4,
+   "pages": 300,
+   "blurb": "Eine erfundene Geschichte.",
+   "forms": [
+    {
+     "kind": "ebook",
+     "language": "de",
+     "pages": 300
+    }
+   ]
+  },
+  {
+   "id": "b10",
+   "title": "Briefe aus Triest",
+   "author": "Mara Feldkamp",
+   "genre": "klassiker",
+   "color": "#7d2f2b",
+   "language": "de",
+   "released": "2019-03-01",
+   "series": null,
+   "seriesNo": null,
+   "pages": 300,
+   "blurb": "Eine erfundene Geschichte.",
+   "forms": [
+    {
+     "kind": "ebook",
+     "language": "de",
+     "pages": 300
+    }
+   ]
+  },
+  {
+   "id": "b11",
+   "title": "Schwarzer Sand",
+   "author": "Jonas Lindholm",
+   "genre": "krimi",
+   "color": "#1d2a3a",
+   "language": "de",
+   "released": "2017-06-01",
+   "series": "Die Deich-Krimis",
+   "seriesNo": 2,
+   "pages": 300,
+   "blurb": "Eine erfundene Geschichte.",
+   "forms": [
+    {
+     "kind": "ebook",
+     "language": "de",
+     "pages": 300
+    }
+   ]
+  }
+ ],
+ "lists": {
+  "best": [
+   {
+    "book": "b1",
+    "rank": 1
+   },
+   {
+    "book": "b2",
+    "rank": 2
+   },
+   {
+    "book": "b3",
+    "rank": 3
+   },
+   {
+    "book": "b4",
+    "rank": 4
+   },
+   {
+    "book": "b5",
+    "rank": 5
+   },
+   {
+    "book": "b11",
+    "rank": 6
+   }
+  ],
+  "new": [
+   {
+    "book": "b6",
+    "rank": 1
+   },
+   {
+    "book": "b2",
+    "rank": 2
+   }
+  ],
+  "soon": [
+   {
+    "book": "b7",
+    "rank": 1
+   }
+  ],
+  "trending": [
+   {
+    "book": "b3",
+    "rank": 1
+   },
+   {
+    "book": "b4",
+    "rank": 2
+   }
+  ]
+ },
+ "series": [
+  {
+   "name": "Die Deich-Krimis",
+   "volumes": [
+    {
+     "book": "b5",
+     "pos": 1
+    },
+    {
+     "book": "b11",
+     "pos": 2
+    },
+    {
+     "book": "b8",
+     "pos": 3
+    },
+    {
+     "book": "b9",
+     "pos": 4
+    }
+   ]
+  }
+ ],
+ "authors": [
+  {
+   "name": "Mara Feldkamp",
+   "books": [
+    "b10",
+    "b1"
+   ]
+  }
+ ]
+}

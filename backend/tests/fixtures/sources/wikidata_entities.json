@@ -1,0 +1,28 @@
+{"entities": {
+  "Q9000001": {"type": "item", "id": "Q9000001",
+    "labels": {"en": {"language": "en", "value": "Ada Feldkamp"}, "de": {"language": "de", "value": "Ada Feldkamp"}},
+    "descriptions": {"en": {"language": "en", "value": "Invented novelist (born 1971)"}, "de": {"language": "de", "value": "erfundene Schriftstellerin"}},
+    "aliases": {"en": [{"language": "en", "value": "A. Feldkamp"}]},
+    "claims": {
+      "P31": [{"mainsnak": {"snaktype": "value", "property": "P31", "datavalue": {"value": {"entity-type": "item", "numeric-id": 5, "id": "Q5"}, "type": "wikibase-entityid"}, "datatype": "wikibase-item"}, "type": "statement", "rank": "normal"}],
+      "P18": [{"mainsnak": {"snaktype": "value", "property": "P18", "datavalue": {"value": "Ada Feldkamp reading 2019.jpg", "type": "string"}, "datatype": "commonsMedia"}, "type": "statement", "rank": "normal"}],
+      "P569": [{"mainsnak": {"snaktype": "value", "property": "P569", "datavalue": {"value": {"time": "+1971-04-02T00:00:00Z", "timezone": 0, "before": 0, "after": 0, "precision": 11, "calendarmodel": "http://www.wikidata.org/entity/Q1985727"}, "type": "time"}, "datatype": "time"}, "type": "statement", "rank": "normal"}]
+    }},
+  "Q9000002": {"type": "item", "id": "Q9000002",
+    "labels": {"en": {"language": "en", "value": "Ada Feldkamp"}},
+    "descriptions": {"en": {"language": "en", "value": "football player (born 1990)"}},
+    "aliases": {},
+    "claims": {
+      "P31": [{"mainsnak": {"snaktype": "value", "property": "P31", "datavalue": {"value": {"entity-type": "item", "numeric-id": 5, "id": "Q5"}, "type": "wikibase-entityid"}, "datatype": "wikibase-item"}, "type": "statement", "rank": "normal"}],
+      "P569": [{"mainsnak": {"snaktype": "value", "property": "P569", "datavalue": {"value": {"time": "+1990-01-01T00:00:00Z", "timezone": 0, "before": 0, "after": 0, "precision": 9, "calendarmodel": "http://www.wikidata.org/entity/Q1985727"}, "type": "time"}, "datatype": "time"}, "type": "statement", "rank": "normal"}]
+    }},
+  "Q9100001": {"type": "item", "id": "Q9100001",
+    "labels": {"en": {"language": "en", "value": "Alpha"}, "de": {"language": "de", "value": "Alpha"}},
+    "aliases": {}},
+  "Q9100002": {"type": "item", "id": "Q9100002",
+    "labels": {"en": {"language": "en", "value": "The Quiet Orchard"}, "de": {"language": "de", "value": "Der stille Obstgarten"}},
+    "aliases": {"de": [{"language": "de", "value": "Obstgarten"}]}},
+  "Q9100003": {"type": "item", "id": "Q9100003",
+    "labels": {"en": {"language": "en", "value": "Beta"}},
+    "aliases": {}}
+}, "success": 1}

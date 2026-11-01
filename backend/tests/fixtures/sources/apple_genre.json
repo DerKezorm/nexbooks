@@ -1,0 +1,595 @@
+{
+ "feed": {
+  "author": {
+   "name": {
+    "label": "iTunes Store"
+   }
+  },
+  "entry": [
+   {
+    "im:name": {
+     "label": "Nebelwacht"
+    },
+    "subtitle": {
+     "label": ""
+    },
+    "im:image": [
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000001/0x55bb.png",
+      "attributes": {
+       "height": "55"
+      }
+     },
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000001/0x60bb.png",
+      "attributes": {
+       "height": "60"
+      }
+     },
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000001/0x170bb.png",
+      "attributes": {
+       "height": "170"
+      }
+     }
+    ],
+    "summary": {
+     "label": "Ein Kommissar am Deich, ein Dorf im Nebel und eine Tote, die niemand kennen will."
+    },
+    "im:price": {
+     "label": "9,99 EUR",
+     "attributes": {
+      "amount": "9.99",
+      "currency": "EUR"
+     }
+    },
+    "im:contentType": {
+     "attributes": {
+      "term": "Book",
+      "label": "Book"
+     }
+    },
+    "title": {
+     "label": "Nebelwacht - Ilse Brandt"
+    },
+    "link": {
+     "attributes": {
+      "rel": "alternate",
+      "type": "text/html",
+      "href": "https://books.apple.com/book/id1800000001"
+     }
+    },
+    "id": {
+     "label": "https://books.apple.com/book/id1800000001",
+     "attributes": {
+      "im:id": "1800000001"
+     }
+    },
+    "im:artist": {
+     "label": "Ilse Brandt",
+     "attributes": {
+      "href": "https://books.apple.com/author/example"
+     }
+    },
+    "category": {
+     "attributes": {
+      "im:id": "9032",
+      "term": "Mysteries & Thrillers",
+      "scheme": "https://books.apple.com/genre",
+      "label": "Polizeiromane"
+     }
+    },
+    "im:releaseDate": {
+     "label": "2026-09-20T00:00:00-07:00",
+     "attributes": {
+      "label": "2026-09-20"
+     }
+    }
+   },
+   {
+    "im:name": {
+     "label": "Der Leuchtturmwaerter"
+    },
+    "subtitle": {
+     "label": ""
+    },
+    "im:image": [
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000002/0x55bb.png",
+      "attributes": {
+       "height": "55"
+      }
+     },
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000002/0x60bb.png",
+      "attributes": {
+       "height": "60"
+      }
+     },
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000002/0x170bb.png",
+      "attributes": {
+       "height": "170"
+      }
+     }
+    ],
+    "summary": {
+     "label": "Ein Leuchtturm, ein Winter und ein Mann, der nicht mehr hinaufsteigt."
+    },
+    "im:price": {
+     "label": "9,99 EUR",
+     "attributes": {
+      "amount": "9.99",
+      "currency": "EUR"
+     }
+    },
+    "im:contentType": {
+     "attributes": {
+      "term": "Book",
+      "label": "Book"
+     }
+    },
+    "title": {
+     "label": "Der Leuchtturmwaerter - Mara Feldkamp"
+    },
+    "link": {
+     "attributes": {
+      "rel": "alternate",
+      "type": "text/html",
+      "href": "https://books.apple.com/book/id1800000002"
+     }
+    },
+    "id": {
+     "label": "https://books.apple.com/book/id1800000002",
+     "attributes": {
+      "im:id": "1800000002"
+     }
+    },
+    "im:artist": {
+     "label": "Mara Feldkamp",
+     "attributes": {
+      "href": "https://books.apple.com/author/example"
+     }
+    },
+    "category": {
+     "attributes": {
+      "im:id": "9032",
+      "term": "Mysteries & Thrillers",
+      "scheme": "https://books.apple.com/genre",
+      "label": "Krimis und Thriller"
+     }
+    },
+    "im:releaseDate": {
+     "label": "2024-03-14T00:00:00-07:00",
+     "attributes": {
+      "label": "2024-03-14"
+     }
+    }
+   },
+   {
+    "im:name": {
+     "label": "Die Salzwiese"
+    },
+    "subtitle": {
+     "label": ""
+    },
+    "im:image": [
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000003/0x55bb.png",
+      "attributes": {
+       "height": "55"
+      }
+     },
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000003/0x60bb.png",
+      "attributes": {
+       "height": "60"
+      }
+     },
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000003/0x170bb.png",
+      "attributes": {
+       "height": "170"
+      }
+     }
+    ],
+    "summary": {
+     "label": "Salz, Wind und ein Fund im Watt."
+    },
+    "im:price": {
+     "label": "9,99 EUR",
+     "attributes": {
+      "amount": "9.99",
+      "currency": "EUR"
+     }
+    },
+    "im:contentType": {
+     "attributes": {
+      "term": "Book",
+      "label": "Book"
+     }
+    },
+    "title": {
+     "label": "Die Salzwiese - Ilse Marwitz"
+    },
+    "link": {
+     "attributes": {
+      "rel": "alternate",
+      "type": "text/html",
+      "href": "https://books.apple.com/book/id1800000003"
+     }
+    },
+    "id": {
+     "label": "https://books.apple.com/book/id1800000003",
+     "attributes": {
+      "im:id": "1800000003"
+     }
+    },
+    "im:artist": {
+     "label": "Ilse Marwitz",
+     "attributes": {
+      "href": "https://books.apple.com/author/example"
+     }
+    },
+    "category": {
+     "attributes": {
+      "im:id": "9032",
+      "term": "Mysteries & Thrillers",
+      "scheme": "https://books.apple.com/genre",
+      "label": "Krimis und Thriller"
+     }
+    },
+    "im:releaseDate": {
+     "label": "2026-05-02T00:00:00-07:00",
+     "attributes": {
+      "label": "2026-05-02"
+     }
+    }
+   },
+   {
+    "im:name": {
+     "label": "Orbit Null"
+    },
+    "subtitle": {
+     "label": ""
+    },
+    "im:image": [
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000004/0x55bb.png",
+      "attributes": {
+       "height": "55"
+      }
+     },
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000004/0x60bb.png",
+      "attributes": {
+       "height": "60"
+      }
+     },
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000004/0x170bb.png",
+      "attributes": {
+       "height": "170"
+      }
+     }
+    ],
+    "summary": {
+     "label": "Ein Frachter, eine Ladung, die es nicht geben darf."
+    },
+    "im:price": {
+     "label": "9,99 EUR",
+     "attributes": {
+      "amount": "9.99",
+      "currency": "EUR"
+     }
+    },
+    "im:contentType": {
+     "attributes": {
+      "term": "Book",
+      "label": "Book"
+     }
+    },
+    "title": {
+     "label": "Orbit Null - Theo Valcourt"
+    },
+    "link": {
+     "attributes": {
+      "rel": "alternate",
+      "type": "text/html",
+      "href": "https://books.apple.com/book/id1800000004"
+     }
+    },
+    "id": {
+     "label": "https://books.apple.com/book/id1800000004",
+     "attributes": {
+      "im:id": "1800000004"
+     }
+    },
+    "im:artist": {
+     "label": "Theo Valcourt",
+     "attributes": {
+      "href": "https://books.apple.com/author/example"
+     }
+    },
+    "category": {
+     "attributes": {
+      "im:id": "9032",
+      "term": "Mysteries & Thrillers",
+      "scheme": "https://books.apple.com/genre",
+      "label": "Krimis und Thriller"
+     }
+    },
+    "im:releaseDate": {
+     "label": "2025-11-20T00:00:00-07:00",
+     "attributes": {
+      "label": "2025-11-20"
+     }
+    }
+   },
+   {
+    "im:name": {
+     "label": "Kommende Dinge"
+    },
+    "subtitle": {
+     "label": ""
+    },
+    "im:image": [
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000005/0x55bb.png",
+      "attributes": {
+       "height": "55"
+      }
+     },
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000005/0x60bb.png",
+      "attributes": {
+       "height": "60"
+      }
+     },
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000005/0x170bb.png",
+      "attributes": {
+       "height": "170"
+      }
+     }
+    ],
+    "summary": {
+     "label": "Ein Thriller, der erst im Winter erscheint."
+    },
+    "im:price": {
+     "label": "9,99 EUR",
+     "attributes": {
+      "amount": "9.99",
+      "currency": "EUR"
+     }
+    },
+    "im:contentType": {
+     "attributes": {
+      "term": "Book",
+      "label": "Book"
+     }
+    },
+    "title": {
+     "label": "Kommende Dinge - Jan Aster"
+    },
+    "link": {
+     "attributes": {
+      "rel": "alternate",
+      "type": "text/html",
+      "href": "https://books.apple.com/book/id1800000005"
+     }
+    },
+    "id": {
+     "label": "https://books.apple.com/book/id1800000005",
+     "attributes": {
+      "im:id": "1800000005"
+     }
+    },
+    "im:artist": {
+     "label": "Jan Aster",
+     "attributes": {
+      "href": "https://books.apple.com/author/example"
+     }
+    },
+    "category": {
+     "attributes": {
+      "im:id": "9032",
+      "term": "Mysteries & Thrillers",
+      "scheme": "https://books.apple.com/genre",
+      "label": "Krimis und Thriller"
+     }
+    },
+    "im:releaseDate": {
+     "label": "2026-12-01T00:00:00-07:00",
+     "attributes": {
+      "label": "2026-12-01"
+     }
+    }
+   },
+   {
+    "im:name": {
+     "label": "Das Raetsel von Kalmar"
+    },
+    "subtitle": {
+     "label": ""
+    },
+    "im:image": [
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000006/0x55bb.png",
+      "attributes": {
+       "height": "55"
+      }
+     },
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000006/0x60bb.png",
+      "attributes": {
+       "height": "60"
+      }
+     },
+     {
+      "label": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/1800000006/0x170bb.png",
+      "attributes": {
+       "height": "170"
+      }
+     }
+    ],
+    "summary": {
+     "label": "Ein Fall mit einem Datum, das Apple nicht kennt."
+    },
+    "im:price": {
+     "label": "9,99 EUR",
+     "attributes": {
+      "amount": "9.99",
+      "currency": "EUR"
+     }
+    },
+    "im:contentType": {
+     "attributes": {
+      "term": "Book",
+      "label": "Book"
+     }
+    },
+    "title": {
+     "label": "Das Raetsel von Kalmar - Uta Lind"
+    },
+    "link": {
+     "attributes": {
+      "rel": "alternate",
+      "type": "text/html",
+      "href": "https://books.apple.com/book/id1800000006"
+     }
+    },
+    "id": {
+     "label": "https://books.apple.com/book/id1800000006",
+     "attributes": {
+      "im:id": "1800000006"
+     }
+    },
+    "im:artist": {
+     "label": "Uta Lind",
+     "attributes": {
+      "href": "https://books.apple.com/author/example"
+     }
+    },
+    "category": {
+     "attributes": {
+      "im:id": "9032",
+      "term": "Mysteries & Thrillers",
+      "scheme": "https://books.apple.com/genre",
+      "label": "Krimis und Thriller"
+     }
+    },
+    "im:releaseDate": {
+     "label": "1608-01-01T00:00:00-07:00",
+     "attributes": {
+      "label": "1608-01-01"
+     }
+    }
+   },
+   {
+    "im:name": {
+     "label": "Fremdes Bild"
+    },
+    "subtitle": {
+     "label": ""
+    },
+    "im:image": [
+     {
+      "label": "https://evil.example.com/pic/1800000007/0x55bb.png",
+      "attributes": {
+       "height": "55"
+      }
+     },
+     {
+      "label": "https://evil.example.com/pic/1800000007/0x60bb.png",
+      "attributes": {
+       "height": "60"
+      }
+     },
+     {
+      "label": "https://evil.example.com/pic/1800000007/0x170bb.png",
+      "attributes": {
+       "height": "170"
+      }
+     }
+    ],
+    "summary": {
+     "label": "Ein Buch, dessen Bild von einem fremden Host kommt."
+    },
+    "im:price": {
+     "label": "9,99 EUR",
+     "attributes": {
+      "amount": "9.99",
+      "currency": "EUR"
+     }
+    },
+    "im:contentType": {
+     "attributes": {
+      "term": "Book",
+      "label": "Book"
+     }
+    },
+    "title": {
+     "label": "Fremdes Bild - Karl Boden"
+    },
+    "link": {
+     "attributes": {
+      "rel": "alternate",
+      "type": "text/html",
+      "href": "https://books.apple.com/book/id1800000007"
+     }
+    },
+    "id": {
+     "label": "https://books.apple.com/book/id1800000007",
+     "attributes": {
+      "im:id": "1800000007"
+     }
+    },
+    "im:artist": {
+     "label": "Karl Boden",
+     "attributes": {
+      "href": "https://books.apple.com/author/example"
+     }
+    },
+    "category": {
+     "attributes": {
+      "im:id": "9032",
+      "term": "Mysteries & Thrillers",
+      "scheme": "https://books.apple.com/genre",
+      "label": "Krimis und Thriller"
+     }
+    },
+    "im:releaseDate": {
+     "label": "2025-02-02T00:00:00-07:00",
+     "attributes": {
+      "label": "2025-02-02"
+     }
+    }
+   },
+   {
+    "im:name": {
+     "label": "Ohne Nummer"
+    },
+    "im:artist": {
+     "label": "Niemand"
+    }
+   },
+   "kein Buch"
+  ],
+  "updated": {
+   "label": "2026-10-12T21:00:00-07:00"
+  },
+  "rights": {
+   "label": "Copyright 2008 Apple Inc."
+  },
+  "title": {
+   "label": "iTunes Store: Top-Buecher (gekauft) in Mysteries & Thrillers"
+  },
+  "icon": {
+   "label": "http://itunes.apple.com/favicon.ico"
+  },
+  "id": {
+   "label": "https://itunes.apple.com/de/rss/toppaidebooks/genre=9032/limit=100/json"
+  }
+ }
+}

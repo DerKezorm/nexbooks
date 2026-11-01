@@ -1,0 +1,415 @@
+{
+ "numFound": 11,
+ "start": 0,
+ "docs": [
+  {
+   "author_key": [
+    "OL900001A"
+   ],
+   "author_name": [
+    "Edmund Halloran"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 1974,
+   "key": "/works/OL90000W",
+   "language": [
+    "eng",
+    "ger"
+   ],
+   "title": "The Salt Daughters",
+   "subject": [
+    "Fiction",
+    "Horror"
+   ],
+   "number_of_pages_median": 238,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL90000M",
+      "title": "Die Salztöchter",
+      "language": [
+       "ger"
+      ],
+      "isbn": [
+       "9783000000101"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL900001A"
+   ],
+   "author_name": [
+    "Edmund Halloran"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 1983,
+   "key": "/works/OL90001W",
+   "language": [
+    "eng",
+    "ger"
+   ],
+   "title": "Soot",
+   "subject": [
+    "Fiction",
+    "Horror"
+   ],
+   "number_of_pages_median": 512,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL90001M",
+      "title": "Ruß",
+      "language": [
+       "ger"
+      ],
+      "isbn": [
+       "9783000000118"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL900001A"
+   ],
+   "author_name": [
+    "Edmund Halloran"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 2024,
+   "key": "/works/OL90002W",
+   "language": [
+    "eng",
+    "ger"
+   ],
+   "title": "Soot and Roses",
+   "subject": [
+    "Short stories",
+    "Fiction"
+   ],
+   "number_of_pages_median": 384,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL90002M",
+      "title": "Ruß und Rosen",
+      "language": [
+       "ger"
+      ],
+      "isbn": [
+       "9783000000125"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL900001A"
+   ],
+   "author_name": [
+    "Edmund Halloran"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 1986,
+   "key": "/works/OL90003W",
+   "language": [
+    "eng",
+    "ger"
+   ],
+   "title": "The Ninth Shore",
+   "subject": [
+    "Fiction",
+    "Horror"
+   ],
+   "number_of_pages_median": 1104,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL90003M",
+      "title": "Das neunte Ufer",
+      "language": [
+       "ger"
+      ],
+      "isbn": [
+       "9783000000132"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL900001A"
+   ],
+   "author_name": [
+    "Edmund Halloran"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 1982,
+   "key": "/works/OL90004W",
+   "language": [
+    "eng",
+    "ger"
+   ],
+   "title": "The Wrenfield Chronicles: The Ash Road",
+   "subject": [
+    "Fiction",
+    "Horror"
+   ],
+   "number_of_pages_median": 260,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL90004M",
+      "title": "Die Aschenstraße",
+      "language": [
+       "ger"
+      ],
+      "isbn": [
+       "9783000000149"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL900001A"
+   ],
+   "author_name": [
+    "Edmund Halloran"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 1987,
+   "key": "/works/OL90005W",
+   "language": [
+    "eng",
+    "ger"
+   ],
+   "title": "The Wrenfield Chronicles: Three Doors",
+   "subject": [
+    "Fiction",
+    "Horror"
+   ],
+   "number_of_pages_median": 432,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL90005M",
+      "title": "Drei Türen",
+      "language": [
+       "ger"
+      ],
+      "isbn": [
+       "9783000000156"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL900001A"
+   ],
+   "author_name": [
+    "Edmund Halloran"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 1991,
+   "key": "/works/OL90006W",
+   "language": [
+    "eng",
+    "ger"
+   ],
+   "title": "The Wrenfield Chronicles: The Salt Plains",
+   "subject": [
+    "Fiction",
+    "Horror"
+   ],
+   "number_of_pages_median": 512,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL90006M",
+      "title": "Die Salzebene",
+      "language": [
+       "ger"
+      ],
+      "isbn": [
+       "9783000000163"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL900001A"
+   ],
+   "author_name": [
+    "Edmund Halloran"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 2017,
+   "key": "/works/OL90007W",
+   "language": [
+    "eng",
+    "ger"
+   ],
+   "title": "The Wrenfield Chronicles: Complete Edition",
+   "subject": [
+    "Fiction",
+    "Horror"
+   ],
+   "number_of_pages_median": 1210,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL90007M",
+      "title": "Die Wrenfield-Chroniken. Gesamtausgabe",
+      "language": [
+       "ger"
+      ],
+      "isbn": []
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL900001A"
+   ],
+   "author_name": [
+    "Edmund Halloran"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 1981,
+   "key": "/works/OL90008W",
+   "language": [
+    "eng",
+    "ger"
+   ],
+   "title": "On Being Afraid",
+   "subject": [
+    "Fear",
+    "Psychology"
+   ],
+   "number_of_pages_median": 412,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL90008M",
+      "title": "Vom Fürchten",
+      "language": [
+       "ger"
+      ],
+      "isbn": []
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL900001A"
+   ],
+   "author_name": [
+    "Edmund Halloran"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 2011,
+   "key": "/works/OL90009W",
+   "language": [
+    "eng",
+    "ger"
+   ],
+   "title": "Pim and the Lighthouse",
+   "subject": [
+    "Juvenile fiction",
+    "Lighthouses"
+   ],
+   "number_of_pages_median": 48,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL90009M",
+      "title": "Pim und der Leuchtturm",
+      "language": [
+       "ger"
+      ],
+      "isbn": []
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL900001A"
+   ],
+   "author_name": [
+    "Edmund Halloran"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 2010,
+   "key": "/works/OL90011W",
+   "language": [
+    "eng",
+    "ger"
+   ],
+   "title": "Wrenfield: The Graphic Novel",
+   "subject": [
+    "Comics & graphic novels"
+   ],
+   "number_of_pages_median": 184,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL90011M",
+      "title": "Wrenfield. Die Graphic Novel",
+      "language": [
+       "ger"
+      ],
+      "isbn": []
+     }
+    ]
+   }
+  }
+ ]
+}

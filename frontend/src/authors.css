@@ -1,0 +1,924 @@
+/* The page of an author and the authors in the search. Sizes, colours and distances are set here; the classes are named inside `.au-page` (the page) and `.res-au` (the
+   search). The buttons, marks and fields come from `.acq` (acquire.css), the switch from player.css. */
+
+@layer components {
+  .au-page {
+    overflow-x: clip;
+    --tint: color-mix(in oklab, var(--accent) 80%, var(--text));
+    --soft: var(--surface);
+  }
+  .au-page > .d-back {
+    margin-bottom: 10px;
+  }
+
+  /* Photos and initials */
+  .av {
+    flex: none;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--surface);
+    box-shadow: 0 0 0 1px var(--line);
+  }
+  .av img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .av.ini {
+    display: inline-grid;
+    place-items: center;
+    background: var(--ac);
+    color: #f6efe2;
+    font: 600 13px/1 var(--serif);
+    letter-spacing: 0.02em;
+  }
+  .av.xs {
+    width: 24px;
+    height: 24px;
+  }
+  .av.xs.ini {
+    font-size: 10px;
+  }
+  .av.s {
+    width: 30px;
+    height: 30px;
+  }
+  .av.m {
+    width: 60px;
+    height: 60px;
+  }
+  .av.m.ini {
+    font-size: 21px;
+  }
+  .av.xl {
+    width: 172px;
+    height: 172px;
+    box-shadow: 0 0 0 5px var(--surface), 0 0 0 6px var(--line), 0 24px 50px -18px rgba(0, 0, 0, 0.45);
+  }
+  .av.xl.ini {
+    font-size: 58px;
+  }
+
+  /* The search: the group of authors */
+  .res.res-au {
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+  }
+  .res-go {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .res-go svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  /* The page of a book: the way to the author */
+  .d-by .pen {
+    font: 400 15px var(--sans);
+    color: var(--muted);
+  }
+  .acard {
+    display: grid;
+    grid-template-columns: 60px minmax(0, 1fr) auto;
+    gap: 16px;
+    align-items: center;
+    padding: 14px 18px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid color-mix(in oklab, var(--tint, var(--accent)) 20%, transparent);
+    background: var(--soft, var(--surface));
+    max-width: 760px;
+  }
+  .acard:hover {
+    border-color: color-mix(in oklab, var(--tint, var(--accent)) 45%, transparent);
+  }
+  .ac-t b {
+    display: block;
+    font: 600 19px var(--serif);
+  }
+  .ac-t small {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .ac-go {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--tint, var(--accent));
+    white-space: nowrap;
+  }
+  .ac-go svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* The head of the page */
+  .au-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 172px minmax(0, 1fr) 270px;
+    gap: 22px clamp(24px, 4vw, 52px);
+    align-items: start;
+    padding: 26px 0 8px;
+    isolation: isolate;
+  }
+  .au-glow {
+    position: absolute;
+    inset: -40px -10% 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(40% 60% at 12% 30%, color-mix(in oklab, var(--bc) 30%, transparent), transparent 70%),
+      radial-gradient(35% 55% at 88% 20%, color-mix(in oklab, var(--bc) 22%, transparent), transparent 70%);
+    filter: blur(24px);
+    opacity: 0.7;
+  }
+  .au-photo {
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+  }
+  .au-credit {
+    color: var(--dim);
+    font-size: 11px;
+    text-align: center;
+    max-width: 180px;
+    margin: 0;
+  }
+  .au-credit a {
+    color: inherit;
+    text-underline-offset: 3px;
+  }
+  .au-name {
+    font: 600 clamp(34px, 4.6vw, 56px) / 1.03 var(--serif);
+    margin: 0;
+    letter-spacing: -0.015em;
+  }
+  .au-life {
+    margin: 8px 0 0;
+    font: italic 18px var(--serif);
+    color: var(--muted);
+  }
+  .au-alias {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .au-alias b {
+    color: var(--text);
+  }
+  .au-alias button {
+    margin-left: 6px;
+  }
+  .au-bio {
+    font: 17px/1.6 var(--serif);
+    margin: 16px 0 0;
+    max-width: 64ch;
+  }
+  .au-src {
+    margin: 6px 0 0;
+    font-size: 12px;
+    color: var(--dim);
+  }
+  .au-src a {
+    color: inherit;
+    text-underline-offset: 3px;
+  }
+  .au-langs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 8px;
+    margin-top: 14px;
+  }
+  .au-langs .lab {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-right: 2px;
+  }
+  .au-langs small {
+    color: var(--muted);
+    font-size: 12.5px;
+    margin-left: 4px;
+  }
+  .au-fan {
+    position: relative;
+    height: 300px;
+    align-self: center;
+  }
+  .au-fan .fc {
+    position: absolute;
+    bottom: 10px;
+    width: 108px;
+    transform-origin: 50% 120%;
+    filter: drop-shadow(0 18px 18px rgba(0, 0, 0, 0.28));
+  }
+  .au-fan .fc .cover {
+    width: 100%;
+  }
+  .au-fan .f0 {
+    left: 14px;
+    transform: rotate(-16deg);
+  }
+  .au-fan .f1 {
+    left: 44px;
+    transform: rotate(-8deg);
+  }
+  .au-fan .f2 {
+    left: 74px;
+    transform: rotate(0deg);
+    z-index: 3;
+  }
+  .au-fan .f3 {
+    left: 104px;
+    transform: rotate(8deg);
+    z-index: 2;
+  }
+  .au-fan .f4 {
+    left: 134px;
+    transform: rotate(16deg);
+    z-index: 1;
+  }
+  .au-state {
+    margin: 18px 0 0;
+    padding: 12px 16px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* Sections */
+  .au-sec {
+    margin: 30px 0 0;
+  }
+  .au-sec-h {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px 16px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+  .au-sec-h h2 {
+    font: 600 23px var(--serif);
+    margin: 0;
+  }
+  .au-sec-h h2 small {
+    font: 500 13.5px var(--sans);
+    color: var(--dim);
+    margin-left: 4px;
+  }
+  .au-sec-h p {
+    margin: 2px 0 0;
+    color: var(--muted);
+    font-size: 13.5px;
+    max-width: 80ch;
+  }
+  .au-sec-h .bbtn .cnt {
+    font: 700 11px var(--sans);
+    padding: 1px 7px;
+    border-radius: 9px;
+    background: color-mix(in oklab, var(--accent) 16%, transparent);
+    color: var(--text);
+  }
+  .soons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+    gap: 12px;
+  }
+  .soon-c {
+    display: grid;
+    grid-template-columns: 74px minmax(0, 1fr);
+    gap: 14px;
+    padding: 14px;
+    border-radius: 16px;
+    border: 1.5px dashed color-mix(in oklab, var(--accent) 55%, var(--line));
+    background: var(--surface);
+  }
+  .soon-c .at-cv {
+    width: 74px;
+  }
+  .soon-c b {
+    display: block;
+    font: 600 17px/1.25 var(--serif);
+  }
+  .soon-c small {
+    display: block;
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+  .soon-c ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 10px;
+    display: grid;
+    gap: 3px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .soon-c li.up {
+    color: var(--text);
+  }
+  .soon-c li.up b {
+    display: inline;
+    font: 600 13px var(--sans);
+    color: var(--accent);
+  }
+  .soon-c li.no {
+    color: var(--dim);
+    font-style: italic;
+  }
+  .soon-c .mini-act {
+    margin-top: 0;
+  }
+  .soon-c .rchip {
+    height: auto;
+    min-height: 22px;
+    white-space: normal;
+    padding: 3px 8px;
+    gap: 5px;
+  }
+  .soon-c .rchip svg {
+    width: 13px;
+    height: 13px;
+    flex: none;
+  }
+
+  /* "Das Werk" and where the catalogue comes from */
+  .au-werk-h {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px 22px;
+    flex-wrap: wrap;
+    margin: 40px 0 12px;
+  }
+  .au-werk-h h2 {
+    font: 600 30px/1.1 var(--serif);
+    margin: 0;
+  }
+  .catnote {
+    flex: 1;
+    min-width: min(100%, 420px);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+  }
+  .catnote summary {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr) auto;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 14px;
+    cursor: pointer;
+  }
+  .catnote summary::-webkit-details-marker {
+    display: none;
+  }
+  .catnote summary > svg {
+    width: 18px;
+    height: 18px;
+    color: var(--muted);
+  }
+  .cn-s b {
+    display: block;
+    font-size: 13.5px;
+  }
+  .cn-s span {
+    display: block;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .catnote.thin {
+    border-color: color-mix(in oklab, var(--warn) 45%, var(--line));
+    background: color-mix(in oklab, var(--warn) 6%, var(--surface));
+  }
+  .meter {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .meter i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: color-mix(in oklab, var(--text) 15%, transparent);
+  }
+  .meter em {
+    font: 600 11.5px var(--sans);
+    font-style: normal;
+    color: var(--muted);
+    margin-left: 5px;
+  }
+  .meter.m3 i {
+    background: var(--ok);
+  }
+  .meter.m2 i:nth-child(-n + 2) {
+    background: var(--upg, #b5832a);
+  }
+  .meter.m1 i:first-child {
+    background: var(--warn);
+  }
+  .cn-body {
+    padding: 0 14px 12px 44px;
+    font-size: 13.5px;
+  }
+  .cn-body p {
+    margin: 0 0 8px;
+  }
+  .cn-src {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 8px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .cn-src li {
+    display: inline-flex;
+    gap: 6px;
+    align-items: baseline;
+    padding: 4px 10px;
+    border-radius: 9px;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    font-size: 12.5px;
+  }
+  .cn-src li span {
+    color: var(--muted);
+  }
+  .au-tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    margin: 6px 0 10px;
+  }
+  .au-legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 8px;
+    margin: 0 0 6px;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .au-legend .fp {
+    margin-left: 6px;
+  }
+  .au-legend .fp:first-child {
+    margin-left: 0;
+  }
+  .au-hid {
+    margin-left: auto;
+    color: var(--text);
+  }
+  .au-hid + .au-hid {
+    margin-left: 12px;
+  }
+
+  /* The editions as small marks */
+  .fps {
+    display: flex;
+    gap: 4px;
+    margin-top: 7px;
+    flex-wrap: wrap;
+  }
+  .fp {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    height: 22px;
+    padding: 0 6px;
+    border-radius: 7px;
+    font: 700 11px var(--sans);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  /* In the tiles every mark has the same width, so that the line stands still from book to book. */
+  .atile .fp {
+    justify-content: center;
+    width: 40px;
+    padding: 0;
+  }
+  .fp svg {
+    width: 13px;
+    height: 13px;
+  }
+  .fp.have {
+    color: var(--ok);
+    border-color: color-mix(in oklab, var(--ok) 45%, var(--line));
+    background: color-mix(in oklab, var(--ok) 10%, var(--surface));
+  }
+  .fp.want {
+    /* (The word ``want`` is also the row of buttons in Discover: its margin is not for this mark.) */
+    margin-top: 0;
+    color: var(--accent);
+    border-color: color-mix(in oklab, var(--accent) 50%, var(--line));
+    background: color-mix(in oklab, var(--accent) 9%, var(--surface));
+  }
+  .fp.none {
+    color: var(--dim);
+    border-color: transparent;
+    background: none;
+    opacity: 0.45;
+  }
+
+  /* The works as a grid of covers */
+  .agrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
+    gap: 28px 20px;
+  }
+  .atile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+  }
+  /* The cover, the words and the marks stand on one line with the neighbours, however long a title runs. */
+  .agrid > .atile:has(> .at-foot) {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+    justify-items: start;
+  }
+  .at-text {
+    min-width: 0;
+    width: 100%;
+  }
+  .at-foot {
+    display: grid;
+    gap: 6px;
+    justify-items: start;
+    align-self: start;
+    width: 100%;
+    min-width: 0;
+    margin-top: 8px;
+  }
+  .at-foot .fps {
+    margin-top: 0;
+  }
+  .at-cv {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+  }
+  .at-cv .cover {
+    width: 100%;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s;
+  }
+  .at-cv:hover .cover,
+  .at-cv:focus-visible .cover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 34px rgba(0, 0, 0, 0.3);
+  }
+  .at-cv:focus-visible {
+    outline: none;
+  }
+  .at-cv .tbadge {
+    position: absolute;
+    z-index: 2;
+    top: 6px;
+    left: 6px;
+  }
+  .atile.is-soon .at-cv::after,
+  .atile.is-unsure .at-cv::after {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border: 2px dashed color-mix(in oklab, var(--accent) 75%, transparent);
+    border-radius: 8px;
+    pointer-events: none;
+  }
+  .atile.is-unsure .at-cv::after {
+    border-color: color-mix(in oklab, var(--text) 35%, transparent);
+  }
+  .atile.is-unsure .at-cv .cover {
+    filter: saturate(0.55);
+    opacity: 0.85;
+  }
+  .at-y {
+    display: block;
+    margin-top: 10px;
+    font: 600 11px var(--sans);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .au-page .soon {
+    color: var(--accent);
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 12px;
+  }
+  .at-t {
+    display: block;
+    padding: 0;
+    margin-top: 2px;
+    border: 0;
+    background: none;
+    text-align: left;
+    font: 600 14.5px/1.25 var(--serif);
+    color: var(--text);
+    overflow-wrap: anywhere;
+    cursor: pointer;
+  }
+  .at-t:hover {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in oklab, var(--accent) 50%, transparent);
+  }
+  .at-sub {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 1px;
+  }
+  .atile .mini-act {
+    font-family: var(--sans);
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  .unsure {
+    display: grid;
+    gap: 4px;
+    margin-top: 8px;
+    justify-items: start;
+  }
+  .unsure small {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.35;
+  }
+  .au-page .sel.mini {
+    height: 30px;
+    width: auto;
+    max-width: 100%;
+    padding: 0 8px;
+    font-size: 12.5px;
+  }
+  .tbadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    height: 20px;
+    padding: 0 7px;
+    border-radius: 6px;
+    font: 700 10.5px var(--sans);
+    background: var(--surface);
+    color: var(--muted);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  .tbadge svg {
+    width: 12px;
+    height: 12px;
+  }
+  .tbadge.owned {
+    color: var(--ok);
+  }
+  .tbadge.want {
+    color: var(--accent);
+  }
+
+  /* The works as a list */
+  .atab-w {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+  }
+  .atab {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  .atab th {
+    text-align: left;
+    font: 700 11px var(--sans);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--dim);
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .atab td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .atab tr:last-child td {
+    border-bottom: 0;
+  }
+  .atab tr.is-owned td {
+    background: color-mix(in oklab, var(--ok) 4%, transparent);
+  }
+  .atab .c-y {
+    width: 78px;
+    color: var(--muted);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .atab .c-t .at-t {
+    margin: 0;
+    font-size: 15px;
+  }
+  .atab .c-t small {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .atab .c-k {
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .atab .c-f {
+    white-space: nowrap;
+  }
+  .atab .c-f .fp + .fp {
+    margin-left: 4px;
+  }
+  .atab .c-s {
+    white-space: nowrap;
+  }
+  .atab .c-s i {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: color-mix(in oklab, var(--text) 35%, transparent);
+    margin-right: 3px;
+  }
+  .atab .c-a {
+    text-align: right;
+  }
+  .atab .c-a .mini-act {
+    margin-top: 0;
+  }
+  .atab .unsure {
+    margin: 0;
+    justify-items: end;
+  }
+
+  @media (max-width: 1100px) {
+    .au-hero {
+      grid-template-columns: 150px minmax(0, 1fr);
+    }
+    .au-fan {
+      display: none;
+    }
+    .av.xl {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  @media (max-width: 820px) {
+    .au-hero {
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 16px;
+      padding-top: 14px;
+    }
+    .av.xl {
+      width: 96px;
+      height: 96px;
+      box-shadow: 0 0 0 3px var(--surface), 0 0 0 4px var(--line), 0 14px 30px -12px rgba(0, 0, 0, 0.45);
+    }
+    .av.xl.ini {
+      font-size: 34px;
+    }
+    .au-credit {
+      display: none;
+    }
+    .au-name {
+      font-size: 32px;
+    }
+    .au-life {
+      font-size: 16px;
+    }
+    .au-bio {
+      font-size: 16px;
+    }
+    .au-main .d-facts {
+      gap: 16px;
+    }
+    .au-tools > .seg {
+      max-width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .au-tools > .seg button {
+      white-space: nowrap;
+    }
+    .au-hid {
+      margin-left: 0;
+      flex-basis: 100%;
+    }
+    .au-hid + .au-hid {
+      margin-left: 0;
+    }
+    .agrid {
+      grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+      gap: 22px 14px;
+    }
+    .au-sec-h h2 {
+      font-size: 20px;
+    }
+    .au-werk-h h2 {
+      font-size: 26px;
+    }
+    .catnote summary {
+      grid-template-columns: 18px minmax(0, 1fr);
+    }
+    .catnote .meter {
+      grid-column: 2;
+    }
+    .cn-body {
+      padding-left: 14px;
+    }
+    .acard {
+      grid-template-columns: 52px minmax(0, 1fr);
+    }
+    .acard .av.m {
+      width: 52px;
+      height: 52px;
+    }
+    .ac-go {
+      grid-column: 2;
+    }
+    .atab .c-y {
+      width: 58px;
+    }
+    .atab td,
+    .atab th {
+      padding: 8px 8px;
+    }
+    .atab .c-a .mini-act {
+      font-size: 0;
+      gap: 0;
+      padding: 0 9px;
+      height: 30px;
+    }
+    .atab .c-a .mini-act svg {
+      width: 15px;
+      height: 15px;
+    }
+    .atab .hide-s {
+      display: none;
+    }
+    .res-go {
+      display: none;
+    }
+    /* The head has no room beside the photo on a phone. */
+    .au-hero .au-main {
+      display: contents;
+    }
+    .au-hero .au-main > .d-eyebrow,
+    .au-hero .au-main > .au-name,
+    .au-hero .au-main > .au-life {
+      grid-column: 2;
+    }
+    .au-hero .au-main > .d-eyebrow {
+      grid-row: 1;
+      align-self: end;
+      margin: 0;
+    }
+    .au-hero .au-main > .au-name {
+      grid-row: 2;
+    }
+    .au-hero .au-main > .au-life {
+      grid-row: 3;
+      margin-top: 2px;
+    }
+    .au-hero .au-photo {
+      grid-row: 1 / span 3;
+      align-self: center;
+    }
+    .au-hero .au-main > :nth-child(n + 4) {
+      grid-column: 1 / -1;
+    }
+  }
+}

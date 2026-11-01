@@ -1,0 +1,24 @@
+# Frontend
+node_modules/
+dist/
+*.tsbuildinfo
+test-results/
+playwright-report/
+
+# Backend
+backend/.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+
+# Runtime data: database, media, backups, logs, user languages. Never in the repo.
+/data/
+/data-*/
+backend/data/
+backend/data-*/
+.env
+
+
+# The files pdf.js asks for while it reads a PDF, copied from the package before every build and every start of the dev
+# server (frontend/scripts/pdfjs-assets.mjs).
+frontend/public/pdfjs/

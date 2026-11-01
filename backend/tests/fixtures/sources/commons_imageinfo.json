@@ -1,0 +1,14 @@
+{"batchcomplete": "", "query": {"normalized": [{"from": "File:Ada_Feldkamp_reading_2019.jpg", "to": "File:Ada Feldkamp reading 2019.jpg"}], "pages": {
+  "99000001": {"pageid": 99000001, "ns": 6, "title": "File:Ada Feldkamp reading 2019.jpg", "imagerepository": "local", "imageinfo": [
+    {"thumburl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ada_Feldkamp_reading_2019.jpg/640px-Ada_Feldkamp_reading_2019.jpg",
+     "thumbwidth": 640, "thumbheight": 427,
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Ada_Feldkamp_reading_2019.jpg",
+     "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ada_Feldkamp_reading_2019.jpg",
+     "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=99000001", "mime": "image/jpeg",
+     "extmetadata": {
+       "LicenseShortName": {"value": "CC BY-SA 4.0", "source": "commons-desc-page", "hidden": ""},
+       "LicenseUrl": {"value": "https://creativecommons.org/licenses/by-sa/4.0", "source": "commons-desc-page", "hidden": ""},
+       "Artist": {"value": "<a href=\"//commons.wikimedia.org/wiki/User:Example\" title=\"User:Example\">Pia Example</a>", "source": "commons-desc-page"},
+       "Credit": {"value": "<span class=\"int-own-work\">Own work</span>", "source": "commons-desc-page", "hidden": ""},
+       "NonFree": {"value": "", "source": "commons-desc-page", "hidden": ""}
+     }}]}}}}

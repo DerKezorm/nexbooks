@@ -1,0 +1,105 @@
+{
+  "0.1.0": {
+    "lead": "Das ist nexbooks 0.1: E-Books und Hörbücher auf deinem eigenen Server, zum Lesen und Hören im Browser, mit Autorenseiten, Stöbern und, wenn der Betreiber es einrichtet, dem Beschaffen neuer Bücher. Es ist der erste Stand, und er ist noch jung.",
+    "sections": [
+      {
+        "title": "Bibliotheken und Einlesen",
+        "body": "Der Betreiber nennt Ordner mit Büchern, nexbooks liest sie im Hintergrund und erkennt Titel, Autorin, Reihe, Sprache, Cover und Laufzeit. EPUB, AZW3, MOBI und PDF desselben Buchs sind eine Fassung, die Teile eines Hörbuchs ebenso. Deine Dateien bleiben unverändert dort, wo sie liegen.",
+        "where": "Einstellungen, Bibliotheken"
+      },
+      {
+        "title": "Ein Buch, mehrere Fassungen",
+        "body": "E-Book und Hörbuch desselben Buchs stehen nebeneinander, beide mit eigenem Stand. Es wird nichts abgeglichen: ein gekürztes Hörbuch, ein Hörspiel oder eine Übersetzung gliedert sich anders als das Buch.",
+        "where": "Seite eines Buchs"
+      },
+      {
+        "title": "Das Regal",
+        "body": "Die Bibliothek ist ein Regal aus Buchrücken, ein Regal je Genre. Ein Klick dreht das Buch zum Cover und öffnet seine Seite in den Farben des Buchs. Dazu gibt es das Coverraster und eine sortierbare Liste, und eine Übersicht der Autorinnen und Autoren mit Foto.",
+        "where": "Bibliothek"
+      },
+      {
+        "title": "Lesen im Browser",
+        "body": "Der Leser öffnet EPUB, MOBI, AZW3 und PDF. Schrift, Größe, Ränder und Farben sind deine Wahl, dazu kommen Inhaltsverzeichnis, Lesezeichen und die Suche im Buch. Ein Buch wird als fremder Code behandelt: Skripte laufen nicht, und es erreicht keine Adresse.",
+        "where": "Seite eines Buchs, Lesen"
+      },
+      {
+        "title": "Hören im Browser",
+        "body": "Der Player spielt Hörbücher aus vielen Dateien wie eine, mit Kapiteln, Geschwindigkeit von 0,5 bis 3, Schlaftimer, Sprungtasten und Lesezeichen mit Notiz. Auf dem Sperrbildschirm und an Kopfhörern gehen die Tasten. Offline hören gibt es noch nicht.",
+        "where": "Seite eines Buchs, Hören"
+      },
+      {
+        "title": "Quellen im Internet, ganz freiwillig",
+        "body": "Open Library, die Deutsche Nationalbibliothek und Hardcover können fehlende Angaben ergänzen, und Audible auch, sobald der Betreiber es einschaltet. Es gehen nur Titel, Autor und ISBN hinaus, nie eine Datei. Was sicher ist, übernimmt nexbooks, der Rest kommt in eine Liste zum Prüfen. Ein Schalter für den Betreiber stellt alles ab.",
+        "where": "Einstellungen, Quellen"
+      },
+      {
+        "title": "Prüfen und Hineinsehen",
+        "body": "Was nexbooks nicht sicher zuordnen kann, steht in der Prüfliste, mit den Vorschlägen und ihren Gründen nebeneinander. Du kannst in das Buch hineinsehen: die ersten Seiten eines E-Books, ein kurzes Hineinhören in ein Hörbuch und was die Datei über sich sagt, etwa Name, Autor, Sprecher, ISBN und Laufzeit. Dabei wird kein Stand gespeichert.",
+        "where": "Bibliothek, Prüfliste"
+      },
+      {
+        "title": "Stöbern und Entdecken",
+        "body": "Stöbern wie in einer Buchhandlung: dreizehn Regale nach Themen, in jedem Neues, gerade Beliebtes, Preisgekröntes und Klassiker, gefüllt allein aus offenen Quellen. Bleib mit der Maus auf einem Cover, um es in die Hand zu nehmen und die Rückseite zu lesen. Daneben Bestseller, Neues und Kommendes je Land und Für dich mit den Lücken in deinen Reihen. Was du hast, blendet nexbooks aus. Die Merkliste gehört dir allein.",
+        "where": "Entdecken"
+      },
+      {
+        "title": "Seiten der Autorinnen und Autoren",
+        "body": "Jede Autorin und jeder Autor hat eine Seite mit allen Werken, die die Quellen kennen, nach Reihe und Art geordnet und in deiner Sprache. Dabei steht, was du hast, was gewünscht ist und was es noch gibt. Gleiche Namen werden nicht vermischt, und was nexbooks nicht sicher zuordnen kann, steht gesondert. Zwei Schreibweisen eines Namens (die Wörter vertauscht, ein Vorname in einer anderen Sprache, Initialen, die zu genau einem Namen passen) werden von selbst eine Autorin, wenn beide in denselben Bibliotheken stehen. „Mit anderem Autor zusammenführen“ geht von Hand, und „Trennen“ nimmt beides zurück.",
+        "where": "Seite einer Autorin oder eines Autors"
+      },
+      {
+        "title": "Autoren beobachten",
+        "body": "Ein Schalter auf der Seite einer Autorin lässt nexbooks ihre neuen Bücher für dich wünschen: als E-Book, Hörbuch oder beides, in einer Sprache. Schon Angekündigtes wartet auf seinen Tag, Erschienenes wird nie gewünscht. Wer nicht beschaffen darf, bekommt die Bücher auf die Merkliste.",
+        "where": "Seite einer Autorin oder eines Autors, Beobachten"
+      },
+      {
+        "title": "Bücher beschaffen",
+        "body": "Der Betreiber trägt Indexer (Newznab, Torznab oder einen Prowlarr) und Download-Programme ein. Wer das Recht zum Beschaffen hat, wünscht ein Buch als E-Book, Hörbuch oder beides. nexbooks sucht, beurteilt jeden Treffer nach Autor, Titel, Band, Sprache und Format und lädt den besten. Eine Rangliste je Art bestimmt die Formate, PDF ist ab Werk aus. Danach liest nexbooks die Datei wie beim Einlesen und legt sie nur ein, wenn es das gewünschte Buch ist.",
+        "where": "Beschaffen, Einstellungen, Beschaffung"
+      },
+      {
+        "title": "Die Automatik",
+        "body": "Ein Wunsch ohne Treffer wird nach der Zeit, die du wählst, neu gesucht. Die neuesten Einträge der Indexer werden gelesen, ein Buch, das noch nicht erschienen ist, wartet auf seinen Tag, und ein gescheiterter Download wird durch den nächsten Treffer ersetzt. Grenzen je Indexer und je Person schonen die Indexer, ein Hauptschalter stellt alles ab. Torrents werden ab Werk nicht weiter geteilt.",
+        "where": "Einstellungen, Beschaffung, Automatik"
+      },
+      {
+        "title": "Papierkorb und falsches Buch",
+        "body": "Was ein besseres Format ersetzt, liegt 30 Tage in einem Papierkorb der Bibliothek. Ein geholtes Buch, das nicht stimmt, schickst du mit „Falsches Buch“ weg: Die Dateien gehen in den Papierkorb, der Treffer wird gesperrt, und dein Stand kommt zurück, wenn du die Dateien zurückholst. Ein Buch lässt sich auch in eine andere Bibliothek verschieben, mit Stand, Lesezeichen und Verlauf.",
+        "where": "Seite eines Buchs, Bearbeiten"
+      },
+      {
+        "title": "iPhone-App und Fernseher verbinden",
+        "body": "Die iPhone-App wird mit einem QR-Code verbunden, der zehn Minuten gilt. Ein Gerät ohne Kamera, etwa ein Apple TV, zeigt einen Code, den du im Browser bestätigst. Mit der verbundenen App geht das auch vom Telefon aus. Die Geräte stehen in einer Liste und lassen sich einzeln sperren.",
+        "where": "Mein Konto, Geräte und Apps"
+      },
+      {
+        "title": "E-Reader verbinden",
+        "body": "„An Kindle senden“ schickt ein EPUB per Mail an deinen Kindle; ohne Mailversand lädt der Knopf die Datei und öffnet die Seite Send to Kindle von Amazon. Über OPDS holst du Bücher in Lese-Apps, KOReader gleicht deinen Lesestand ab, und auf einen Kobo kommen die Bücher, die du mit „Auf den Kobo“ auswählst. Jede Verbindung hat eigene Zugangsdaten, die nur einmal gezeigt werden, und lässt sich einzeln sperren. Der Betreiber kann E-Reader ganz abschalten. Umgewandelt wird nichts: Für Kindle, KOReader und Kobo braucht ein Buch ein EPUB. Der Kobo ist noch Beta: Er wurde noch nicht an einem echten Gerät erprobt.",
+        "where": "Mein Konto, Geräte und Apps, Seite eines Buchs"
+      },
+      {
+        "title": "Lesestapel",
+        "body": "Je Jahr ein Turm aus den Büchern, die du gelesen oder gehört hast, jedes so dick wie im Regal, dazu ein Rückblick mit Büchern, Seiten und Stunden.",
+        "where": "Lesestapel"
+      },
+      {
+        "title": "Ordnen, wenn du willst",
+        "body": "Ab Werk liest nexbooks nur. Wer will, lässt Dateien nach einem Schema umbenennen und verschieben, mit Vorschau, Bestätigung und einem Weg zurück. Nichts wird überschrieben.",
+        "where": "Einstellungen, Ordnen"
+      }
+    ],
+    "smallTitle": "Außerdem",
+    "small": [
+      "Die Taste / sucht Bücher, Personen und Reihen, auf Wunsch auch in den Katalogen der Quellen",
+      "Bücher hochladen, auch vom Handy",
+      "Doppelte Dateien eines Buchs gehen in den Papierkorb, wenn sie Byte für Byte gleich sind, und zwar dort, wo nexbooks schreiben darf (Aufräumen ist an, oder geholte Bücher landen dort); sonst werden sie nur genannt",
+      "Übersetzt der Browser die Seite, läuft nexbooks weiter",
+      "Mehrere Personen mit eigenem Stand, eigener Merkliste und eigenem Stapel; der Betreiber sieht weder Fortschritt noch Verlauf",
+      "Zweiter Faktor von Anfang an, Passkeys und Anmeldung über den eigenen Anbieter (authentik, Entra ID und andere)",
+      "Sicherung mit Datenbank, Einstellungen, Covern und Fotos, ohne die Bücher",
+      "Hinweise per Web Push bei neuen Anmeldungen",
+      "Eine offene Schnittstelle unter /api/v1 mit Geräte-Token und API-Schlüsseln",
+      "Hell und dunkel, Deutsch und Englisch, weitere Sprachen als Datei"
+    ]
+  }
+}

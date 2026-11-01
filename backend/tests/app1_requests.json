@@ -1,0 +1,356 @@
+{
+  "DELETE /api/app/1/bookmarks/{bookmark_id}": {
+    "body": [],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "DELETE /api/app/1/history/{entry_id}": {
+    "body": [],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "DELETE /api/app/1/pairing/request/{request_id}": {
+    "body": [],
+    "headers": {
+      "204": [
+        "Cache-Control"
+      ]
+    },
+    "parameters": [
+      "header X-Pairing-Secret"
+    ],
+    "required_body": [],
+    "required_parameters": [
+      "header X-Pairing-Secret"
+    ]
+  },
+  "DELETE /api/app/1/pairing/request/{request_id}/confirm": {
+    "body": [],
+    "headers": {
+      "204": [
+        "Cache-Control"
+      ],
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "GET /api/app/1/editions/{edition_id}/bookmarks": {
+    "body": [],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "GET /api/app/1/files/{file_id}/content": {
+    "body": [],
+    "headers": {
+      "200": [
+        "Accept-Ranges",
+        "Content-Disposition",
+        "Content-Length",
+        "ETag",
+        "Last-Modified"
+      ],
+      "206": [
+        "Content-Range",
+        "ETag"
+      ],
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [
+      "header If-None-Match",
+      "header If-Range",
+      "header Range"
+    ],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "GET /api/app/1/history": {
+    "body": [],
+    "headers": {
+      "200": [
+        "X-Total-Count"
+      ],
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [
+      "query limit",
+      "query offset",
+      "query work"
+    ],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "GET /api/app/1/library": {
+    "body": [],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [
+      "query after",
+      "query limit"
+    ],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "GET /api/app/1/me": {
+    "body": [],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "GET /api/app/1/pairing/request/{request_id}": {
+    "body": [],
+    "headers": {
+      "200": [
+        "Cache-Control"
+      ],
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [
+      "header X-Pairing-Secret"
+    ],
+    "required_body": [],
+    "required_parameters": [
+      "header X-Pairing-Secret"
+    ]
+  },
+  "GET /api/app/1/progress": {
+    "body": [],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [
+      "query since"
+    ],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "GET /api/app/1/works/{work_id}": {
+    "body": [],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "GET /api/app/1/works/{work_id}/cover": {
+    "body": [],
+    "headers": {
+      "200": [
+        "Cache-Control",
+        "ETag"
+      ],
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [
+      "header If-None-Match",
+      "query v"
+    ],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "PATCH /api/app/1/bookmarks/{bookmark_id}": {
+    "body": [
+      "note"
+    ],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [
+      "note"
+    ],
+    "required_parameters": []
+  },
+  "POST /api/app/1/editions/{edition_id}/bookmarks": {
+    "body": [
+      "chapter_title",
+      "fraction",
+      "locator",
+      "note"
+    ],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [
+      "fraction",
+      "locator"
+    ],
+    "required_parameters": []
+  },
+  "POST /api/app/1/editions/{edition_id}/finished": {
+    "body": [
+      "finished_on"
+    ],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "POST /api/app/1/pairing/claim": {
+    "body": [
+      "code",
+      "device_name"
+    ],
+    "headers": {
+      "200": [
+        "Cache-Control"
+      ],
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [
+      "code"
+    ],
+    "required_parameters": []
+  },
+  "POST /api/app/1/pairing/request": {
+    "body": [
+      "device_name"
+    ],
+    "headers": {
+      "201": [
+        "Cache-Control"
+      ],
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [],
+    "required_parameters": []
+  },
+  "POST /api/app/1/pairing/request/confirm": {
+    "body": [
+      "code",
+      "id"
+    ],
+    "headers": {
+      "200": [
+        "Cache-Control"
+      ],
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [
+      "code",
+      "id"
+    ],
+    "required_parameters": []
+  },
+  "POST /api/app/1/pairing/request/preview": {
+    "body": [
+      "code",
+      "id"
+    ],
+    "headers": {
+      "200": [
+        "Cache-Control"
+      ],
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [
+      "code",
+      "id"
+    ],
+    "required_parameters": []
+  },
+  "POST /api/app/1/pairing/{pairing_id}/claim": {
+    "body": [
+      "device_name",
+      "secret"
+    ],
+    "headers": {
+      "200": [
+        "Cache-Control"
+      ],
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [
+      "secret"
+    ],
+    "required_parameters": []
+  },
+  "PUT /api/app/1/editions/{edition_id}/progress": {
+    "body": [
+      "age",
+      "chapter",
+      "chapter_count",
+      "chapter_title",
+      "device",
+      "locator",
+      "percent"
+    ],
+    "headers": {
+      "429": [
+        "Retry-After"
+      ]
+    },
+    "parameters": [],
+    "required_body": [
+      "locator",
+      "percent"
+    ],
+    "required_parameters": []
+  }
+}

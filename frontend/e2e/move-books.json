@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Leuchtfeuer am Kai",
+    "author": "Ida Brandt",
+    "genre": "roman",
+    "color": "#2f5d62",
+    "pages": 80,
+    "year": 2021,
+    "series": null,
+    "seriesNo": null,
+    "blurb": "Erfunden.",
+    "fassungen": [
+      { "kind": "ebook", "lang": "Deutsch", "format": "EPUB", "pages": 80 },
+      { "kind": "audio", "variant": "ungekürzt", "lang": "Deutsch", "minutes": 2, "narrator": "Clara Vienne" }
+    ]
+  },
+  {
+    "title": "Bleibt im Regal",
+    "author": "Ben Hollister",
+    "genre": "krimi",
+    "color": "#5e2027",
+    "pages": 60,
+    "year": 2018,
+    "series": null,
+    "seriesNo": null,
+    "blurb": "Erfunden.",
+    "fassungen": [{ "kind": "ebook", "lang": "Deutsch", "format": "EPUB", "pages": 60 }]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "books": [
+      {"id": 8102, "title": "Glas und Asche", "release_date": "2026-09-15", "release_year": 2026, "users_count": 900,
+       "cached_tags": {"Genre": [{"tag": "Fantasy", "count": 40}]}, "image": {"url": "https://assets.hardcover.app/books/8102/cover.jpg"},
+       "contributions": [{"author": {"name": "Iris Quist"}}], "book_series": [{"position": 2, "series": {"name": "Die Chroniken von Arvel"}}]},
+      {"id": 8101, "title": "Die Krone der Weberinnen", "release_date": "2026-02-10", "release_year": 2026, "users_count": 1500,
+       "cached_tags": {"Genre": [{"tag": "Fantasy", "count": 90}]}, "image": {"url": "https://evil.example.com/cover.jpg"},
+       "contributions": [{"author": {"name": "Iris Quist"}}], "book_series": [{"position": 1, "series": {"name": "Die Chroniken von Arvel"}}]},
+      {"id": 8103, "title": "Orbit Sieben", "release_date": "2025-06-01", "users_count": 400, "image": null,
+       "contributions": [{"author": {"name": "Theo Valcourt"}}], "book_series": []},
+      {"id": "oops", "title": "A book with a bad number"}
+    ]
+  }
+}

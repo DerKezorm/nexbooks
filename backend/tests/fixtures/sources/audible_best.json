@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "asin": "B0CHART001", "title": "Der Leuchtturmwaerter", "authors": [{"name": "Mara Feldkamp"}],
+      "narrators": [{"name": "Ben Hollister"}], "runtime_length_min": 540, "format_type": "unabridged", "language": "german",
+      "release_date": "2024-04-02", "publisher_name": "Beispiel Hoerbuch Verlag",
+      "product_images": {"500": "https://m.media-amazon.com/images/I/chart001._SL500_.jpg"},
+      "category_ladders": [{"ladder": [{"id": "1", "name": "Belletristik"}, {"id": "2", "name": "Romane"}]}]
+    },
+    {
+      "asin": "B0CHART002", "title": "Nebel ueber dem Deich", "authors": [{"name": "Jonas Lindholm"}],
+      "narrators": [{"name": "Clara Vienne"}], "runtime_length_min": 612, "format_type": "unabridged", "language": "german",
+      "series": [{"title": "Die Deich-Krimis", "sequence": "1"}], "release_date": "2023-09-10",
+      "product_images": {"500": "https://m.media-amazon.com/images/I/chart002._SL500_.jpg"},
+      "category_ladders": [{"ladder": [{"id": "3", "name": "Krimis & Thriller"}]}]
+    },
+    {
+      "asin": "B0CHART003", "title": "The Salt Orchard", "authors": [{"name": "Quentin Hartwig"}],
+      "narrators": [{"name": "Ruth Marlowe"}], "runtime_length_min": 430, "format_type": "unabridged", "language": "english",
+      "release_date": "2022-01-20", "category_ladders": [{"ladder": [{"id": "4", "name": "Fantasy"}]}]
+    },
+    {"asin": "bad", "title": "A product with a bad number", "authors": [{"name": "Nobody"}]}
+  ]
+}

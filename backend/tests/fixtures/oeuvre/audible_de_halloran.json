@@ -1,0 +1,133 @@
+{
+ "products": [
+  {
+   "asin": "B0EXAMPL01",
+   "title": "Die Salztöchter",
+   "subtitle": "Ein Roman aus Port Aldous",
+   "authors": [
+    {
+     "name": "Edmund Halloran"
+    }
+   ],
+   "narrators": [
+    {
+     "name": "Ida Leser"
+    }
+   ],
+   "runtime_length_min": 512,
+   "format_type": "unabridged",
+   "language": "german",
+   "release_date": "2012-04-01",
+   "publisher_name": "Beispiel Audio",
+   "category_ladders": [
+    {
+     "ladder": [
+      {
+       "name": "Krimis & Thriller"
+      }
+     ]
+    }
+   ],
+   "product_images": {
+    "500": "https://m.media-amazon.com/images/I/B0EXAMPL01._SL500_.jpg"
+   }
+  },
+  {
+   "asin": "B0EXAMPL02",
+   "title": "Das neunte Ufer",
+   "subtitle": "",
+   "authors": [
+    {
+     "name": "Edmund Halloran"
+    }
+   ],
+   "narrators": [
+    {
+     "name": "Ida Leser"
+    }
+   ],
+   "runtime_length_min": 2730,
+   "format_type": "unabridged",
+   "language": "german",
+   "release_date": "2015-09-01",
+   "publisher_name": "Beispiel Audio",
+   "category_ladders": [
+    {
+     "ladder": [
+      {
+       "name": "Krimis & Thriller"
+      }
+     ]
+    }
+   ],
+   "product_images": {
+    "500": "https://m.media-amazon.com/images/I/B0EXAMPL02._SL500_.jpg"
+   }
+  },
+  {
+   "asin": "B0EXAMPL03",
+   "title": "Der Hüter der verlorenen Zimmer",
+   "subtitle": "",
+   "authors": [
+    {
+     "name": "Edmund Halloran"
+    }
+   ],
+   "narrators": [
+    {
+     "name": "Ida Leser"
+    }
+   ],
+   "runtime_length_min": 1210,
+   "format_type": "unabridged",
+   "language": "german",
+   "release_date": "2027-03-03",
+   "publisher_name": "Beispiel Audio",
+   "category_ladders": [
+    {
+     "ladder": [
+      {
+       "name": "Krimis & Thriller"
+      }
+     ]
+    }
+   ],
+   "product_images": {
+    "500": "https://m.media-amazon.com/images/I/B0EXAMPL03._SL500_.jpg"
+   }
+  },
+  {
+   "asin": "B0EXAMPL04",
+   "title": "Las hijas de la sal",
+   "subtitle": "",
+   "authors": [
+    {
+     "name": "Edmund Halloran"
+    }
+   ],
+   "narrators": [
+    {
+     "name": "Ida Leser"
+    }
+   ],
+   "runtime_length_min": 500,
+   "format_type": "unabridged",
+   "language": "spanish",
+   "release_date": "2016-02-01",
+   "publisher_name": "Beispiel Audio",
+   "category_ladders": [
+    {
+     "ladder": [
+      {
+       "name": "Krimis & Thriller"
+      }
+     ]
+    }
+   ],
+   "product_images": {
+    "500": "https://m.media-amazon.com/images/I/B0EXAMPL04._SL500_.jpg"
+   }
+  }
+ ],
+ "total_results": 4
+}

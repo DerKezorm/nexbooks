@@ -1,0 +1,10 @@
+{"searchinfo": {"search": "Ada Feldkamp"}, "search": [
+  {"id": "Q9000002", "title": "Q9000002", "pageid": 90000002, "concepturi": "http://www.wikidata.org/entity/Q9000002",
+   "repository": "wikidata", "url": "//www.wikidata.org/wiki/Q9000002", "display": {"label": {"value": "Ada Feldkamp", "language": "en"},
+   "description": {"value": "football player (born 1990)", "language": "en"}}, "label": "Ada Feldkamp",
+   "description": "football player (born 1990)", "match": {"type": "label", "language": "en", "text": "Ada Feldkamp"}},
+  {"id": "Q9000001", "title": "Q9000001", "pageid": 90000001, "concepturi": "http://www.wikidata.org/entity/Q9000001",
+   "repository": "wikidata", "url": "//www.wikidata.org/wiki/Q9000001", "display": {"label": {"value": "Ada Feldkamp", "language": "en"},
+   "description": {"value": "Invented novelist (born 1971)", "language": "en"}}, "label": "Ada Feldkamp",
+   "description": "Invented novelist (born 1971)", "match": {"type": "label", "language": "en", "text": "Ada Feldkamp"}}
+], "success": 1}

@@ -1,0 +1,615 @@
+/* The reader: a book on the whole screen, with a bar above and a bar below, side panels and a sheet for the look. The
+   reader speaks the language of the rest of the app: the tokens, Fraunces for the titles, the `.seg` of the settings, the thin
+   bar and the chapter strokes of the twins. The colours of the page of the book (light, sepia, dark) come from the reader as
+   `--rd-*`, so that the bars and panels match the page they lie over and not the app behind it. */
+
+@layer components {
+  .reader {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    overflow: hidden;
+    background: var(--rd-ground, var(--bg));
+    color: var(--rd-ink, var(--text));
+    -webkit-tap-highlight-color: transparent;
+  }
+  .rd-frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: var(--rd-ground);
+  }
+  .rd-frame[hidden] {
+    display: none;
+  }
+
+  /* ---- The bars ---------------------------------------------------------------------------------------------------- */
+  .rd-top,
+  .rd-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* Above the veil over the page, so that the button that opened a panel closes it again. */
+    z-index: 5;
+    background: color-mix(in oklab, var(--rd-ground) 94%, transparent);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease,
+      visibility 0s linear 0s;
+  }
+  .rd-top {
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: max(8px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) 8px max(10px, env(safe-area-inset-left));
+    border-bottom: 1px solid var(--rd-line);
+  }
+  .rd-bottom {
+    bottom: 0;
+    padding: 8px max(14px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+    border-top: 1px solid var(--rd-line);
+  }
+  .reader.bare .rd-top {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease,
+      visibility 0s linear 0.25s;
+  }
+  .reader.bare .rd-bottom {
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease,
+      visibility 0s linear 0.25s;
+  }
+  .rd-title {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    line-height: 1.25;
+  }
+  .rd-title b {
+    display: block;
+    font: 600 15px var(--serif);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .rd-title span {
+    display: block;
+    font-size: 12px;
+    color: var(--rd-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .rd-tools {
+    display: flex;
+    gap: 2px;
+  }
+  .rd-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    background: none;
+    color: inherit;
+    flex: none;
+    font-size: 22px;
+    line-height: 1;
+  }
+  .rd-icon:hover:not(:disabled),
+  .rd-icon.on {
+    background: color-mix(in oklab, var(--rd-accent) 14%, transparent);
+  }
+  .rd-icon:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+  .rd-icon.filled svg {
+    fill: currentColor;
+  }
+  .rd-where {
+    margin: 0 0 2px;
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--rd-muted);
+    min-height: 18px;
+    font-variant-numeric: tabular-nums;
+  }
+  .rd-nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .rd-step-page {
+    display: none;
+  }
+  @media (min-width: 720px) {
+    .rd-step-page {
+      display: inline-grid;
+    }
+  }
+
+  /* The thin bar of the twins, with a stroke for every chapter, that can be dragged. */
+  .rd-track {
+    position: relative;
+    flex: 1;
+    height: 28px;
+    display: flex;
+    align-items: center;
+  }
+  .rd-track .line,
+  .rd-track .done {
+    position: absolute;
+    height: 6px;
+    border-radius: 4px;
+  }
+  .rd-track .line {
+    inset-inline: 0;
+    background: color-mix(in oklab, var(--rd-ink) 14%, transparent);
+  }
+  .rd-track .done {
+    inset-inline-start: 0;
+    background: var(--rd-accent);
+  }
+  .rd-track .tick {
+    position: absolute;
+    top: 50%;
+    width: 2px;
+    height: 12px;
+    transform: translate(-50%, -50%);
+    background: color-mix(in oklab, var(--rd-ink) 30%, transparent);
+    pointer-events: none;
+  }
+  .rd-track[dir='rtl'] .tick {
+    transform: translate(50%, -50%);
+  }
+  .rd-track input[type='range'] {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 28px;
+    margin: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    touch-action: pan-y;
+  }
+  .rd-track input[type='range']::-webkit-slider-runnable-track {
+    background: transparent;
+    height: 28px;
+  }
+  .rd-track input[type='range']::-moz-range-track {
+    background: transparent;
+    height: 28px;
+  }
+  .rd-track input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin-top: 5px;
+    border-radius: 50%;
+    border: 3px solid var(--rd-ground);
+    background: var(--rd-accent);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  }
+  .rd-track input[type='range']::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 3px solid var(--rd-ground);
+    background: var(--rd-accent);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  }
+  .rd-track input[type='range']:focus-visible {
+    outline: 2px solid var(--rd-accent);
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+
+  /* ---- Messages ------------------------------------------------------------------------------------------------------ */
+  .rd-loading {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    color: var(--rd-muted);
+    font: italic 16px var(--serif);
+    pointer-events: none;
+  }
+  .rd-failed {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 18px;
+    padding: 24px;
+    text-align: center;
+    background: var(--rd-ground);
+  }
+  .rd-failed p {
+    margin: 0;
+    max-width: 460px;
+    font: 17px/1.5 var(--serif);
+  }
+  .rd-failed-go {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .reader .go {
+    display: inline-flex;
+    align-items: center;
+    height: 38px;
+    padding: 0 16px;
+    border-radius: 10px;
+    border: 0;
+    background: var(--rd-accent);
+    color: var(--rd-ground);
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .reader .rd-quiet {
+    height: 38px;
+    padding: 0 14px;
+    border-radius: 10px;
+    border: 1px solid var(--rd-line);
+    background: none;
+    color: inherit;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .rd-hint {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: calc(92px + env(safe-area-inset-bottom));
+    z-index: 4;
+    max-width: 520px;
+    margin: 0 auto;
+    display: grid;
+    gap: 10px;
+    padding: 12px 14px;
+    border: 1px solid color-mix(in oklab, var(--rd-accent) 40%, var(--rd-line));
+    border-radius: 14px;
+    background: var(--rd-ground);
+    box-shadow: var(--shadow);
+  }
+  .rd-hint p {
+    margin: 0;
+    font-size: 14.5px;
+  }
+  .rd-hint div {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .rd-toast {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100px + env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    z-index: 7;
+    margin: 0;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--rd-ink);
+    color: var(--rd-ground);
+    font-size: 13.5px;
+    font-weight: 600;
+    max-width: calc(100vw - 32px);
+  }
+
+  /* ---- The side panel ------------------------------------------------------------------------------------------------ */
+  .rd-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    background: rgb(20 14 8 / 0.28);
+  }
+  .rd-panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    inset-inline-start: 0;
+    z-index: 6;
+    width: min(380px, 92vw);
+    display: flex;
+    flex-direction: column;
+    padding-top: env(safe-area-inset-top);
+    background: var(--rd-ground);
+    border-inline-end: 1px solid var(--rd-line);
+    box-shadow: var(--shadow);
+  }
+  .rd-panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--rd-line);
+  }
+  .reader .seg {
+    background: transparent;
+    border-color: var(--rd-line);
+  }
+  .reader .seg button {
+    color: var(--rd-muted);
+  }
+  .reader .seg button.on {
+    color: var(--rd-ink);
+    background: color-mix(in oklab, var(--rd-accent) 16%, transparent);
+  }
+  .rd-list {
+    flex: 1;
+    overflow: auto;
+    padding: 6px 8px max(20px, env(safe-area-inset-bottom));
+  }
+  .rd-toc {
+    display: block;
+    width: 100%;
+    text-align: start;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+    padding: 9px 12px;
+    font-size: 14.5px;
+    color: var(--rd-ink);
+  }
+  .rd-toc:hover,
+  .rd-hit:hover,
+  .rd-mark-go:hover {
+    background: color-mix(in oklab, var(--rd-ink) 7%, transparent);
+  }
+  .rd-toc.on {
+    background: color-mix(in oklab, var(--rd-accent) 14%, transparent);
+    font-weight: 600;
+  }
+  .rd-empty {
+    margin: 0;
+    padding: 16px 12px;
+    color: var(--rd-muted);
+    font: italic 15px var(--serif);
+  }
+  .rd-mark {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  .rd-mark-go {
+    flex: 1;
+    min-width: 0;
+    text-align: start;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+    padding: 8px 12px;
+    color: var(--rd-ink);
+  }
+  .rd-mark-go b {
+    display: block;
+    font-size: 14.5px;
+  }
+  .rd-mark-go span {
+    font-size: 12.5px;
+    color: var(--rd-muted);
+  }
+  .rd-search {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .rd-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 12px 4px;
+    padding: 0 6px 0 12px;
+    height: 42px;
+    border: 1px solid var(--rd-line);
+    border-radius: 11px;
+  }
+  .rd-field svg {
+    color: var(--rd-muted);
+    flex: none;
+  }
+  .rd-field input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    outline: none;
+  }
+  .rd-hit {
+    display: block;
+    width: 100%;
+    text-align: start;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--rd-ink);
+  }
+  .rd-hit mark {
+    background: color-mix(in oklab, var(--rd-accent) 28%, transparent);
+    color: inherit;
+  }
+  .rd-group h3 {
+    margin: 12px 12px 2px;
+    font: 600 12.5px var(--sans);
+    color: var(--rd-muted);
+  }
+  .rd-count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 16px;
+    color: var(--rd-muted);
+    min-height: 40px;
+  }
+  .rd-pair {
+    display: inline-flex;
+  }
+  .rd-bar {
+    display: block;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 3px;
+    background: color-mix(in oklab, var(--rd-ink) 14%, transparent);
+    overflow: hidden;
+  }
+  .rd-bar i {
+    display: block;
+    height: 100%;
+    background: var(--rd-accent);
+    border-radius: 3px;
+    transition: width 0.2s;
+  }
+
+  /* ---- The look ---------------------------------------------------------------------------------------------------- */
+  .rd-look {
+    position: absolute;
+    z-index: 7;
+    top: calc(60px + env(safe-area-inset-top));
+    inset-inline-end: 12px;
+    width: min(360px, calc(100vw - 24px));
+    max-height: calc(100dvh - 130px);
+    overflow: auto;
+    padding: 12px 16px 14px;
+    border: 1px solid var(--rd-line);
+    border-radius: 16px;
+    background: var(--rd-ground);
+    box-shadow: var(--shadow);
+  }
+  .rd-look-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .rd-look-head h2 {
+    margin: 0;
+    font: 600 17px var(--serif);
+  }
+  .rd-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--rd-line);
+  }
+  .rd-label {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--rd-muted);
+  }
+  .rd-step {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .rd-step output {
+    min-width: 58px;
+    text-align: center;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .rd-note {
+    margin: 8px 0 0;
+    font-size: 12.5px;
+    color: var(--rd-muted);
+  }
+  .rd-row .seg {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .rd-switch {
+    position: relative;
+    cursor: pointer;
+  }
+  .rd-switch input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .rd-switch i {
+    position: relative;
+    width: 36px;
+    height: 21px;
+    border-radius: 11px;
+    flex: none;
+    background: color-mix(in oklab, var(--rd-ink) 22%, transparent);
+    transition: background 0.2s;
+  }
+  .rd-switch i::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--rd-ground);
+    transition: transform 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  }
+  .rd-switch input:checked + i {
+    background: var(--rd-accent);
+  }
+  .rd-switch input:checked + i::after {
+    transform: translateX(15px);
+  }
+  .rd-switch input:focus-visible + i {
+    outline: 2px solid var(--rd-accent);
+    outline-offset: 2px;
+  }
+  @media (max-width: 640px) {
+    .rd-look {
+      inset-inline: 0;
+      top: auto;
+      bottom: 0;
+      width: auto;
+      max-height: 78dvh;
+      border-radius: 18px 18px 0 0;
+      border-bottom: 0;
+      padding-bottom: max(16px, env(safe-area-inset-bottom));
+    }
+    .rd-title span {
+      display: none;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .rd-top,
+    .rd-bottom,
+    .rd-bar i,
+    .rd-switch i,
+    .rd-switch i::after {
+      transition: none;
+    }
+  }
+}

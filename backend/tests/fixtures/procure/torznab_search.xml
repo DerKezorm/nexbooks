@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:torznab="http://torznab.com/schemas/2015/feed">
+  <channel>
+    <title>Example Torznab</title>
+    <description>Example Torznab API</description>
+    <torznab:response offset="0" total="1"/>
+    <item>
+      <title>Example.Author.The.Lantern.Road.2019.EPUB-EXAMPLE</title>
+      <guid>https://torrents.example.com/details/42</guid>
+      <link>https://torrents.example.com/download/42.torrent</link>
+      <pubDate>Tue, 06 Oct 2026 10:00:00 +0000</pubDate>
+      <enclosure url="https://torrents.example.com/download/42.torrent" length="2097152" type="application/x-bittorrent"/>
+      <torznab:attr name="category" value="7020"/>
+      <torznab:attr name="seeders" value="12"/>
+      <torznab:attr name="size" value="2097152"/>
+    </item>
+  </channel>
+</rss>

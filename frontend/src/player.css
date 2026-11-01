@@ -1,0 +1,896 @@
+/* The player of recordings. The player speaks the language of the rest of the app: the tokens, Fraunces for the
+   titles, the `.seg` and the `.toggle` of the settings, the chips `.g`, the thin bar with the chapter strokes of the twins, and
+   for the big player the colours of the book, as the page of a book has them (`--bc`, `--page`, `--tint`, `--soft`). */
+
+@layer components {
+  /* ---- The switch of the design, word for word ----------------------------------------- */
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    user-select: none;
+  }
+  .toggle input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .toggle span {
+    width: 36px;
+    height: 21px;
+    border-radius: 11px;
+    background: color-mix(in oklab, var(--text) 18%, transparent);
+    position: relative;
+    transition: background 0.2s;
+    flex: none;
+  }
+  .toggle span::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--surface);
+    transition: transform 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  }
+  .toggle input:checked + span {
+    background: var(--accent);
+  }
+  .toggle input:checked + span::after {
+    transform: translateX(15px);
+  }
+  .toggle input:focus-visible + span {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* ---- Room for the small player at the bottom of the pages ------------------------------------------------------------ */
+  body.has-player {
+    --player-space: calc(76px + env(safe-area-inset-bottom));
+  }
+  body.has-player main,
+  body.has-player .d-wrap {
+    padding-bottom: calc(80px + var(--player-space));
+  }
+  /* A dialog lies over everything: the small player steps aside while one is open (on a phone its buttons would cover the
+     dialog's). */
+  body.has-dialog .mp {
+    visibility: hidden;
+  }
+
+  /* ---- The small player ------------------------------------------------------------------------------------------------ */
+  .mp {
+    position: fixed;
+    z-index: 54;
+    left: 50%;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    width: min(760px, calc(100vw - 24px));
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 8px 0 8px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: color-mix(in oklab, var(--surface) 94%, transparent);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .mp-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3px;
+    background: color-mix(in oklab, var(--accent) 14%, transparent);
+  }
+  .mp-line i {
+    display: block;
+    height: 100%;
+    background: var(--accent);
+  }
+  .mp-open {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    height: 100%;
+    border: 0;
+    background: none;
+    padding: 0 4px;
+    text-align: start;
+    color: var(--text);
+    cursor: pointer;
+  }
+  .mp-cover {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  .mp-cover .cover {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    border-radius: 6px;
+  }
+  .mp-cover .cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .mp-text {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .mp-text b {
+    font: 600 15px/1.25 var(--serif);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mp-text small {
+    font-size: 12.5px;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-variant-numeric: tabular-nums;
+  }
+  .mp-btn {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 12px;
+    background: none;
+    color: var(--muted);
+  }
+  .mp-btn:hover:not(:disabled) {
+    color: var(--text);
+    background: color-mix(in oklab, var(--text) 7%, transparent);
+  }
+  .mp-play {
+    flex: none;
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--on-accent);
+    margin: 0 2px;
+  }
+  .mp-play:disabled,
+  .mp-btn:disabled {
+    opacity: 0.45;
+  }
+  @media (max-width: 520px) {
+    .mp-wide {
+      display: none;
+    }
+  }
+
+  /* ---- The big player ---------------------------------------------------------------------------------------------------- */
+  .pl {
+    position: fixed;
+    inset: 0;
+    z-index: 55;
+    overflow: auto;
+    color: var(--text);
+    --page: color-mix(in oklab, var(--bc, var(--accent)) 13%, var(--bg));
+    --tint: color-mix(in oklab, var(--bc, var(--accent)) 70%, var(--text));
+    --soft: color-mix(in oklab, var(--bc, var(--accent)) 18%, var(--surface));
+    background: var(--page);
+    overscroll-behavior: contain;
+  }
+  :root[data-theme='dark'] .pl {
+    --page: color-mix(in oklab, var(--bc, var(--accent)) 30%, #0d0b09);
+    --tint: color-mix(in oklab, var(--bc, var(--accent)) 45%, #fff);
+    --soft: color-mix(in oklab, var(--bc, var(--accent)) 30%, #1a1612);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) .pl {
+      --page: color-mix(in oklab, var(--bc, var(--accent)) 30%, #0d0b09);
+      --tint: color-mix(in oklab, var(--bc, var(--accent)) 45%, #fff);
+      --soft: color-mix(in oklab, var(--bc, var(--accent)) 30%, #1a1612);
+    }
+  }
+  .pl:focus {
+    outline: none;
+  }
+  .pl-glow {
+    position: fixed;
+    inset: -10%;
+    pointer-events: none;
+    background:
+      radial-gradient(50% 45% at 22% 30%, color-mix(in oklab, var(--bc, var(--accent)) 55%, transparent), transparent 70%),
+      radial-gradient(40% 40% at 85% 0%, color-mix(in oklab, var(--bc, var(--accent)) 30%, transparent), transparent 70%);
+    opacity: 0.55;
+    filter: blur(30px);
+  }
+  .pl-loading {
+    position: relative;
+    margin: 30vh auto 0;
+    text-align: center;
+    color: var(--muted);
+    font: italic 17px var(--serif);
+  }
+  .pl-wrap {
+    position: relative;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: max(14px, env(safe-area-inset-top)) clamp(16px, 3vw, 36px) max(40px, env(safe-area-inset-bottom));
+  }
+  .pl-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pl-top-end {
+    margin-inline-start: auto;
+    display: flex;
+    gap: 4px;
+  }
+  .pl-eyebrow,
+  .pl-chapter-of {
+    font: 600 12px var(--sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--tint);
+  }
+  .pl-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    flex: none;
+    border: 1px solid color-mix(in oklab, var(--tint, var(--text)) 22%, transparent);
+    border-radius: 12px;
+    background: color-mix(in oklab, var(--page, var(--surface)) 70%, transparent);
+    color: var(--text);
+  }
+  .pl-icon:hover:not(:disabled) {
+    background: color-mix(in oklab, var(--tint, var(--text)) 12%, transparent);
+  }
+  .pl-icon:disabled {
+    opacity: 0.4;
+  }
+  .pl-main {
+    display: grid;
+    grid-template-columns: minmax(220px, 380px) 1fr;
+    gap: clamp(26px, 5vw, 64px);
+    align-items: center;
+    margin-top: 26px;
+  }
+  .pl-cover .cover {
+    width: 100%;
+    box-shadow:
+      0 40px 70px -20px rgba(0, 0, 0, 0.55),
+      inset 4px 0 0 rgba(0, 0, 0, 0.18);
+  }
+  /* A picture keeps its own shape: the covers of recordings are square, the ones of books upright. */
+  .pl-cover .cover:has(img) {
+    aspect-ratio: auto;
+    padding: 0;
+    display: block;
+  }
+  .pl-cover .cover.is-fit img.c-back {
+    display: none;
+  }
+  .pl-cover .cover img {
+    position: relative;
+    height: auto;
+    max-height: min(70vh, 560px);
+    object-fit: contain;
+  }
+  .pl-side {
+    min-width: 0;
+  }
+  .pl-chapter-of {
+    margin: 0 0 8px;
+  }
+  .pl-title {
+    font: 600 clamp(28px, 3.6vw, 46px) / 1.06 var(--serif);
+    margin: 0;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+  .pl-by {
+    font: italic 400 18px var(--serif);
+    color: var(--muted);
+    margin: 8px 0 0;
+  }
+  .pl-chapter {
+    margin: 22px 0 0;
+    font: 600 19px var(--serif);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* The bar of the chapter: a range drawn as the thin bar of the twins, with a knob. */
+  .pl-scrub {
+    margin-top: 12px;
+  }
+  .pl input[type='range'] {
+    --done: 0%;
+    width: 100%;
+    height: 28px;
+    margin: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+  }
+  .pl input[type='range']::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 4px;
+    background: linear-gradient(to right, var(--tint) var(--done), color-mix(in oklab, var(--tint) 18%, transparent) var(--done));
+  }
+  .pl input[type='range']::-moz-range-track {
+    height: 6px;
+    border-radius: 4px;
+    background: color-mix(in oklab, var(--tint) 18%, transparent);
+  }
+  .pl input[type='range']::-moz-range-progress {
+    height: 6px;
+    border-radius: 4px;
+    background: var(--tint);
+  }
+  .pl input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    margin-top: -6px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--tint);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+  .pl input[type='range']::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--tint);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+  .pl input[type='range']:focus-visible {
+    outline: 2px solid var(--tint);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  .pl-times {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .pl-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(6px, 2vw, 18px);
+    margin: 18px 0 8px;
+  }
+  .pl-big {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border-color: transparent;
+    background: transparent;
+  }
+  .pl-play {
+    width: 76px;
+    height: 76px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: var(--tint);
+    color: var(--page);
+    box-shadow: 0 16px 30px -12px color-mix(in oklab, var(--bc, var(--accent)) 70%, #000);
+  }
+  .pl-play:disabled {
+    opacity: 0.45;
+  }
+
+  /* The whole recording: the line with the chapter strokes of the design's twins. */
+  .pl-book {
+    position: relative;
+    height: 14px;
+    margin-top: 14px;
+  }
+  .pl-book .line,
+  .pl-book .done {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    height: 3px;
+    border-radius: 2px;
+  }
+  .pl-book .line {
+    right: 0;
+    background: color-mix(in oklab, var(--tint) 18%, transparent);
+  }
+  .pl-book .done {
+    background: color-mix(in oklab, var(--tint) 70%, transparent);
+  }
+  .pl-book .tick {
+    position: absolute;
+    top: 3px;
+    width: 1px;
+    height: 9px;
+    background: color-mix(in oklab, var(--tint) 40%, transparent);
+  }
+  .pl-left {
+    margin: 4px 0 0;
+    font-size: 13.5px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .pl-wait {
+    font-style: italic;
+  }
+
+  .pl-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+    /* Above the veil of an open panel: the button that opened it closes it, another one opens its own. */
+    position: relative;
+    z-index: 7;
+  }
+  .pl-tool {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    height: 40px;
+    padding: 0 14px;
+    border: 1px solid color-mix(in oklab, var(--tint) 25%, transparent);
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--page) 70%, transparent);
+    color: var(--text);
+    font-weight: 600;
+    font-size: 13.5px;
+    font-variant-numeric: tabular-nums;
+  }
+  .pl-tool.on,
+  .pl-tool.active {
+    border-color: color-mix(in oklab, var(--tint) 60%, transparent);
+    background: color-mix(in oklab, var(--tint) 16%, var(--page));
+  }
+
+  .pl-hint,
+  .pl-failed {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    border: 1px solid color-mix(in oklab, var(--tint) 30%, transparent);
+    background: var(--soft);
+  }
+  .pl-failed {
+    border-color: color-mix(in oklab, var(--bad) 45%, transparent);
+  }
+  .pl-hint p,
+  .pl-failed p {
+    margin: 0 0 10px;
+    font-size: 14.5px;
+  }
+  .pl-failed p.pl-failed-part {
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+  .pl-hint div,
+  .pl-failed-go {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  .pl .go {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 38px;
+    padding: 0 14px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--tint);
+    color: var(--page);
+    font-weight: 700;
+    font-size: 13.5px;
+    text-decoration: none;
+  }
+  .pl .go:disabled {
+    opacity: 0.5;
+  }
+  .pl-quiet {
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid color-mix(in oklab, var(--tint) 30%, transparent);
+    border-radius: 10px;
+    background: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 13.5px;
+  }
+  .pl-parts summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13.5px;
+  }
+  .pl-parts ul {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+    max-height: 200px;
+    overflow: auto;
+  }
+  .pl-parts a {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    padding: 4px 0;
+    color: var(--text);
+    font-size: 13px;
+  }
+  .pl-toast {
+    position: fixed;
+    left: 50%;
+    bottom: calc(28px + env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    z-index: 8;
+    margin: 0;
+    padding: 9px 15px;
+    border-radius: 999px;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 13.5px;
+    font-weight: 600;
+    max-width: calc(100vw - 32px);
+  }
+
+  /* ---- The panels ------------------------------------------------------------------------------------------------------ */
+  .pl-scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 6;
+    background: rgb(20 14 8 / 0.28);
+  }
+  .pl-panel {
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    bottom: 0;
+    inset-inline-end: 0;
+    width: min(400px, 94vw);
+    display: flex;
+    flex-direction: column;
+    padding-top: env(safe-area-inset-top);
+    background: var(--page);
+    border-inline-start: 1px solid color-mix(in oklab, var(--tint) 20%, transparent);
+    box-shadow: var(--shadow);
+  }
+  .pl-panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px 14px;
+    border-bottom: 1px solid color-mix(in oklab, var(--tint) 18%, transparent);
+  }
+  .pl-panel-head h3 {
+    margin: 0;
+    font: 600 18px var(--serif);
+  }
+  .pl-panel-body {
+    padding: 14px 16px max(20px, env(safe-area-inset-bottom));
+    overflow: auto;
+  }
+  .pl-panel .seg {
+    background: transparent;
+    border-color: color-mix(in oklab, var(--tint) 22%, transparent);
+    flex-wrap: wrap;
+  }
+  .pl-panel .seg button.on {
+    background: color-mix(in oklab, var(--tint) 18%, transparent);
+  }
+  .pl-presets button {
+    flex: 1;
+    justify-content: center;
+    font-variant-numeric: tabular-nums;
+  }
+  .pl-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid color-mix(in oklab, var(--tint) 14%, transparent);
+  }
+  .pl-row input[type='range'] {
+    flex: 1;
+    min-width: 0;
+  }
+  .pl-row-col {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pl-label {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .pl-value {
+    min-width: 58px;
+    text-align: end;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .pl-note {
+    margin: 10px 0 0;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .pl-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid color-mix(in oklab, var(--tint) 14%, transparent);
+  }
+  .pl-chips .g {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 999px;
+    padding: 6px 13px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .pl-chips .g.on {
+    color: var(--text);
+    border-color: color-mix(in oklab, var(--accent) 50%, transparent);
+    background: color-mix(in oklab, var(--accent) 12%, var(--surface));
+  }
+  .pl-sleep-now {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: var(--soft);
+    font-variant-numeric: tabular-nums;
+  }
+  .pl-sleep-now p {
+    margin: 0;
+    font-weight: 600;
+  }
+  .pl-list {
+    list-style: none;
+    margin: 0;
+    padding: 6px 8px max(20px, env(safe-area-inset-bottom));
+    overflow: auto;
+    flex: 1;
+  }
+  .pl-chap {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    width: 100%;
+    text-align: start;
+    border: 0;
+    border-radius: 9px;
+    background: none;
+    padding: 10px 10px;
+    color: var(--text);
+    font-size: 14.5px;
+  }
+  .pl-chap:hover {
+    background: color-mix(in oklab, var(--text) 6%, transparent);
+  }
+  .pl-chap.on {
+    background: color-mix(in oklab, var(--tint) 16%, transparent);
+    font-weight: 600;
+  }
+  .pl-chap .n {
+    min-width: 22px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .pl-chap .tt {
+    flex: 1;
+    min-width: 0;
+  }
+  .pl-chap .d {
+    color: var(--muted);
+    font-size: 12.5px;
+    font-variant-numeric: tabular-nums;
+  }
+  .pl-marks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-height: 0;
+  }
+  .pl-marks > .go {
+    align-self: flex-start;
+  }
+  .pl-marks .pl-list {
+    padding: 0;
+  }
+  .pl-mark {
+    padding: 6px 0 10px;
+    border-bottom: 1px solid color-mix(in oklab, var(--tint) 14%, transparent);
+  }
+  .pl-mark-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .pl-mark-go {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-align: start;
+    border: 0;
+    border-radius: 9px;
+    background: none;
+    padding: 8px 8px;
+    color: var(--text);
+  }
+  .pl-mark-go:hover {
+    background: color-mix(in oklab, var(--text) 6%, transparent);
+  }
+  .pl-mark-go b {
+    font-variant-numeric: tabular-nums;
+  }
+  .pl-mark-go span {
+    font-size: 13px;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .pl-mark .pl-icon {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    background: none;
+    color: var(--muted);
+  }
+  .pl-note-text {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 2px 8px;
+    border: 0;
+    background: none;
+    text-align: start;
+    font: italic 15px/1.45 var(--serif);
+    color: var(--text);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  .pl-note-text.is-empty {
+    font: 500 13px var(--sans);
+    color: var(--tint);
+  }
+  .pl-note-edit {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 2px 8px 0;
+  }
+  .pl-note-edit textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 56px;
+    padding: 8px 10px;
+    border: 1px solid color-mix(in oklab, var(--tint) 30%, transparent);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text);
+    font: 15px/1.45 var(--serif);
+  }
+  .pl-note-edit div {
+    display: flex;
+    gap: 8px;
+  }
+  .pl-empty {
+    margin: 0;
+    color: var(--muted);
+    font: italic 15px var(--serif);
+  }
+
+  /* ---- Phones: the cover above, everything large enough for a thumb, the panels from below -------------------------------- */
+  @media (max-width: 760px) {
+    .pl-main {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 10px;
+    }
+    .pl-cover {
+      width: min(64vw, 300px);
+      margin: 0 auto;
+    }
+    .pl-side {
+      text-align: center;
+    }
+    .pl-chapter {
+      margin-top: 12px;
+    }
+    .pl-times,
+    .pl-left {
+      text-align: start;
+    }
+    .pl-tools {
+      justify-content: center;
+    }
+    .pl-hint,
+    .pl-failed {
+      text-align: start;
+    }
+    /* The panel rises from the bottom of a phone and holds the text the sentence would cover: it appears over the top. */
+    .pl-toast {
+      bottom: auto;
+      top: calc(76px + env(safe-area-inset-top));
+    }
+    .pl-panel {
+      top: auto;
+      inset-inline: 0;
+      width: auto;
+      max-height: 80dvh;
+      border-radius: 18px 18px 0 0;
+      border-inline-start: 0;
+      border-top: 1px solid color-mix(in oklab, var(--tint) 20%, transparent);
+    }
+  }
+  @media (max-width: 400px) {
+    .pl-controls {
+      gap: 2px;
+    }
+    .pl-big {
+      width: 50px;
+      height: 50px;
+    }
+    .pl-play {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .toggle span,
+    .toggle span::after {
+      transition: none;
+    }
+  }
+}

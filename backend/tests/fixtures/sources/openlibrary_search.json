@@ -1,0 +1,47 @@
+{
+  "numFound": 3,
+  "start": 0,
+  "numFoundExact": true,
+  "docs": [
+    {
+      "key": "/works/OL9000001W",
+      "title": "The Quiet Orchard",
+      "subtitle": "A Novel",
+      "author_name": ["Mara Lindqvist"],
+      "first_publish_year": 2019,
+      "language": ["eng", "ger", "fre"],
+      "isbn": ["9783999900018", "3999900016", "9783999900025", "not-an-isbn"],
+      "cover_i": 8000001,
+      "subject": ["Fiction", "Family Saga", "Orchards"],
+      "number_of_pages_median": 312,
+      "edition_count": 14,
+      "publisher": ["Example House Press", "Second Example Press"]
+    },
+    {
+      "key": "/works/OL9000002W",
+      "title": "Summary and Study Guide: The Quiet Orchard",
+      "author_name": ["Example Study Notes"],
+      "first_publish_year": 2020,
+      "language": ["eng"],
+      "isbn": ["9783999900049"],
+      "edition_count": 1
+    },
+    {
+      "key": "/works/OL9000003W",
+      "title": "The Quiet Orchard",
+      "author_name": ["Hanna Lindqvist"],
+      "first_publish_year": 1987,
+      "language": ["eng"],
+      "edition_count": 2
+    },
+    {
+      "key": "/books/OL1M",
+      "title": "Not a work",
+      "author_name": ["Nobody"]
+    },
+    {
+      "key": "/works/OL9000004W",
+      "title": ""
+    }
+  ]
+}

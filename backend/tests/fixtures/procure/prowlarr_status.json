@@ -1,0 +1,7 @@
+{
+  "appName": "Prowlarr",
+  "version": "2.6.5.5623",
+  "urlBase": "",
+  "branch": "master",
+  "authentication": "forms"
+}

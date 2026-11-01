@@ -1,0 +1,63 @@
+{
+ "xsearch": {
+  "from": 1,
+  "to": 6,
+  "records": 6,
+  "list": [
+   {
+    "identifier": "http://libris.kb.se/bib/9000000",
+    "title": "Den tysta hamnen : kriminalroman",
+    "creator": "Lindqvist, Marit, 1938-2019",
+    "isbn": "9789100000000",
+    "type": "book",
+    "publisher": "Stockholm : Exempelförlaget",
+    "date": "1971",
+    "language": "swe"
+   },
+   {
+    "identifier": "http://libris.kb.se/bib/8000000",
+    "title": "Den tysta hamnen (fr)",
+    "creator": "Lindqvist, Marit",
+    "type": "text",
+    "date": "1981",
+    "language": "fre"
+   },
+   {
+    "identifier": "http://libris.kb.se/bib/9000001",
+    "title": "Mannen vid kanalen : kriminalroman",
+    "creator": "Lindqvist, Marit, 1938-2019",
+    "isbn": "9789100000001",
+    "type": "book",
+    "publisher": "Stockholm : Exempelförlaget",
+    "date": "1973",
+    "language": "swe"
+   },
+   {
+    "identifier": "http://libris.kb.se/bib/8000001",
+    "title": "Mannen vid kanalen (fr)",
+    "creator": "Lindqvist, Marit",
+    "type": "text",
+    "date": "1983",
+    "language": "fre"
+   },
+   {
+    "identifier": "http://libris.kb.se/bib/9000002",
+    "title": "Isvägen : kriminalroman",
+    "creator": "Lindqvist, Marit, 1938-2019",
+    "isbn": "9789100000002",
+    "type": "book",
+    "publisher": "Stockholm : Exempelförlaget",
+    "date": "1975",
+    "language": "swe"
+   },
+   {
+    "identifier": "http://libris.kb.se/bib/8000002",
+    "title": "Isvägen (fr)",
+    "creator": "Lindqvist, Marit",
+    "type": "text",
+    "date": "1985",
+    "language": "fre"
+   }
+  ]
+ }
+}

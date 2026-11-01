@@ -1,0 +1,25 @@
+{
+ "numFound": 2,
+ "start": 0,
+ "docs": [
+  {
+   "key": "OL900001A",
+   "name": "Edmund Halloran",
+   "alternate_names": [
+    "Richard Vane",
+    "E. Halloran"
+   ],
+   "birth_date": "14 Mar 1951",
+   "work_count": 58,
+   "top_work": "The Ninth Shore",
+   "type": "author"
+  },
+  {
+   "key": "OL900002A",
+   "name": "Ellen Halloran",
+   "work_count": 3,
+   "top_work": "Harbour Lights",
+   "type": "author"
+  }
+ ]
+}

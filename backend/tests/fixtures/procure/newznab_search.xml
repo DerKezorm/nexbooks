@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:newznab="http://www.newznab.com/dtd/2010/feeds/attributes/">
+  <channel>
+    <title>Example Newznab</title>
+    <description>Example Newznab API</description>
+    <newznab:response offset="0" total="1"/>
+    <item>
+      <title>Example.Author.The.Lantern.Road.2019.GERMAN.EPUB-EXAMPLE</title>
+      <guid isPermaLink="true">https://indexer.example.com/details/aaaabbbbccccdddd</guid>
+      <link>https://indexer.example.com/getnzb/aaaabbbbccccdddd.nzb</link>
+      <pubDate>Mon, 05 Oct 2026 08:30:00 +0000</pubDate>
+      <category>Books &gt; EBook</category>
+      <enclosure url="https://indexer.example.com/getnzb/aaaabbbbccccdddd.nzb" length="1048576" type="application/x-nzb"/>
+      <newznab:attr name="category" value="7000"/>
+      <newznab:attr name="category" value="7120"/>
+      <newznab:attr name="size" value="1048576"/>
+    </item>
+  </channel>
+</rss>

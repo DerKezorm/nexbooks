@@ -1,0 +1,15 @@
+{
+  "data": {
+    "e0": [
+      {"title": "The Quiet Orchard", "isbn_13": "9783999900018", "asin": null, "pages": 312, "edition_format": "Paperback", "language": {"language": "English"}, "reading_format": {"format": "Read"}},
+      {"title": "The Quiet Orchard", "isbn_13": null, "asin": "B0ENGLISH1", "pages": null, "edition_format": "ebook", "language": {"language": "English"}, "reading_format": {"format": "Read"}},
+      {"title": "The Quiet Orchard", "isbn_13": null, "asin": null, "pages": 300, "edition_format": null, "language": {"language": "English"}, "reading_format": null},
+      {"title": "Der stille Obstgarten", "isbn_13": "9783999900025", "asin": null, "pages": 340, "edition_format": "Hardcover", "language": {"language": "German"}, "reading_format": {"format": "Read"}},
+      {"title": "Der stille Obstgarten", "isbn_13": null, "asin": null, "pages": null, "edition_format": null, "language": {"language": "German"}, "reading_format": null},
+      {"title": "Mara Lindqvist", "isbn_13": null, "asin": null, "pages": null, "edition_format": null, "language": {"language": "German"}, "reading_format": null},
+      {"title": "Le verger silencieux", "isbn_13": "9783999900032", "asin": null, "pages": 330, "edition_format": "Paperback", "language": {"language": "French"}, "reading_format": null},
+      {"title": "Strange", "isbn_13": "not-an-isbn", "asin": null, "pages": 1, "edition_format": null, "language": null, "reading_format": null},
+      "not an edition"
+    ]
+  }
+}

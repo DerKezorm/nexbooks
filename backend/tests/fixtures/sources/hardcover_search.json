@@ -1,0 +1,44 @@
+{
+  "data": {
+    "s0": {
+      "results": {
+        "found": 3,
+        "hits": [
+          {
+            "document": {
+              "id": "7001",
+              "title": "The Quiet Orchard",
+              "author_names": ["Mara Lindqvist"],
+              "release_year": 2019,
+              "users_count": 4200,
+              "description": "<p>Three sisters and an orchard.</p>",
+              "image": {"url": "https://assets.hardcover.app/books/7001/orchard.jpg"},
+              "featured_series": {"series": {"name": "Orchard Tales"}, "position": 1},
+              "genres": ["Fiction", "Family Saga"],
+              "isbns": ["9783999900018"]
+            }
+          },
+          {
+            "document": {
+              "id": 7002,
+              "title": "The Quiet Orchard: Companion Workbook",
+              "author_names": ["Example Study Notes"],
+              "users_count": 3
+            }
+          },
+          {
+            "document": {
+              "id": "7003",
+              "title": "Salt Harbor",
+              "author_names": ["Theo Ravensberg"],
+              "users_count": 800,
+              "featured_series": {"series": {"name": "Harbor Chronicles"}, "position": 1}
+            }
+          },
+          {"document": {"title": "Without an id"}},
+          "not a hit"
+        ]
+      }
+    }
+  }
+}

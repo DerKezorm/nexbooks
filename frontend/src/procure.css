@@ -1,0 +1,427 @@
+/* Fetching books: the dialog "Releases ansehen" with the progress per indexer, a card per kind and the
+   table of the releases. Sizes, colours and distances are set here, inside the dialog. */
+
+:root {
+  --info: #3d5a80;
+  --upg: #946414;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --info: #8fb0dc;
+    --upg: #e0b060;
+  }
+}
+:root[data-theme='dark'] {
+  --info: #8fb0dc;
+  --upg: #e0b060;
+}
+
+@layer components {
+  /* On the twin of a book: look for a better format than the one there is (an upgrade). Quiet, like taking a choice back. */
+  .twin .tw-upgrade {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    margin: 2px 0 6px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--accent);
+    font: 600 13px var(--sans);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+  /* The symbol stands before the word on one line, as in the design (`.twin .go .ic`): the base styles make an svg a
+     block, which put it above the text. */
+  .twin button.go svg {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+    vertical-align: -3px;
+  }
+  .twin .tw-upgrade svg {
+    flex: none;
+    width: 14px;
+    height: 14px;
+  }
+  .rel-dlg .bbtn svg {
+    flex: none;
+    width: 15px;
+    height: 15px;
+  }
+  .rel-dlg .rel-again {
+    display: flex;
+    justify-content: flex-end;
+    margin: 4px 0 0;
+  }
+  .rel-dlg .rel-limit {
+    margin: 12px 0;
+    padding: 12px 14px;
+    border: 1px solid color-mix(in oklab, var(--warn) 45%, var(--line));
+    border-radius: 12px;
+    background: color-mix(in oklab, var(--warn) 10%, transparent);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .rel-dlg .rel-limit-h {
+    margin: 0 0 4px;
+    font-weight: 700;
+    color: var(--warn);
+  }
+  .rel-dlg .rel-limit ul {
+    margin: 0;
+    padding: 0 0 0 18px;
+  }
+  .rel-dlg .rel-limit li + li {
+    margin-top: 4px;
+  }
+  .rel-dlg .isr-at {
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
+  .rel-dlg .bbtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    font: 600 14px var(--sans);
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .rel-dlg .bbtn:hover:not(:disabled) {
+    background: color-mix(in oklab, var(--accent) 8%, var(--surface));
+  }
+  .rel-dlg .bbtn.small {
+    height: 34px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+  .rel-dlg .bbtn.primary {
+    background: var(--accent);
+    color: var(--on-accent);
+    border-color: transparent;
+  }
+  .rel-dlg .bbtn.primary:hover:not(:disabled) {
+    background: var(--accent);
+    filter: brightness(1.07);
+  }
+  .rel-dlg .bbtn:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  .rel-dlg .bbtn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .rel-dlg .spin {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 2px solid color-mix(in oklab, currentColor 25%, transparent);
+    border-top-color: currentColor;
+    animation: rel-spin 0.8s linear infinite;
+    vertical-align: -2px;
+  }
+  .rel-dlg .rchip {
+    display: inline-flex;
+    align-items: center;
+    height: 22px;
+    padding: 0 8px;
+    border-radius: 7px;
+    font: 600 11.5px var(--sans);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    background: var(--surface);
+    white-space: nowrap;
+  }
+  .rel-dlg .rchip.ok {
+    color: var(--ok);
+    border-color: color-mix(in oklab, var(--ok) 45%, var(--line));
+    background: color-mix(in oklab, var(--ok) 10%, transparent);
+  }
+  .rel-dlg .rchip.warn {
+    color: var(--warn);
+    border-color: color-mix(in oklab, var(--warn) 45%, var(--line));
+    background: color-mix(in oklab, var(--warn) 10%, transparent);
+  }
+  .rel-dlg .rel {
+    font: 500 12px/1.4 ui-monospace, Menlo, Consolas, monospace;
+    overflow-wrap: anywhere;
+    color: var(--text);
+    margin: 6px 0;
+    display: block;
+  }
+  .rel-dlg .rel-sub {
+    margin: -8px 0 12px;
+    color: var(--muted);
+    font-size: 13.5px;
+  }
+
+  /* ---- The progress per indexer --------------------------------------------------------------------------------- */
+  .rel-dlg .isr-h {
+    margin: 0 0 6px;
+    font: 600 12px var(--sans);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .rel-dlg .irow {
+    display: grid;
+    grid-template-columns: 24px auto auto 1fr;
+    gap: 10px;
+    padding: 5px 0;
+    font-size: 13px;
+    align-items: center;
+  }
+  .rel-dlg .irow small {
+    color: var(--dim);
+  }
+  .rel-dlg .ir {
+    justify-self: end;
+    color: var(--muted);
+  }
+  .rel-dlg .irow.ok .ii {
+    color: var(--ok);
+  }
+  .rel-dlg .irow.warn .ii {
+    color: var(--warn);
+  }
+  .rel-dlg .ii {
+    display: grid;
+    place-items: center;
+  }
+  .rel-dlg .ii svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* ---- A card per kind ------------------------------------------------------------------------------------------ */
+  .rel-dlg .fcards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 14px 0 6px;
+  }
+  .rel-dlg .fcard {
+    text-align: left;
+    border: 1.5px solid var(--line);
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 14px 16px;
+    display: grid;
+    gap: 6px;
+    cursor: pointer;
+    align-content: start;
+    align-self: start;
+    color: var(--text);
+  }
+  .rel-dlg .fcard.on {
+    border-color: var(--accent);
+    background: color-mix(in oklab, var(--accent) 5%, var(--surface));
+  }
+  .rel-dlg .fh {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .rel-dlg .fh svg {
+    width: 18px;
+    color: var(--accent);
+  }
+  .rel-dlg .fh .rchip {
+    margin-left: auto;
+  }
+  .rel-dlg .fcard small {
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+  .rel-dlg .fcard .goalnote {
+    color: var(--upg);
+  }
+  .rel-dlg .fcard .fn {
+    color: var(--muted);
+    font-size: 13.5px;
+  }
+  .rel-dlg .fw {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+
+  /* ---- The table ------------------------------------------------------------------------------------------------ */
+  .rel-dlg .rt-h {
+    font: 600 12px var(--sans);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 18px 0 8px;
+  }
+  .rel-dlg .rtab-w {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+  }
+  .rel-dlg .rtab {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .rel-dlg .rtab th {
+    text-align: left;
+    font: 600 11.5px var(--sans);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dim);
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+    background: color-mix(in oklab, var(--text) 3%, transparent);
+  }
+  .rel-dlg .rtab td:nth-child(4) {
+    white-space: nowrap;
+  }
+  .rel-dlg .rtab td {
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .rel-dlg .rtab tr:last-child td {
+    border-bottom: 0;
+  }
+  .rel-dlg .rtab .r {
+    text-align: right;
+    white-space: nowrap;
+  }
+  .rel-dlg .rtab td small {
+    display: block;
+    color: var(--dim);
+    font-size: 11.5px;
+  }
+  .rel-dlg .rtab .c-rank {
+    width: 44px;
+    color: var(--dim);
+    text-align: center;
+    font-weight: 700;
+  }
+  .rel-dlg .rtab tr[data-row] {
+    cursor: pointer;
+  }
+  .rel-dlg .rtab tr[data-row]:hover {
+    background: color-mix(in oklab, var(--accent) 5%, transparent);
+  }
+  .rel-dlg .rtab tr.rej .rel {
+    color: var(--muted);
+  }
+  .rel-dlg .rtab tr.best {
+    background: color-mix(in oklab, var(--ok) 8%, transparent);
+  }
+  .rel-dlg .rtab tr.best .c-rank {
+    color: var(--ok);
+  }
+  .rel-dlg .rtab .rel {
+    margin: 0;
+    min-width: 190px;
+  }
+  .rel-dlg .rchips {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  /* In the table the chips break into lines when the column is narrow, instead of pushing the table wider than its box
+     and running off its edge. */
+  .rel-dlg .rtab .rchip {
+    height: auto;
+    min-height: 22px;
+    padding: 2px 8px;
+    line-height: 1.25;
+    white-space: normal;
+  }
+  .rel-dlg .rtab td:last-child {
+    min-width: 150px;
+  }
+  .rel-dlg .car {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4px;
+    color: var(--dim);
+  }
+  .rel-dlg .car svg {
+    width: 14px;
+    height: 14px;
+  }
+  .rel-dlg tr.open .car svg {
+    transform: rotate(180deg);
+  }
+  .rel-dlg .why-row td {
+    background: color-mix(in oklab, var(--text) 3%, transparent);
+  }
+  .rel-dlg .whyl {
+    margin: 0 0 8px;
+    padding-left: 18px;
+    font-size: 13px;
+    list-style: disc;
+  }
+  .rel-dlg .wact {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 12.5px;
+  }
+  .rel-dlg .wact .muted {
+    color: var(--muted);
+  }
+  .rel-dlg .tno {
+    font: 700 11px ui-monospace, Consolas, monospace;
+    color: var(--dim);
+  }
+  .rel-dlg .hide-l {
+    display: none !important;
+  }
+  .rel-dlg .rel-empty {
+    padding: 12px 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 820px) {
+    .rel-dlg .fcards {
+      grid-template-columns: 1fr;
+    }
+    .rel-dlg .hide-s {
+      display: none !important;
+    }
+    .rel-dlg .hide-l {
+      display: block !important;
+    }
+    .rel-dlg .rtab .rel {
+      min-width: 0;
+    }
+  }
+}
+
+@keyframes rel-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rel-dlg .spin {
+    animation: none;
+  }
+}

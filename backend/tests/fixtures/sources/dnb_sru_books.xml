@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/">
+  <version>1.1</version>
+  <numberOfRecords>9</numberOfRecords>
+  <records>
+    <record>
+      <recordSchema>MARC21-xml</recordSchema>
+      <recordPacking>xml</recordPacking>
+      <recordData>
+        <record xmlns="http://www.loc.gov/MARC21/slim">
+          <leader>00000nam a2200000 c 4500</leader>
+          <controlfield tag="001">2000000001</controlfield>
+          <controlfield tag="007">tu</controlfield>
+          <datafield tag="020" ind1=" " ind2=" "><subfield code="a">978-3-9999-1101-4</subfield></datafield>
+          <datafield tag="041" ind1=" " ind2=" "><subfield code="a">ger</subfield></datafield>
+          <datafield tag="082" ind1="0" ind2="4"><subfield code="a">B</subfield><subfield code="2">23sdnb</subfield></datafield>
+          <datafield tag="100" ind1="1" ind2=" "><subfield code="a">Feldkamp, Ada</subfield><subfield code="4">aut</subfield></datafield>
+          <datafield tag="245" ind1="1" ind2="0">
+            <subfield code="a">Die Nebelwacht :</subfield>
+            <subfield code="b">Kriminalroman /</subfield>
+            <subfield code="c">Ada Feldkamp</subfield>
+          </datafield>
+          <datafield tag="264" ind1=" " ind2="1">
+            <subfield code="a">Beispielstadt :</subfield>
+            <subfield code="b">Beispiel Verlag,</subfield>
+            <subfield code="c">2021</subfield>
+          </datafield>
+          <datafield tag="300" ind1=" " ind2=" "><subfield code="a">412 Seiten</subfield></datafield>
+          <datafield tag="490" ind1="1" ind2=" "><subfield code="a">Wolff-Reihe ;</subfield><subfield code="v">1</subfield></datafield>
+          <datafield tag="689" ind1="0" ind2="0"><subfield code="a">Kriminalroman</subfield></datafield>
+        </record>
+      </recordData>
+      <recordPosition>1</recordPosition>
+    </record>
+    <record>
+      <recordSchema>MARC21-xml</recordSchema>
+      <recordData>
+        <record xmlns="http://www.loc.gov/MARC21/slim">
+          <leader>00000nam a2200000 c 4500</leader>
+          <controlfield tag="001">2000000002</controlfield>
+          <controlfield tag="007">tu</controlfield>
+          <datafield tag="020" ind1=" " ind2=" "><subfield code="a">978-3-9999-1102-1</subfield></datafield>
+          <datafield tag="041" ind1=" " ind2=" "><subfield code="a">ger</subfield></datafield>
+          <datafield tag="082" ind1="0" ind2="4"><subfield code="a">B</subfield></datafield>
+          <datafield tag="100" ind1="1" ind2=" "><subfield code="a">Feldkamp, Ada Ada</subfield><subfield code="4">aut</subfield></datafield>
+          <datafield tag="245" ind1="1" ind2="0">
+            <subfield code="a">Die Nebelwacht (Ein Wolff-Krimi 1) :</subfield>
+            <subfield code="b">Ein Mord im Nebel, ein Dorf, das schweigt /</subfield>
+            <subfield code="c">Ada Ada Feldkamp</subfield>
+          </datafield>
+          <datafield tag="264" ind1=" " ind2="1">
+            <subfield code="a">Beispielstadt :</subfield>
+            <subfield code="b">Anderer Verlag,</subfield>
+            <subfield code="c">2018</subfield>
+          </datafield>
+        </record>
+      </recordData>
+      <recordPosition>2</recordPosition>
+    </record>
+    <record>
+      <recordSchema>MARC21-xml</recordSchema>
+      <recordData>
+        <record xmlns="http://www.loc.gov/MARC21/slim">
+          <leader>00000nam a2200000 c 4500</leader>
+          <controlfield tag="001">2000000003</controlfield>
+          <controlfield tag="007">tu</controlfield>
+          <datafield tag="020" ind1=" " ind2=" "><subfield code="a">978-3-9999-1103-8</subfield></datafield>
+          <datafield tag="041" ind1=" " ind2=" "><subfield code="a">ger</subfield></datafield>
+          <datafield tag="100" ind1="1" ind2=" "><subfield code="a">Feldkamp, Ada</subfield></datafield>
+          <datafield tag="245" ind1="1" ind2="0"><subfield code="a">Die Nebelwacht</subfield></datafield>
+          <datafield tag="264" ind1=" " ind2="1"><subfield code="b">Taschenbuch Verlag,</subfield><subfield code="c">2024</subfield></datafield>
+        </record>
+      </recordData>
+      <recordPosition>3</recordPosition>
+    </record>
+    <record>
+      <recordSchema>MARC21-xml</recordSchema>
+      <recordData>
+        <record xmlns="http://www.loc.gov/MARC21/slim">
+          <leader>00000nim a2200000 c 4500</leader>
+          <controlfield tag="001">2000000004</controlfield>
+          <controlfield tag="007">sd</controlfield>
+          <datafield tag="020" ind1=" " ind2=" "><subfield code="a">978-3-9999-1104-5</subfield></datafield>
+          <datafield tag="041" ind1=" " ind2=" "><subfield code="a">ger</subfield></datafield>
+          <datafield tag="100" ind1="1" ind2=" "><subfield code="a">Feldkamp, Ada</subfield></datafield>
+          <datafield tag="245" ind1="1" ind2="0"><subfield code="a">Die Nebelwacht</subfield><subfield code="h">[Tontr&#228;ger]</subfield></datafield>
+          <datafield tag="264" ind1=" " ind2="1"><subfield code="b">Beispiel H&#246;rverlag,</subfield><subfield code="c">2016</subfield></datafield>
+          <datafield tag="300" ind1=" " ind2=" "><subfield code="a">1 MP3-CD (ca. 612 Min.)</subfield></datafield>
+        </record>
+      </recordData>
+      <recordPosition>4</recordPosition>
+    </record>
+    <record>
+      <recordSchema>MARC21-xml</recordSchema>
+      <recordData>
+        <record xmlns="http://www.loc.gov/MARC21/slim">
+          <leader>00000crm a2200000 c 4500</leader>
+          <controlfield tag="001">2000000005</controlfield>
+          <datafield tag="041" ind1=" " ind2=" "><subfield code="a">ger</subfield></datafield>
+          <datafield tag="100" ind1="1" ind2=" "><subfield code="a">Feldkamp, Ada</subfield></datafield>
+          <datafield tag="245" ind1="1" ind2="0"><subfield code="a">Die Nebelwacht</subfield><subfield code="b">Das Kartenspiel</subfield><subfield code="h">[Spielkarten]</subfield></datafield>
+          <datafield tag="264" ind1=" " ind2="1"><subfield code="b">Spiel Verlag,</subfield><subfield code="c">2015</subfield></datafield>
+        </record>
+      </recordData>
+      <recordPosition>5</recordPosition>
+    </record>
+    <record>
+      <recordSchema>MARC21-xml</recordSchema>
+      <recordData>
+        <record xmlns="http://www.loc.gov/MARC21/slim">
+          <leader>00000nam a2200000 c 4500</leader>
+          <controlfield tag="001">2000000006</controlfield>
+          <controlfield tag="007">tu</controlfield>
+          <datafield tag="020" ind1=" " ind2=" "><subfield code="a">978-1-9999-1106-5</subfield></datafield>
+          <datafield tag="041" ind1=" " ind2=" "><subfield code="a">eng</subfield></datafield>
+          <datafield tag="100" ind1="1" ind2=" "><subfield code="a">Feldkamp, Ada</subfield></datafield>
+          <datafield tag="245" ind1="1" ind2="0"><subfield code="a">The Fog Watch</subfield></datafield>
+          <datafield tag="264" ind1=" " ind2="1"><subfield code="b">Example Press,</subfield><subfield code="c">2020</subfield></datafield>
+        </record>
+      </recordData>
+      <recordPosition>6</recordPosition>
+    </record>
+    <record>
+      <recordSchema>MARC21-xml</recordSchema>
+      <recordData>
+        <record xmlns="http://www.loc.gov/MARC21/slim">
+          <leader>00000nam a2200000 c 4500</leader>
+          <controlfield tag="001">2000000007</controlfield>
+          <controlfield tag="007">tu</controlfield>
+          <datafield tag="020" ind1=" " ind2=" "><subfield code="a">978-3-9999-1107-6</subfield></datafield>
+          <datafield tag="041" ind1="1" ind2=" "><subfield code="a">ger</subfield><subfield code="h">eng</subfield></datafield>
+          <datafield tag="082" ind1="0" ind2="4"><subfield code="a">B</subfield></datafield>
+          <datafield tag="100" ind1="1" ind2=" "><subfield code="a">Example, Dana</subfield><subfield code="4">aut</subfield></datafield>
+          <datafield tag="240" ind1="1" ind2="0"><subfield code="a">The Cloud Path</subfield></datafield>
+          <datafield tag="245" ind1="1" ind2="0"><subfield code="a">Der Wolkenpfad</subfield><subfield code="b">Roman</subfield></datafield>
+          <datafield tag="264" ind1=" " ind2="1"><subfield code="b">Beispiel Verlag,</subfield><subfield code="c">2022</subfield></datafield>
+          <datafield tag="700" ind1="1" ind2=" "><subfield code="a">Uebersetzer, Udo</subfield><subfield code="4">trl</subfield></datafield>
+        </record>
+      </recordData>
+      <recordPosition>7</recordPosition>
+    </record>
+    <record>
+      <recordSchema>MARC21-xml</recordSchema>
+      <recordData>
+        <record xmlns="http://www.loc.gov/MARC21/slim">
+          <leader>00000nam a2200000 c 4500</leader>
+          <controlfield tag="001">2000000008</controlfield>
+          <controlfield tag="007">tu</controlfield>
+          <datafield tag="041" ind1=" " ind2=" "><subfield code="a">ger</subfield></datafield>
+          <datafield tag="082" ind1="0" ind2="4"><subfield code="a">K</subfield></datafield>
+          <datafield tag="100" ind1="1" ind2=" "><subfield code="a">Feldkamp, Ada</subfield></datafield>
+          <datafield tag="245" ind1="1" ind2="0"><subfield code="a">Die kleine Laterne</subfield></datafield>
+          <datafield tag="264" ind1=" " ind2="1"><subfield code="c">2019</subfield></datafield>
+        </record>
+      </recordData>
+      <recordPosition>8</recordPosition>
+    </record>
+    <record>
+      <recordSchema>MARC21-xml</recordSchema>
+      <recordData>
+        <record xmlns="http://www.loc.gov/MARC21/slim">
+          <leader>00000nam a2200000 c 4500</leader>
+          <controlfield tag="001">2000000009</controlfield>
+          <controlfield tag="007">tu</controlfield>
+          <datafield tag="041" ind1=" " ind2=" "><subfield code="a">ger</subfield></datafield>
+          <datafield tag="082" ind1="0" ind2="4"><subfield code="a">640</subfield></datafield>
+          <datafield tag="100" ind1="1" ind2=" "><subfield code="a">Feldkamp, Ada</subfield></datafield>
+          <datafield tag="245" ind1="1" ind2="0"><subfield code="a">Das Gartenjahr</subfield><subfield code="b">Ratgeber</subfield></datafield>
+          <datafield tag="264" ind1=" " ind2="1"><subfield code="c">2012</subfield></datafield>
+        </record>
+      </recordData>
+      <recordPosition>9</recordPosition>
+    </record>
+  </records>
+</searchRetrieveResponse>

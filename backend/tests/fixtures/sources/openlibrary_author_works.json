@@ -1,0 +1,4 @@
+{"links": {"self": "/authors/OL9000001A/works.json"}, "size": 2, "entries": [
+  {"key": "/works/OL9100001W", "title": "Alpha", "type": {"key": "/type/work"}},
+  {"key": "/works/OL9100002W", "title": "Beta", "type": {"key": "/type/work"}}
+]}

@@ -1,0 +1,1310 @@
+{
+ "sets": {
+  "LANTERN_OL": [
+   {
+    "key": "/works/OL7001W",
+    "title": "The Lantern Road",
+    "author_name": [
+     "Ada Sorrel"
+    ],
+    "author_key": [
+     "OL4797404A"
+    ],
+    "first_publish_year": 2012,
+    "language": [
+     "eng",
+     "ger"
+    ],
+    "edition_count": 210,
+    "subject": [
+     "Fiction"
+    ],
+    "isbn": [
+     "9780000070011",
+     "9783000070011",
+     "9783000070028"
+    ],
+    "cover_i": 7001,
+    "number_of_pages_median": 420,
+    "editions": {
+     "numFound": 1,
+     "start": 0,
+     "numFoundExact": true,
+     "docs": [
+      {
+       "key": "/books/OL7001M",
+       "title": "Die Laternenstraße",
+       "language": [
+        "ger"
+       ],
+       "isbn": [
+        "9780000070011"
+       ],
+       "publish_date": "2012"
+      }
+     ]
+    }
+   },
+   {
+    "key": "/works/OL7002W",
+    "title": "The Salt Gate",
+    "author_name": [
+     "Ada Sorrel"
+    ],
+    "author_key": [
+     "OL4797404A"
+    ],
+    "first_publish_year": 2014,
+    "language": [
+     "eng",
+     "ger"
+    ],
+    "edition_count": 150,
+    "subject": [
+     "Fiction"
+    ],
+    "isbn": [
+     "9780000070035",
+     "9783000070042"
+    ],
+    "cover_i": 7002,
+    "number_of_pages_median": 460,
+    "editions": {
+     "numFound": 1,
+     "start": 0,
+     "numFoundExact": true,
+     "docs": [
+      {
+       "key": "/books/OL7002M",
+       "title": "Das Salztor",
+       "language": [
+        "ger"
+       ],
+       "isbn": [
+        "9780000070035"
+       ],
+       "publish_date": "2014"
+      }
+     ]
+    }
+   },
+   {
+    "key": "/works/OL7003W",
+    "title": "The Last Ember",
+    "author_name": [
+     "Ada Sorrel"
+    ],
+    "author_key": [
+     "OL4797404A"
+    ],
+    "first_publish_year": 2016,
+    "language": [
+     "eng",
+     "ger"
+    ],
+    "edition_count": 120,
+    "subject": [
+     "Fiction"
+    ],
+    "isbn": [
+     "9780000070059"
+    ],
+    "cover_i": 7003,
+    "number_of_pages_median": 510,
+    "editions": {
+     "numFound": 1,
+     "start": 0,
+     "numFoundExact": true,
+     "docs": [
+      {
+       "key": "/books/OL7003M",
+       "title": "Die Laternen-Saga",
+       "language": [
+        "ger"
+       ],
+       "isbn": [
+        "9780000070059"
+       ],
+       "publish_date": "2016"
+      }
+     ]
+    }
+   },
+   {
+    "key": "/works/OL7004W",
+    "title": "The Lantern Saga 1-3 Boxed Set",
+    "author_name": [
+     "Ada Sorrel"
+    ],
+    "author_key": [
+     "OL4797404A"
+    ],
+    "first_publish_year": 2017,
+    "language": [
+     "eng"
+    ],
+    "edition_count": 4,
+    "subject": [
+     "Fiction"
+    ]
+   },
+   {
+    "key": "/works/OL7005W",
+    "title": "The Lantern Road",
+    "author_name": [
+     "Finn Hale",
+     "Ada Sorrel"
+    ],
+    "author_key": [
+     "OL13442873A",
+     "OL4797404A"
+    ],
+    "first_publish_year": 2020,
+    "language": [
+     "eng"
+    ],
+    "edition_count": 2,
+    "subject": [
+     "Comics & graphic novels"
+    ]
+   },
+   {
+    "key": "/works/OL7006W",
+    "title": "The Salt Gate",
+    "author_name": [
+     "Theo Brand"
+    ],
+    "author_key": [
+     "OL15200077A"
+    ],
+    "first_publish_year": 2015,
+    "language": [
+     "eng"
+    ],
+    "edition_count": 3,
+    "subject": [
+     "Motion picture music"
+    ]
+   }
+  ],
+  "LANTERN_DNB": [
+   {
+    "id": "70101",
+    "title": "Die Laternenstraße",
+    "subtitle": "",
+    "author": "Sorrel, Ada",
+    "year": 2013,
+    "language": "ger",
+    "translated": "eng",
+    "original": "The lantern road",
+    "isbn": "9783000070011",
+    "series": "Die Laternen-Saga",
+    "position": "1",
+    "audio": false,
+    "group": "B",
+    "pages": 430
+   },
+   {
+    "id": "70102",
+    "title": "Die Laternenstraße",
+    "subtitle": "",
+    "author": "Sorrel, Ada",
+    "year": 2015,
+    "language": "ger",
+    "translated": "eng",
+    "original": "The lantern road",
+    "isbn": "9783000070028",
+    "series": "Die Laternen-Saga",
+    "position": "1",
+    "audio": false,
+    "group": "B",
+    "pages": 430
+   },
+   {
+    "id": "70103",
+    "title": "Die Laternen-Saga 2. Das Salztor",
+    "subtitle": "",
+    "author": "Sorrel, Ada",
+    "year": 2015,
+    "language": "ger",
+    "translated": "eng",
+    "original": "The lantern road",
+    "isbn": "9783000070042",
+    "series": "Die Laternen-Saga",
+    "position": "2",
+    "audio": false,
+    "group": "B",
+    "pages": 470
+   },
+   {
+    "id": "70104",
+    "title": "Das Salztor",
+    "subtitle": "Hörspiel",
+    "author": "Sorrel, Ada",
+    "year": 2016,
+    "language": "ger",
+    "translated": "eng",
+    "original": "",
+    "isbn": "",
+    "series": "Die Laternen-Saga",
+    "position": "2",
+    "audio": true,
+    "group": "B",
+    "pages": null
+   },
+   {
+    "id": "70105",
+    "title": "Ada Sorrels Das Salztor",
+    "subtitle": "Lektürehilfe",
+    "author": "Brück, Lena",
+    "year": 2018,
+    "language": "ger",
+    "translated": "",
+    "original": "",
+    "isbn": "",
+    "series": "",
+    "position": "",
+    "audio": false,
+    "group": "830",
+    "pages": null
+   },
+   {
+    "id": "70106",
+    "title": "Das Salztor (Wandkalender 2027 DIN A3 hoch)",
+    "subtitle": "",
+    "author": "Sorrel, Ada",
+    "year": 2026,
+    "language": "ger",
+    "translated": "",
+    "original": "",
+    "isbn": "",
+    "series": "",
+    "position": "",
+    "audio": false,
+    "group": "B",
+    "pages": null
+   },
+   {
+    "id": "70107",
+    "title": "Die letzte Glut",
+    "subtitle": "",
+    "author": "Sorrel, Ada",
+    "year": 2017,
+    "language": "ger",
+    "translated": "eng",
+    "original": "The last ember",
+    "isbn": "",
+    "series": "Die Laternen-Saga",
+    "position": "3",
+    "audio": false,
+    "group": "B",
+    "pages": 520
+   }
+  ],
+  "LANTERN_AUDIBLE_DE": [
+   {
+    "asin": "B070000001",
+    "title": "Die Laternenstraße",
+    "authors": [
+     {
+      "name": "Ada Sorrel"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "german",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 840,
+    "subtitle": "Laternen-Saga 1",
+    "series": [
+     {
+      "title": "Die Laternen-Saga",
+      "sequence": "1"
+     }
+    ]
+   },
+   {
+    "asin": "B070000002",
+    "title": "Mara Quell liest Das Salztor",
+    "authors": [
+     {
+      "name": "Ada Sorrel"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Mara Quell"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "german",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 900,
+    "series": [
+     {
+      "title": "Die Laternen-Saga",
+      "sequence": "2"
+     }
+    ]
+   },
+   {
+    "asin": "B070000003",
+    "title": "Das Salztor",
+    "authors": [
+     {
+      "name": "Ada Sorrel"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ensemble"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "german",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 120,
+    "series": [
+     {
+      "title": "Die Laternen-Saga (Hörspiele mit voller Besetzung)",
+      "sequence": "2"
+     }
+    ]
+   },
+   {
+    "asin": "B070000004",
+    "title": "Die letzte Glut (1/2)",
+    "authors": [
+     {
+      "name": "Ada Sorrel"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "german",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 480,
+    "series": [
+     {
+      "title": "Die Laternen-Saga",
+      "sequence": "3"
+     }
+    ]
+   },
+   {
+    "asin": "B070000005",
+    "title": "Die letzte Glut (2/2)",
+    "authors": [
+     {
+      "name": "Ada Sorrel"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "german",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 470,
+    "series": [
+     {
+      "title": "Die Laternen-Saga",
+      "sequence": "3"
+     }
+    ]
+   },
+   {
+    "asin": "B070000006",
+    "title": "Le portail de sel",
+    "authors": [
+     {
+      "name": "Ada Sorrel"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "french",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 880,
+    "series": [
+     {
+      "title": "La Saga des lanternes",
+      "sequence": "2"
+     }
+    ]
+   }
+  ],
+  "LANTERN_AUDIBLE_US": [
+   {
+    "asin": "B070000011",
+    "title": "The Salt Gate, Book 2",
+    "authors": [
+     {
+      "name": "Ada Sorrel"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "english",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 890,
+    "series": [
+     {
+      "title": "The Lantern Saga",
+      "sequence": "2"
+     }
+    ]
+   },
+   {
+    "asin": "B070000012",
+    "title": "The Lantern Road",
+    "authors": [
+     {
+      "name": "Ada Sorrel"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "english",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 830,
+    "series": [
+     {
+      "title": "The Lantern Saga",
+      "sequence": "1"
+     }
+    ]
+   }
+  ],
+  "GARDEN_OL": [
+   {
+    "key": "/works/OL7101W",
+    "title": "Der stille Garten",
+    "author_name": [
+     "Ilse Marbach"
+    ],
+    "author_key": [
+     "OL13356477A"
+    ],
+    "first_publish_year": 1961,
+    "language": [
+     "ger",
+     "eng",
+     "fre",
+     "spa",
+     "ita"
+    ],
+    "edition_count": 320,
+    "subject": [
+     "Fiction"
+    ],
+    "isbn": [
+     "9783000071018",
+     "9780000071019"
+    ],
+    "cover_i": 7101,
+    "editions": {
+     "numFound": 1,
+     "start": 0,
+     "numFoundExact": true,
+     "docs": [
+      {
+       "key": "/books/OL7101M",
+       "title": "Der stille Garten",
+       "language": [
+        "ger"
+       ],
+       "isbn": [
+        "9783000071018"
+       ],
+       "publish_date": "1961"
+      }
+     ]
+    }
+   }
+  ],
+  "GARDEN_OL_EN": [
+   {
+    "key": "/works/OL7101W",
+    "title": "Der stille Garten",
+    "author_name": [
+     "Ilse Marbach"
+    ],
+    "author_key": [
+     "OL13356477A"
+    ],
+    "first_publish_year": 1961,
+    "language": [
+     "ger",
+     "eng",
+     "fre",
+     "spa",
+     "ita"
+    ],
+    "edition_count": 320,
+    "subject": [
+     "Fiction"
+    ],
+    "isbn": [
+     "9783000071018",
+     "9780000071019"
+    ],
+    "cover_i": 7101,
+    "editions": {
+     "numFound": 1,
+     "start": 0,
+     "numFoundExact": true,
+     "docs": [
+      {
+       "key": "/books/OL7102M",
+       "title": "The Quiet Garden",
+       "language": [
+        "eng"
+       ],
+       "isbn": [
+        "9783000071018"
+       ],
+       "publish_date": "1961"
+      }
+     ]
+    }
+   }
+  ],
+  "GARDEN_DNB": [
+   {
+    "id": "71101",
+    "title": "Der stille Garten",
+    "subtitle": "",
+    "author": "Marbach, Ilse",
+    "year": 1961,
+    "language": "ger",
+    "translated": "",
+    "original": "",
+    "isbn": "9783000071018",
+    "series": "",
+    "position": "",
+    "audio": false,
+    "group": "B",
+    "pages": null
+   },
+   {
+    "id": "71102",
+    "title": "Der stille Garten",
+    "subtitle": "Roman",
+    "author": "Marbach, Ilse",
+    "year": 2001,
+    "language": "ger",
+    "translated": "",
+    "original": "",
+    "isbn": "9783000071025",
+    "series": "",
+    "position": "",
+    "audio": false,
+    "group": "B",
+    "pages": null
+   }
+  ],
+  "GARDEN_AUDIBLE_DE": [
+   {
+    "asin": "B071000001",
+    "title": "Der stille Garten",
+    "authors": [
+     {
+      "name": "Ilse Marbach"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "german",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 410
+   },
+   {
+    "asin": "B071000002",
+    "title": "Le jardin silencieux",
+    "authors": [
+     {
+      "name": "Ilse Marbach"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "french",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 400
+   },
+   {
+    "asin": "B071000003",
+    "title": "El jardín silencioso",
+    "authors": [
+     {
+      "name": "Ilse Marbach"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "spanish",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 395
+   },
+   {
+    "asin": "B071000004",
+    "title": "Il giardino silenzioso",
+    "authors": [
+     {
+      "name": "Ilse Marbach"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "italian",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 405
+   }
+  ],
+  "MOOR_OL": [
+   {
+    "key": "/works/OL7201W",
+    "title": "Das Moorhaus",
+    "author_name": [
+     "Jonas Brehm"
+    ],
+    "author_key": [
+     "OL1484810A"
+    ],
+    "first_publish_year": 2019,
+    "language": [
+     "ger"
+    ],
+    "edition_count": 40,
+    "subject": [
+     "Fiction"
+    ],
+    "isbn": [
+     "9783000072015"
+    ],
+    "cover_i": 7201,
+    "editions": {
+     "numFound": 1,
+     "start": 0,
+     "numFoundExact": true,
+     "docs": [
+      {
+       "key": "/books/OL7201M",
+       "title": "Das Moorhaus",
+       "language": [
+        "ger"
+       ],
+       "isbn": [
+        "9783000072015"
+       ],
+       "publish_date": "2019"
+      }
+     ]
+    }
+   }
+  ],
+  "MOOR_DNB": [
+   {
+    "id": "72101",
+    "title": "Das Moorhaus",
+    "subtitle": "Kriminalroman",
+    "author": "Brehm, Jonas",
+    "year": 2019,
+    "language": "ger",
+    "translated": "",
+    "original": "",
+    "isbn": "9783000072015",
+    "series": "Ein Fall für Kommissar Lund",
+    "position": "1",
+    "audio": false,
+    "group": "B",
+    "pages": null
+   },
+   {
+    "id": "72102",
+    "title": "Das Moorhaus",
+    "subtitle": "ungekürzte Lesung",
+    "author": "Brehm, Jonas",
+    "year": 2019,
+    "language": "ger",
+    "translated": "",
+    "original": "",
+    "isbn": "",
+    "series": "Ein Fall für Kommissar Lund",
+    "position": "1",
+    "audio": true,
+    "group": "B",
+    "pages": null
+   }
+  ],
+  "MOOR_AUDIBLE_DE": [
+   {
+    "asin": "B072000001",
+    "title": "Das Moorhaus",
+    "authors": [
+     {
+      "name": "Jonas Brehm"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "german",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 612,
+    "series": [
+     {
+      "title": "Kommissar Lund",
+      "sequence": "1"
+     }
+    ]
+   },
+   {
+    "asin": "B072000002",
+    "title": "Das Moorhaus - Das Hörspiel",
+    "authors": [
+     {
+      "name": "Jonas Brehm"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ensemble"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "german",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 95,
+    "series": [
+     {
+      "title": "Kommissar Lund Hörspiele",
+      "sequence": "1"
+     }
+    ]
+   }
+  ],
+  "BRIDGE_OL": [
+   {
+    "key": "/works/OL7301W",
+    "title": "Die Brücke",
+    "author_name": [
+     "Klara Wendt"
+    ],
+    "author_key": [
+     "OL4729991A"
+    ],
+    "first_publish_year": 2008,
+    "language": [
+     "ger"
+    ],
+    "edition_count": 60,
+    "subject": [
+     "Fiction"
+    ],
+    "isbn": [
+     "9783000073012"
+    ],
+    "cover_i": 7301,
+    "editions": {
+     "numFound": 1,
+     "start": 0,
+     "numFoundExact": true,
+     "docs": [
+      {
+       "key": "/books/OL7301M",
+       "title": "Die Brücke",
+       "language": [
+        "ger"
+       ],
+       "isbn": [
+        "9783000073012"
+       ],
+       "publish_date": "2008"
+      }
+     ]
+    }
+   },
+   {
+    "key": "/works/OL7302W",
+    "title": "Die Brücke",
+    "author_name": [
+     "Paul Ostrander"
+    ],
+    "author_key": [
+     "OL5136645A"
+    ],
+    "first_publish_year": 1999,
+    "language": [
+     "ger"
+    ],
+    "edition_count": 1,
+    "subject": [
+     "Fiction"
+    ]
+   }
+  ],
+  "BRIDGE_DNB": [
+   {
+    "id": "73101",
+    "title": "Die Brücke",
+    "subtitle": "Roman",
+    "author": "Wendt, Klara",
+    "year": 2008,
+    "language": "ger",
+    "translated": "",
+    "original": "",
+    "isbn": "9783000073012",
+    "series": "",
+    "position": "",
+    "audio": false,
+    "group": "B",
+    "pages": null
+   }
+  ],
+  "BRIDGE_AUDIBLE_DE": [
+   {
+    "asin": "B073000001",
+    "title": "Die Brücke",
+    "authors": [
+     {
+      "name": "Klara Wendt"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "german",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 520
+   }
+  ],
+  "PIM_OL": [
+   {
+    "key": "/works/OL7401W",
+    "title": "Pim und der Leuchtturm",
+    "author_name": [
+     "Hanne Voss"
+    ],
+    "author_key": [
+     "OL12889042A"
+    ],
+    "first_publish_year": 2011,
+    "language": [
+     "ger"
+    ],
+    "edition_count": 12,
+    "subject": [
+     "Juvenile fiction"
+    ],
+    "number_of_pages_median": 48,
+    "editions": {
+     "numFound": 1,
+     "start": 0,
+     "numFoundExact": true,
+     "docs": [
+      {
+       "key": "/books/OL7401M",
+       "title": "Pim und der Leuchtturm",
+       "language": [
+        "ger"
+       ],
+       "isbn": [],
+       "publish_date": "2011"
+      }
+     ]
+    }
+   }
+  ],
+  "PIM_DNB": [
+   {
+    "id": "74101",
+    "title": "Pim und der Leuchtturm",
+    "subtitle": "",
+    "author": "Voss, Hanne",
+    "year": 2011,
+    "language": "ger",
+    "translated": "",
+    "original": "",
+    "isbn": "",
+    "series": "",
+    "position": "",
+    "audio": false,
+    "group": "K",
+    "pages": 48
+   }
+  ],
+  "ASH_OL": [
+   {
+    "key": "/works/OL7501W",
+    "title": "The Copper Bell",
+    "author_name": [
+     "J. K. Ash"
+    ],
+    "author_key": [
+     "OL1832236A"
+    ],
+    "first_publish_year": 2018,
+    "language": [
+     "eng",
+     "ger"
+    ],
+    "edition_count": 55,
+    "subject": [
+     "Fiction"
+    ],
+    "isbn": [
+     "9783000075016"
+    ],
+    "editions": {
+     "numFound": 1,
+     "start": 0,
+     "numFoundExact": true,
+     "docs": [
+      {
+       "key": "/books/OL7501M",
+       "title": "Die Kupferglocke",
+       "language": [
+        "ger"
+       ],
+       "isbn": [
+        "9783000075016"
+       ],
+       "publish_date": "2018"
+      }
+     ]
+    }
+   }
+  ],
+  "ASH_DNB": [
+   {
+    "id": "75101",
+    "title": "Die Kupferglocke",
+    "subtitle": "",
+    "author": "Ash, J. K.",
+    "year": 2019,
+    "language": "ger",
+    "translated": "eng",
+    "original": "The copper bell",
+    "isbn": "9783000075016",
+    "series": "",
+    "position": "",
+    "audio": false,
+    "group": "B",
+    "pages": null
+   }
+  ],
+  "ASH_AUDIBLE_DE": [
+   {
+    "asin": "B075000001",
+    "title": "Die Kupferglocke",
+    "authors": [
+     {
+      "name": "Joanna K. Ash"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "german",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 700
+   }
+  ],
+  "SALT_OL": [
+   {
+    "key": "/works/OL7601W",
+    "title": "Salt & Ashes",
+    "author_name": [
+     "Wren Calloway"
+    ],
+    "author_key": [
+     "OL11386916A"
+    ],
+    "first_publish_year": 2021,
+    "language": [
+     "eng"
+    ],
+    "edition_count": 30,
+    "subject": [
+     "Fiction"
+    ]
+   }
+  ],
+  "SALT_AUDIBLE_US": [
+   {
+    "asin": "B076000001",
+    "title": "Salt and Ashes",
+    "authors": [
+     {
+      "name": "Wren Calloway"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "english",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 640
+   }
+  ],
+  "PHARE_OL": [
+   {
+    "key": "/works/OL7701W",
+    "title": "La Maison du Phare",
+    "author_name": [
+     "Odile Ferrand"
+    ],
+    "author_key": [
+     "OL6688562A"
+    ],
+    "first_publish_year": 1998,
+    "language": [
+     "fre"
+    ],
+    "edition_count": 25,
+    "subject": [
+     "Roman"
+    ]
+   }
+  ],
+  "PHARE_AUDIBLE_DE": [
+   {
+    "asin": "B077000001",
+    "title": "La Maison du Phare",
+    "authors": [
+     {
+      "name": "Odile Ferrand"
+     }
+    ],
+    "narrators": [
+     {
+      "name": "Ben Hollister"
+     }
+    ],
+    "format_type": "unabridged",
+    "language": "french",
+    "release_date": "2019-03-01",
+    "runtime_length_min": 520
+   }
+  ]
+ },
+ "searches": [
+  {
+   "q": "Laternenstraße Sorrel",
+   "ol": {
+    "de": "LANTERN_OL",
+    "en": "LANTERN_OL"
+   },
+   "dnb": "LANTERN_DNB",
+   "audible": {
+    "de": "LANTERN_AUDIBLE_DE",
+    "us": "LANTERN_AUDIBLE_US"
+   }
+  },
+  {
+   "q": "lantern saga 2",
+   "ol": {
+    "de": "LANTERN_OL",
+    "en": "LANTERN_OL"
+   },
+   "dnb": "LANTERN_DNB",
+   "audible": {
+    "de": "LANTERN_AUDIBLE_DE",
+    "us": "LANTERN_AUDIBLE_US"
+   }
+  },
+  {
+   "q": "Das Salztor",
+   "ol": {
+    "de": "LANTERN_OL",
+    "en": "LANTERN_OL"
+   },
+   "dnb": "LANTERN_DNB",
+   "audible": {
+    "de": "LANTERN_AUDIBLE_DE",
+    "us": "LANTERN_AUDIBLE_US"
+   }
+  },
+  {
+   "q": "The Salt Gate",
+   "ol": {
+    "de": "LANTERN_OL",
+    "en": "LANTERN_OL"
+   },
+   "dnb": "LANTERN_DNB",
+   "audible": {
+    "de": "LANTERN_AUDIBLE_DE",
+    "us": "LANTERN_AUDIBLE_US"
+   }
+  },
+  {
+   "q": "Lantern Saga Box",
+   "ol": {
+    "de": "LANTERN_OL",
+    "en": "LANTERN_OL"
+   },
+   "dnb": "LANTERN_DNB",
+   "audible": {
+    "de": "LANTERN_AUDIBLE_DE",
+    "us": "LANTERN_AUDIBLE_US"
+   }
+  },
+  {
+   "q": "Salztor Lektürehilfe",
+   "ol": {},
+   "dnb": "LANTERN_DNB",
+   "audible": {
+    "de": "LANTERN_AUDIBLE_DE"
+   }
+  },
+  {
+   "q": "Die letzte Glut",
+   "ol": {
+    "de": "LANTERN_OL",
+    "en": "LANTERN_OL"
+   },
+   "dnb": "LANTERN_DNB",
+   "audible": {
+    "de": "LANTERN_AUDIBLE_DE"
+   }
+  },
+  {
+   "q": "Der stille Garten",
+   "ol": {
+    "de": "GARDEN_OL",
+    "en": "GARDEN_OL_EN"
+   },
+   "dnb": "GARDEN_DNB",
+   "audible": {
+    "de": "GARDEN_AUDIBLE_DE"
+   }
+  },
+  {
+   "q": "Das Moorhaus",
+   "ol": {
+    "de": "MOOR_OL",
+    "en": "MOOR_OL"
+   },
+   "dnb": "MOOR_DNB",
+   "audible": {
+    "de": "MOOR_AUDIBLE_DE"
+   }
+  },
+  {
+   "q": "Die Brücke",
+   "ol": {
+    "de": "BRIDGE_OL",
+    "en": "BRIDGE_OL"
+   },
+   "dnb": "BRIDGE_DNB",
+   "audible": {
+    "de": "BRIDGE_AUDIBLE_DE"
+   }
+  },
+  {
+   "q": "Pim und der Leuchtturm",
+   "ol": {
+    "de": "PIM_OL",
+    "en": "PIM_OL"
+   },
+   "dnb": "PIM_DNB",
+   "audible": {}
+  },
+  {
+   "q": "J. K. Ash Kupferglocke",
+   "ol": {
+    "de": "ASH_OL",
+    "en": "ASH_OL"
+   },
+   "dnb": "ASH_DNB",
+   "audible": {
+    "de": "ASH_AUDIBLE_DE"
+   }
+  },
+  {
+   "q": "Salt and Ashes",
+   "ol": {
+    "de": "SALT_OL",
+    "en": "SALT_OL"
+   },
+   "dnb": "",
+   "audible": {
+    "us": "SALT_AUDIBLE_US"
+   }
+  },
+  {
+   "q": "La Maison du Phare",
+   "ol": {
+    "de": "PHARE_OL",
+    "en": "PHARE_OL"
+   },
+   "dnb": "",
+   "audible": {
+    "de": "PHARE_AUDIBLE_DE"
+   }
+  },
+  {
+   "q": "The Copper Bell",
+   "ol": {
+    "de": "ASH_OL",
+    "en": "ASH_OL"
+   },
+   "dnb": "ASH_DNB",
+   "audible": {
+    "de": "ASH_AUDIBLE_DE"
+   }
+  }
+ ]
+}

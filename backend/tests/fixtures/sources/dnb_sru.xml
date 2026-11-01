@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/">
+  <version>1.1</version>
+  <numberOfRecords>3</numberOfRecords>
+  <records>
+    <record>
+      <recordSchema>MARC21-xml</recordSchema>
+      <recordPacking>xml</recordPacking>
+      <recordData>
+        <record xmlns="http://www.loc.gov/MARC21/slim">
+          <leader>00000nam a2200000 c 4500</leader>
+          <controlfield tag="001">1000000001</controlfield>
+          <datafield tag="020" ind1=" " ind2=" ">
+            <subfield code="a">978-3-9999-0002-5</subfield>
+            <subfield code="c">Broschur</subfield>
+          </datafield>
+          <datafield tag="041" ind1=" " ind2=" ">
+            <subfield code="a">ger</subfield>
+          </datafield>
+          <datafield tag="100" ind1="1" ind2=" ">
+            <subfield code="a">Lindqvist, Mara</subfield>
+            <subfield code="4">aut</subfield>
+          </datafield>
+          <datafield tag="245" ind1="1" ind2="0">
+            <subfield code="a">Der stille Obstgarten :</subfield>
+            <subfield code="b">Roman /</subfield>
+            <subfield code="c">Mara Lindqvist</subfield>
+          </datafield>
+          <datafield tag="264" ind1=" " ind2="1">
+            <subfield code="a">Beispielstadt :</subfield>
+            <subfield code="b">Beispiel Verlag,</subfield>
+            <subfield code="c">2021</subfield>
+          </datafield>
+          <datafield tag="490" ind1="1" ind2=" ">
+            <subfield code="a">Obstgarten-Reihe ;</subfield>
+            <subfield code="v">Band 1</subfield>
+          </datafield>
+          <datafield tag="700" ind1="1" ind2=" ">
+            <subfield code="a">Example, Translator</subfield>
+            <subfield code="4">trl</subfield>
+          </datafield>
+        </record>
+      </recordData>
+      <recordPosition>1</recordPosition>
+    </record>
+    <record>
+      <recordSchema>MARC21-xml</recordSchema>
+      <recordData>
+        <record xmlns="http://www.loc.gov/MARC21/slim">
+          <controlfield tag="001">1000000002</controlfield>
+          <datafield tag="245" ind1="1" ind2="0">
+            <subfield code="a">Ohne Autor</subfield>
+          </datafield>
+        </record>
+      </recordData>
+    </record>
+    <record>
+      <recordData>
+        <record xmlns="http://www.loc.gov/MARC21/slim">
+          <datafield tag="245"><subfield code="a">No identifier</subfield></datafield>
+        </record>
+      </recordData>
+    </record>
+  </records>
+</searchRetrieveResponse>

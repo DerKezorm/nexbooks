@@ -1,0 +1,431 @@
+{
+  "DELETE /api/app/1/bookmarks/{bookmark_id}": {
+    "400": [
+      "client_required"
+    ],
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "not_found"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "DELETE /api/app/1/history/{entry_id}": {
+    "400": [
+      "client_required"
+    ],
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "not_found"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "DELETE /api/app/1/pairing/request/{request_id}": {
+    "403": [
+      "origin_refused"
+    ],
+    "422": [
+      "invalid_input"
+    ]
+  },
+  "DELETE /api/app/1/pairing/request/{request_id}/confirm": {
+    "400": [
+      "client_required"
+    ],
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "pairing_unknown"
+    ],
+    "410": [
+      "pairing_used"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "GET /api/app/1/editions/{edition_id}/bookmarks": {
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "not_found"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "GET /api/app/1/files/{file_id}/content": {
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "not_found"
+    ],
+    "429": [
+      "stream_too_often",
+      "too_many_attempts",
+      "too_many_streams"
+    ]
+  },
+  "GET /api/app/1/history": {
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "GET /api/app/1/library": {
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "410": [
+      "marker_too_old"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "GET /api/app/1/me": {
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "GET /api/app/1/pairing/request/{request_id}": {
+    "403": [
+      "origin_refused"
+    ],
+    "404": [
+      "pairing_unknown"
+    ],
+    "409": [
+      "too_many_devices"
+    ],
+    "410": [
+      "pairing_used"
+    ],
+    "422": [
+      "invalid_input"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "GET /api/app/1/progress": {
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "GET /api/app/1/works/{work_id}": {
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "not_found"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "GET /api/app/1/works/{work_id}/cover": {
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "not_found"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "PATCH /api/app/1/bookmarks/{bookmark_id}": {
+    "400": [
+      "client_required"
+    ],
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "not_found"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "POST /api/app/1/editions/{edition_id}/bookmarks": {
+    "400": [
+      "client_required"
+    ],
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "not_found"
+    ],
+    "409": [
+      "bookmark_limit"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "POST /api/app/1/editions/{edition_id}/finished": {
+    "400": [
+      "client_required"
+    ],
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "not_found"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  },
+  "POST /api/app/1/pairing/claim": {
+    "403": [
+      "origin_refused"
+    ],
+    "404": [
+      "pairing_unknown"
+    ],
+    "409": [
+      "too_many_devices"
+    ],
+    "410": [
+      "pairing_expired",
+      "pairing_used"
+    ],
+    "422": [
+      "device_name_invalid",
+      "invalid_input",
+      "pairing_code"
+    ],
+    "429": [
+      "too_many_attempts",
+      "too_many_codes"
+    ]
+  },
+  "POST /api/app/1/pairing/request": {
+    "403": [
+      "origin_refused"
+    ],
+    "422": [
+      "device_name_invalid",
+      "invalid_input"
+    ],
+    "429": [
+      "too_many_requests"
+    ]
+  },
+  "POST /api/app/1/pairing/request/confirm": {
+    "400": [
+      "client_required"
+    ],
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "device_chain",
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "pairing_unknown"
+    ],
+    "409": [
+      "too_many_devices"
+    ],
+    "410": [
+      "pairing_expired",
+      "pairing_used"
+    ],
+    "422": [
+      "invalid_input",
+      "pairing_code"
+    ],
+    "429": [
+      "too_many_attempts",
+      "too_many_codes"
+    ]
+  },
+  "POST /api/app/1/pairing/request/preview": {
+    "400": [
+      "client_required"
+    ],
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "device_chain",
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "pairing_unknown"
+    ],
+    "410": [
+      "pairing_expired",
+      "pairing_used"
+    ],
+    "422": [
+      "invalid_input",
+      "pairing_code"
+    ],
+    "429": [
+      "too_many_attempts",
+      "too_many_codes"
+    ]
+  },
+  "POST /api/app/1/pairing/{pairing_id}/claim": {
+    "403": [
+      "origin_refused"
+    ],
+    "404": [
+      "pairing_unknown"
+    ],
+    "409": [
+      "too_many_devices"
+    ],
+    "410": [
+      "pairing_expired",
+      "pairing_used"
+    ],
+    "422": [
+      "device_name_invalid",
+      "invalid_input",
+      "pairing_code"
+    ],
+    "429": [
+      "too_many_attempts",
+      "too_many_codes"
+    ]
+  },
+  "PUT /api/app/1/editions/{edition_id}/progress": {
+    "400": [
+      "client_required"
+    ],
+    "401": [
+      "device_token_required",
+      "sign_in_required",
+      "token_invalid",
+      "token_wrong_kind"
+    ],
+    "403": [
+      "second_factor_setup_required"
+    ],
+    "404": [
+      "not_found"
+    ],
+    "422": [
+      "bad_place"
+    ],
+    "429": [
+      "too_many_attempts"
+    ]
+  }
+}

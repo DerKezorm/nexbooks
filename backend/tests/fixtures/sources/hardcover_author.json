@@ -1,0 +1,12 @@
+{
+  "data": {
+    "books": [
+      {"id": 8201, "title": "Briefe aus Triest", "release_date": "2019-03-01", "users_count": 800, "image": null,
+       "contributions": [{"author": {"name": "Mara Feldkamp"}}], "book_series": []},
+      {"id": 8202, "title": "Der Leuchtturmwaerter", "release_date": "2024-03-14", "users_count": 3000, "image": null,
+       "contributions": [{"author": {"name": "Mara Feldkamp"}}], "book_series": []},
+      {"id": 8203, "title": "Nach dem Sturm", "release_date": "2021-10-10", "users_count": 500, "image": null,
+       "contributions": [{"author": {"name": "Mara Feldkamp"}}], "book_series": []}
+    ]
+  }
+}

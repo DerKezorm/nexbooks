@@ -1,0 +1,105 @@
+{
+  "0.1.0": {
+    "lead": "This is nexbooks 0.1: e-books and audiobooks on your own server, to read and listen to in the browser, with pages for authors, browsing and, when the operator sets it up, acquiring new books. It is the first release, and it is still young.",
+    "sections": [
+      {
+        "title": "Libraries and the scan",
+        "body": "The operator names folders of books, nexbooks reads them in the background and recognises title, author, series, language, cover and running time. EPUB, AZW3, MOBI and PDF of the same book are one edition, and so are the parts of an audiobook. Your files stay unchanged where they are.",
+        "where": "Settings, Libraries"
+      },
+      {
+        "title": "One book, several editions",
+        "body": "The e-book and the audiobook of a book stand side by side, each edition with its own place. Nothing is compared: an abridged recording, a play or a translation is divided differently from the book.",
+        "where": "Page of a book"
+      },
+      {
+        "title": "The shelf",
+        "body": "The library is a shelf of spines, a shelf for each genre. A click turns the book to its cover and opens its page in the colours of the book. There is also a grid of covers, a list you can sort and an overview of the authors with their photos.",
+        "where": "Library"
+      },
+      {
+        "title": "Reading in the browser",
+        "body": "The reader opens EPUB, MOBI, AZW3 and PDF. Typeface, size, margins and colours are yours, and there are contents, bookmarks and a search in the book. A book is treated as code from outside: no script runs in it, and it cannot reach any address.",
+        "where": "Page of a book, Read"
+      },
+      {
+        "title": "Listening in the browser",
+        "body": "The player plays an audiobook of many files as one, with chapters, speed from 0.5 to 3, a sleep timer, jump buttons and bookmarks with a note. The lock screen and headphone buttons work. Listening offline is not there yet.",
+        "where": "Page of a book, Listen"
+      },
+      {
+        "title": "Sources on the internet, entirely optional",
+        "body": "Open Library, the German National Library and Hardcover can fill in what is missing, and Audible too once the operator turns it on. Only a title, an author and an ISBN go out, never a file. What is certain nexbooks takes by itself, the rest goes into a list to check. One switch for the operator turns it all off.",
+        "where": "Settings, Sources"
+      },
+      {
+        "title": "Checking and looking in",
+        "body": "What nexbooks cannot match for sure is in the review list, with the proposals and the reasons side by side. You can look into the book: the first pages of an e-book, a short listen into an audiobook, and what the file says about itself, such as its name, author, narrator, ISBN and running time. Nothing is saved as your place while you look.",
+        "where": "Library, Review list"
+      },
+      {
+        "title": "Browse and Discover",
+        "body": "Browse like in a bookshop: thirteen shelves by topic, each with what is new, popular now, prize winners and classics, filled from open sources alone. Rest the mouse on a cover to pick it up and read its back. Beside that, best sellers, new and coming books for each country, and For you with the gaps in your series. nexbooks hides what you have. The wish list is yours alone.",
+        "where": "Discover"
+      },
+      {
+        "title": "Pages for authors",
+        "body": "Every author has a page with all the works the sources know, ordered by series and kind and in your language. It says what you have, what is wished and what else exists. People of the same name are not mixed up, and what nexbooks cannot place for sure stands apart. Two spellings of one name (the words the other way round, a first name in another language, initials that fit exactly one name) become one author by themselves when both stand in the same libraries. “Join with another author” does it by hand, and “Split” takes either back.",
+        "where": "Page of an author"
+      },
+      {
+        "title": "Watching authors",
+        "body": "A switch on the page of an author lets nexbooks wish their new books for you: as an e-book, an audiobook or both, in one language. What is announced already waits for its day, and what is out already is never wished. Whoever may not acquire gets the books on the wish list.",
+        "where": "Page of an author, Watch"
+      },
+      {
+        "title": "Acquiring books",
+        "body": "The operator enters indexers (Newznab, Torznab or a Prowlarr) and download programs. Whoever has the right to acquire wishes a book as an e-book, an audiobook or both. nexbooks searches, judges every hit by author, title, volume, language and format, and loads the best. A ranking for each kind sets the formats, and PDF is off from the start. Then nexbooks reads the file as the scan does and files it only if it is the book that was wished.",
+        "where": "Acquire, Settings, Acquisition"
+      },
+      {
+        "title": "The automatic work",
+        "body": "A wish that found nothing is searched again after the time you choose. The newest entries of the indexers are read, a book that is not out yet waits for its day, and a failed download is replaced by the next hit. Limits for each indexer and each person spare the indexers, and a main switch turns it all off. Torrents are not seeded from the start.",
+        "where": "Settings, Acquisition, Automation"
+      },
+      {
+        "title": "Trash and wrong book",
+        "body": "What a better format replaces lies for 30 days in a trash of the library. A fetched book that is not right is sent away with “Wrong book”: the files go into the trash, the hit is blocked, and your place comes back when you take the files out again. A book can also be moved into another library, with its place, bookmarks and history.",
+        "where": "Page of a book, Edit"
+      },
+      {
+        "title": "Connecting the iPhone app and a television",
+        "body": "The iPhone app is connected with a QR code that is good for ten minutes. A device without a camera, such as an Apple TV, shows a code that you confirm in the browser. With the app connected, that works from the phone too. The devices are listed and can be blocked one by one.",
+        "where": "My account, Devices and apps"
+      },
+      {
+        "title": "Connecting e-readers",
+        "body": "“Send to Kindle” mails an EPUB to your Kindle; where the server cannot send mail, the button downloads the file and opens Amazon's Send to Kindle page. Through OPDS you fetch books into reading apps, KOReader keeps your place in step, and a Kobo gets the books you pick with “To the Kobo”. Every connection has credentials of its own, shown once, and can be blocked by itself. The operator can switch e-readers off altogether. Nothing is converted: for Kindle, KOReader and Kobo a book needs an EPUB. Kobo is still in beta: it has not been tried on a real device yet.",
+        "where": "My account, Devices and apps, Page of a book"
+      },
+      {
+        "title": "Reading stack",
+        "body": "A tower for each year of the books you read or listened to, each as thick as on the shelf, with a look back at books, pages and hours.",
+        "where": "Reading stack"
+      },
+      {
+        "title": "Tidying, if you like",
+        "body": "By default nexbooks only reads. If you want, it renames and moves files by a scheme, after a preview and your confirmation, with a way back. Nothing is overwritten.",
+        "where": "Settings, Tidying"
+      }
+    ],
+    "smallTitle": "Also",
+    "small": [
+      "The key / searches books, people and series, and the catalogues of the sources if you like",
+      "Upload books, also from a phone",
+      "Copies of a file of a book that are the same byte for byte go to the trash where nexbooks may write (tidying is on, or fetched books go there); elsewhere they are only named",
+      "If the browser translates the page, nexbooks keeps working",
+      "Several people, each with their own place, wish list and stack; the operator sees neither progress nor history",
+      "A second factor from the start, passkeys and sign-in through your own provider (authentik, Entra ID and others)",
+      "A backup with the database, settings, covers and photos, without the books",
+      "Notices by Web Push for new sign-ins",
+      "An open API under /api/v1 with device tokens and API keys",
+      "Light and dark, German and English, more languages as a file"
+    ]
+  }
+}

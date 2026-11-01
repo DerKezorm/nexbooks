@@ -1,0 +1,104 @@
+{
+ "products": [
+  {
+   "asin": "B0WRENPR01",
+   "title": "The Glass Harbour",
+   "subtitle": "",
+   "authors": [
+    {
+     "asin": "B0WRENAU01",
+     "name": "Tobias Wren"
+    }
+   ],
+   "narrators": [
+    {
+     "name": "Ida Leser"
+    }
+   ],
+   "runtime_length_min": 640,
+   "format_type": "unabridged",
+   "language": "english",
+   "release_date": "2005-01-01",
+   "publisher_name": "Beispiel Audio",
+   "category_ladders": [
+    {
+     "ladder": [
+      {
+       "name": "Krimis & Thriller"
+      }
+     ]
+    }
+   ],
+   "product_images": {
+    "500": "https://m.media-amazon.com/images/I/B0WRENPR01._SL500_.jpg"
+   }
+  },
+  {
+   "asin": "B0WRENPR02",
+   "title": "The Lantern Teacher",
+   "subtitle": "",
+   "authors": [
+    {
+     "asin": "B0WRENAU01",
+     "name": "Tobias Wren"
+    }
+   ],
+   "narrators": [
+    {
+     "name": "Ida Leser"
+    }
+   ],
+   "runtime_length_min": 640,
+   "format_type": "unabridged",
+   "language": "english",
+   "release_date": "2012-06-01",
+   "publisher_name": "Beispiel Audio",
+   "category_ladders": [
+    {
+     "ladder": [
+      {
+       "name": "Krimis & Thriller"
+      }
+     ]
+    }
+   ],
+   "product_images": {
+    "500": "https://m.media-amazon.com/images/I/B0WRENPR02._SL500_.jpg"
+   }
+  },
+  {
+   "asin": "B0WRENPR03",
+   "title": "Ledger of Tides",
+   "subtitle": "",
+   "authors": [
+    {
+     "asin": "B0WRENAU02",
+     "name": "Tobias Wren"
+    }
+   ],
+   "narrators": [
+    {
+     "name": "Ida Leser"
+    }
+   ],
+   "runtime_length_min": 640,
+   "format_type": "unabridged",
+   "language": "english",
+   "release_date": "2015-01-01",
+   "publisher_name": "Beispiel Audio",
+   "category_ladders": [
+    {
+     "ladder": [
+      {
+       "name": "Krimis & Thriller"
+      }
+     ]
+    }
+   ],
+   "product_images": {
+    "500": "https://m.media-amazon.com/images/I/B0WRENPR03._SL500_.jpg"
+   }
+  }
+ ],
+ "total_results": 3
+}

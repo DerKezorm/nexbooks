@@ -1,0 +1,31 @@
+{
+  "feed": {
+    "id": "https://rss.marketingtools.apple.com/api/v2/de/books/top-paid/50/books.json",
+    "title": "Top Paid",
+    "country": "de",
+    "updated": "2026-10-12T21:00:00.000-07:00",
+    "results": [
+      {
+        "artistName": "Mara Feldkamp", "id": "1700000001", "name": "Der Leuchtturmwaerter", "releaseDate": "2024-03-14",
+        "kind": "books", "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Publication/v4/aa/bb/cc/100x100bb.jpg",
+        "genres": [{"genreId": "9031", "name": "Romane & Erzählungen", "url": "https://books.apple.com/de/genre/id9031"}],
+        "url": "https://books.apple.com/de/book/id1700000001"
+      },
+      {
+        "artistName": "Ilse Marwitz", "id": "1700000002", "name": "Die Salzwiese", "releaseDate": "2026-05-02", "kind": "books",
+        "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Publication/v4/dd/ee/ff/100x100bb.jpg",
+        "genres": [{"genreId": "9032", "name": "Krimis & Thriller", "url": "https://books.apple.com/de/genre/id9032"}],
+        "url": "https://books.apple.com/de/book/id1700000002"
+      },
+      {
+        "artistName": "Theo Valcourt", "id": "1700000003", "name": "Orbit Null", "releaseDate": "2025-11-20", "kind": "books",
+        "artworkUrl100": "https://evil.example.com/pic/100x100bb.jpg",
+        "genres": [{"genreId": "9033", "name": "Science-Fiction", "url": "https://books.apple.com/de/genre/id9033"}],
+        "url": "https://books.apple.com/de/book/id1700000003"
+      },
+      {"artistName": "Nobody", "id": "not-a-number", "name": "A Record with a Bad Number", "kind": "books"},
+      {"artistName": "Nobody", "id": "1700000009", "name": "", "kind": "books"},
+      "not a book"
+    ]
+  }
+}

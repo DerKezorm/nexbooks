@@ -1,0 +1,38 @@
+{
+  "authors": [
+    {
+      "name": "Jonas Lindholm",
+      "orig": "de",
+      "genre": "krimi",
+      "aliases": ["Jon Holm"],
+      "born": "1968",
+      "works": [
+        {"key": "nebel", "series": "Die Deich-Krimis", "pos": 1, "color": "#1f304b", "titles": {"de": {"title": "Nebel ueber dem Deich", "year": 2015}, "en": {"title": "Fog over the Dyke", "year": 2018}}},
+        {"key": "sand", "series": "Die Deich-Krimis", "pos": 2, "color": "#1d2a3a", "titles": {"de": {"title": "Schwarzer Sand", "year": 2017, "audio": true}}},
+        {"key": "watt", "series": "Die Deich-Krimis", "pos": 3, "color": "#28465e", "pattern": 2, "titles": {"de": {"title": "Wattenstille", "year": 2019, "audio": true}, "en": {"title": "Silent Flats", "year": 2021}}},
+        {"key": "flut", "series": "Die Deich-Krimis", "pos": 4, "color": "#3a5a72", "pattern": 1, "titles": {"de": {"title": "Die letzte Flut", "year": 2031, "released": "2031-04-20"}}},
+        {"key": "faehre", "color": "#5e2027", "pattern": 3, "titles": {"de": {"title": "Die Nachtfaehre", "year": 2012}}},
+        {"key": "moor", "color": "#4a3b2a", "pattern": 0, "titles": {"de": {"title": "Moorlicht", "year": 2021, "audio": true}}},
+        {"key": "kurz", "kind": "erz", "color": "#6b4b2a", "pattern": 4, "titles": {"de": {"title": "Geschichten vom Kai", "year": 2016}}},
+        {"key": "jung", "kind": "kinder", "color": "#b48a2a", "pattern": 2, "titles": {"de": {"title": "Pia und der Leuchtturm", "year": 2014}}},
+        {"key": "holm", "pen": "Jon Holm", "color": "#2a3b4a", "pattern": 1, "titles": {"de": {"title": "Kaltes Wasser", "year": 2009}}},
+        {"key": "comic", "kind": "unsure", "why": "comic", "color": "#555555", "pattern": 0, "titles": {"de": {"title": "Deich. Die Graphic Novel", "year": 2020}}}
+      ]
+    },
+    {
+      "name": "Edmund Halloran",
+      "orig": "en",
+      "genre": "krimi",
+      "aliases": ["Richard Vane"],
+      "born": "1951",
+      "works": [
+        {"key": "salt", "color": "#1d1c1f", "pattern": 0, "titles": {"en": {"title": "The Salt Daughters", "year": 1974}, "de": {"title": "Die Salztoechter", "year": 1976, "audio": true}}},
+        {"key": "soot", "color": "#7a2e2a", "pattern": 1, "titles": {"en": {"title": "Soot", "year": 1983}, "de": {"title": "Russ", "year": 1985}}},
+        {"key": "roses", "kind": "erz", "color": "#3b5a4a", "pattern": 2, "titles": {"en": {"title": "Soot and Roses", "year": 2024}, "de": {"title": "Russ und Rosen", "year": 2026}}},
+        {"key": "tide", "color": "#2a4a6a", "pattern": 3, "titles": {"en": {"title": "Tidewater", "year": 2019}}},
+        {"key": "keeper", "color": "#1f2f4a", "pattern": 4, "titles": {"en": {"title": "The Keeper of Lost Rooms", "year": 2030, "released": "2030-11-15", "audio": true}, "de": {"title": "Der Hueter der verlorenen Zimmer", "year": 2031, "released": "2031-03-03"}}},
+        {"key": "rain", "pen": "Richard Vane", "color": "#444a2a", "pattern": 0, "titles": {"en": {"title": "Rain Fury", "year": 1977}, "de": {"title": "Regenwut", "year": 1980}}}
+      ]
+    }
+  ]
+}

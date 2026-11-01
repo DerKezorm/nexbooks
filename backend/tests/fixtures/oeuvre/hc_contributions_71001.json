@@ -1,0 +1,106 @@
+{
+ "data": {
+  "contributions": [
+   {
+    "contribution": null,
+    "book": {
+     "id": 82000,
+     "title": "The Glass Harbour",
+     "release_date": "2004-04-01",
+     "release_year": 2004,
+     "compilation": false,
+     "pages": 300,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 90,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Thriller"
+       }
+      ]
+     },
+     "image": null,
+     "canonical_id": null,
+     "editions": [],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 82001,
+     "title": "Night Ferry",
+     "release_date": "2009-04-01",
+     "release_year": 2009,
+     "compilation": false,
+     "pages": 300,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 89,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Thriller"
+       }
+      ]
+     },
+     "image": null,
+     "canonical_id": null,
+     "editions": [],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 82002,
+     "title": "Ledger of Tides",
+     "release_date": "1951-04-01",
+     "release_year": 1951,
+     "compilation": false,
+     "pages": 300,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 88,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Thriller"
+       }
+      ]
+     },
+     "image": null,
+     "canonical_id": null,
+     "editions": [],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 82003,
+     "title": "The Lantern Teacher",
+     "release_date": "2012-04-01",
+     "release_year": 2012,
+     "compilation": false,
+     "pages": 300,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 87,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Thriller"
+       }
+      ]
+     },
+     "image": null,
+     "canonical_id": null,
+     "editions": [],
+     "book_series": []
+    }
+   }
+  ]
+ }
+}

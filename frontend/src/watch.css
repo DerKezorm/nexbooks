@@ -1,0 +1,183 @@
+/* Watching an author. Sizes, colours and distances are set here; the switch comes from player.css, the buttons and fields from `.acq`. */
+
+@layer components {
+  .watch {
+    margin: 22px 0 8px;
+    padding: 18px 20px;
+    border-radius: 18px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .watch.on {
+    border-color: color-mix(in oklab, var(--accent) 45%, var(--line));
+    background: color-mix(in oklab, var(--accent) 6%, var(--surface));
+  }
+  .w-head {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    gap: 14px;
+    align-items: start;
+  }
+  .w-ic {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: var(--accent);
+    background: color-mix(in oklab, var(--accent) 13%, transparent);
+  }
+  .w-head h3 {
+    margin: 0;
+    font: 600 18px var(--serif);
+  }
+  .w-head p {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 78ch;
+  }
+  .toggle.big {
+    font-size: 14px;
+    color: var(--text);
+    gap: 10px;
+    white-space: nowrap;
+    margin-top: 6px;
+  }
+  .toggle.big b {
+    min-width: 86px;
+  }
+  .w-opts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 4px 26px;
+    margin: 8px 0 0 54px;
+  }
+  .w-opts .fld {
+    margin: 8px 0 0;
+  }
+  .w-opts .chk {
+    margin-bottom: 7px;
+    font-size: 13.5px;
+  }
+  /* The field of the design (`.sel.mini`: 32 px, 13 px, 12 px inside) beats the smaller one of the tools of the page. */
+  .au-page .w-opts .sel.mini {
+    height: 32px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+  .w-sum {
+    flex-basis: 100%;
+    margin: 10px 0 0;
+    font-size: 13.5px;
+    color: var(--text);
+  }
+  .w-said {
+    margin: 12px 0 0 54px;
+    font-size: 13.5px;
+    color: var(--text);
+  }
+  .chk {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .chk input {
+    accent-color: var(--accent);
+    width: 17px;
+    height: 17px;
+    flex: none;
+  }
+  .chk.top {
+    align-items: flex-start;
+  }
+  .chk.top input {
+    margin-top: 2px;
+  }
+  .chk.top span {
+    display: grid;
+    gap: 2px;
+  }
+  .chk.top small {
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+  .watch-choice {
+    display: grid;
+    gap: 12px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .watchstrip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 0 26px;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+  }
+  .ws-l {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    margin-right: 4px;
+  }
+  .ws-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 5px 12px 5px 5px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    text-decoration: none;
+    color: inherit;
+    background: var(--bg);
+  }
+  .ws-chip:hover {
+    border-color: color-mix(in oklab, var(--accent) 50%, var(--line));
+  }
+  .ws-chip b {
+    display: block;
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  .ws-chip small {
+    display: block;
+    font-size: 11.5px;
+    color: var(--accent);
+    line-height: 1.2;
+  }
+  .dcard .dtext small.via {
+    color: var(--accent);
+  }
+  @media (max-width: 820px) {
+    .w-head {
+      grid-template-columns: 36px minmax(0, 1fr);
+    }
+    .w-head .toggle.big {
+      grid-column: 2;
+      margin-top: 2px;
+    }
+    .w-ic {
+      width: 36px;
+      height: 36px;
+    }
+    .w-opts,
+    .w-said {
+      margin-left: 0;
+    }
+    .watch {
+      padding: 16px;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+ "numFound": 2,
+ "start": 0,
+ "docs": [
+  {
+   "author_key": [
+    "OL900001A"
+   ],
+   "author_name": [
+    "Richard Vane"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 1977,
+   "key": "/works/OL91000W",
+   "language": [
+    "eng"
+   ],
+   "title": "Rain Fury",
+   "subject": [
+    "Fiction"
+   ],
+   "number_of_pages_median": 280,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL91000M",
+      "title": "Rain Fury",
+      "language": [
+       "eng"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL900001A"
+   ],
+   "author_name": [
+    "Richard Vane"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 1980,
+   "key": "/works/OL91001W",
+   "language": [
+    "eng"
+   ],
+   "title": "Roadside",
+   "subject": [
+    "Fiction"
+   ],
+   "number_of_pages_median": 280,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL91001M",
+      "title": "Roadside",
+      "language": [
+       "eng"
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

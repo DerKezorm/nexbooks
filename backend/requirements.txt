@@ -1,0 +1,22 @@
+fastapi==0.141.1
+uvicorn[standard]==0.54.0
+sqlalchemy==2.1.1
+pydantic==2.13.5
+pydantic-settings==2.15.0
+pillow==12.3.0
+pillow-heif==1.8.0
+argon2-cffi==25.1.0
+cryptography==50.0.1
+pyjwt==2.15.1
+httpx==0.28.1
+segno==1.6.6
+tzdata==2026.1
+# Web Push: the message encrypted for one device (RFC 8291, aes128gcm).
+http-ece==1.2.1
+# Passkeys (WebAuthn): the browser's answers checked; brings cbor2, pyOpenSSL, pyasn1.
+webauthn==3.0.1
+# Reading the books (app/services/readers): the tags of audio files (mutagen), the XML inside an EPUB (defusedxml: no
+# entities, no external files), the pages and the title of a PDF (pypdf).
+mutagen==1.48.1
+defusedxml==0.7.1
+pypdf==6.20.1

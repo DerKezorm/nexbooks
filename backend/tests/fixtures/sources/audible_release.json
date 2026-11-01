@@ -1,0 +1,20 @@
+{
+  "products": [
+    {"asin": "B0SOON0004", "title": "Das Echo am Ende der Strasse", "authors": [{"name": "Edda Hellwig"}], "narrators": [{"name": "Ben Hollister"}],
+     "runtime_length_min": 480, "format_type": "unabridged", "language": "german", "release_date": "2026-12-04",
+     "category_ladders": [{"ladder": [{"id": "1", "name": "Belletristik"}]}]},
+    {"asin": "B0SOON0003", "title": "Schwarzer Sand", "authors": [{"name": "Jonas Lindholm"}], "narrators": [{"name": "Clara Vienne"}],
+     "runtime_length_min": 590, "format_type": "unabridged", "language": "german", "release_date": "2026-10-30",
+     "series": [{"title": "Die Deich-Krimis", "sequence": "3"}],
+     "category_ladders": [{"ladder": [{"id": "3", "name": "Krimis & Thriller"}]}]},
+    {"asin": "B0NEW00001", "title": "Kaltes Licht", "authors": [{"name": "Vera Brenner"}], "narrators": [{"name": "Johanna Bergfeld"}],
+     "runtime_length_min": 420, "format_type": "unabridged", "language": "german", "release_date": "2026-10-09",
+     "category_ladders": [{"ladder": [{"id": "3", "name": "Krimis & Thriller"}]}]},
+    {"asin": "B0NEW00002", "title": "Das Lied der Weberinnen", "authors": [{"name": "Iris Quist"}], "narrators": [{"name": "Leonie Saarinen"}],
+     "runtime_length_min": 900, "format_type": "unabridged", "language": "german", "release_date": "2026-09-01",
+     "category_ladders": [{"ladder": [{"id": "4", "name": "Fantasy"}]}]},
+    {"asin": "B0OLD00001", "title": "Ein Winter auf dem Lande", "authors": [{"name": "Konrad Albrecht"}], "narrators": [{"name": "David Okoro"}],
+     "runtime_length_min": 300, "format_type": "unabridged", "language": "german", "release_date": "2026-03-01"},
+    {"asin": "B0NODATE01", "title": "A product with no day", "authors": [{"name": "Nobody Atall"}], "language": "german"}
+  ]
+}

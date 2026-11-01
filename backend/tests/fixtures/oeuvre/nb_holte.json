@@ -1,0 +1,75 @@
+{
+ "_embedded": {
+  "items": [
+   {
+    "id": "holteitem0001",
+    "_links": {
+     "self": {
+      "href": "https://api.nb.no/catalog/v1/items/holteitem0001"
+     }
+    },
+    "metadata": {
+     "creators": [
+      "Holte, Sigrun"
+     ],
+     "identifiers": {
+      "isbn13": [
+       "97882000m0001"
+      ]
+     },
+     "languages": [
+      {
+       "code": "nob"
+      }
+     ],
+     "mediaTypes": [
+      "bøker"
+     ],
+     "originInfo": {
+      "publisher": "Eksempelforlaget",
+      "issued": "2015"
+     },
+     "pageCount": 412,
+     "title": "Fjordlys : roman"
+    }
+   },
+   {
+    "id": "holteitem0002",
+    "_links": {
+     "self": {
+      "href": "https://api.nb.no/catalog/v1/items/holteitem0002"
+     }
+    },
+    "metadata": {
+     "creators": [
+      "Holte, Sigrun"
+     ],
+     "identifiers": {
+      "isbn13": [
+       "97882000m0002"
+      ]
+     },
+     "languages": [
+      {
+       "code": "nob"
+      }
+     ],
+     "mediaTypes": [
+      "bøker"
+     ],
+     "originInfo": {
+      "publisher": "Eksempelforlaget",
+      "issued": "2018"
+     },
+     "pageCount": 380,
+     "title": "Vinterbro"
+    }
+   }
+  ]
+ },
+ "page": {
+  "size": 100,
+  "totalElements": 2,
+  "number": 0
+ }
+}

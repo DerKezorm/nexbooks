@@ -1,0 +1,767 @@
+{
+ "numFound": 14,
+ "start": 0,
+ "docs": [
+  {
+   "key": "/works/OL1001W",
+   "title": "The Quiet Pier",
+   "author_name": [
+    "Mara Feldkamp"
+   ],
+   "first_publish_year": 2022,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "cover_i": 70001,
+   "subject": [
+    "Thriller",
+    "Mystery",
+    "Suspense"
+   ],
+   "number_of_pages_median": 312,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1001M",
+      "title": "Der stille Pier",
+      "language": [
+       "ger"
+      ],
+      "cover_i": 75001,
+      "publish_date": [
+       "2022"
+      ],
+      "isbn": [
+       "9783000001001"
+      ]
+     },
+     {
+      "key": "/books/OL1002M",
+      "title": "The Quiet Pier",
+      "language": [
+       "eng"
+      ],
+      "cover_i": 76001,
+      "publish_date": [
+       "2022"
+      ],
+      "isbn": [
+       "9781000001001"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "/works/OL1003W",
+   "title": "Harbour Lights",
+   "author_name": [
+    "Iris Quist"
+   ],
+   "first_publish_year": 2021,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "cover_i": 70002,
+   "subject": [
+    "Mystery",
+    "Detective and mystery stories"
+   ],
+   "number_of_pages_median": 224,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1003M",
+      "title": "Hafenlichter",
+      "language": [
+       "ger"
+      ],
+      "cover_i": 75002,
+      "publish_date": [
+       "2021"
+      ],
+      "isbn": [
+       "9783000001003"
+      ]
+     },
+     {
+      "key": "/books/OL1004M",
+      "title": "Harbour Lights",
+      "language": [
+       "eng"
+      ],
+      "cover_i": 76002,
+      "publish_date": [
+       "2021"
+      ],
+      "isbn": [
+       "9781000001003"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "/works/OL1005W",
+   "title": "The Ninth Bell",
+   "author_name": [
+    "Edmund Halloran"
+   ],
+   "first_publish_year": 2024,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "cover_i": 70003,
+   "subject": [
+    "Thriller",
+    "Murder"
+   ],
+   "number_of_pages_median": 388,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1005M",
+      "title": "Die neunte Glocke",
+      "language": [
+       "ger"
+      ],
+      "cover_i": 75003,
+      "publish_date": [
+       "2024"
+      ],
+      "isbn": [
+       "9783000001005"
+      ]
+     },
+     {
+      "key": "/books/OL1006M",
+      "title": "The Ninth Bell",
+      "language": [
+       "eng"
+      ],
+      "cover_i": 76003,
+      "publish_date": [
+       "2024"
+      ],
+      "isbn": [
+       "9781000001005"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "/works/OL1007W",
+   "title": "Fog Runner",
+   "author_name": [
+    "Theo Valcourt"
+   ],
+   "first_publish_year": 2026,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "cover_i": 70004,
+   "subject": [
+    "Thriller",
+    "Crime fiction"
+   ],
+   "number_of_pages_median": 276,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1007M",
+      "title": "Nebelläufer",
+      "language": [
+       "ger"
+      ],
+      "cover_i": 75004,
+      "publish_date": [
+       "2026-03-05"
+      ],
+      "isbn": [
+       "9783000001007"
+      ]
+     },
+     {
+      "key": "/books/OL1008M",
+      "title": "Fog Runner",
+      "language": [
+       "eng"
+      ],
+      "cover_i": 76004,
+      "publish_date": [
+       "2026"
+      ],
+      "isbn": [
+       "9781000001007"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "/works/OL1009W",
+   "title": "Salt Daughters",
+   "author_name": [
+    "Juna Okafor"
+   ],
+   "first_publish_year": 2025,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "cover_i": 70005,
+   "subject": [
+    "Mystery",
+    "Suspense"
+   ],
+   "number_of_pages_median": 340,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1009M",
+      "title": "Die Salztöchter",
+      "language": [
+       "ger"
+      ],
+      "cover_i": 75005,
+      "publish_date": [
+       "2025"
+      ],
+      "isbn": [
+       "9783000001009"
+      ]
+     },
+     {
+      "key": "/books/OL1010M",
+      "title": "Salt Daughters",
+      "language": [
+       "eng"
+      ],
+      "cover_i": 76005,
+      "publish_date": [
+       "2025"
+      ],
+      "isbn": [
+       "9781000001009"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "/works/OL1011W",
+   "title": "The Long Goodbye Road",
+   "author_name": [
+    "Hans Feldkamp"
+   ],
+   "first_publish_year": 1953,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "cover_i": 70006,
+   "subject": [
+    "Mystery",
+    "Edgar Award",
+    "Detective and mystery stories",
+    "award:edgar_award=1954"
+   ],
+   "number_of_pages_median": 288,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1011M",
+      "title": "Der lange Heimweg",
+      "language": [
+       "ger"
+      ],
+      "cover_i": 75006,
+      "publish_date": [
+       "1953"
+      ],
+      "isbn": [
+       "9783000001011"
+      ]
+     },
+     {
+      "key": "/books/OL1012M",
+      "title": "The Long Goodbye Road",
+      "language": [
+       "eng"
+      ],
+      "cover_i": 76006,
+      "publish_date": [
+       "1953"
+      ],
+      "isbn": [
+       "9781000001011"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "/works/OL1013W",
+   "title": "A Case of Salt",
+   "author_name": [
+    "Vera Brenner"
+   ],
+   "first_publish_year": 1968,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "cover_i": 70007,
+   "subject": [
+    "Thriller",
+    "Edgar Award winners",
+    "Suspense",
+    "award:edgar_award=1969"
+   ],
+   "number_of_pages_median": 255,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1013M",
+      "title": "Ein Fall von Salz",
+      "language": [
+       "ger"
+      ],
+      "cover_i": 75007,
+      "publish_date": [
+       "1968"
+      ],
+      "isbn": [
+       "9783000001013"
+      ]
+     },
+     {
+      "key": "/books/OL1014M",
+      "title": "A Case of Salt",
+      "language": [
+       "eng"
+      ],
+      "cover_i": 76007,
+      "publish_date": [
+       "1968"
+      ],
+      "isbn": [
+       "9781000001013"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "/works/OL1015W",
+   "title": "Old Money Kills",
+   "author_name": [
+    "Ilse Marwitz"
+   ],
+   "first_publish_year": 1934,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "cover_i": 70008,
+   "subject": [
+    "Mystery",
+    "Detective and mystery stories"
+   ],
+   "number_of_pages_median": 210,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1015M",
+      "title": "Altes Geld tötet",
+      "language": [
+       "ger"
+      ],
+      "cover_i": 75008,
+      "publish_date": [
+       "1934"
+      ],
+      "isbn": [
+       "9783000001015"
+      ]
+     },
+     {
+      "key": "/books/OL1016M",
+      "title": "Old Money Kills",
+      "language": [
+       "eng"
+      ],
+      "cover_i": 76008,
+      "publish_date": [
+       "1934"
+      ],
+      "isbn": [
+       "9781000001015"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "/works/OL1017W",
+   "title": "The Locked Boat",
+   "author_name": [
+    "Uta Lind"
+   ],
+   "first_publish_year": 1959,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "cover_i": 70009,
+   "subject": [
+    "Mystery",
+    "Murder"
+   ],
+   "number_of_pages_median": 198,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1017M",
+      "title": "Das verschlossene Boot",
+      "language": [
+       "ger"
+      ],
+      "cover_i": 75009,
+      "publish_date": [
+       "1959"
+      ],
+      "isbn": [
+       "9783000001017"
+      ]
+     },
+     {
+      "key": "/books/OL1018M",
+      "title": "The Locked Boat",
+      "language": [
+       "eng"
+      ],
+      "cover_i": 76009,
+      "publish_date": [
+       "1959"
+      ],
+      "isbn": [
+       "9781000001017"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "/works/OL1019W",
+   "title": "Tide Table",
+   "author_name": [
+    "Karl Boden"
+   ],
+   "first_publish_year": 1971,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "cover_i": 70010,
+   "subject": [
+    "Thriller",
+    "Pulitzer Prize",
+    "Crime fiction"
+   ],
+   "number_of_pages_median": 180,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1019M",
+      "title": "Gezeitentafel",
+      "language": [
+       "ger"
+      ],
+      "cover_i": 75010,
+      "publish_date": [
+       "1971"
+      ],
+      "isbn": [
+       "9783000001019"
+      ]
+     },
+     {
+      "key": "/books/OL1020M",
+      "title": "Tide Table",
+      "language": [
+       "eng"
+      ],
+      "cover_i": 76010,
+      "publish_date": [
+       "1971"
+      ],
+      "isbn": [
+       "9781000001019"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "/works/OL1021W",
+   "title": "The Impossible Prize",
+   "author_name": [
+    "Jan Aster"
+   ],
+   "first_publish_year": 1890,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "cover_i": 70011,
+   "subject": [
+    "Thriller",
+    "Edgar Award",
+    "Mystery",
+    "award:edgar_award=1891"
+   ],
+   "number_of_pages_median": 250,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1021M",
+      "title": "Der unmögliche Preis",
+      "language": [
+       "ger"
+      ],
+      "cover_i": 75011,
+      "publish_date": [
+       "1890"
+      ],
+      "isbn": [
+       "9783000001021"
+      ]
+     },
+     {
+      "key": "/books/OL1022M",
+      "title": "The Impossible Prize",
+      "language": [
+       "eng"
+      ],
+      "cover_i": 76011,
+      "publish_date": [
+       "1890"
+      ],
+      "isbn": [
+       "9781000001021"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "/works/OL1023W",
+   "title": "Without Pictures",
+   "author_name": [
+    "Karl Boden"
+   ],
+   "first_publish_year": 2023,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "subject": [
+    "Thriller",
+    "Mystery"
+   ],
+   "number_of_pages_median": 300,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1023M",
+      "title": "Ohne Bild",
+      "language": [
+       "ger"
+      ],
+      "publish_date": [
+       "2023"
+      ],
+      "isbn": [
+       "9783000001023"
+      ]
+     },
+     {
+      "key": "/books/OL1024M",
+      "title": "Without Pictures",
+      "language": [
+       "eng"
+      ],
+      "publish_date": [
+       "2023"
+      ],
+      "isbn": [
+       "9781000001023"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "/works/OL1025W",
+   "title": "Eight Hours To Go",
+   "author_name": [
+    "Vera Brenner"
+   ],
+   "first_publish_year": 2025,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "cover_i": 70013,
+   "subject": [
+    "Suspense",
+    "Thriller"
+   ],
+   "number_of_pages_median": 520,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1025M",
+      "title": "Acht Stunden bis zum Morgen",
+      "language": [
+       "ger"
+      ],
+      "cover_i": 75013,
+      "publish_date": [
+       "2025"
+      ],
+      "isbn": [
+       "9783000001025"
+      ]
+     },
+     {
+      "key": "/books/OL1026M",
+      "title": "Eight Hours To Go",
+      "language": [
+       "eng"
+      ],
+      "cover_i": 76013,
+      "publish_date": [
+       "2025"
+      ],
+      "isbn": [
+       "9781000001025"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "key": "/works/OL1027W",
+   "title": "Short Night",
+   "author_name": [
+    "Ilse Brandt"
+   ],
+   "first_publish_year": 2024,
+   "language": [
+    "ger",
+    "eng"
+   ],
+   "cover_i": 70014,
+   "subject": [
+    "Thriller",
+    "Crime fiction"
+   ],
+   "number_of_pages_median": 160,
+   "edition_count": 12,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL1027M",
+      "title": "Kurze Nacht",
+      "language": [
+       "ger"
+      ],
+      "cover_i": 75014,
+      "publish_date": [
+       "2024"
+      ],
+      "isbn": [
+       "9783000001027"
+      ]
+     },
+     {
+      "key": "/books/OL1028M",
+      "title": "Short Night",
+      "language": [
+       "eng"
+      ],
+      "cover_i": 76014,
+      "publish_date": [
+       "2024"
+      ],
+      "isbn": [
+       "9781000001027"
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

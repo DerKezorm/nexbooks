@@ -1,0 +1,138 @@
+{
+ "numFound": 4,
+ "start": 0,
+ "docs": [
+  {
+   "author_key": [
+    "OL800001A"
+   ],
+   "author_name": [
+    "Tobias Wren"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 2004,
+   "key": "/works/OL80001W",
+   "language": [
+    "eng"
+   ],
+   "title": "The Glass Harbour",
+   "subject": [
+    "Fiction"
+   ],
+   "number_of_pages_median": 320,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL80001M",
+      "title": "The Glass Harbour",
+      "language": [
+       "eng"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL800001A"
+   ],
+   "author_name": [
+    "Tobias Wren"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 2009,
+   "key": "/works/OL80002W",
+   "language": [
+    "eng"
+   ],
+   "title": "Night Ferry",
+   "subject": [
+    "Fiction"
+   ],
+   "number_of_pages_median": 320,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL80002M",
+      "title": "Night Ferry",
+      "language": [
+       "eng"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL800003A"
+   ],
+   "author_name": [
+    "Tobias Wren"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 2004,
+   "key": "/works/OL80003W",
+   "language": [
+    "eng"
+   ],
+   "title": "The Glass Harbour",
+   "subject": [
+    "Fiction"
+   ],
+   "number_of_pages_median": 320,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL80003M",
+      "title": "The Glass Harbour",
+      "language": [
+       "eng"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "author_key": [
+    "OL800002A"
+   ],
+   "author_name": [
+    "Tobias Wren"
+   ],
+   "edition_count": 4,
+   "first_publish_year": 1951,
+   "key": "/works/OL80004W",
+   "language": [
+    "eng"
+   ],
+   "title": "Ledger of Tides",
+   "subject": [
+    "Fiction"
+   ],
+   "number_of_pages_median": 210,
+   "editions": {
+    "numFound": 2,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+     {
+      "key": "/books/OL80004M",
+      "title": "Ledger of Tides",
+      "language": [
+       "eng"
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

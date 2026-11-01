@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "name": "Example Books Usenet",
+    "enable": true,
+    "protocol": "usenet",
+    "priority": 10,
+    "fields": [
+      {"name": "baseSettings.queryLimit", "value": 150},
+      {"name": "baseSettings.limitsUnit", "value": 0}
+    ],
+    "capabilities": {
+      "categories": [
+        {"id": 3000, "name": "Audio", "subCategories": [{"id": 3030, "name": "Audio/Audiobook", "subCategories": []}]},
+        {"id": 7000, "name": "Books", "subCategories": [
+          {"id": 7020, "name": "Books/EBook", "subCategories": []},
+          {"id": 7030, "name": "Books/Comics", "subCategories": []}
+        ]}
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "name": "Example Torrent Library",
+    "enable": true,
+    "protocol": "torrent",
+    "priority": 40,
+    "fields": [
+      {"name": "baseSettings.queryLimit", "value": 10},
+      {"name": "baseSettings.limitsUnit", "value": 1}
+    ],
+    "capabilities": {
+      "categories": [
+        {"id": 7000, "name": "Books", "subCategories": [{"id": 7120, "name": "Books/EBook German", "subCategories": []}]}
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "name": "Example Movies Only",
+    "enable": true,
+    "protocol": "usenet",
+    "priority": 25,
+    "fields": [],
+    "capabilities": {
+      "categories": [
+        {"id": 2000, "name": "Movies", "subCategories": [{"id": 2040, "name": "Movies/HD", "subCategories": []}]}
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "name": "Example Switched Off",
+    "enable": false,
+    "protocol": "torrent",
+    "priority": 25,
+    "fields": [],
+    "capabilities": {
+      "categories": [
+        {"id": 7000, "name": "Books", "subCategories": [{"id": 7020, "name": "Books/EBook", "subCategories": []}]}
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "name": "Example Unknown Protocol",
+    "enable": true,
+    "protocol": "unknown",
+    "priority": 25,
+    "fields": [],
+    "capabilities": {
+      "categories": [
+        {"id": 7000, "name": "Books", "subCategories": [{"id": 7020, "name": "Books/EBook", "subCategories": []}]}
+      ]
+    }
+  }
+]

@@ -1,0 +1,671 @@
+/* Browse: the wall of themed shelves, the covers on a shelf board, the cover taken in the hand and one shelf
+   opened. Sizes, colours, distances and curves are set here. The wall's buttons, switch and fields come from discover.css, the badge and the page of an author from
+   authors.css. */
+
+@layer components {
+  /* ---- The top of the wall --------------------------------------------------------------------------------------- */
+  .browse-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px 20px;
+    flex-wrap: wrap;
+    margin: -4px 0 20px;
+  }
+  .browse-intro {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14.5px;
+    max-width: 72ch;
+  }
+  .eyebrow {
+    font: 700 11px var(--sans);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+  }
+
+  /* ---- The wall: three departments of tiles --------------------------------------------------------------------- */
+  .tw {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+  .tw-dept h3 {
+    font: 600 12px var(--sans);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px 2px;
+  }
+  .tw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
+    gap: 12px;
+  }
+  .shtile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 12px 14px 12px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    text-decoration: none;
+    color: inherit;
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--wall) 70%, var(--surface)),
+      var(--surface)
+    );
+    overflow: hidden;
+    transition:
+      transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 0.25s;
+  }
+  .shtile:hover,
+  .shtile:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+    outline: none;
+  }
+  .sh-fan {
+    position: relative;
+    height: 92px;
+    margin-bottom: 8px;
+    border-bottom: 7px solid var(--plank-2);
+    box-shadow: 0 1px 0 var(--plank-edge);
+  }
+  .sh-c {
+    position: absolute;
+    bottom: 0;
+    width: 52px;
+    transform-origin: bottom center;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .sh-c .cover {
+    width: 100%;
+    padding: 12% 7% 0;
+    box-shadow:
+      inset 3px 0 0 rgba(0, 0, 0, 0.18),
+      0 6px 12px rgba(0, 0, 0, 0.25);
+  }
+  .sh-c.c0 {
+    left: 10px;
+    transform: rotate(-7deg);
+  }
+  .sh-c.c1 {
+    left: 52px;
+    z-index: 2;
+  }
+  .sh-c.c2 {
+    left: 94px;
+    transform: rotate(6deg);
+  }
+  .shtile:hover .sh-c.c0 {
+    transform: rotate(-11deg) translateX(-4px);
+  }
+  .shtile:hover .sh-c.c1 {
+    transform: translateY(-5px);
+  }
+  .shtile:hover .sh-c.c2 {
+    transform: rotate(10deg) translateX(4px);
+  }
+  .shtile b {
+    font: 600 16.5px/1.2 var(--serif);
+  }
+  .shtile small {
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+
+  /* ---- The shelves made for the person --------------------------------------------------------------------------- */
+  .pers .prow {
+    margin-top: 22px;
+  }
+  .prow h3,
+  .shb-h h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font: 600 18px var(--serif);
+    margin: 0 0 12px;
+  }
+  .prow h3 small {
+    font: 500 13px var(--sans);
+    color: var(--dim);
+  }
+  .favs {
+    display: inline-flex;
+  }
+  .favc {
+    width: 22px;
+    margin-right: -6px;
+  }
+  .favc .cover {
+    width: 100%;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .favc .cover > * {
+    display: none;
+  }
+
+  /* ---- A department and its shelves ---------------------------------------------------------------------------- */
+  .dept {
+    margin: 52px 0 10px;
+    padding-top: 26px;
+    border-top: 1px solid var(--line);
+  }
+  .dept-h {
+    margin-bottom: 18px;
+  }
+  .dept-h h2 {
+    font: 600 30px/1.1 var(--serif);
+    margin: 2px 0 4px;
+  }
+  .dept-h p {
+    margin: 0;
+    color: var(--muted);
+  }
+  .shblock {
+    margin: 0 0 30px;
+  }
+  .shb-h {
+    display: flex;
+    align-items: center;
+    gap: 10px 18px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .shb-h h3 {
+    margin: 0;
+  }
+  .shb-h h3 a {
+    text-decoration: none;
+  }
+  .shb-h h3 a:hover {
+    text-decoration: underline;
+    text-decoration-color: color-mix(in oklab, var(--accent) 50%, transparent);
+  }
+  .shb-h .sec-link {
+    margin: 0 0 0 auto;
+  }
+  .subtabs {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .subtabs button {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 999px;
+    padding: 4px 11px;
+    font: 600 12.5px var(--sans);
+    color: var(--muted);
+  }
+  .subtabs button.on,
+  .tchip.on {
+    color: var(--text);
+    border-color: color-mix(in oklab, var(--accent) 50%, transparent);
+    background: color-mix(in oklab, var(--accent) 12%, var(--surface));
+  }
+  .tchip {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 999px;
+    padding: 6px 13px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .slim {
+    padding: 14px 0;
+  }
+
+  /* ---- Covers on a board: each card carries its piece of the board, together they are one --------------------- */
+  .brow,
+  .bgrid {
+    --cw: 148px;
+    --gap: 22px;
+    --ch: calc(var(--cw) * 1.5);
+  }
+  .brow {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: var(--cw);
+    gap: 0 var(--gap);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    padding: 18px calc(var(--gap) / 2 + 2px) 12px;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+  }
+  .bgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--cw), 1fr));
+    gap: 30px var(--gap);
+    padding: 10px calc(var(--gap) / 2) 0;
+  }
+  .bcard {
+    container-type: inline-size;
+    position: relative;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-self: start;
+    padding: 0;
+    border: 0;
+    background: none;
+    text-align: left;
+    min-width: 0;
+    color: inherit;
+  }
+  .bcv {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 150cqw;
+    margin-bottom: 14px;
+  }
+  .bcv::after {
+    content: '';
+    position: absolute;
+    left: calc(var(--gap) / -2 - 1px);
+    right: calc(var(--gap) / -2 - 1px);
+    bottom: -12px;
+    height: 12px;
+    z-index: 0;
+    background: linear-gradient(180deg, var(--plank-1), var(--plank-2));
+    box-shadow:
+      0 1px 0 var(--plank-edge) inset,
+      0 8px 12px -6px rgba(0, 0, 0, 0.35);
+  }
+  .bcv .cover {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    transition:
+      transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 0.32s;
+    transform-origin: 50% 100%;
+  }
+  .bcard:hover .bcv .cover,
+  .bcard:focus-visible .bcv .cover,
+  .bcard.held .bcv .cover {
+    transform: translateY(-10px) rotate(-2deg) scale(1.03);
+    box-shadow:
+      inset 4px 0 0 rgba(0, 0, 0, 0.18),
+      0 26px 34px -8px rgba(0, 0, 0, 0.42);
+  }
+  .bcard:focus-visible {
+    outline: none;
+  }
+  .bcard:focus-visible b {
+    text-decoration: underline;
+  }
+  .bcard b {
+    display: block;
+    margin-top: 10px;
+    font: 600 14.5px/1.25 var(--serif);
+    overflow-wrap: anywhere;
+  }
+  .bcard small {
+    display: block;
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+  .bcard .bmeta {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  .bcard.is-owned .bcv .cover {
+    opacity: 0.78;
+  }
+  .bbadge {
+    position: absolute;
+    left: 7px;
+    bottom: 8px;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    height: 22px;
+    padding: 0 7px;
+    border-radius: 7px;
+    font: 700 10.5px var(--sans);
+    background: rgba(20, 16, 12, 0.8);
+    color: #f2e9d6;
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+  }
+  .bbadge svg {
+    width: 12px;
+    height: 12px;
+  }
+  .bbadge.owned {
+    background: rgba(60, 110, 70, 0.88);
+  }
+  .bbadge.want {
+    box-shadow: 0 0 0 1.5px var(--accent);
+  }
+  .shb-h .sec-link,
+  .shp .sec-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 13.5px;
+    text-decoration: none;
+  }
+  .sec-link svg {
+    width: 15px;
+    height: 15px;
+  }
+  .tribbon {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    z-index: 3;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #e9cf7f;
+    color: #4a3510;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+  }
+  .tribbon svg {
+    width: 15px;
+    height: 15px;
+  }
+  .bcv .tribbon {
+    top: 5px;
+    right: 5px;
+  }
+
+  /* ---- A shelf opened -------------------------------------------------------------------------------------------- */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  .back-link svg {
+    width: 16px;
+    height: 16px;
+  }
+  .back-link:hover {
+    color: var(--text);
+  }
+  .dsec-h h2.shp-t {
+    font: 600 34px/1.1 var(--serif);
+    margin: 2px 0 4px;
+  }
+  .shp-f {
+    margin-top: 6px;
+  }
+  .shp-more {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 10px;
+  }
+
+  /* ---- The cover taken in the hand: its back, in the colours of the book --------------------------------------- */
+  .hand {
+    position: fixed;
+    z-index: 75;
+    left: 0;
+    top: 0;
+    width: 340px;
+    border-radius: 16px;
+    color: var(--text);
+    overflow: hidden;
+    --page: color-mix(in oklab, var(--bc) 16%, var(--surface));
+    --tint: color-mix(in oklab, var(--bc) 70%, var(--text));
+    background: var(--page);
+    border: 1px solid color-mix(in oklab, var(--bc) 35%, var(--line));
+    box-shadow:
+      0 28px 60px -18px rgba(0, 0, 0, 0.5),
+      0 2px 0 rgba(255, 255, 255, 0.04) inset;
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+    transition:
+      opacity 0.16s,
+      transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .hand.show {
+    opacity: 1;
+    transform: none;
+  }
+  :root[data-theme='dark'] .hand {
+    --page: color-mix(in oklab, var(--bc) 28%, #15110e);
+    --tint: color-mix(in oklab, var(--bc) 45%, #fff);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) .hand {
+      --page: color-mix(in oklab, var(--bc) 28%, #15110e);
+      --tint: color-mix(in oklab, var(--bc) 45%, #fff);
+    }
+  }
+  .hand::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: var(--bc);
+    opacity: 0.9;
+  }
+  .h-in {
+    display: flex;
+    gap: 14px;
+    padding: 16px 18px 16px 22px;
+  }
+  .h-body {
+    min-width: 0;
+    flex: 1;
+  }
+  .h-eye {
+    margin: 0 0 4px;
+    font: 700 10.5px var(--sans);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--tint);
+  }
+  .h-t {
+    display: block;
+    font: 600 20px/1.15 var(--serif);
+    text-wrap: balance;
+  }
+  .h-by {
+    display: block;
+    margin-top: 2px;
+    font: italic 15px var(--serif);
+    color: var(--muted);
+  }
+  .h-by button {
+    all: unset;
+    cursor: pointer;
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in oklab, var(--tint) 50%, transparent);
+  }
+  .h-award {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--tint);
+  }
+  .h-award svg {
+    width: 15px;
+    height: 15px;
+  }
+  .h-blurb {
+    margin: 10px 0 0;
+    font: 15px/1.5 var(--serif);
+  }
+  .h-blurb.waiting {
+    color: var(--muted);
+    font-style: italic;
+  }
+  .h-facts {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .h-facts b {
+    display: block;
+    color: var(--text);
+    font: 600 15px var(--serif);
+  }
+  .h-act .bbtn svg {
+    width: 16px;
+    height: 16px;
+    flex: none;
+  }
+  .h-fass {
+    margin-top: 10px;
+  }
+  .h-fass .chip {
+    background: color-mix(in oklab, var(--page) 60%, var(--surface));
+  }
+  .h-act {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+    align-items: center;
+  }
+  .h-act .bbtn.primary {
+    background: var(--tint);
+    color: var(--page);
+  }
+  .h-x {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 0;
+    background: color-mix(in oklab, var(--text) 8%, transparent);
+    display: grid;
+    place-items: center;
+    z-index: 2;
+    color: inherit;
+  }
+  .h-cv {
+    width: 86px;
+    flex: none;
+  }
+  .h-cv .cover {
+    width: 100%;
+  }
+  .hand.sheet {
+    left: 0 !important;
+    right: 0;
+    top: auto !important;
+    bottom: 0;
+    width: auto !important;
+    max-height: 82dvh;
+    overflow: auto;
+    border-radius: 18px 18px 0 0;
+    transform: translateY(30px);
+  }
+  .hand.sheet.show {
+    transform: none;
+  }
+  .hand.sheet .h-in {
+    padding: 18px 16px calc(18px + env(safe-area-inset-bottom)) 20px;
+  }
+  .hand-back {
+    position: fixed;
+    inset: 0;
+    z-index: 74;
+    background: rgba(24, 16, 10, 0.45);
+  }
+
+  /* ---- Narrow screens ---------------------------------------------------------------------------------------------- */
+  @media (max-width: 820px) {
+    .brow,
+    .bgrid {
+      --cw: 112px;
+      --gap: 14px;
+    }
+    .bgrid {
+      gap: 24px var(--gap);
+    }
+    .tw-grid {
+      grid-auto-flow: column;
+      grid-template-columns: none;
+      grid-auto-columns: 168px;
+      grid-template-rows: auto;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+    }
+    .sh-fan {
+      height: 78px;
+    }
+    .sh-c {
+      width: 44px;
+    }
+    .sh-c.c1 {
+      left: 44px;
+    }
+    .sh-c.c2 {
+      left: 78px;
+    }
+    .shb-h .sec-link {
+      margin-left: 0;
+    }
+    .browse-top ~ .dsec .src,
+    .shp .src {
+      white-space: normal;
+    }
+    .subtabs {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+      max-width: 100%;
+    }
+    .subtabs button {
+      white-space: nowrap;
+    }
+    .shp-f > .seg {
+      max-width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .shp-f > .seg button {
+      white-space: nowrap;
+    }
+    .dept-h h2 {
+      font-size: 26px;
+    }
+    .dsec-h h2.shp-t {
+      font-size: 28px;
+    }
+  }
+}

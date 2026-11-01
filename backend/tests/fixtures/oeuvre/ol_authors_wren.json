@@ -1,0 +1,26 @@
+{
+ "numFound": 3,
+ "start": 0,
+ "docs": [
+  {
+   "key": "OL800001A",
+   "name": "Tobias Wren",
+   "birth_date": "1970",
+   "work_count": 12,
+   "type": "author"
+  },
+  {
+   "key": "OL800002A",
+   "name": "Tobias Wren",
+   "birth_date": "1902",
+   "work_count": 3,
+   "type": "author"
+  },
+  {
+   "key": "OL800003A",
+   "name": "Tobias Wren",
+   "work_count": 1,
+   "type": "author"
+  }
+ ]
+}

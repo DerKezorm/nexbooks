@@ -1,0 +1,26 @@
+{
+ "data": {
+  "search": {
+   "results": {
+    "hits": [
+     {
+      "document": {
+       "id": "71001",
+       "name": "Tobias Wren",
+       "books_count": 15,
+       "alternate_names": []
+      }
+     },
+     {
+      "document": {
+       "id": "71002",
+       "name": "Tobias Wren",
+       "books_count": 2,
+       "alternate_names": []
+      }
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,2261 @@
+[
+ {
+  "title": "Funken 0",
+  "author": "Ida Brandt",
+  "genre": "roman",
+  "color": "#5e2027",
+  "pages": 120,
+  "year": 1990,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 120
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 300,
+    "narrator": "Clara Vienne"
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 150,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 130
+   }
+  ]
+ },
+ {
+  "title": "Ein Winter in der Hafenstadt 1",
+  "author": "Jonas Lindholm",
+  "genre": "krimi",
+  "color": "#2f4b3b",
+  "pages": 121,
+  "year": 1991,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 1,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 121
+   }
+  ]
+ },
+ {
+  "title": "Bretonische Brandung: Kommissar Kerlouans siebter Fall an der Küste der Rosa Granitfelsen 2",
+  "author": "Mara Feldkamp",
+  "genre": "fantasy",
+  "color": "#1f3a5f",
+  "pages": 122,
+  "year": 1992,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 122
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 302,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Glut 3",
+  "author": "Theo Valcourt",
+  "genre": "sachbuch",
+  "color": "#6b4f2a",
+  "pages": 123,
+  "year": 1993,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 123
+   }
+  ]
+ },
+ {
+  "title": "Bretonische Brandung: Kommissar Kerlouans siebter Fall an der Küste der Rosa Granitfelsen 4",
+  "author": "Annegret Wilhelmine von Hohenstein-Lauterbach",
+  "genre": "roman",
+  "color": "#3d2f5e",
+  "pages": 124,
+  "year": 1994,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 124
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 304,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Das Haus am Deich 5",
+  "author": "Rune Falkner",
+  "genre": "krimi",
+  "color": "#5e2027",
+  "pages": 125,
+  "year": 1995,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 2,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 125
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 155,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 135
+   }
+  ]
+ },
+ {
+  "title": "Salz 6",
+  "author": "Greta Ostermann",
+  "genre": "fantasy",
+  "color": "#2f4b3b",
+  "pages": 126,
+  "year": 1996,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 126
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 306,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Bretonische Brandung: Kommissar Kerlouans siebter Fall an der Küste der Rosa Granitfelsen 7",
+  "author": "Lio Wu",
+  "genre": "sachbuch",
+  "color": "#1f3a5f",
+  "pages": 127,
+  "year": 1997,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 127
+   }
+  ]
+ },
+ {
+  "title": "Bretonische Brandung: Kommissar Kerlouans siebter Fall an der Küste der Rosa Granitfelsen 8",
+  "author": "Jean-Baptiste Marchetti-Delacroix",
+  "genre": "roman",
+  "color": "#6b4f2a",
+  "pages": 128,
+  "year": 1998,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 128
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 308,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Eis 9",
+  "author": "Ida Brandt",
+  "genre": "krimi",
+  "color": "#3d2f5e",
+  "pages": 129,
+  "year": 1999,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 3,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 129
+   }
+  ]
+ },
+ {
+  "title": "Ein Winter in der Hafenstadt 10",
+  "author": "Jonas Lindholm",
+  "genre": "fantasy",
+  "color": "#5e2027",
+  "pages": 130,
+  "year": 2000,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 130
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 310,
+    "narrator": "Clara Vienne"
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 160,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 140
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 11",
+  "author": "Mara Feldkamp",
+  "genre": "sachbuch",
+  "color": "#2f4b3b",
+  "pages": 131,
+  "year": 2001,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 131
+   }
+  ]
+ },
+ {
+  "title": "Funken 12",
+  "author": "Theo Valcourt",
+  "genre": "roman",
+  "color": "#1f3a5f",
+  "pages": 132,
+  "year": 2002,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 132
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 312,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Sieben Tage Regen über dem alten Marktplatz von Westerholm 13",
+  "author": "Annegret Wilhelmine von Hohenstein-Lauterbach",
+  "genre": "krimi",
+  "color": "#6b4f2a",
+  "pages": 133,
+  "year": 2003,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 4,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 133
+   }
+  ]
+ },
+ {
+  "title": "Sieben Tage Regen über dem alten Marktplatz von Westerholm 14",
+  "author": "Rune Falkner",
+  "genre": "fantasy",
+  "color": "#3d2f5e",
+  "pages": 134,
+  "year": 2004,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 134
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 314,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Funken 15",
+  "author": "Greta Ostermann",
+  "genre": "sachbuch",
+  "color": "#5e2027",
+  "pages": 135,
+  "year": 2005,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 135
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 165,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 145
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 16",
+  "author": "Lio Wu",
+  "genre": "roman",
+  "color": "#2f4b3b",
+  "pages": 136,
+  "year": 2006,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 136
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 316,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Ein Winter in der Hafenstadt 17",
+  "author": "Jean-Baptiste Marchetti-Delacroix",
+  "genre": "krimi",
+  "color": "#1f3a5f",
+  "pages": 137,
+  "year": 2007,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 5,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 137
+   }
+  ]
+ },
+ {
+  "title": "Salz 18",
+  "author": "Ida Brandt",
+  "genre": "fantasy",
+  "color": "#6b4f2a",
+  "pages": 138,
+  "year": 2008,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 138
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 318,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Das Haus am Deich 19",
+  "author": "Jonas Lindholm",
+  "genre": "sachbuch",
+  "color": "#3d2f5e",
+  "pages": 139,
+  "year": 2009,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 139
+   }
+  ]
+ },
+ {
+  "title": "Sieben Tage Regen über dem alten Marktplatz von Westerholm 20",
+  "author": "Mara Feldkamp",
+  "genre": "roman",
+  "color": "#5e2027",
+  "pages": 140,
+  "year": 2010,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 140
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 320,
+    "narrator": "Clara Vienne"
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 170,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 150
+   }
+  ]
+ },
+ {
+  "title": "Funken 21",
+  "author": "Theo Valcourt",
+  "genre": "krimi",
+  "color": "#2f4b3b",
+  "pages": 141,
+  "year": 2011,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 6,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 141
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 22",
+  "author": "Annegret Wilhelmine von Hohenstein-Lauterbach",
+  "genre": "fantasy",
+  "color": "#1f3a5f",
+  "pages": 142,
+  "year": 2012,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 142
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 322,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Bretonische Brandung: Kommissar Kerlouans siebter Fall an der Küste der Rosa Granitfelsen 23",
+  "author": "Rune Falkner",
+  "genre": "sachbuch",
+  "color": "#6b4f2a",
+  "pages": 143,
+  "year": 2013,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 143
+   }
+  ]
+ },
+ {
+  "title": "Moor 24",
+  "author": "Greta Ostermann",
+  "genre": "roman",
+  "color": "#3d2f5e",
+  "pages": 144,
+  "year": 2014,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 144
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 324,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 25",
+  "author": "Lio Wu",
+  "genre": "krimi",
+  "color": "#5e2027",
+  "pages": 145,
+  "year": 2015,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 7,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 145
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 175,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 155
+   }
+  ]
+ },
+ {
+  "title": "Bretonische Brandung: Kommissar Kerlouans siebter Fall an der Küste der Rosa Granitfelsen 26",
+  "author": "Jean-Baptiste Marchetti-Delacroix",
+  "genre": "fantasy",
+  "color": "#2f4b3b",
+  "pages": 146,
+  "year": 2016,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 146
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 326,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Asche 27",
+  "author": "Ida Brandt",
+  "genre": "sachbuch",
+  "color": "#1f3a5f",
+  "pages": 147,
+  "year": 2017,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 147
+   }
+  ]
+ },
+ {
+  "title": "Ein Winter in der Hafenstadt 28",
+  "author": "Jonas Lindholm",
+  "genre": "roman",
+  "color": "#6b4f2a",
+  "pages": 148,
+  "year": 2018,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 148
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 328,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Bretonische Brandung: Kommissar Kerlouans siebter Fall an der Küste der Rosa Granitfelsen 29",
+  "author": "Mara Feldkamp",
+  "genre": "krimi",
+  "color": "#3d2f5e",
+  "pages": 149,
+  "year": 2019,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 8,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 149
+   }
+  ]
+ },
+ {
+  "title": "Glut 30",
+  "author": "Theo Valcourt",
+  "genre": "fantasy",
+  "color": "#5e2027",
+  "pages": 150,
+  "year": 2020,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 150
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 330,
+    "narrator": "Clara Vienne"
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 180,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 160
+   }
+  ]
+ },
+ {
+  "title": "Ein Winter in der Hafenstadt 31",
+  "author": "Annegret Wilhelmine von Hohenstein-Lauterbach",
+  "genre": "sachbuch",
+  "color": "#2f4b3b",
+  "pages": 151,
+  "year": 2021,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 151
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 32",
+  "author": "Rune Falkner",
+  "genre": "roman",
+  "color": "#1f3a5f",
+  "pages": 152,
+  "year": 2022,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 152
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 332,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Moor 33",
+  "author": "Greta Ostermann",
+  "genre": "krimi",
+  "color": "#6b4f2a",
+  "pages": 153,
+  "year": 2023,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 9,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 153
+   }
+  ]
+ },
+ {
+  "title": "Ein Winter in der Hafenstadt 34",
+  "author": "Lio Wu",
+  "genre": "fantasy",
+  "color": "#3d2f5e",
+  "pages": 154,
+  "year": 2024,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 154
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 334,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 35",
+  "author": "Jean-Baptiste Marchetti-Delacroix",
+  "genre": "sachbuch",
+  "color": "#5e2027",
+  "pages": 155,
+  "year": 1990,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 155
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 185,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 165
+   }
+  ]
+ },
+ {
+  "title": "Asche 36",
+  "author": "Ida Brandt",
+  "genre": "roman",
+  "color": "#2f4b3b",
+  "pages": 156,
+  "year": 1991,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 156
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 336,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 37",
+  "author": "Jonas Lindholm",
+  "genre": "krimi",
+  "color": "#1f3a5f",
+  "pages": 157,
+  "year": 1992,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 10,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 157
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 38",
+  "author": "Mara Feldkamp",
+  "genre": "fantasy",
+  "color": "#6b4f2a",
+  "pages": 158,
+  "year": 1993,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 158
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 338,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Funken 39",
+  "author": "Theo Valcourt",
+  "genre": "sachbuch",
+  "color": "#3d2f5e",
+  "pages": 159,
+  "year": 1994,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 159
+   }
+  ]
+ },
+ {
+  "title": "Sieben Tage Regen über dem alten Marktplatz von Westerholm 40",
+  "author": "Annegret Wilhelmine von Hohenstein-Lauterbach",
+  "genre": "roman",
+  "color": "#5e2027",
+  "pages": 160,
+  "year": 1995,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 160
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 340,
+    "narrator": "Clara Vienne"
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 190,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 170
+   }
+  ]
+ },
+ {
+  "title": "Bretonische Brandung: Kommissar Kerlouans siebter Fall an der Küste der Rosa Granitfelsen 41",
+  "author": "Rune Falkner",
+  "genre": "krimi",
+  "color": "#2f4b3b",
+  "pages": 161,
+  "year": 1996,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 11,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 161
+   }
+  ]
+ },
+ {
+  "title": "Asche 42",
+  "author": "Greta Ostermann",
+  "genre": "fantasy",
+  "color": "#1f3a5f",
+  "pages": 162,
+  "year": 1997,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 162
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 342,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 43",
+  "author": "Lio Wu",
+  "genre": "sachbuch",
+  "color": "#6b4f2a",
+  "pages": 163,
+  "year": 1998,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 163
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 44",
+  "author": "Jean-Baptiste Marchetti-Delacroix",
+  "genre": "roman",
+  "color": "#3d2f5e",
+  "pages": 164,
+  "year": 1999,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 164
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 344,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Salz 45",
+  "author": "Ida Brandt",
+  "genre": "krimi",
+  "color": "#5e2027",
+  "pages": 165,
+  "year": 2000,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 12,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 165
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 195,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 175
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 46",
+  "author": "Jonas Lindholm",
+  "genre": "fantasy",
+  "color": "#2f4b3b",
+  "pages": 166,
+  "year": 2001,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 166
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 346,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Das Haus am Deich 47",
+  "author": "Mara Feldkamp",
+  "genre": "sachbuch",
+  "color": "#1f3a5f",
+  "pages": 167,
+  "year": 2002,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 167
+   }
+  ]
+ },
+ {
+  "title": "Asche 48",
+  "author": "Theo Valcourt",
+  "genre": "roman",
+  "color": "#6b4f2a",
+  "pages": 168,
+  "year": 2003,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 168
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 348,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Das Haus am Deich 49",
+  "author": "Annegret Wilhelmine von Hohenstein-Lauterbach",
+  "genre": "krimi",
+  "color": "#3d2f5e",
+  "pages": 169,
+  "year": 2004,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 13,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 169
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 50",
+  "author": "Rune Falkner",
+  "genre": "fantasy",
+  "color": "#5e2027",
+  "pages": 170,
+  "year": 2005,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 170
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 350,
+    "narrator": "Clara Vienne"
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 200,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 180
+   }
+  ]
+ },
+ {
+  "title": "Nebel 51",
+  "author": "Greta Ostermann",
+  "genre": "sachbuch",
+  "color": "#2f4b3b",
+  "pages": 171,
+  "year": 2006,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 171
+   }
+  ]
+ },
+ {
+  "title": "Sieben Tage Regen über dem alten Marktplatz von Westerholm 52",
+  "author": "Lio Wu",
+  "genre": "roman",
+  "color": "#1f3a5f",
+  "pages": 172,
+  "year": 2007,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 172
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 352,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Sieben Tage Regen über dem alten Marktplatz von Westerholm 53",
+  "author": "Jean-Baptiste Marchetti-Delacroix",
+  "genre": "krimi",
+  "color": "#6b4f2a",
+  "pages": 173,
+  "year": 2008,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 14,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 173
+   }
+  ]
+ },
+ {
+  "title": "Asche 54",
+  "author": "Ida Brandt",
+  "genre": "fantasy",
+  "color": "#3d2f5e",
+  "pages": 174,
+  "year": 2009,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 174
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 354,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Das Haus am Deich 55",
+  "author": "Jonas Lindholm",
+  "genre": "sachbuch",
+  "color": "#5e2027",
+  "pages": 175,
+  "year": 2010,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 175
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 205,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 185
+   }
+  ]
+ },
+ {
+  "title": "Das Haus am Deich 56",
+  "author": "Mara Feldkamp",
+  "genre": "roman",
+  "color": "#2f4b3b",
+  "pages": 176,
+  "year": 2011,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 176
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 356,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Funken 57",
+  "author": "Theo Valcourt",
+  "genre": "krimi",
+  "color": "#1f3a5f",
+  "pages": 177,
+  "year": 2012,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 15,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 177
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 58",
+  "author": "Annegret Wilhelmine von Hohenstein-Lauterbach",
+  "genre": "fantasy",
+  "color": "#6b4f2a",
+  "pages": 178,
+  "year": 2013,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 178
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 358,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Bretonische Brandung: Kommissar Kerlouans siebter Fall an der Küste der Rosa Granitfelsen 59",
+  "author": "Rune Falkner",
+  "genre": "sachbuch",
+  "color": "#3d2f5e",
+  "pages": 179,
+  "year": 2014,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 179
+   }
+  ]
+ },
+ {
+  "title": "Stille 60",
+  "author": "Greta Ostermann",
+  "genre": "roman",
+  "color": "#5e2027",
+  "pages": 180,
+  "year": 2015,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 180
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 360,
+    "narrator": "Clara Vienne"
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 210,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 190
+   }
+  ]
+ },
+ {
+  "title": "Bretonische Brandung: Kommissar Kerlouans siebter Fall an der Küste der Rosa Granitfelsen 61",
+  "author": "Lio Wu",
+  "genre": "krimi",
+  "color": "#2f4b3b",
+  "pages": 181,
+  "year": 2016,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 16,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 181
+   }
+  ]
+ },
+ {
+  "title": "Sieben Tage Regen über dem alten Marktplatz von Westerholm 62",
+  "author": "Jean-Baptiste Marchetti-Delacroix",
+  "genre": "fantasy",
+  "color": "#1f3a5f",
+  "pages": 182,
+  "year": 2017,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 182
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 362,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Funken 63",
+  "author": "Ida Brandt",
+  "genre": "sachbuch",
+  "color": "#6b4f2a",
+  "pages": 183,
+  "year": 2018,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 183
+   }
+  ]
+ },
+ {
+  "title": "Ein Winter in der Hafenstadt 64",
+  "author": "Jonas Lindholm",
+  "genre": "roman",
+  "color": "#3d2f5e",
+  "pages": 184,
+  "year": 2019,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 184
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 364,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Sieben Tage Regen über dem alten Marktplatz von Westerholm 65",
+  "author": "Mara Feldkamp",
+  "genre": "krimi",
+  "color": "#5e2027",
+  "pages": 185,
+  "year": 2020,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 17,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 185
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 215,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 195
+   }
+  ]
+ },
+ {
+  "title": "Salz 66",
+  "author": "Theo Valcourt",
+  "genre": "fantasy",
+  "color": "#2f4b3b",
+  "pages": 186,
+  "year": 2021,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 186
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 366,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Bretonische Brandung: Kommissar Kerlouans siebter Fall an der Küste der Rosa Granitfelsen 67",
+  "author": "Annegret Wilhelmine von Hohenstein-Lauterbach",
+  "genre": "sachbuch",
+  "color": "#1f3a5f",
+  "pages": 187,
+  "year": 2022,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 187
+   }
+  ]
+ },
+ {
+  "title": "Ein Winter in der Hafenstadt 68",
+  "author": "Rune Falkner",
+  "genre": "roman",
+  "color": "#6b4f2a",
+  "pages": 188,
+  "year": 2023,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 188
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 368,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Salz 69",
+  "author": "Greta Ostermann",
+  "genre": "krimi",
+  "color": "#3d2f5e",
+  "pages": 189,
+  "year": 2024,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 18,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 189
+   }
+  ]
+ },
+ {
+  "title": "Sieben Tage Regen über dem alten Marktplatz von Westerholm 70",
+  "author": "Lio Wu",
+  "genre": "fantasy",
+  "color": "#5e2027",
+  "pages": 190,
+  "year": 1990,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 190
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 370,
+    "narrator": "Clara Vienne"
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 220,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 200
+   }
+  ]
+ },
+ {
+  "title": "Sieben Tage Regen über dem alten Marktplatz von Westerholm 71",
+  "author": "Jean-Baptiste Marchetti-Delacroix",
+  "genre": "sachbuch",
+  "color": "#2f4b3b",
+  "pages": 191,
+  "year": 1991,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 191
+   }
+  ]
+ },
+ {
+  "title": "Moor 72",
+  "author": "Ida Brandt",
+  "genre": "roman",
+  "color": "#1f3a5f",
+  "pages": 192,
+  "year": 1992,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 192
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 372,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Sieben Tage Regen über dem alten Marktplatz von Westerholm 73",
+  "author": "Jonas Lindholm",
+  "genre": "krimi",
+  "color": "#6b4f2a",
+  "pages": 193,
+  "year": 1993,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 19,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 193
+   }
+  ]
+ },
+ {
+  "title": "Das Haus am Deich 74",
+  "author": "Mara Feldkamp",
+  "genre": "fantasy",
+  "color": "#3d2f5e",
+  "pages": 194,
+  "year": 1994,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 194
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 374,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Stille 75",
+  "author": "Theo Valcourt",
+  "genre": "sachbuch",
+  "color": "#5e2027",
+  "pages": 195,
+  "year": 1995,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 195
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 225,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 205
+   }
+  ]
+ },
+ {
+  "title": "Sieben Tage Regen über dem alten Marktplatz von Westerholm 76",
+  "author": "Annegret Wilhelmine von Hohenstein-Lauterbach",
+  "genre": "roman",
+  "color": "#2f4b3b",
+  "pages": 196,
+  "year": 1996,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 196
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 376,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Das Haus am Deich 77",
+  "author": "Rune Falkner",
+  "genre": "krimi",
+  "color": "#1f3a5f",
+  "pages": 197,
+  "year": 1997,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 20,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 197
+   }
+  ]
+ },
+ {
+  "title": "Asche 78",
+  "author": "Greta Ostermann",
+  "genre": "fantasy",
+  "color": "#6b4f2a",
+  "pages": 198,
+  "year": 1998,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 198
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 378,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Bretonische Brandung: Kommissar Kerlouans siebter Fall an der Küste der Rosa Granitfelsen 79",
+  "author": "Lio Wu",
+  "genre": "sachbuch",
+  "color": "#3d2f5e",
+  "pages": 199,
+  "year": 1999,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 199
+   }
+  ]
+ },
+ {
+  "title": "Das Haus am Deich 80",
+  "author": "Jean-Baptiste Marchetti-Delacroix",
+  "genre": "roman",
+  "color": "#5e2027",
+  "pages": 200,
+  "year": 2000,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 200
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 380,
+    "narrator": "Clara Vienne"
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 230,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 210
+   }
+  ]
+ },
+ {
+  "title": "Salz 81",
+  "author": "Ida Brandt",
+  "genre": "krimi",
+  "color": "#2f4b3b",
+  "pages": 201,
+  "year": 2001,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 21,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 201
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 82",
+  "author": "Jonas Lindholm",
+  "genre": "fantasy",
+  "color": "#1f3a5f",
+  "pages": 202,
+  "year": 2002,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 202
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 382,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 83",
+  "author": "Mara Feldkamp",
+  "genre": "sachbuch",
+  "color": "#6b4f2a",
+  "pages": 203,
+  "year": 2003,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 203
+   }
+  ]
+ },
+ {
+  "title": "Moor 84",
+  "author": "Theo Valcourt",
+  "genre": "roman",
+  "color": "#3d2f5e",
+  "pages": 204,
+  "year": 2004,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 204
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 384,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Das Haus am Deich 85",
+  "author": "Annegret Wilhelmine von Hohenstein-Lauterbach",
+  "genre": "krimi",
+  "color": "#5e2027",
+  "pages": 205,
+  "year": 2005,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 22,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "PDF",
+    "pages": 205
+   },
+   {
+    "kind": "audio",
+    "variant": "gekürzt",
+    "lang": "Deutsch",
+    "minutes": 235,
+    "narrator": "Ben Hollister"
+   },
+   {
+    "kind": "ebook",
+    "lang": "Englisch",
+    "format": "EPUB",
+    "pages": 215
+   }
+  ]
+ },
+ {
+  "title": "Sieben Tage Regen über dem alten Marktplatz von Westerholm 86",
+  "author": "Rune Falkner",
+  "genre": "fantasy",
+  "color": "#2f4b3b",
+  "pages": 206,
+  "year": 2006,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 206
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 386,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Glut 87",
+  "author": "Greta Ostermann",
+  "genre": "sachbuch",
+  "color": "#1f3a5f",
+  "pages": 207,
+  "year": 2007,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 207
+   }
+  ]
+ },
+ {
+  "title": "Das Haus am Deich 88",
+  "author": "Lio Wu",
+  "genre": "roman",
+  "color": "#6b4f2a",
+  "pages": 208,
+  "year": 2008,
+  "series": null,
+  "seriesNo": null,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "EPUB",
+    "pages": 208
+   },
+   {
+    "kind": "audio",
+    "variant": "ungekürzt",
+    "lang": "Deutsch",
+    "minutes": 388,
+    "narrator": "Clara Vienne"
+   }
+  ]
+ },
+ {
+  "title": "Die ausgesprochen lange Geschichte vom Leuchtturm am Ende der Welt und den Menschen, die dort warteten 89",
+  "author": "Jean-Baptiste Marchetti-Delacroix",
+  "genre": "krimi",
+  "color": "#3d2f5e",
+  "pages": 209,
+  "year": 2009,
+  "series": "Die sehr lange Reihe der Küstenkrimis von Westerholm",
+  "seriesNo": 23,
+  "blurb": "Erfunden.",
+  "fassungen": [
+   {
+    "kind": "ebook",
+    "lang": "Deutsch",
+    "format": "AZW3",
+    "pages": 209
+   }
+  ]
+ }
+]

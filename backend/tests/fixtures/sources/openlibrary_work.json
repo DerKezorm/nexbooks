@@ -1,0 +1,10 @@
+{
+  "key": "/works/OL9000001W",
+  "title": "The Quiet Orchard",
+  "description": {
+    "type": "/type/text",
+    "value": "Three sisters inherit an orchard that does not want to be sold.\r\n\r\nA story about apples, weather and who stays."
+  },
+  "subjects": ["Fiction"],
+  "first_publish_date": "2019"
+}

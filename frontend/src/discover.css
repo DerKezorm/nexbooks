@@ -1,0 +1,503 @@
+/* Discover: the lists, the gaps in a series, more of the authors, the wish list, and the page of a book that is
+   not on a shelf. Sizes, colours, distances and curves are set here. */
+
+@layer components {
+  /* ---- The count on the tab ------------------------------------------------------------------------------------------ */
+  .wishcount {
+    display: inline-grid;
+    place-items: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    margin-left: 4px;
+    border-radius: 9px;
+    background: var(--accent);
+    color: var(--bg);
+    font: 700 11px var(--sans);
+  }
+  .wishcount[hidden] {
+    display: none;
+  }
+
+  /* ---- The markets: the buttons of the design, and a list for the others ---------------------------------------------- */
+  .market-pick {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .market-more {
+    height: 38px;
+    border-radius: 11px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--muted);
+    font: 600 13px var(--sans);
+    padding: 0 10px;
+  }
+
+  /* ---- The lists (tabs), the filters ------------------------------------------------------------------------------- */
+  .dlists {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 2px 0 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .dlists button,
+  .dlists a {
+    border: 0;
+    background: none;
+    padding: 10px 14px 12px;
+    font: 600 15px var(--sans);
+    color: var(--muted);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  .dlists a {
+    text-decoration: none;
+  }
+  .dlists button.on,
+  .dlists a.on {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+  }
+  .dfilters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    margin-bottom: 26px;
+  }
+  .dfilters[hidden] {
+    display: none;
+  }
+  .dgenres {
+    margin: 0;
+    flex-basis: 100%;
+  }
+
+  /* ---- A section of the page ---------------------------------------------------------------------------------------- */
+  .dsec {
+    margin: 8px 0 44px;
+  }
+  .dsec-h {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .dsec-h h2 {
+    font: 600 24px var(--serif);
+    margin: 0;
+  }
+  .dsec-h h2 small {
+    font: 500 14px var(--sans);
+    color: var(--dim);
+    margin-left: 6px;
+  }
+  .dsec-h p {
+    margin: 2px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .src {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--dim);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px 10px;
+    white-space: nowrap;
+  }
+  .src i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .wishsec {
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+
+  /* ---- The grid of a list -------------------------------------------------------------------------------------------- */
+  .dgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 34px 24px;
+  }
+  .dcard {
+    position: relative;
+    scroll-snap-align: start;
+    text-align: left;
+    border: 0;
+    background: none;
+    padding: 0;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .dcard .cover {
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .dcard:hover .cover {
+    transform: translateY(-5px);
+  }
+  .dcard b {
+    display: block;
+    margin-top: 10px;
+    font: 600 14.5px/1.25 var(--serif);
+  }
+  .dcard small {
+    display: block;
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+  .dcard .cv {
+    position: relative;
+    display: block;
+  }
+  .dcard .badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    height: 24px;
+    padding: 0 8px;
+    border-radius: 7px;
+    font: 700 11px var(--sans);
+    background: rgba(20, 16, 12, 0.78);
+    color: #f2e9d6;
+    backdrop-filter: blur(4px);
+    border: 0;
+    cursor: pointer;
+  }
+  .dcard .badge svg {
+    width: 13px;
+  }
+  .dcard .badge.owned {
+    background: rgba(60, 110, 70, 0.85);
+    cursor: inherit;
+  }
+  .dcard .badge.on {
+    background: var(--accent);
+    color: #1d1408;
+  }
+  .dcard .vol {
+    display: block;
+    margin-top: 9px;
+    font: 600 11px var(--sans);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .dcard .vol + .dtext b {
+    margin-top: 2px;
+    font-size: 13.5px;
+  }
+  .dcard .dopen {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .dcard .dopen:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  .dcard .dtext {
+    cursor: pointer;
+  }
+  .dcard.missing .cover {
+    filter: saturate(0.5) brightness(0.82);
+    opacity: 0.85;
+  }
+  .dcard.missing .cv::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 2px dashed color-mix(in oklab, var(--text) 40%, transparent);
+    border-radius: 8px;
+    pointer-events: none;
+  }
+  .dcard.missing.soon .cv::after {
+    border-color: var(--accent);
+  }
+  .dcard.missing .vol {
+    color: var(--accent);
+  }
+  .dcard .soon-date {
+    color: var(--accent) !important;
+  }
+  .dgrid .dcard {
+    padding-left: 0;
+  }
+  .dgrid .rk {
+    position: absolute;
+    z-index: 2;
+    top: -10px;
+    left: -10px;
+    min-width: 30px;
+    height: 30px;
+    padding: 0 7px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    background: var(--text);
+    color: var(--bg);
+    font: 700 14px var(--serif);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+  .dgrid .dcard:nth-child(-n + 3) .rk {
+    background: var(--accent);
+    color: #1d1408;
+    min-width: 36px;
+    height: 36px;
+    font-size: 17px;
+  }
+  .dgrid .dcard.is-owned .cover {
+    opacity: 0.75;
+  }
+  .dgrid .chips {
+    margin-top: 6px;
+  }
+  .when {
+    font-size: 11.5px;
+    color: var(--accent);
+    font-weight: 600;
+    align-self: center;
+    margin-left: 2px;
+  }
+
+  /* ---- A row of covers (the wish list, more of the authors, the volumes of a series) ------------------------------- */
+  .row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 150px;
+    gap: 22px;
+    overflow-x: auto;
+    padding: 4px 4px 14px;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+  }
+
+  /* ---- Gaps in the series -------------------------------------------------------------------------------------------- */
+  .gaps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 430px), 1fr));
+    gap: 16px;
+  }
+  .gap {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 16px 18px 0;
+    overflow: hidden;
+  }
+  .gap h3 {
+    font: 600 18px var(--serif);
+    margin: 0;
+  }
+  .gap .gmeta {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 2px 0 12px;
+  }
+  .gap .gmeta b {
+    color: var(--text);
+  }
+  .gap .row.vols {
+    grid-auto-columns: 112px;
+    gap: 16px;
+    padding-bottom: 16px;
+  }
+  .gap .mini-shelf {
+    margin: 0 -18px;
+    border-radius: 0;
+    padding: 0 18px;
+    height: 178px;
+    --row: 178px;
+    --k: 0.74;
+    background: linear-gradient(180deg, color-mix(in oklab, var(--wall) 92%, #000), var(--wall));
+  }
+  .spine.ghost {
+    background: color-mix(in oklab, var(--c) 10%, transparent);
+    border: 1.5px dashed color-mix(in oklab, var(--text) 38%, transparent);
+    color: var(--muted);
+    box-shadow: none;
+  }
+  .spine.ghost .t {
+    font: 600 11px var(--sans) !important;
+    letter-spacing: 0.02em;
+  }
+  .spine.ghost .a {
+    opacity: 1;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .spine.ghost.soon {
+    border-color: color-mix(in oklab, var(--accent) 70%, transparent);
+  }
+
+  /* ---- More of the authors ------------------------------------------------------------------------------------------- */
+  .authors {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+  .dsec {
+    min-width: 0;
+  }
+  .arow h3 {
+    font: 600 17px var(--serif);
+    margin: 0 0 10px;
+  }
+  .arow h3 small {
+    font: 500 12.5px var(--sans);
+    color: var(--dim);
+    margin-left: 6px;
+  }
+
+  /* ---- The page of a book that is not on a shelf ----------------------------------------------------------------- */
+  .want {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+  }
+  .want button {
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 11px;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid color-mix(in oklab, var(--tint) 35%, transparent);
+    background: none;
+    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .want button svg {
+    width: 16px;
+  }
+  .want button.primary {
+    background: var(--tint);
+    color: var(--page);
+    border: 0;
+  }
+  .want button:disabled {
+    opacity: 0.55;
+    cursor: default;
+  }
+  .twin .go svg {
+    width: 14px;
+    vertical-align: -2px;
+    margin-right: 5px;
+  }
+  .notmine {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--muted);
+    padding: 6px 12px;
+    border-radius: 9px;
+    border: 1px dashed color-mix(in oklab, var(--tint) 35%, transparent);
+  }
+
+  /* ---- What the app says beyond the design: why a list is empty, and the sentence after taking a book off the list --- */
+  .dnote {
+    margin: 0 0 22px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px dashed var(--line);
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .dnote a {
+    color: var(--accent);
+    text-underline-offset: 3px;
+  }
+  .dundo {
+    position: fixed;
+    inset-inline: 0;
+    z-index: 40;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    bottom: calc(2rem + var(--player-space, 0px));
+  }
+  .dundo p {
+    margin: 0;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: var(--text);
+    color: var(--bg);
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: var(--shadow);
+  }
+  .dundo button {
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 820px) {
+  @layer components {
+    .row {
+      grid-auto-columns: 118px;
+      gap: 14px;
+    }
+    #market button {
+      padding: 6px 9px;
+      font-size: 12.5px;
+    }
+    .dlists {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .dlists button,
+    .dlists a {
+      white-space: nowrap;
+      padding: 9px 10px 11px;
+      font-size: 14px;
+    }
+    .dgrid {
+      grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+      gap: 26px 14px;
+    }
+    .dgenres {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .dgenres .g {
+      white-space: nowrap;
+    }
+  }
+}

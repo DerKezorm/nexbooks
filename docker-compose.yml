@@ -1,0 +1,69 @@
+# nexbooks, start with:  docker compose up -d --build
+#
+# Then open http://<your-host>:8580. The first account you create there is the operator; it needs the setup code
+# from the log (docker logs nexbooks) or the one you set below.
+
+services:
+  nexbooks:
+    build: .
+    container_name: nexbooks
+    restart: unless-stopped
+
+    ports:
+      # Host port on the left, container port on the right. Only this machine reaches it (127.0.0.1): put a reverse
+      # proxy with https in front and let it forward to http://127.0.0.1:8580 (a proxy in another container: put both
+      # in one Docker network and forward to http://nexbooks:8000). Set NEXBOOKS_TRUSTED_PROXIES below to the proxy.
+      # To reach nexbooks directly from your home network instead, write "8580:8000", but only for a network you trust:
+      # without https, passwords and codes cross it in the clear.
+      - "127.0.0.1:8580:8000"
+
+    # The container needs nothing it is not given: it may not gain rights later, and starts with only what the
+    # entrypoint needs to set the ownership of /data (CHOWN, DAC_READ_SEARCH) and to drop from root to the user
+    # nexbooks (SETUID, SETGID). nexbooks itself runs as that user, with none.
+    security_opt:
+      - no-new-privileges:true
+    # The image's own files cannot be changed while it runs: nexbooks writes only to /data (and, when tidying is on, to
+    # the books), and keeps some scratch in memory (a large sort in SQLite spills there; 256 MB is only used when it is).
+    read_only: true
+    tmpfs:
+      - /tmp:size=256m,mode=1777
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - DAC_READ_SEARCH
+      - SETUID
+      - SETGID
+
+    volumes:
+      # Database, logs, backups and the operator's own languages.
+      # A local disk, never an SMB or NFS share: SQLite's locking does not work reliably over network filesystems.
+      - ./data:/data
+      # Your books, read-only (nexbooks writes into them only if the operator turns on tidying; then drop the ":ro").
+      # In Settings, Libraries, make a library of a folder
+      # at or below /books. The user nexbooks runs as (PUID/PGID below) must be able to read them.
+      - /path/to/your/books:/books:ro
+      # To fetch books: the folder where your download program (SABnzbd, qBittorrent ...) puts finished jobs, so that nexbooks
+      # can see them (and, to file them, write into the library: then drop the ":ro" above). Any path below /downloads
+      # works (never /data, which holds the database and the keys: nexbooks refuses to start with it as a download folder);
+      # a path your program reports differently is mapped once, in the page Acquire.
+      # - /path/to/your/downloads:/downloads
+
+    environment:
+      # Who should own the files in the data directory. The container fixes the permissions itself on startup.
+      PUID: 1000
+      PGID: 1000
+
+      TZ: Europe/Berlin
+
+      # The address people use to reach nexbooks, for invitation links and the redirect address of the sign-in
+      # providers. Can also be set in the interface.
+      # NEXBOOKS_PUBLIC_URL: https://books.example.com
+
+      # Behind a reverse proxy: its address, so that the brake against password guessing sees the real sender and the
+      # scheme the proxy reports (X-Forwarded-Proto) counts.
+      # NEXBOOKS_TRUSTED_PROXIES: 172.16.0.0/12
+
+      # The code the first account needs. Without it nexbooks makes one at every start until it is set up and
+      # writes it to the log: docker logs nexbooks
+      # NEXBOOKS_SETUP_TOKEN: choose-a-long-one

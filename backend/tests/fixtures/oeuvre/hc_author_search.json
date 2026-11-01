@@ -1,0 +1,30 @@
+{
+ "data": {
+  "search": {
+   "results": {
+    "hits": [
+     {
+      "document": {
+       "id": "70001",
+       "name": "Edmund Halloran",
+       "books_count": 52,
+       "alternate_names": [
+        "Richard Vane",
+        "E. Halloran",
+        "Halloran, Edmund"
+       ]
+      }
+     },
+     {
+      "document": {
+       "id": "70002",
+       "name": "Ellen Halloran",
+       "books_count": 3,
+       "alternate_names": []
+      }
+     }
+    ]
+   }
+  }
+ }
+}

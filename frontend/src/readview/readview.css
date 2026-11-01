@@ -1,0 +1,22 @@
+/* The frame that draws a book: nothing but the pages, on the ground of the theme. The colours come from the page. */
+:root {
+  --ground: #fffdf8;
+  --ink: #2a241d;
+  color-scheme: light;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--ground);
+  color: var(--ink);
+  font: 15px/1.5 system-ui, -apple-system, 'Segoe UI', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+foliate-view {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

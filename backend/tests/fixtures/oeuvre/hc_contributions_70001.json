@@ -1,0 +1,564 @@
+{
+ "data": {
+  "contributions": [
+   {
+    "contribution": null,
+    "book": {
+     "id": 80000,
+     "title": "The Salt Daughters",
+     "release_date": "1974-05-01",
+     "release_year": 1974,
+     "compilation": false,
+     "pages": 238,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 500,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Horror"
+       },
+       {
+        "tag": "Fiction"
+       }
+      ]
+     },
+     "image": {
+      "url": "https://assets.hardcover.app/books/80000/cover.jpg"
+     },
+     "canonical_id": null,
+     "editions": [
+      {
+       "title": "Die Salztöchter",
+       "isbn_13": "9783000000101",
+       "release_date": null,
+       "language": {
+        "language": "German"
+       }
+      }
+     ],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 80001,
+     "title": "Soot",
+     "release_date": "1983-05-01",
+     "release_year": 1983,
+     "compilation": false,
+     "pages": 512,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 490,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Horror"
+       },
+       {
+        "tag": "Fiction"
+       }
+      ]
+     },
+     "image": {
+      "url": "https://assets.hardcover.app/books/80001/cover.jpg"
+     },
+     "canonical_id": null,
+     "editions": [
+      {
+       "title": "Ruß",
+       "isbn_13": "9783000000118",
+       "release_date": null,
+       "language": {
+        "language": "German"
+       }
+      }
+     ],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 80002,
+     "title": "Soot and Roses",
+     "release_date": "2024-05-01",
+     "release_year": 2024,
+     "compilation": false,
+     "pages": 384,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 480,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Short Stories"
+       },
+       {
+        "tag": "Horror"
+       }
+      ]
+     },
+     "image": {
+      "url": "https://assets.hardcover.app/books/80002/cover.jpg"
+     },
+     "canonical_id": null,
+     "editions": [
+      {
+       "title": "Ruß und Rosen",
+       "isbn_13": "9783000000125",
+       "release_date": null,
+       "language": {
+        "language": "German"
+       }
+      }
+     ],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 80003,
+     "title": "The Ninth Shore",
+     "release_date": "1986-05-01",
+     "release_year": 1986,
+     "compilation": false,
+     "pages": 1104,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 470,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Horror"
+       },
+       {
+        "tag": "Fiction"
+       }
+      ]
+     },
+     "image": {
+      "url": "https://assets.hardcover.app/books/80003/cover.jpg"
+     },
+     "canonical_id": null,
+     "editions": [
+      {
+       "title": "Das neunte Ufer",
+       "isbn_13": "9783000000132",
+       "release_date": null,
+       "language": {
+        "language": "German"
+       }
+      }
+     ],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 80004,
+     "title": "The Ash Road",
+     "release_date": "1982-05-01",
+     "release_year": 1982,
+     "compilation": false,
+     "pages": 260,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 460,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Horror"
+       },
+       {
+        "tag": "Fiction"
+       }
+      ]
+     },
+     "image": {
+      "url": "https://assets.hardcover.app/books/80004/cover.jpg"
+     },
+     "canonical_id": null,
+     "editions": [
+      {
+       "title": "Die Aschenstraße",
+       "isbn_13": "9783000000149",
+       "release_date": null,
+       "language": {
+        "language": "German"
+       }
+      }
+     ],
+     "book_series": [
+      {
+       "position": 1,
+       "series": {
+        "name": "The Wrenfield Chronicles"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 80005,
+     "title": "Three Doors",
+     "release_date": "1987-05-01",
+     "release_year": 1987,
+     "compilation": false,
+     "pages": 432,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 450,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Horror"
+       },
+       {
+        "tag": "Fiction"
+       }
+      ]
+     },
+     "image": {
+      "url": "https://assets.hardcover.app/books/80005/cover.jpg"
+     },
+     "canonical_id": null,
+     "editions": [
+      {
+       "title": "Drei Türen",
+       "isbn_13": "9783000000156",
+       "release_date": null,
+       "language": {
+        "language": "German"
+       }
+      }
+     ],
+     "book_series": [
+      {
+       "position": 2,
+       "series": {
+        "name": "The Wrenfield Chronicles"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 80006,
+     "title": "The Salt Plains",
+     "release_date": "1991-05-01",
+     "release_year": 1991,
+     "compilation": false,
+     "pages": 512,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 440,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Horror"
+       },
+       {
+        "tag": "Fiction"
+       }
+      ]
+     },
+     "image": {
+      "url": "https://assets.hardcover.app/books/80006/cover.jpg"
+     },
+     "canonical_id": null,
+     "editions": [
+      {
+       "title": "Die Salzebene",
+       "isbn_13": "9783000000163",
+       "release_date": null,
+       "language": {
+        "language": "German"
+       }
+      }
+     ],
+     "book_series": [
+      {
+       "position": 3,
+       "series": {
+        "name": "The Wrenfield Chronicles"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 80007,
+     "title": "The Wrenfield Chronicles: Complete Edition",
+     "release_date": "2017-05-01",
+     "release_year": 2017,
+     "compilation": true,
+     "pages": 1210,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 430,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Horror"
+       },
+       {
+        "tag": "Fiction"
+       }
+      ]
+     },
+     "image": {
+      "url": "https://assets.hardcover.app/books/80007/cover.jpg"
+     },
+     "canonical_id": null,
+     "editions": [
+      {
+       "title": "Die Wrenfield-Chroniken. Gesamtausgabe",
+       "isbn_13": null,
+       "release_date": null,
+       "language": {
+        "language": "German"
+       }
+      }
+     ],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 80008,
+     "title": "On Being Afraid",
+     "release_date": "1981-05-01",
+     "release_year": 1981,
+     "compilation": false,
+     "pages": 412,
+     "literary_type_id": 2,
+     "book_category_id": 1,
+     "users_count": 420,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Horror"
+       },
+       {
+        "tag": "Fiction"
+       }
+      ]
+     },
+     "image": {
+      "url": "https://assets.hardcover.app/books/80008/cover.jpg"
+     },
+     "canonical_id": null,
+     "editions": [
+      {
+       "title": "Vom Fürchten",
+       "isbn_13": null,
+       "release_date": null,
+       "language": {
+        "language": "German"
+       }
+      }
+     ],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 80009,
+     "title": "Pim and the Lighthouse",
+     "release_date": "2011-05-01",
+     "release_year": 2011,
+     "compilation": false,
+     "pages": 48,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 410,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Children"
+       },
+       {
+        "tag": "Juvenile Fiction"
+       }
+      ]
+     },
+     "image": {
+      "url": "https://assets.hardcover.app/books/80009/cover.jpg"
+     },
+     "canonical_id": null,
+     "editions": [
+      {
+       "title": "Pim und der Leuchtturm",
+       "isbn_13": null,
+       "release_date": null,
+       "language": {
+        "language": "German"
+       }
+      }
+     ],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 80010,
+     "title": "The Keeper of Lost Rooms",
+     "release_date": "2026-11-15",
+     "release_year": 2026,
+     "compilation": false,
+     "pages": 560,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 400,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Horror"
+       },
+       {
+        "tag": "Fiction"
+       }
+      ]
+     },
+     "image": {
+      "url": "https://assets.hardcover.app/books/80010/cover.jpg"
+     },
+     "canonical_id": null,
+     "editions": [],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 80011,
+     "title": "Wrenfield: The Graphic Novel",
+     "release_date": "2010-05-01",
+     "release_year": 2010,
+     "compilation": false,
+     "pages": 184,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 390,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Graphic Novels"
+       },
+       {
+        "tag": "Comics"
+       }
+      ]
+     },
+     "image": {
+      "url": "https://assets.hardcover.app/books/80011/cover.jpg"
+     },
+     "canonical_id": null,
+     "editions": [
+      {
+       "title": "Wrenfield. Die Graphic Novel",
+       "isbn_13": null,
+       "release_date": null,
+       "language": {
+        "language": "German"
+       }
+      }
+     ],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 89999,
+     "title": "Die Salztöchter",
+     "canonical_id": 80000,
+     "editions": [],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 81000,
+     "title": "Rain Fury",
+     "release_date": "1977-03-01",
+     "release_year": 1977,
+     "compilation": false,
+     "pages": 280,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 40,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Thriller"
+       }
+      ]
+     },
+     "image": null,
+     "canonical_id": null,
+     "editions": [
+      {
+       "title": "Regenwut",
+       "isbn_13": null,
+       "release_date": null,
+       "language": {
+        "language": "German"
+       }
+      }
+     ],
+     "book_series": []
+    }
+   },
+   {
+    "contribution": null,
+    "book": {
+     "id": 81001,
+     "title": "Roadside",
+     "release_date": "1980-03-01",
+     "release_year": 1980,
+     "compilation": false,
+     "pages": 280,
+     "literary_type_id": 1,
+     "book_category_id": 1,
+     "users_count": 40,
+     "cached_tags": {
+      "Genre": [
+       {
+        "tag": "Thriller"
+       }
+      ]
+     },
+     "image": null,
+     "canonical_id": null,
+     "editions": [
+      {
+       "title": "Am Straßenrand",
+       "isbn_13": null,
+       "release_date": null,
+       "language": {
+        "language": "German"
+       }
+      }
+     ],
+     "book_series": []
+    }
+   }
+  ]
+ }
+}

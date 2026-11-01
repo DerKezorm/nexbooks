@@ -1,0 +1,2013 @@
+{
+ "about": "Cases of decisions nexbooks takes without a person: a release name, the files after a download, two titles of one work or two, two names of one person or two, an author field, a title, the titles of the files of a recording. Shaped like real data, every name of a living author and every title of a protected book invented. source: observed (a shape seen in real data) or shaped (made after a pattern of real data).",
+ "cases": [
+  {
+   "id": "release-01",
+   "stage": "release",
+   "input": {
+    "release": "Lena French - Blauer Montag - Hoerbuch",
+    "size": 400000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "A word of a language in the author's name (French, Deutsch, English) is no sign of a language.",
+   "wish": {
+    "title": "Blauer Montag",
+    "authors": [
+     "Lena French"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Blauer Montag",
+      "de"
+     ],
+     [
+      "Blue Monday",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-02",
+   "stage": "release",
+   "input": {
+    "release": "Lena.French.-.Blue.Monday.EPUB",
+    "size": 2000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "As the one before, for an English wish.",
+   "wish": {
+    "title": "Blue Monday",
+    "authors": [
+     "Lena French"
+    ],
+    "language": "en",
+    "titles": [
+     [
+      "Blue Monday",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-03",
+   "stage": "release",
+   "input": {
+    "release": "Tom Deutsch - The Fabric of Sky - EPUB",
+    "size": 2000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "The last name Deutsch is no GERMAN.",
+   "wish": {
+    "title": "The Fabric of Sky",
+    "authors": [
+     "Tom Deutsch"
+    ],
+    "language": "en",
+    "titles": [
+     [
+      "The Fabric of Sky",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-04",
+   "stage": "release",
+   "input": {
+    "release": "Mara.Quell.Nocturno.EPUB",
+    "size": 2000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "A title that is the same in both languages, known only in English: the title says no language; the file decides after the download.",
+   "wish": {
+    "title": "Nocturno",
+    "authors": [
+     "Mara Quell"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nocturno",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-05",
+   "stage": "release",
+   "input": {
+    "release": "I.M.Winterberg - Nora Nachtfalter 2 - Die Halle der Spiegel - German EPUB",
+    "size": 2000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "The series and its volume as a field of their own, then the title without the name of the series.",
+   "wish": {
+    "title": "Nora Nachtfalter und die Halle der Spiegel",
+    "authors": [
+     "I. M. Winterberg"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nora Nachtfalter und die Halle der Spiegel",
+      "de"
+     ]
+    ],
+    "series": "Nora Nachtfalter",
+    "position": 2,
+    "others": []
+   }
+  },
+  {
+   "id": "release-06",
+   "stage": "release",
+   "input": {
+    "release": "Henrike Lindner - Wetterleuchten - Die Stunde der Erben - Hoerbuch",
+    "size": 500000000
+   },
+   "expected": "pass",
+   "source": "observed",
+   "notes": "The name of the series as a field of its own before the title.",
+   "wish": {
+    "title": "Die Stunde der Erben",
+    "authors": [
+     "Henrike Lindner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Die Stunde der Erben",
+      "de"
+     ]
+    ],
+    "series": "Wetterleuchten",
+    "position": 3,
+    "others": []
+   }
+  },
+  {
+   "id": "release-07",
+   "stage": "release",
+   "input": {
+    "release": "Nora.Nachtfalter.und.die.Halle.der.Spiegel.German.EPUB-GRP",
+    "size": 2000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "No author in the name is no other author: ranked lower, the file decides.",
+   "wish": {
+    "title": "Nora Nachtfalter und die Halle der Spiegel",
+    "authors": [
+     "I. M. Winterberg"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nora Nachtfalter und die Halle der Spiegel",
+      "de"
+     ]
+    ],
+    "series": "Nora Nachtfalter",
+    "position": 2,
+    "others": []
+   }
+  },
+  {
+   "id": "release-08",
+   "stage": "release",
+   "input": {
+    "release": "Mord im Nachtzug - Hoerbuch - MP3",
+    "size": 300000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "As the one before.",
+   "wish": {
+    "title": "Mord im Nachtzug",
+    "authors": [
+     "Agnes Crane"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Mord im Nachtzug",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-09",
+   "stage": "release",
+   "input": {
+    "release": "Leo Tolstoi - Krieg und Frieden - EPUB",
+    "size": 2000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "Another spelling of the name (Lew and Leo, Tolstoi and Tolstoy) is the same author.",
+   "wish": {
+    "title": "Krieg und Frieden",
+    "authors": [
+     "Lew Tolstoi"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Krieg und Frieden",
+      "de"
+     ],
+     [
+      "War and Peace",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-10",
+   "stage": "release",
+   "input": {
+    "release": "Brueder Grimm - Kinder- und Hausmaerchen - EPUB",
+    "size": 2000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "The group name of the authors (Brüder Grimm).",
+   "wish": {
+    "title": "Kinder- und Hausmärchen",
+    "authors": [
+     "Jacob Grimm",
+     "Wilhelm Grimm"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Kinder- und Hausmärchen",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-11",
+   "stage": "release",
+   "input": {
+    "release": "Ferdinand Brack - Der Prozess - Hoerbuch - Ungekuerzt",
+    "size": 300000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "Prozess and Process: the old and the new spelling.",
+   "wish": {
+    "title": "Der Process",
+    "authors": [
+     "Ferdinand Brack"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Der Process",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-12",
+   "stage": "release",
+   "input": {
+    "release": "Mark Twain - Tom Sawyer - EPUB",
+    "size": 2000000
+   },
+   "expected": "ask:title_short",
+   "source": "shaped",
+   "notes": "A short form of the title: not turned down, a question after a look.",
+   "wish": {
+    "title": "Die Abenteuer des Tom Sawyer",
+    "authors": [
+     "Mark Twain"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Die Abenteuer des Tom Sawyer",
+      "de"
+     ],
+     [
+      "The Adventures of Tom Sawyer",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-13",
+   "stage": "release",
+   "input": {
+    "release": "Simon.Krieger.-.Ihr.wollt.es.kälter.EPUB",
+    "size": 2000000
+   },
+   "expected": "reject:title_mismatch",
+   "source": "observed",
+   "notes": "A short title is never a word inside a longer one.",
+   "wish": {
+    "title": "Es",
+    "authors": [
+     "Simon Krieger"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Es",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-14",
+   "stage": "release",
+   "input": {
+    "release": "Simon Krieger - ES - Hoerbuch",
+    "size": 900000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "ES in capitals is the title here, not Spanish.",
+   "wish": {
+    "title": "Es",
+    "authors": [
+     "Simon Krieger"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Es",
+      "de"
+     ],
+     [
+      "It",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-15",
+   "stage": "release",
+   "input": {
+    "release": "Rune Falkner - Nebelchor - ES - EPUB",
+    "size": 2000000
+   },
+   "expected": "reject:other_language",
+   "source": "shaped",
+   "notes": "ES after the title is Spanish.",
+   "wish": {
+    "title": "Nebelchor",
+    "authors": [
+     "Rune Falkner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nebelchor",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-16",
+   "stage": "release",
+   "input": {
+    "release": "Bram Stoker - Dracula - Zweisprachig Englisch-Deutsch - EPUB",
+    "size": 2000000
+   },
+   "expected": "ask:bilingual",
+   "source": "shaped",
+   "notes": "A bilingual edition is a version of its own.",
+   "wish": {
+    "title": "Dracula",
+    "authors": [
+     "Bram Stoker"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Dracula",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-17",
+   "stage": "release",
+   "input": {
+    "release": "Rune Falkner - Nebelchor - DE-EN - EPUB",
+    "size": 2000000
+   },
+   "expected": "ask:bilingual",
+   "source": "shaped",
+   "notes": "DE-EN: two signs of a language.",
+   "wish": {
+    "title": "Nebelchor",
+    "authors": [
+     "Rune Falkner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nebelchor",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-18",
+   "stage": "release",
+   "input": {
+    "release": "Rune Falkner - Nebelchor by moewe",
+    "size": 2000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "by and a name that is no author of the book, at the end: an uploader.",
+   "wish": {
+    "title": "Nebelchor",
+    "authors": [
+     "Rune Falkner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nebelchor",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-19",
+   "stage": "release",
+   "input": {
+    "release": "Rune Falkner - Nebelchor - GERMAN - EPUB - Sh4d0w",
+    "size": 2000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "An uploader's tag with digits at the end.",
+   "wish": {
+    "title": "Nebelchor",
+    "authors": [
+     "Rune Falkner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nebelchor",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-20",
+   "stage": "release",
+   "input": {
+    "release": "Jane Austen - Stolz und Vorurteil - Die Graphic Novel - EPUB",
+    "size": 2000000
+   },
+   "expected": "reject:adaptation",
+   "source": "shaped",
+   "notes": "A graphic novel, a comic, a manga are adaptations.",
+   "wish": {
+    "title": "Stolz und Vorurteil",
+    "authors": [
+     "Jane Austen"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Stolz und Vorurteil",
+      "de"
+     ],
+     [
+      "Pride and Prejudice",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-21",
+   "stage": "release",
+   "input": {
+    "release": "Jane Austen - Stolz und Vorurteil - Nacherzaehlt fuer Kinder - EPUB",
+    "size": 2000000
+   },
+   "expected": "reject:adaptation",
+   "source": "shaped",
+   "notes": "A retelling for children.",
+   "wish": {
+    "title": "Stolz und Vorurteil",
+    "authors": [
+     "Jane Austen"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Stolz und Vorurteil",
+      "de"
+     ],
+     [
+      "Pride and Prejudice",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-22",
+   "stage": "release",
+   "input": {
+    "release": "Jane Austen - Pride and Prejudice - Penguin Readers Level 5 - EPUB",
+    "size": 2000000
+   },
+   "expected": "reject:adaptation",
+   "source": "shaped",
+   "notes": "A graded reader, simplified.",
+   "wish": {
+    "title": "Pride and Prejudice",
+    "authors": [
+     "Jane Austen"
+    ],
+    "language": "en",
+    "titles": [
+     [
+      "Pride and Prejudice",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-23",
+   "stage": "release",
+   "input": {
+    "release": "Ferdinand Brack - Die Verwandlung - Koenigs Erlaeuterungen - EPUB",
+    "size": 2000000
+   },
+   "expected": "reject:companion",
+   "source": "shaped",
+   "notes": "A study guide.",
+   "wish": {
+    "title": "Die Verwandlung",
+    "authors": [
+     "Ferdinand Brack"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Die Verwandlung",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-24",
+   "stage": "release",
+   "input": {
+    "release": "Ferdinand Brack - Die Verwandlung - Schulausgabe mit Materialien - EPUB",
+    "size": 2000000
+   },
+   "expected": "ask:edition",
+   "source": "shaped",
+   "notes": "A school edition holds the text with additions: a question.",
+   "wish": {
+    "title": "Die Verwandlung",
+    "authors": [
+     "Ferdinand Brack"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Die Verwandlung",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-25",
+   "stage": "release",
+   "input": {
+    "release": "Mary Shelley - Frankenstein - Das Buch zum Film - EPUB",
+    "size": 2000000
+   },
+   "expected": "ask:edition",
+   "source": "shaped",
+   "notes": "The book of the film: the novel or a companion? A question.",
+   "wish": {
+    "title": "Frankenstein",
+    "authors": [
+     "Mary Shelley"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Frankenstein",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-26",
+   "stage": "release",
+   "input": {
+    "release": "Bram Stoker - Dracula - Vereinfachte Fassung - EPUB",
+    "size": 2000000
+   },
+   "expected": "reject:adaptation",
+   "source": "shaped",
+   "notes": "A simplified edition.",
+   "wish": {
+    "title": "Dracula",
+    "authors": [
+     "Bram Stoker"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Dracula",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-27",
+   "stage": "release",
+   "input": {
+    "release": "Jane Austen - Pride and Prejudice and Dragons - EPUB",
+    "size": 2000000
+   },
+   "expected": "reject:title_mismatch",
+   "source": "shaped",
+   "notes": "A parody with a longer title.",
+   "wish": {
+    "title": "Pride and Prejudice",
+    "authors": [
+     "Jane Austen"
+    ],
+    "language": "en",
+    "titles": [
+     [
+      "Pride and Prejudice",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-28",
+   "stage": "release",
+   "input": {
+    "release": "Ferdinand Brack - Die Verwandlung - Interpretation - EPUB",
+    "size": 2000000
+   },
+   "expected": "reject:companion",
+   "source": "shaped",
+   "notes": "An interpretation.",
+   "wish": {
+    "title": "Die Verwandlung",
+    "authors": [
+     "Ferdinand Brack"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Die Verwandlung",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-30",
+   "stage": "release",
+   "input": {
+    "release": "Herman Melville - Moby Dick - Teil 2 von 2 - Hoerbuch - MP3",
+    "size": 500000000
+   },
+   "expected": "reject:partial",
+   "source": "shaped",
+   "notes": "Part 2 of 2 is half of the recording.",
+   "wish": {
+    "title": "Moby Dick",
+    "authors": [
+     "Herman Melville"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Moby Dick",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-31",
+   "stage": "release",
+   "input": {
+    "release": "Herman Melville - Moby Dick - Part 1 - Unabridged",
+    "size": 500000000
+   },
+   "expected": "ask:maybe_partial",
+   "source": "shaped",
+   "notes": "Part 1 without the number of parts: a part, or a part of the title (works named Teil 1). A question, not a refusal.",
+   "wish": {
+    "title": "Moby Dick",
+    "authors": [
+     "Herman Melville"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Moby Dick",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-32",
+   "stage": "release",
+   "input": {
+    "release": "Herman Melville - Moby Dick - CD 7-12 - MP3",
+    "size": 500000000
+   },
+   "expected": "reject:partial",
+   "source": "shaped",
+   "notes": "CD 7-12 is a part, not a bundle.",
+   "wish": {
+    "title": "Moby Dick",
+    "authors": [
+     "Herman Melville"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Moby Dick",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-33",
+   "stage": "release",
+   "input": {
+    "release": "Lew Tolstoi - Krieg und Frieden - Band 2 von 4 - EPUB",
+    "size": 2000000
+   },
+   "expected": "reject:partial",
+   "source": "shaped",
+   "notes": "One volume of an edition in several volumes is not the work.",
+   "wish": {
+    "title": "Krieg und Frieden",
+    "authors": [
+     "Lew Tolstoi"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Krieg und Frieden",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-34",
+   "stage": "release",
+   "input": {
+    "release": "J.R.R. Tannberg - Der Hüter der Steine - Gesamtausgabe - EPUB",
+    "size": 2000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "The work itself is called so: the complete edition is the book wished.",
+   "wish": {
+    "title": "Der Hüter der Steine",
+    "authors": [
+     "J. R. R. Tannberg"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Der Hüter der Steine",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-35",
+   "stage": "release",
+   "input": {
+    "release": "Arthur Conan Doyle - The Complete Sherlock Holmes - EPUB",
+    "size": 2000000
+   },
+   "expected": "reject",
+   "source": "shaped",
+   "notes": "A complete edition for one volume.",
+   "wish": {
+    "title": "A Study in Scarlet",
+    "authors": [
+     "Arthur Conan Doyle"
+    ],
+    "language": "en",
+    "titles": [
+     [
+      "A Study in Scarlet",
+      "en"
+     ]
+    ],
+    "series": "Sherlock Holmes",
+    "position": 1,
+    "others": []
+   }
+  },
+  {
+   "id": "release-36",
+   "stage": "release",
+   "input": {
+    "release": "Rune Falkner - Quist 01 - 05 - AUDiOBOOK - MP3",
+    "size": 3000000000
+   },
+   "expected": "reject:bundle",
+   "source": "observed",
+   "notes": "Volumes 1 to 5 for volume 5.",
+   "wish": {
+    "title": "Nebelchor",
+    "authors": [
+     "Rune Falkner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nebelchor",
+      "de"
+     ]
+    ],
+    "series": "Quist",
+    "position": 5,
+    "others": []
+   }
+  },
+  {
+   "id": "release-40",
+   "stage": "release",
+   "input": {
+    "release": "Rune Falkner - Nebelchor - Gekuerzte Lesung - Hoerbuch",
+    "size": 300000000
+   },
+   "expected": "reject:abridged",
+   "source": "shaped",
+   "notes": "Abridged, off from the start.",
+   "wish": {
+    "title": "Nebelchor",
+    "authors": [
+     "Rune Falkner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nebelchor",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-41",
+   "stage": "release",
+   "input": {
+    "release": "Rune Falkner - Nebelchor - Das Hoerspiel - MP3",
+    "size": 300000000
+   },
+   "expected": "reject:dramatized",
+   "source": "shaped",
+   "notes": "A play, off from the start.",
+   "wish": {
+    "title": "Nebelchor",
+    "authors": [
+     "Rune Falkner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nebelchor",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-42",
+   "stage": "release",
+   "input": {
+    "release": "Rune Falkner - Nebelchor - Autorisierte Lesefassung - MP3",
+    "size": 300000000
+   },
+   "expected": "reject:abridged",
+   "source": "shaped",
+   "notes": "Lesefassung means abridged.",
+   "wish": {
+    "title": "Nebelchor",
+    "authors": [
+     "Rune Falkner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nebelchor",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-43",
+   "stage": "release",
+   "input": {
+    "release": "Rune Falkner - Nebelchor - Hoerbuch - MP3",
+    "size": 300000000
+   },
+   "expected": "pass",
+   "source": "shaped",
+   "notes": "The name says nothing: loaded, the running time decides after the download.",
+   "wish": {
+    "title": "Nebelchor",
+    "authors": [
+     "Rune Falkner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nebelchor",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-44",
+   "stage": "release",
+   "input": {
+    "release": "Rune Falkner - Nebelchor - Soundtrack - FLAC",
+    "size": 300000000
+   },
+   "expected": "reject:soundtrack",
+   "source": "shaped",
+   "notes": "A soundtrack.",
+   "wish": {
+    "title": "Nebelchor",
+    "authors": [
+     "Rune Falkner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nebelchor",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "release-45",
+   "stage": "release",
+   "input": {
+    "release": "Rune Falkner - Nebelchor - Leseprobe - EPUB",
+    "size": 2000000
+   },
+   "expected": "reject:sample",
+   "source": "shaped",
+   "notes": "A sample.",
+   "wish": {
+    "title": "Nebelchor",
+    "authors": [
+     "Rune Falkner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nebelchor",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "after_download-01",
+   "stage": "after_download",
+   "input": {
+    "file_title": "Nora Nachtfalter 2",
+    "file_authors": [
+     "Ilse M. Winterberg"
+    ]
+   },
+   "expected": "take",
+   "source": "observed",
+   "notes": "The file carries the series and its number but is the book: filed under the title wished.",
+   "wish": {
+    "title": "Nora Nachtfalter und die Halle der Spiegel",
+    "authors": [
+     "I. M. Winterberg"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nora Nachtfalter und die Halle der Spiegel",
+      "de"
+     ],
+     [
+      "Nora Nightmoth and the Hall of Mirrors",
+      "en"
+     ]
+    ],
+    "series": "Nora Nachtfalter",
+    "position": 2,
+    "others": []
+   }
+  },
+  {
+   "id": "after_download-02",
+   "stage": "after_download",
+   "input": {
+    "file_title": "Die Halle der Spiegel",
+    "file_authors": [
+     "I. M. Winterberg"
+    ]
+   },
+   "expected": "ask:files_unassigned",
+   "source": "shaped",
+   "notes": "A part of the title is missing: the question is right.",
+   "wish": {
+    "title": "Nora Nachtfalter und die Halle der Spiegel",
+    "authors": [
+     "I. M. Winterberg"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nora Nachtfalter und die Halle der Spiegel",
+      "de"
+     ],
+     [
+      "Nora Nightmoth and the Hall of Mirrors",
+      "en"
+     ]
+    ],
+    "series": "Nora Nachtfalter",
+    "position": 2,
+    "others": []
+   }
+  },
+  {
+   "id": "after_download-03",
+   "stage": "after_download",
+   "input": {
+    "file_title": "Simon Krieger - Es",
+    "file_authors": [
+     "Simon Krieger"
+    ]
+   },
+   "expected": "take",
+   "source": "shaped",
+   "notes": "dc:title with the author in front (the file name as the title).",
+   "wish": {
+    "title": "Es",
+    "authors": [
+     "Simon Krieger"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Es",
+      "de"
+     ],
+     [
+      "It",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": [
+     "Ihr wollt es kälter",
+     "Clara"
+    ]
+   }
+  },
+  {
+   "id": "after_download-04",
+   "stage": "after_download",
+   "input": {
+    "file_title": "Ihr wollt es kälter",
+    "file_authors": [
+     "Simon Krieger"
+    ]
+   },
+   "expected": "reject:title_mismatch",
+   "source": "observed",
+   "notes": "A short title is never a word inside the title of another book of the author.",
+   "wish": {
+    "title": "Es",
+    "authors": [
+     "Simon Krieger"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Es",
+      "de"
+     ],
+     [
+      "It",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": [
+     "Ihr wollt es kälter",
+     "Clara"
+    ]
+   }
+  },
+  {
+   "id": "after_download-05",
+   "stage": "after_download",
+   "input": {
+    "file_title": "Es - Teil 1",
+    "file_authors": [
+     "Simon Krieger"
+    ]
+   },
+   "expected": "ask:partial",
+   "source": "shaped",
+   "notes": "Part 1 of a recording in several parts.",
+   "wish": {
+    "title": "Es",
+    "authors": [
+     "Simon Krieger"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Es",
+      "de"
+     ],
+     [
+      "It",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": [
+     "Ihr wollt es kälter",
+     "Clara"
+    ]
+   }
+  },
+  {
+   "id": "after_download-06",
+   "stage": "after_download",
+   "input": {
+    "file_title": "Krieg und Frieden - Band 2",
+    "file_authors": [
+     "Lew Tolstoi"
+    ]
+   },
+   "expected": "ask:partial",
+   "source": "shaped",
+   "notes": "One volume of an edition in several volumes.",
+   "wish": {
+    "title": "Krieg und Frieden",
+    "authors": [
+     "Lew Tolstoi"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Krieg und Frieden",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "after_download-07",
+   "stage": "after_download",
+   "input": {
+    "file_title": "Stolz und Vorurteil - Die Graphic Novel",
+    "file_authors": [
+     "Jane Austen"
+    ]
+   },
+   "expected": "reject:adaptation",
+   "source": "shaped",
+   "notes": "A graphic novel.",
+   "wish": {
+    "title": "Stolz und Vorurteil",
+    "authors": [
+     "Jane Austen"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Stolz und Vorurteil",
+      "de"
+     ],
+     [
+      "Pride and Prejudice",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "after_download-08",
+   "stage": "after_download",
+   "input": {
+    "file_title": "Stolz und Vorurteil: Nacherzählt für Kinder",
+    "file_authors": [
+     "Jane Austen"
+    ]
+   },
+   "expected": "reject:adaptation",
+   "source": "shaped",
+   "notes": "A version for children.",
+   "wish": {
+    "title": "Stolz und Vorurteil",
+    "authors": [
+     "Jane Austen"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Stolz und Vorurteil",
+      "de"
+     ],
+     [
+      "Pride and Prejudice",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "after_download-09",
+   "stage": "after_download",
+   "input": {
+    "file_title": "Nebelchor",
+    "file_authors": [
+     "DeBar0n"
+    ]
+   },
+   "expected": "take",
+   "source": "shaped",
+   "notes": "dc:creator is an uploader's name: the author is unknown, not another one.",
+   "wish": {
+    "title": "Nebelchor",
+    "authors": [
+     "Rune Falkner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nebelchor",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "after_download-10",
+   "stage": "after_download",
+   "input": {
+    "file_title": "Nebelchor",
+    "file_authors": [
+     "Hörbuch Beispielverlag"
+    ]
+   },
+   "expected": "take",
+   "source": "shaped",
+   "notes": "The artist tag is the publisher: the author is unknown.",
+   "wish": {
+    "title": "Nebelchor",
+    "authors": [
+     "Rune Falkner"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nebelchor",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "after_download-11",
+   "stage": "after_download",
+   "input": {
+    "file_title": "The Hound of the Baskervilles",
+    "file_authors": [
+     "Sir Arthur Conan Doyle"
+    ]
+   },
+   "expected": "take",
+   "source": "shaped",
+   "notes": "Sir, Dr., Prof. make no other author.",
+   "wish": {
+    "title": "The Hound of the Baskervilles",
+    "authors": [
+     "Arthur Conan Doyle"
+    ],
+    "language": "en",
+    "titles": [
+     [
+      "The Hound of the Baskervilles",
+      "en"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "after_download-12",
+   "stage": "after_download",
+   "input": {
+    "file_title": "Krieg und Frieden",
+    "file_authors": [
+     "Leo Tolstoy"
+    ]
+   },
+   "expected": "take",
+   "source": "shaped",
+   "notes": "Another spelling of the name.",
+   "wish": {
+    "title": "Krieg und Frieden",
+    "authors": [
+     "Lew Tolstoi"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Krieg und Frieden",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "after_download-13",
+   "stage": "after_download",
+   "input": {
+    "file_title": "Der Ruf der Möwe",
+    "file_authors": [
+     "Robert Kranich"
+    ]
+   },
+   "expected": "ask:pen_name",
+   "source": "shaped",
+   "notes": "A pen name without proof: a question, not a refusal.",
+   "wish": {
+    "title": "Der Ruf der Möwe",
+    "authors": [
+     "I. M. Winterberg"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Der Ruf der Möwe",
+      "de"
+     ]
+    ],
+    "series": "",
+    "position": null,
+    "others": []
+   }
+  },
+  {
+   "id": "after_download-14",
+   "stage": "after_download",
+   "input": {
+    "file_title": "Nora Nightmoth and the Hall of Mirrors",
+    "file_authors": [
+     "I. M. Winterberg"
+    ]
+   },
+   "expected": "take",
+   "source": "shaped",
+   "notes": "The title fits; then the language decides.",
+   "wish": {
+    "title": "Nora Nachtfalter und die Halle der Spiegel",
+    "authors": [
+     "I. M. Winterberg"
+    ],
+    "language": "de",
+    "titles": [
+     [
+      "Nora Nachtfalter und die Halle der Spiegel",
+      "de"
+     ],
+     [
+      "Nora Nightmoth and the Hall of Mirrors",
+      "en"
+     ]
+    ],
+    "series": "Nora Nachtfalter",
+    "position": 2,
+    "others": []
+   }
+  },
+  {
+   "id": "grouping-01",
+   "stage": "grouping",
+   "input": {
+    "title_a": "Simon Krieger - Es",
+    "title_b": "Simon Krieger - Clara"
+   },
+   "expected": "two_works",
+   "source": "shaped",
+   "notes": "A title with the author in front: the core is not the author's name."
+  },
+  {
+   "id": "grouping-02",
+   "stage": "grouping",
+   "input": {
+    "title_a": "Die Spiele von Arkadia: Tödliche Spiele",
+    "title_b": "Die Spiele von Arkadia: Flammender Zorn"
+   },
+   "expected": "two_works",
+   "source": "shaped",
+   "notes": "The series before the colon, two volumes."
+  },
+  {
+   "id": "grouping-03",
+   "stage": "grouping",
+   "input": {
+    "title_a": "Frevel: The Leonardo Key",
+    "title_b": "Frevel: Das Filmbuch"
+   },
+   "expected": "two_works",
+   "source": "shaped",
+   "notes": "The book of the film is another book."
+  },
+  {
+   "id": "grouping-04",
+   "stage": "grouping",
+   "input": {
+    "title_a": "Stolz und Vorurteil",
+    "title_b": "Stolz und Vorurteil - Die Graphic Novel"
+   },
+   "expected": "two_works",
+   "source": "shaped",
+   "notes": "A graphic novel is an adaptation."
+  },
+  {
+   "id": "grouping-05",
+   "stage": "grouping",
+   "input": {
+    "title_a": "Das Protokoll: Thriller",
+    "title_b": "Das Protokoll: Roman"
+   },
+   "expected": "one_work",
+   "source": "shaped",
+   "notes": "A word of the kind of book as the subtitle."
+  },
+  {
+   "id": "grouping-06",
+   "stage": "grouping",
+   "input": {
+    "title_a": "Nora Nachtfalter 2",
+    "title_b": "Nora Nachtfalter und die Halle der Spiegel"
+   },
+   "expected": "one_work",
+   "source": "shaped",
+   "notes": "The series and its volume are the title of that volume."
+  },
+  {
+   "id": "people-01",
+   "stage": "people",
+   "input": {
+    "name_a": "Homer",
+    "name_b": "Homer"
+   },
+   "expected": "one_person",
+   "source": "shaped",
+   "notes": "A name of one word (Homer, Voltaire, Molière)."
+  },
+  {
+   "id": "people-02",
+   "stage": "people",
+   "input": {
+    "name_a": "Sir Arthur Conan Doyle",
+    "name_b": "Arthur Conan Doyle"
+   },
+   "expected": "one_person",
+   "source": "shaped",
+   "notes": "Sir."
+  },
+  {
+   "id": "people-03",
+   "stage": "people",
+   "input": {
+    "name_a": "Lew Tolstoi",
+    "name_b": "Leo Tolstoy"
+   },
+   "expected": "one_person",
+   "source": "shaped",
+   "notes": "Another spelling."
+  },
+  {
+   "id": "people-04",
+   "stage": "people",
+   "input": {
+    "name_a": "Brüder Grimm",
+    "name_b": "Jacob Grimm"
+   },
+   "expected": "one_person",
+   "source": "shaped",
+   "notes": "Brüder Grimm."
+  },
+  {
+   "id": "people-05",
+   "stage": "people",
+   "input": {
+    "name_a": "J. W. von Goethe",
+    "name_b": "Johann Wolfgang von Goethe"
+   },
+   "expected": "one_person",
+   "source": "shaped",
+   "notes": "Initials."
+  },
+  {
+   "id": "people-06",
+   "stage": "people",
+   "input": {
+    "name_a": "Simon Krieger",
+    "name_b": "Owen Krieger"
+   },
+   "expected": "two_people",
+   "source": "shaped",
+   "notes": "The same last name, another person."
+  },
+  {
+   "id": "people-07",
+   "stage": "people",
+   "input": {
+    "name_a": "Goethe",
+    "name_b": "Johann Wolfgang von Goethe"
+   },
+   "expected": "one_person_with_proof",
+   "source": "shaped",
+   "notes": "The last name alone only with proof (a list of works)."
+  },
+  {
+   "id": "author_field-01",
+   "stage": "author_field",
+   "input": {
+    "field": "DeBar0n"
+   },
+   "expected": "no_person",
+   "source": "shaped",
+   "notes": "Letters and digits mixed, no space."
+  },
+  {
+   "id": "author_field-02",
+   "stage": "author_field",
+   "input": {
+    "field": "Ripped by Sh4d0w"
+   },
+   "expected": "no_person",
+   "source": "shaped",
+   "notes": "Ripped by."
+  },
+  {
+   "id": "author_field-03",
+   "stage": "author_field",
+   "input": {
+    "field": "Hörbuch Beispielverlag"
+   },
+   "expected": "company",
+   "source": "shaped",
+   "notes": "The publisher as the artist tag."
+  },
+  {
+   "id": "author_field-04",
+   "stage": "author_field",
+   "input": {
+    "field": "Example House Audio"
+   },
+   "expected": "company",
+   "source": "shaped",
+   "notes": "An audio label."
+  },
+  {
+   "id": "author_field-05",
+   "stage": "author_field",
+   "input": {
+    "field": "www.example.com"
+   },
+   "expected": "no_person",
+   "source": "shaped",
+   "notes": "A web address."
+  },
+  {
+   "id": "author_field-06",
+   "stage": "author_field",
+   "input": {
+    "field": "calibre"
+   },
+   "expected": "no_person",
+   "source": "shaped",
+   "notes": "The name of a program."
+  },
+  {
+   "id": "author_field-07",
+   "stage": "author_field",
+   "input": {
+    "field": "Die vier ???"
+   },
+   "expected": "no_person",
+   "source": "shaped",
+   "notes": "A series of plays in the artist field."
+  },
+  {
+   "id": "author_field-08",
+   "stage": "author_field",
+   "input": {
+    "field": "Various Artists"
+   },
+   "expected": "no_person",
+   "source": "shaped",
+   "notes": "The tag of a compilation."
+  },
+  {
+   "id": "title-01",
+   "stage": "title",
+   "input": {
+    "title": "2812 - Es"
+   },
+   "expected": "Es",
+   "source": "observed",
+   "notes": "A catalogue or folder number before the title."
+  },
+  {
+   "id": "title-02",
+   "stage": "title",
+   "input": {
+    "title": "Simon Krieger - Es"
+   },
+   "expected": "Es",
+   "source": "shaped",
+   "notes": "The author before the title."
+  },
+  {
+   "id": "title-03",
+   "stage": "title",
+   "input": {
+    "title": "B0ABC12345 - Es"
+   },
+   "expected": "Es",
+   "source": "shaped",
+   "notes": "An ASIN before the title."
+  },
+  {
+   "id": "title-04",
+   "stage": "title",
+   "input": {
+    "title": "978-3-9999-0010-0 - Es"
+   },
+   "expected": "Es",
+   "source": "shaped",
+   "notes": "An ISBN before the title."
+  },
+  {
+   "id": "title-05",
+   "stage": "title",
+   "input": {
+    "title": "NN2 - Die Halle der Spiegel"
+   },
+   "expected": "Die Halle der Spiegel",
+   "source": "shaped",
+   "notes": "A short mark in front."
+  },
+  {
+   "id": "title-06",
+   "stage": "title",
+   "input": {
+    "title": "Eine unbeliebte Dame (Ein Krimi 1): Ein Mord, ein Selbstmord"
+   },
+   "expected": "Eine unbeliebte Dame",
+   "source": "shaped",
+   "notes": "The advertising title of the catalogues."
+  },
+  {
+   "id": "chapters-01",
+   "stage": "chapters",
+   "input": {
+    "file_titles": [
+     "Rune Falkner",
+     "Rune Falkner",
+     "Rune Falkner",
+     "Rune Falkner",
+     "Rune Falkner"
+    ],
+    "book": [
+     "Nebelchor"
+    ]
+   },
+   "expected": [
+    [
+     0,
+     1,
+     ""
+    ],
+    [
+     1,
+     1,
+     ""
+    ],
+    [
+     2,
+     1,
+     ""
+    ],
+    [
+     3,
+     1,
+     ""
+    ],
+    [
+     4,
+     1,
+     ""
+    ]
+   ],
+   "source": "shaped",
+   "notes": "The title tag is the author on every file: no chapter has a name."
+  },
+  {
+   "id": "chapters-02",
+   "stage": "chapters",
+   "input": {
+    "file_titles": [
+     "Quist-Reihe",
+     "Quist-Reihe",
+     "Quist-Reihe",
+     "Quist-Reihe"
+    ],
+    "book": [
+     "Nebelchor"
+    ]
+   },
+   "expected": [
+    [
+     0,
+     1,
+     ""
+    ],
+    [
+     1,
+     1,
+     ""
+    ],
+    [
+     2,
+     1,
+     ""
+    ],
+    [
+     3,
+     1,
+     ""
+    ]
+   ],
+   "source": "shaped",
+   "notes": "The title tag is the series on every file: no chapter has a name."
+  },
+  {
+   "id": "chapters-03",
+   "stage": "chapters",
+   "input": {
+    "file_titles": [
+     "Kapitel 1 (1/3)",
+     "Kapitel 1 (2/3)",
+     "Kapitel 1 (3/3)",
+     "Kapitel 2"
+    ],
+    "book": [
+     "Nebelchor"
+    ]
+   },
+   "expected": [
+    [
+     0,
+     3,
+     "Kapitel 1"
+    ],
+    [
+     3,
+     1,
+     "Kapitel 2"
+    ]
+   ],
+   "source": "shaped",
+   "notes": "The files of one chapter go together."
+  },
+  {
+   "id": "chapters-04",
+   "stage": "chapters",
+   "input": {
+    "file_titles": [
+     "Nebelchor CD1 Track 1",
+     "Nebelchor CD1 Track 2",
+     "Nebelchor CD1 Track 3"
+    ],
+    "book": [
+     "Nebelchor"
+    ]
+   },
+   "expected": [
+    [
+     0,
+     1,
+     "Nebelchor CD1 Track 1"
+    ],
+    [
+     1,
+     1,
+     "Nebelchor CD1 Track 2"
+    ],
+    [
+     2,
+     1,
+     "Nebelchor CD1 Track 3"
+    ]
+   ],
+   "source": "shaped",
+   "notes": "The track numbers of a disc are no parts of a chapter."
+  }
+ ]
+}

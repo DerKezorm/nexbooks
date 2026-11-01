@@ -1,0 +1,175 @@
+/* The reading stack: the recap of a year and the towers of lying books on boards. Sizes, colours, distances,
+   curves and times are set here. */
+
+@layer components {
+  /* ---- The recap of a year -------------------------------------------------------------------------------------------- */
+  .recap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 8px 0 34px;
+  }
+  .rc {
+    padding: 16px 18px;
+    border-radius: 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+  }
+  .rc b {
+    display: block;
+    font: 600 30px/1.1 var(--serif);
+  }
+  .rc span {
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .rc.big {
+    grid-column: span 2;
+    background: color-mix(in oklab, var(--accent) 10%, var(--surface));
+  }
+  .rc.big b {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .rc.big .longest > div {
+    min-width: 0;
+  }
+  .rc.big .longest span {
+    display: block;
+  }
+  .rc.big .longest {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 8px;
+  }
+  .rc.big .cover {
+    width: 46px;
+  }
+
+  /* ---- The towers ------------------------------------------------------------------------------------------------------ */
+  .stacks {
+    display: flex;
+    gap: clamp(18px, 3vw, 46px);
+    align-items: flex-end;
+    overflow-x: auto;
+    padding: 10px 6px 0;
+    min-height: 520px;
+  }
+  .year {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tower {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .lying {
+    --w: 150px;
+    --t: 14px;
+    position: relative;
+    width: var(--w);
+    height: var(--t);
+    margin-left: var(--off, 0);
+    border: 0;
+    padding: 0 8px;
+    border-radius: 1.5px;
+    color: var(--ink);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.22)),
+      var(--c);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font: 600 min(9.5px, calc(var(--t) - 3px)) var(--sans);
+    line-height: var(--t);
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s;
+    animation: drop 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.2) backwards;
+  }
+  .lying span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .lying em {
+    font-style: normal;
+    opacity: 0.7;
+    margin-left: 6px;
+  }
+  .lying:hover,
+  .lying:focus-visible {
+    transform: translateX(14px);
+    z-index: 2;
+  }
+  .lying.audio {
+    border-radius: 4px;
+  }
+  .lying.audio::before {
+    content: '';
+    box-sizing: content-box;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid currentColor;
+    opacity: 0.7;
+    margin-right: 6px;
+    flex: none;
+  }
+  @keyframes drop {
+    from {
+      transform: translateY(-40px);
+      opacity: 0;
+    }
+  }
+  .year .plank {
+    width: 200px;
+    height: 14px;
+    margin-top: 0;
+    border-radius: 3px;
+    background: linear-gradient(180deg, var(--plank-1), var(--plank-2));
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  }
+  .year h3 {
+    font: 600 24px var(--serif);
+    margin: 12px 0 0;
+  }
+  .year h3 small {
+    font: 500 12px var(--sans);
+    color: var(--dim);
+    margin-left: 6px;
+  }
+  .year h3 .yr {
+    border: 0;
+    background: none;
+    padding: 0 2px;
+    color: inherit;
+    font: inherit;
+    border-bottom: 2px solid transparent;
+  }
+  .year h3 .yr.on {
+    border-bottom-color: var(--accent);
+  }
+  .year p {
+    margin: 2px 0 0;
+    color: var(--muted);
+    font-size: 12.5px;
+    text-align: center;
+  }
+
+  @media (max-width: 820px) {
+    .rc.big {
+      grid-column: span 1;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .lying {
+      animation-duration: 0.01ms;
+      transition-duration: 0.01ms;
+    }
+  }
+}
