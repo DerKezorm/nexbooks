@@ -11,7 +11,7 @@ import { useCallback, useEffect, useRef, useState, type CSSProperties, type Poin
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation, useNavigate, useParams, type Location } from 'react-router-dom'
 
-import { ApiError, discoverApi, editionsApi, historyApi, librariesApi, procureApi, readingApi, worksApi, type DiscoverCard, type EditionOut, type HistoryOut, type Library, type ProgressOut, type ReleaseKind, type SeriesGap, type SeriesOut, type PersonOut, type WorkBrief, type WorkOut, type WorkProcure } from '../api/client'
+import { ApiError, discoverApi, editionsApi, historyApi, laterApi, librariesApi, procureApi, readingApi, worksApi, type DiscoverCard, type EditionOut, type HistoryOut, type Library, type ProgressOut, type ReleaseKind, type SeriesGap, type SeriesOut, type PersonOut, type WorkBrief, type WorkOut, type WorkProcure } from '../api/client'
 import { Cover } from '../components/BookCard'
 import { ManageDialog } from '../components/ManageBook'
 import { MoveDialog } from '../components/MoveDialog'
@@ -21,7 +21,7 @@ import { Twins } from '../components/Twins'
 import { VolumeShelf } from '../components/VolumeShelf'
 import { ReleasesDialog } from '../components/procure/ReleasesDialog'
 import { UploadDialog } from '../components/procure/UploadDialog'
-import { BackIcon, PencilIcon } from '../components/icons'
+import { BackIcon, MarkIcon, PencilIcon } from '../components/icons'
 import { authorLine } from '../lib/books'
 import { leadEditions, useEditionLabel } from '../lib/editionText'
 import { errorText } from '../lib/errors'
@@ -53,6 +53,39 @@ function paragraphs(text: string): string[] {
     .split(/\n\s*\n/)
     .map((part) => part.replace(/\s*\n\s*/g, ' ').trim())
     .filter(Boolean)
+}
+
+/** Puts the book on the person's own list for later, the one the apps show too, and takes it off. */
+function LaterButton({ work, listed }: { work: number; listed: boolean }) {
+  const { t } = useTranslation()
+  const [on, setOn] = useState(listed)
+  const [busy, setBusy] = useState(false)
+  const [problem, setProblem] = useState('')
+  const toggle = async () => {
+    setBusy(true)
+    setProblem('')
+    try {
+      await (on ? laterApi.remove(work) : laterApi.add(work))
+      setOn(!on)
+    } catch (error) {
+      setProblem(errorText(error instanceof ApiError ? error.code : 'internal_error', error instanceof ApiError ? error.values : {}))
+    } finally {
+      setBusy(false)
+    }
+  }
+  return (
+    <div className="want" data-testid="later">
+      <button type="button" aria-pressed={on} disabled={busy} onClick={() => void toggle()}>
+        <MarkIcon />
+        {on ? t('work.laterOn') : t('work.later')}
+      </button>
+      {problem && (
+        <p role="alert" className="d-original" data-testid="later-problem">
+          {problem}
+        </p>
+      )}
+    </div>
+  )
 }
 
 export function WorkPage() {
@@ -340,6 +373,7 @@ function WorkView({ id }: { id: number }) {
                     ))}
                   </p>
                 )}
+                {full && <LaterButton key={full.id} work={full.id} listed={Boolean(full.later)} />}
                 {full?.description && (
                   <div className="d-blurb">
                     {paragraphs(full.description).map((text, index) => (

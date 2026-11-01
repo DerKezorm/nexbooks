@@ -1,4 +1,16 @@
 {
+  "0.1.1": {
+    "lead": "A list for the books on your shelves you still mean to read or hear.",
+    "sections": [
+      {
+        "title": "For later",
+        "body": "From the page of a book you put it on the list “For later”, and the library has it as a section of its own. It is the same list as in the apps, and a book you finished reading or hearing leaves it by itself. The list is yours, the operator does not see it.",
+        "where": "Page of a book, Library"
+      }
+    ],
+    "smallTitle": "Also",
+    "small": []
+  },
   "0.1.0": {
     "lead": "This is nexbooks 0.1: e-books and audiobooks on your own server, to read and listen to in the browser, with pages for authors, browsing and, when the operator sets it up, acquiring new books. It is the first release, and it is still young.",
     "sections": [

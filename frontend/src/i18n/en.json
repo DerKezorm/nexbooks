@@ -87,10 +87,12 @@
     "loadingMore": "Loading more books …",
     "genreEmpty": "Nothing in this genre is on the shelf yet.",
     "openBook": "Open {{title}}",
+    "laterNothing": "Nothing for later yet. Put a book here from its page.",
     "section": {
       "label": "Section",
       "books": "Books",
-      "authors": "Authors"
+      "authors": "Authors",
+      "later": "For later"
     },
     "list": {
       "label": "Books as a list",
@@ -1329,6 +1331,7 @@
     "protected_book": "A copy-protected book cannot be sent to a Kindle.",
     "not_epub": "Only an EPUB can be sent to a Kindle.",
     "kindle_too_often": "Too many books at once. Wait a moment and try again.",
+    "later_full": "The list for later is full. Take a book off it first.",
     "kobo_list_full": "The list for the Kobo is full. Take a book off first.",
     "kobo_too_often": "Too many requests. Wait a minute.",
     "opds_too_often": "Too many requests. Wait a minute.",
@@ -2220,6 +2223,8 @@
     }
   },
   "work": {
+    "later": "For later",
+    "laterOn": "On the list for later",
     "back": {
       "library": "Library",
       "discover": "Discover",

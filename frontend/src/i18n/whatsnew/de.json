@@ -1,4 +1,16 @@
 {
+  "0.1.1": {
+    "lead": "Eine Liste für die Bücher in deinem Regal, die du noch lesen oder hören willst.",
+    "sections": [
+      {
+        "title": "Für später",
+        "body": "Auf der Seite eines Buchs legst du es auf die Liste „Für später“, in der Bibliothek findest du sie als eigenen Bereich. Es ist dieselbe Liste wie in den Apps, und ein Buch, das du zu Ende gelesen oder gehört hast, geht von selbst herunter. Die Liste gehört dir, der Betreiber sieht sie nicht.",
+        "where": "Seite eines Buchs, Bibliothek"
+      }
+    ],
+    "smallTitle": "Außerdem",
+    "small": []
+  },
   "0.1.0": {
     "lead": "Das ist nexbooks 0.1: E-Books und Hörbücher auf deinem eigenen Server, zum Lesen und Hören im Browser, mit Autorenseiten, Stöbern und, wenn der Betreiber es einrichtet, dem Beschaffen neuer Bücher. Es ist der erste Stand, und er ist noch jung.",
     "sections": [

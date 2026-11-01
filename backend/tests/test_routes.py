@@ -225,6 +225,8 @@ TOKEN_ROUTES = {
     # Listening: the note of a bookmark.
     ("PATCH", "/api/v1/bookmarks/{bookmark_id}"),
     # Discover: the person's own wish list.
+    ("PUT", "/api/v1/later/{work_id}"),
+    ("DELETE", "/api/v1/later/{work_id}"),
     ("PUT", "/api/v1/wishlist/{token}"),
     ("DELETE", "/api/v1/wishlist/{token}"),
     # The reading stack: a device enters a book as finished and takes the entry away; a key only reads.
@@ -292,6 +294,7 @@ READ_ROUTES: set[tuple[str, str]] = {
     ("GET", "/api/v1/discover/series/{series_id}"),
     ("GET", "/api/v1/discover/books/{token}"),
     ("GET", "/api/v1/discover/books/{token}/cover"),
+    ("GET", "/api/v1/later"),
     ("GET", "/api/v1/wishlist"),
     # Browsing like in a bookshop: the themed shelves, one shelf opened, the shelves made for the caller.
     ("GET", "/api/v1/discover/browse"),

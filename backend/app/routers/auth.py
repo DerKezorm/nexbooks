@@ -569,7 +569,7 @@ PROFILE: dict[str, tuple[Any, ...]] = {
     #: The library shows the books or the authors, the column and
     #: the direction the list is put in order by, and the order
     #: of the authors.
-    "library_section": ("books", "authors"),
+    "library_section": ("books", "authors", "later"),
     "list_sort": ("shelf", "title", "author", "series", "genre", "year", "size", "language", "added", "mine"),
     "list_dir": ("asc", "desc"),
     "authors_sort": ("name", "count", "recent"),

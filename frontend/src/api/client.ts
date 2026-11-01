@@ -156,7 +156,7 @@ export type Profile = {
   /** Discover: whether the lists leave out the books the person has on their shelves (on from the start). */
   discover_hide_owned?: boolean
   /** The library: books or authors, the column and the direction of the list, how the authors are put in order. */
-  library_section?: 'books' | 'authors'
+  library_section?: 'books' | 'authors' | 'later'
   list_sort?: ListSort
   list_dir?: 'asc' | 'desc'
   authors_sort?: 'name' | 'count' | 'recent'
@@ -678,7 +678,7 @@ export type EditionOut = EditionBrief & {
   /** For a member who looks after its library: how many days the trash keeps the edition (`editionsApi.trash`); 0 for anybody else. */
   trash_days?: number
 }
-export type WorkOut = Omit<WorkBrief, 'editions'> & { description: string; original_title: string; original_language: string; editions: EditionOut[]; duplicates: number[][] }
+export type WorkOut = Omit<WorkBrief, 'editions'> & { later?: boolean; description: string; original_title: string; original_language: string; editions: EditionOut[]; duplicates: number[][] }
 export type SeriesOut = { id: number; name: string; works: WorkBrief[] }
 /** Another name a person is known by (a pen name), with the id a split takes. */
 export type PenName = { id: number; name: string }
@@ -908,6 +908,13 @@ export const watchApi = {
   /** Switches it off; the wishes it made stay (`keep`) or go when nothing has started on them (`remove`). */
   stop: (token: string, wishes: 'keep' | 'remove') =>
     api<void>(`/api/v1/watching/authors/${encodeURIComponent(token)}`, { method: 'DELETE', query: { wishes } }),
+}
+
+/** The person's own list of books on their shelves they mean to read or hear, the same as in the apps. */
+export const laterApi = {
+  list: () => api<{ items: WorkRow[] }>('/api/v1/later'),
+  add: (work: number) => api<void>(`/api/v1/later/${work}`, { method: 'PUT' }),
+  remove: (work: number) => api<void>(`/api/v1/later/${work}`, { method: 'DELETE' }),
 }
 
 export const worksApi = {

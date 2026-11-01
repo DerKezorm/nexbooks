@@ -1,4 +1,5 @@
-"""The list "for later": books on the person's own shelves they mean to read or hear, for the apps (``/api/app/1``).
+"""The list "for later": books on the person's own shelves they mean to read or hear, the same in the apps
+(``/api/app/1``) and in the browser (``/api/v1/later``).
 
 The wish list is for books that are not on a shelf; this one is for books that are.
 
@@ -37,6 +38,10 @@ def listing(db: Session, uid: int) -> list[LaterEntry]:
     """The person's own entries for the works they see, the newest first."""
     return list(db.scalars(select(LaterEntry).where(LaterEntry.user_id == uid, _seen(uid))
                            .order_by(LaterEntry.added_at.desc(), LaterEntry.work_id.desc())))
+
+
+def on_list(db: Session, uid: int, work_id: int) -> bool:
+    return db.get(LaterEntry, (uid, work_id)) is not None
 
 
 def add(db: Session, uid: int, work_id: int) -> None:

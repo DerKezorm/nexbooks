@@ -17,15 +17,17 @@ from collections.abc import Callable
 from datetime import datetime
 from typing import Annotated, Any, Literal
 
-from fastapi import APIRouter, Query, Request
+from fastapi import APIRouter, Path, Query, Request
 from fastapi.responses import FileResponse, Response
 from pydantic import BaseModel, Field
+from sqlalchemy import select
 
-from ..deps import BrowserAccount, DbSession, Reader
+from ..deps import Account, BrowserAccount, DbSession, Reader
 from ..errors import error
-from ..models import OPERATOR, Person
+from ..models import OPERATOR, Person, Work
 from ..services import aliases, brakes, chapter_groups, covers, libraries, people_info, relocate
 from ..services import authors as authors_service
+from ..services import later as later_service
 from ..services import listing as listing_service
 from ..services import works as service
 from ..services.match import overlay
@@ -169,6 +171,8 @@ class WorkOut(WorkBrief):
     #: twice (a box and a folder of its own). A hint for a person; nothing is merged by it. Each group is a list of
     #: edition ids.
     duplicates: list[list[int]] = []
+    #: On the caller's own list for later.
+    later: bool = False
 
 
 class Mine(BaseModel):
@@ -421,7 +425,36 @@ def read(work_id: int, account: Reader, db: DbSession) -> WorkOut:
                                            delivered_at=found.imported_at, trash_days=trash_days)
     return WorkOut(**brief.model_dump(exclude={"editions"}), description=view.description,
                    original_title=view.original_title, original_language=view.original_language,
-                   editions=editions, duplicates=duplicate_groups(editions))
+                   editions=editions, duplicates=duplicate_groups(editions),
+                   later=later_service.on_list(db, account.id, work_id))
+
+
+class LaterList(BaseModel):
+    items: list[WorkBrief]
+
+
+@router.get("/later", response_model=LaterList, summary="The caller's own list for later, the newest first")
+def read_later(account: Reader, db: DbSession) -> LaterList:
+    """Books on the caller's own shelves, the same list as in the apps. A book the caller does not see at the moment
+    stays on it and comes back; a book they finish leaves it."""
+    rows = later_service.listing(db, account.id)
+    found = list(db.scalars(select(Work).where(Work.id.in_([row.work_id for row in rows]))))
+    seen = {view.work.id: view for view in service.views(db, account.id, found)}
+    return LaterList(items=[brief_of(seen[row.work_id]) for row in rows if row.work_id in seen])
+
+
+@router.put("/later/{work_id}", status_code=204, summary="Put a book on the caller's list for later")
+def add_later(work_id: Annotated[int, Path(ge=1, le=2**62)], account: Account, db: DbSession) -> Response:
+    brakes.take("wish", account.id)
+    later_service.add(db, account.id, work_id)
+    return Response(status_code=204)
+
+
+@router.delete("/later/{work_id}", status_code=204, summary="Take a book off the caller's list for later")
+def remove_later(work_id: Annotated[int, Path(ge=1, le=2**62)], account: Account, db: DbSession) -> Response:
+    brakes.take("wish", account.id)
+    later_service.remove(db, account.id, work_id)
+    return Response(status_code=204)
 
 
 @router.get("/works/{work_id}/cover", summary="The cover of a book, as a WebP picture", response_model=None,

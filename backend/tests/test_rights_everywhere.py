@@ -152,6 +152,7 @@ def cases() -> list[Case]:
         Case("GET", "/api/v1/libraries/{library}/problems", operator_may=True),
         Case("GET", "/api/v1/libraries/{library}/review"),
         Case("GET", "/api/v1/works/{work}"),
+        Case("PUT", "/api/v1/later/{work}", owner=(200, 204)),
         Case("GET", "/api/v1/works/{work}/cover"),
         Case("GET", "/api/v1/files/{epub_file}/download"),
         Case("GET", "/api/v1/files/{epub_file}/content"),
@@ -319,7 +320,7 @@ NOT_OF_A_LIBRARY = {
     "/api/v1/moves/{move_id}", "/api/v1/moves/{move_id}/retry",
     # The list for later: taking a book off it names the person's own entry and is no error for any number, so it says
     # nothing about a work (``test_app_later``). Putting one on it is tried above.
-    "/api/app/1/later/{work_id}",
+    "/api/app/1/later/{work_id}", "/api/v1/later/{work_id}",
     # Connecting the iPhone app: a code is the person's own (looked up among their codes, another person's is
     # not found) and the claim of the app is open on purpose, its proof is the secret (``test_pairing``,
     # ``test_pairing_claim`` try them with the owner, another person and a stranger).

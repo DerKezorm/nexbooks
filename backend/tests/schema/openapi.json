@@ -7348,6 +7348,22 @@
         "title": "LanguageIn",
         "type": "object"
       },
+      "LaterList": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/WorkBrief"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "title": "LaterList",
+        "type": "object"
+      },
       "LibraryAdmin": {
         "description": "A library as the operator sees it: with its path, the members, the last run and the progress of the one going.",
         "properties": {
@@ -14721,6 +14737,11 @@
           "id": {
             "title": "Id",
             "type": "integer"
+          },
+          "later": {
+            "default": false,
+            "title": "Later",
+            "type": "boolean"
           },
           "original_language": {
             "title": "Original Language",
@@ -23070,6 +23091,115 @@
         "summary": "Withdraw an invitation (operator)",
         "tags": [
           "invitations"
+        ]
+      }
+    },
+    "/api/v1/later": {
+      "get": {
+        "description": "Books on the caller's own shelves, the same list as in the apps. A book the caller does not see at the moment\nstays on it and comes back; a book they finish leaves it.",
+        "operationId": "read_later_api_v1_later_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LaterList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "The caller's own list for later, the newest first",
+        "tags": [
+          "books"
+        ]
+      }
+    },
+    "/api/v1/later/{work_id}": {
+      "delete": {
+        "operationId": "remove_later_api_v1_later__work_id__delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "work_id",
+            "required": true,
+            "schema": {
+              "maximum": 4611686018427387904,
+              "minimum": 1,
+              "title": "Work Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Take a book off the caller's list for later",
+        "tags": [
+          "books"
+        ]
+      },
+      "put": {
+        "operationId": "add_later_api_v1_later__work_id__put",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "work_id",
+            "required": true,
+            "schema": {
+              "maximum": 4611686018427387904,
+              "minimum": 1,
+              "title": "Work Id",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "summary": "Put a book on the caller's list for later",
+        "tags": [
+          "books"
         ]
       }
     },

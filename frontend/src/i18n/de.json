@@ -87,10 +87,12 @@
     "loadingMore": "Weitere Bücher werden geladen …",
     "genreEmpty": "In diesem Genre steht noch nichts im Regal.",
     "openBook": "{{title}} öffnen",
+    "laterNothing": "Noch nichts für später. Auf der Seite eines Buchs legst du es hierher.",
     "section": {
       "label": "Bereich",
       "books": "Bücher",
-      "authors": "Autoren"
+      "authors": "Autoren",
+      "later": "Für später"
     },
     "list": {
       "label": "Bücher als Liste",
@@ -1329,6 +1331,7 @@
     "protected_book": "Ein Buch mit Kopierschutz lässt sich nicht an einen Kindle schicken.",
     "not_epub": "An einen Kindle geht nur ein EPUB.",
     "kindle_too_often": "Zu viele Bücher auf einmal. Warte kurz und versuche es noch einmal.",
+    "later_full": "Die Liste für später ist voll. Nimm zuerst ein Buch herunter.",
     "kobo_list_full": "Die Liste für den Kobo ist voll. Nimm zuerst ein Buch herunter.",
     "kobo_too_often": "Zu viele Anfragen. Warte eine Minute.",
     "opds_too_often": "Zu viele Anfragen. Warte eine Minute.",
@@ -2220,6 +2223,8 @@
     }
   },
   "work": {
+    "later": "Für später",
+    "laterOn": "Auf der Liste für später",
     "back": {
       "library": "Bibliothek",
       "discover": "Entdecken",

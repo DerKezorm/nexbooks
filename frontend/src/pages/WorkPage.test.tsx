@@ -69,6 +69,33 @@ afterEach(() => {
 })
 
 describe('the words of the page', () => {
+  it('puts the book on the list for later, takes it off, and says when the list is full', async () => {
+    serve({ work: workOut(1, [ebook(1)], { later: false }) })
+    server.answers['PUT /api/v1/later/1'] = null
+    server.answers['DELETE /api/v1/later/1'] = null
+    await page.show(app(), '/work/1')
+    const button = () => document.querySelector('[data-testid="later"] button') as HTMLButtonElement
+    expect(button().textContent).toBe('Für später')
+    expect(button().getAttribute('aria-pressed')).toBe('false')
+    await page.click(button())
+    expect(button().textContent).toBe('Auf der Liste für später')
+    expect(button().getAttribute('aria-pressed')).toBe('true')
+    expect(server.changes()).toContain('PUT /api/v1/later/1')
+    await page.click(button())
+    expect(button().textContent).toBe('Für später')
+    expect(server.changes()).toContain('DELETE /api/v1/later/1')
+    server.fails = { 'PUT /api/v1/later/1': { status: 409, code: 'later_full' } }
+    await page.click(button())
+    expect(button().textContent).toBe('Für später')
+    expect(document.querySelector('[data-testid="later-problem"]')!.textContent).toBe('Die Liste für später ist voll. Nimm zuerst ein Buch herunter.')
+  })
+
+  it('shows a book that is on the list as such when the page opens', async () => {
+    serve({ work: workOut(1, [ebook(1)], { later: true }) })
+    await page.show(app(), '/work/1')
+    expect(document.querySelector('[data-testid="later"] button')!.textContent).toBe('Auf der Liste für später')
+  })
+
   it('says quietly that the genre is a guess, and only then', async () => {
     serve({ work: workOut(1, [ebook(1)], { title: 'Allein', genre: 'krimi', genre_guess: true, series: null }) })
     await page.show(app(), '/work/1')

@@ -18,6 +18,7 @@ from .conftest import new_client
 from .reading_helpers import Clock
 
 ORCHARD, KITE, SECRET = "The Quiet Orchard", "Kite Season", "A Secret Shelf"
+TAB = {"X-Nexbooks-Client": "tab-test0000"}
 
 
 @pytest.fixture
@@ -217,3 +218,46 @@ def test_an_account_that_goes_takes_its_list_along(shelf: Shelf) -> None:
         db.execute(text("DELETE FROM users WHERE id = :id"), {"id": shelf.ben.id})
         db.commit()
         assert db.scalars(select(LaterEntry)).all() == []
+
+
+def test_the_browser_keeps_the_same_list_as_the_app(shelf: Shelf, monkeypatch: pytest.MonkeyPatch) -> None:
+    tick = Clock(monkeypatch)
+    first, second = shelf.works[ORCHARD], shelf.works[KITE]
+    assert shelf.ada_app.put(f"/api/app/1/later/{first}").status_code == 204
+    tick.advance(seconds=60)
+    with new_client(shelf.ada) as browser:
+        assert browser.get(f"/api/v1/works/{first}").json()["later"] is True
+        assert browser.get(f"/api/v1/works/{second}").json()["later"] is False
+        assert browser.put(f"/api/v1/later/{second}", headers=TAB).status_code == 204
+        shown = browser.get("/api/v1/later").json()["items"]
+        assert [(item["id"], item["title"]) for item in shown] == [(second, KITE), (first, ORCHARD)]
+        assert browser.delete(f"/api/v1/later/{first}", headers=TAB).status_code == 204
+        assert browser.delete(f"/api/v1/later/{first}", headers=TAB).status_code == 204
+    assert listed(shelf.ada_app) == [second]
+
+
+def test_in_the_browser_too_a_work_the_person_does_not_see_is_not_there_and_a_full_list_says_so(
+        shelf: Shelf, monkeypatch: pytest.MonkeyPatch) -> None:
+    with new_client(shelf.ada) as browser:
+        refused = browser.put(f"/api/v1/later/{shelf.works[SECRET]}", headers=TAB)
+        assert refused.status_code == 404 and refused.json()["detail"]["code"] == "not_found"
+        monkeypatch.setattr(later_service, "MAX_ENTRIES", 1)
+        assert browser.put(f"/api/v1/later/{shelf.works[ORCHARD]}", headers=TAB).status_code == 204
+        full = browser.put(f"/api/v1/later/{shelf.works[KITE]}", headers=TAB)
+        assert full.status_code == 409 and full.json()["detail"]["code"] == "later_full"
+
+
+def test_the_list_shows_nobody_else_in_the_browser(shelf: Shelf) -> None:
+    assert shelf.ada_app.put(f"/api/app/1/later/{shelf.works[ORCHARD]}").status_code == 204
+    with new_client(shelf.ben) as browser:
+        assert browser.get("/api/v1/later").json() == {"items": []}
+        assert browser.get(f"/api/v1/works/{shelf.works[ORCHARD]}").json()["later"] is False
+
+
+def test_a_book_the_person_does_not_see_at_the_moment_stays_out_of_the_page_of_the_browser(shelf: Shelf) -> None:
+    assert shelf.ada_app.put(f"/api/app/1/later/{shelf.works[ORCHARD]}").status_code == 204
+    with SessionLocal() as db:
+        db.delete(db.scalars(select(LibraryMember).where(LibraryMember.user_id == shelf.ada.id)).one())
+        db.commit()
+    with new_client(shelf.ada) as browser:
+        assert browser.get("/api/v1/later").json() == {"items": []}

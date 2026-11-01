@@ -47,6 +47,27 @@ function serve(works: WorkBrief[], total = works.length) {
   server.install()
 }
 
+describe('the list for later', () => {
+  it('shows the books on it, the newest first, and says so when there are none', async () => {
+    serve([work(1), work(2)])
+    server.answers['GET /api/v1/later'] = { items: [work(2)] }
+    server.answers['PUT /api/v1/me/preferences'] = {}
+    await page.show(<LibraryPage />)
+    await page.click(document.querySelector('[data-testid="section-later"]'))
+    expect(document.querySelectorAll('[data-testid="later-grid"] > *').length).toBe(1)
+    expect(document.querySelector('[data-testid="shelf"]')).toBeNull()
+  })
+
+  it('says how a book comes here while the list is empty', async () => {
+    serve([work(1)])
+    server.answers['GET /api/v1/later'] = { items: [] }
+    server.answers['PUT /api/v1/me/preferences'] = {}
+    await page.show(<LibraryPage />)
+    await page.click(document.querySelector('[data-testid="section-later"]'))
+    expect(document.querySelector('[data-testid="later-nothing"]')!.textContent).toContain('Seite eines Buchs')
+  })
+})
+
 describe('the line above the grid', () => {
   it('counts works, editions and the works with an audiobook, in its words', async () => {
     serve([work(1)], 400)

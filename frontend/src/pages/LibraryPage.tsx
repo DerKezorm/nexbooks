@@ -10,7 +10,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 
-import { ApiError, authApi, librariesApi, worksApi, type BookStats, type Library, type LibraryView, type ListSort, type WorkBrief, type WorkRow } from '../api/client'
+import { ApiError, authApi, laterApi, librariesApi, worksApi, type BookStats, type Library, type LibraryView, type ListSort, type WorkBrief, type WorkRow } from '../api/client'
 import { AuthorsGrid, type AuthorSort } from '../components/AuthorsGrid'
 import { BookCard } from '../components/BookCard'
 import { ListView, ROW_PHONE_PX, ROW_PX } from '../components/ListView'
@@ -45,6 +45,39 @@ const FOUND_GLOW_MS = 2400
 type Stock = 'all' | 'available' | 'incoming'
 const STOCKS: Stock[] = ['all', 'available', 'incoming']
 
+type Section = 'books' | 'authors' | 'later'
+
+/** The person's own list for later, the newest first. Read again when a book that was open closes: it may have left. */
+function LaterShelf({ at, onOpen }: { at: string; onOpen: (work: WorkBrief) => void }) {
+  const { t } = useTranslation()
+  const [works, setWorks] = useState<WorkBrief[] | null>(null)
+  useEffect(() => {
+    let live = true
+    laterApi.list().then(
+      (found) => live && setWorks(found.items),
+      () => live && setWorks([]),
+    )
+    return () => {
+      live = false
+    }
+  }, [at])
+  if (!works) return null
+  if (works.length === 0) {
+    return (
+      <p className="empty" data-testid="later-nothing">
+        {t('library.laterNothing')}
+      </p>
+    )
+  }
+  return (
+    <div className="shelf-grid" data-testid="later-grid">
+      {works.map((work) => (
+        <BookCard key={work.id} work={work} onOpen={onOpen} />
+      ))}
+    </div>
+  )
+}
+
 export function LibraryPage() {
   const { t, i18n } = useTranslation()
   const { me, setMe } = useAuth()
@@ -59,7 +92,7 @@ export function LibraryPage() {
   const [genre, setGenre] = useState<GenreKey | null>(null)
   const [stock, setStock] = useState<Stock>('available')
   const [view, setView] = useState<LibraryView>(me?.profile?.view === 'grid' || me?.profile?.view === 'list' ? me.profile.view : 'shelf')
-  const [section, setSection] = useState<'books' | 'authors'>(me?.profile?.library_section === 'authors' ? 'authors' : 'books')
+  const [section, setSection] = useState<Section>(me?.profile?.library_section === 'authors' || me?.profile?.library_section === 'later' ? me.profile.library_section : 'books')
   const [sort, setSort] = useState<ListSort>(me?.profile?.list_sort ?? 'shelf')
   const [dir, setDir] = useState<'asc' | 'desc'>(me?.profile?.list_dir === 'desc' ? 'desc' : 'asc')
   const [authorSort, setAuthorSort] = useState<AuthorSort>(me?.profile?.authors_sort ?? 'name')
@@ -263,7 +296,7 @@ export function LibraryPage() {
     setView(next)
     void keep({ view: next }, setView, before)
   }
-  const chooseSection = (next: 'books' | 'authors') => {
+  const chooseSection = (next: Section) => {
     if (next === section) return
     const before = section
     setSection(next)
@@ -298,7 +331,7 @@ export function LibraryPage() {
   return (
     <div className="view">
       <PageHead title={t('library.title')} text={line}>
-        {(works.length > 0 || section === 'authors' || mayUpload) && (
+        {(works.length > 0 || section !== 'books' || mayUpload) && (
           <div className="head-tools">
             {mayUpload && (
               <div className="seg">
@@ -308,13 +341,16 @@ export function LibraryPage() {
                 </button>
               </div>
             )}
-            {(works.length > 0 || section === 'authors') && (
+            {(works.length > 0 || section !== 'books') && (
             <div className="seg" id="section" role="group" aria-label={t('library.section.label')}>
               <button type="button" className={section === 'books' ? 'on' : ''} aria-pressed={section === 'books'} onClick={() => chooseSection('books')} data-section="books">
                 {t('library.section.books')}
               </button>
               <button type="button" className={section === 'authors' ? 'on' : ''} aria-pressed={section === 'authors'} onClick={() => chooseSection('authors')} data-section="authors">
                 {t('library.section.authors')}
+              </button>
+              <button type="button" className={section === 'later' ? 'on' : ''} aria-pressed={section === 'later'} onClick={() => chooseSection('later')} data-testid="section-later">
+                {t('library.section.later')}
               </button>
             </div>
             )}
@@ -411,6 +447,7 @@ export function LibraryPage() {
         </p>
       )}
       {section === 'authors' && libraries && libraries.length > 0 && <AuthorsGrid sort={authorSort} onSort={chooseAuthorSort} />}
+      {section === 'later' && <LaterShelf at={location.pathname} onOpen={open} />}
       {section === 'books' && works.length > 0 && (
         <>
           <div className="lib-filters">
