@@ -15750,7 +15750,7 @@
   "info": {
     "summary": "The interface the web app speaks, and the one native apps and scripts use.",
     "title": "nexbooks",
-    "version": "0.1.0"
+    "version": "0.1.1"
   },
   "openapi": "3.1.0",
   "paths": {
