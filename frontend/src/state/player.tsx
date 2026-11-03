@@ -9,7 +9,8 @@
  * - **What is saved.** The place (`time:…`, seconds over all the parts), the chapter and how far in the whole recording, now and
  *   then while it plays, at once when it is paused, closed or the page is left. Only the place of the recording: the e-book of
  *   the same book keeps its own.
- * - **Choices** (speed, the jumps, ten seconds back after a longer pause) are the person's, in the profile.
+ * - **Choices** (speed, the jumps, ten seconds back after a longer pause) are the person's, in the profile. The volume is this
+ *   device's (`lib/playerVolume.ts`).
  * - **The lock screen** (Media Session): title, author, cover (nexbooks' own address), the chapter as the title of the track,
  *   the buttons ahead and back jump, the bar on the lock screen is the chapter.
  */
@@ -21,6 +22,7 @@ import { ApiError, authApi, contentUrl, readingApi, type BookmarkOut, type Editi
 import { browserProbe, PROBE, unplayable } from '../lib/audioFormats'
 import { errorText } from '../lib/errors'
 import { PlayerEngine, type EngineState } from '../lib/playerEngine'
+import { clampVolume, loadVolume, saveVolume, volumeSettable, type Volume } from '../lib/playerVolume'
 import { deviceName } from '../lib/readFrame'
 import { chooseStart, deviceKey, loadLocal, ProgressSaver, rememberedPlayer, rememberPlayer, saveLocal } from '../lib/readerProgress'
 import { SleepTimer, type SleepState } from '../lib/sleepTimer'
@@ -45,6 +47,8 @@ export type PlayerLive = {
   loading: boolean
   engine: EngineState
   speed: number
+  /** The volume of this device; `settable` is false where only the buttons of the device set it (Safari on iPhone and iPad). */
+  volume: Volume & { settable: boolean }
   sleep: SleepState
   hint: ProgressOut | null
   expanded: boolean
@@ -66,6 +70,8 @@ export type PlayerActions = {
   chapterBack: () => void
   chapterAhead: () => void
   setSpeed: (speed: number) => void
+  setVolume: (level: number) => void
+  toggleMute: () => void
   sleepFor: (minutes: number) => void
   sleepAtChapterEnd: () => void
   sleepOff: () => void
@@ -132,6 +138,8 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   const [book, setBook] = useState<PlayerBook | null>(null)
   const [loading, setLoading] = useState(false)
   const [speed, setSpeedState] = useState(() => speedFromProfile(me?.profile?.player_speed))
+  const [volume, setVolumeState] = useState<Volume>(loadVolume)
+  const [settable] = useState(volumeSettable)
   const [choices, setChoicesState] = useState<Choices>(() => choicesOf(me?.profile))
   const [hint, setHint] = useState<ProgressOut | null>(null)
   const [bookmarks, setBookmarks] = useState<BookmarkOut[]>([])
@@ -151,6 +159,8 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   choicesRef.current = choices
   const speedRef = useRef(speed)
   speedRef.current = speed
+  const volumeRef = useRef(volume)
+  volumeRef.current = volume
   const hintRef = useRef(hint)
   hintRef.current = hint
   /** The place is saved only after the person played or jumped. */
@@ -174,6 +184,7 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
       onChange: () => store.current.set(made.state),
     })
     made.setSpeed(speedRef.current)
+    made.setVolume(volumeRef.current.muted ? 0 : volumeRef.current.level)
     engine.current = made
     return () => {
       made.dispose()
@@ -483,6 +494,20 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
     [setMe],
   )
 
+  const changeVolume = useCallback((next: Volume) => {
+    setVolumeState(next)
+    volumeRef.current = next
+    engine.current?.setVolume(next.muted ? 0 : next.level)
+    saveVolume(next)
+  }, [])
+  // Moving the slider is a wish to hear: it ends a mute, and a mute at level 0 comes back at a quarter.
+  const setVolume = useCallback((value: number) => changeVolume({ level: clampVolume(value), muted: false }), [changeVolume])
+  const toggleMute = useCallback(() => {
+    const now = volumeRef.current
+    if (now.muted || now.level === 0) changeVolume({ level: now.level === 0 ? 0.25 : now.level, muted: false })
+    else changeVolume({ ...now, muted: true })
+  }, [changeVolume])
+
   const setChoices = useCallback(
     (change: Partial<Choices>) => {
       setChoicesState((now) => ({ ...now, ...change }))
@@ -506,10 +531,10 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
     if (!running || !timer.current.active) return
     const state = store.current.get()
     const verdict = timer.current.tick({ playing: state.playing, position: running.position, speed: speedRef.current })
-    running.setVolume(verdict.volume)
+    running.setFade(verdict.volume)
     if (verdict.stop) {
       running.pause()
-      running.setVolume(1)
+      running.setFade(1)
       // At the end of a chapter the place is its end, so that the next start is the next chapter's.
       if (verdict.state.kind === 'chapter') running.seek(verdict.state.end)
       setSleep({ kind: 'off' })
@@ -531,7 +556,7 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
 
   const sleepFor = useCallback((minutes: number) => {
     timer.current.minutes(minutes)
-    engine.current?.setVolume(1)
+    engine.current?.setFade(1)
     setSleep(timer.current.state())
   }, [])
   const sleepAtChapterEnd = useCallback(() => {
@@ -540,12 +565,12 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
     const position = engine.current?.position ?? 0
     const index = Math.max(0, chapterAt(current.spans, position))
     timer.current.chapterEnd(current.spans[index]?.end ?? current.total)
-    engine.current?.setVolume(1)
+    engine.current?.setFade(1)
     setSleep(timer.current.state(position, speedRef.current))
   }, [])
   const sleepOff = useCallback(() => {
     timer.current.cancel()
-    engine.current?.setVolume(1)
+    engine.current?.setFade(1)
     setSleep({ kind: 'off' })
   }, [])
 
@@ -665,8 +690,8 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   }, [book, span?.title])
 
   const actions = useMemo<PlayerActions>(
-    () => ({ open, toggle, play, pause, seek, skip, chapterBack, chapterAhead, setSpeed, sleepFor, sleepAtChapterEnd, sleepOff, expand, collapse, close, jumpToHint, stayHere, setChoices, addBookmark, saveNote, removeBookmark, retry, skipPart }),
-    [open, toggle, play, pause, seek, skip, chapterBack, chapterAhead, setSpeed, sleepFor, sleepAtChapterEnd, sleepOff, expand, collapse, close, jumpToHint, stayHere, setChoices, addBookmark, saveNote, removeBookmark, retry, skipPart],
+    () => ({ open, toggle, play, pause, seek, skip, chapterBack, chapterAhead, setSpeed, setVolume, toggleMute, sleepFor, sleepAtChapterEnd, sleepOff, expand, collapse, close, jumpToHint, stayHere, setChoices, addBookmark, saveNote, removeBookmark, retry, skipPart }),
+    [open, toggle, play, pause, seek, skip, chapterBack, chapterAhead, setSpeed, setVolume, toggleMute, sleepFor, sleepAtChapterEnd, sleepOff, expand, collapse, close, jumpToHint, stayHere, setChoices, addBookmark, saveNote, removeBookmark, retry, skipPart],
   )
 
   useEffect(() => {
@@ -722,8 +747,8 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   }, [book, span, engineState.playing, engineState.position, speed])
 
   const live = useMemo<PlayerLive>(
-    () => ({ book, loading, engine: engineState, speed, sleep, hint, expanded, choices, bookmarks, said, chapter }),
-    [book, loading, engineState, speed, sleep, hint, expanded, choices, bookmarks, said, chapter],
+    () => ({ book, loading, engine: engineState, speed, volume: { ...volume, settable }, sleep, hint, expanded, choices, bookmarks, said, chapter }),
+    [book, loading, engineState, speed, volume, settable, sleep, hint, expanded, choices, bookmarks, said, chapter],
   )
 
   return (
@@ -742,13 +767,13 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
 const nothing = async () => undefined
 const NO_ACTIONS: PlayerActions = {
   open: nothing, toggle: () => undefined, play: () => undefined, pause: () => undefined, seek: () => undefined, skip: () => undefined,
-  chapterBack: () => undefined, chapterAhead: () => undefined, setSpeed: () => undefined, sleepFor: () => undefined,
+  chapterBack: () => undefined, chapterAhead: () => undefined, setSpeed: () => undefined, setVolume: () => undefined, toggleMute: () => undefined, sleepFor: () => undefined,
   sleepAtChapterEnd: () => undefined, sleepOff: () => undefined, expand: () => undefined, collapse: () => undefined, close: () => undefined,
   jumpToHint: () => undefined, stayHere: () => undefined, setChoices: () => undefined, addBookmark: async () => null,
   saveNote: async () => false, removeBookmark: nothing, retry: () => undefined, skipPart: () => undefined,
 }
 const NO_LIVE: PlayerLive = {
-  book: null, loading: false, engine: IDLE, speed: 1, sleep: { kind: 'off' }, hint: null, expanded: false,
+  book: null, loading: false, engine: IDLE, speed: 1, volume: { level: 1, muted: false, settable: false }, sleep: { kind: 'off' }, hint: null, expanded: false,
   choices: { back: 15, ahead: 30, rewind: true }, bookmarks: [], said: null, chapter: 0,
 }
 

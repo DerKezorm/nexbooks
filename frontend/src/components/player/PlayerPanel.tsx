@@ -3,7 +3,7 @@
  * of the jumps. From the side on a large screen, from below on a phone, in the language of the reader's panels (`.seg`, the
  * switch, the rows).
  */
-import { Minus, Plus, Trash2, X } from 'lucide-react'
+import { Minus, Plus, Trash2, Volume, Volume1, Volume2, VolumeX, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -19,6 +19,20 @@ export type PanelKind = 'speed' | 'sleep' | 'chapters' | 'marks' | 'settings'
 // eslint-disable-next-line react-refresh/only-export-components
 export function speedText(speed: number, language: string): string {
   return `${new Intl.NumberFormat(language, { minimumFractionDigits: 1, maximumFractionDigits: 2 }).format(speed)}×`
+}
+
+/** "80 %": a volume as the language writes a share. */
+// eslint-disable-next-line react-refresh/only-export-components
+export function volumeText(level: number, language: string): string {
+  return new Intl.NumberFormat(language, { style: 'percent', maximumFractionDigits: 0 }).format(level)
+}
+
+/** The loudspeaker of a volume: crossed out when nothing is heard, with more waves the louder it is. */
+export function VolumeIcon({ level, muted, size }: { level: number; muted: boolean; size: number }) {
+  if (muted || level === 0) return <VolumeX size={size} aria-hidden />
+  if (level < 0.34) return <Volume size={size} aria-hidden />
+  if (level < 0.67) return <Volume1 size={size} aria-hidden />
+  return <Volume2 size={size} aria-hidden />
 }
 
 const BACK_CHOICES = [5, 10, 15, 20, 30, 45, 60]

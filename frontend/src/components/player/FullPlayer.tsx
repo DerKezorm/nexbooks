@@ -1,9 +1,9 @@
 /**
  * The big player, over the whole window in the colours of the book, as the page of a book is: the cover large, the
  * chapter with its own bar ("Kapitel 14 von 38", what is left of it and of the book at the speed that plays), the jumps, play and
- * pause, and below them the speed, the sleep timer, the chapters, the bookmarks and the choices, each in a panel of its own.
+ * pause, under them the volume of this device, and below them the speed, the sleep timer, the chapters, the bookmarks and the choices, each in a panel of its own.
  *
- * Keys: the space bar plays and pauses, the arrows jump back and ahead, Escape closes a panel and then the big player. On a phone
+ * Keys: the space bar plays and pauses, the arrows left and right jump back and ahead, up and down set the volume, M mutes, Escape closes a panel and then the big player. On a phone
  * everything is large enough for a thumb, and the panels come from below.
  */
 import { BookCheck, BookOpen, Bookmark, ChevronDown, ChevronsLeft, ChevronsRight, Download, Gauge, List, Pause, Play, Settings2, X } from 'lucide-react'
@@ -17,12 +17,13 @@ import { dayText } from '../../lib/days'
 import { useEditionLabel } from '../../lib/editionText'
 import { errorText } from '../../lib/errors'
 import { trapTab } from '../../lib/focusTrap'
+import { VOLUME_STEP } from '../../lib/playerVolume'
 import { clock, heardIn } from '../../lib/timeline'
 import { usePlayer, usePlayerLive } from '../../state/player'
 import { Cover } from '../BookCard'
 import { useConfirm } from '../useConfirm'
 import { JumpIcon, MoonIcon } from './icons'
-import { PlayerPanel, speedText, type PanelKind } from './PlayerPanel'
+import { PlayerPanel, speedText, volumeText, VolumeIcon, type PanelKind } from './PlayerPanel'
 
 export function FullPlayer() {
   const { t, i18n } = useTranslation()
@@ -30,7 +31,7 @@ export function FullPlayer() {
   const { duration } = useEditionLabel()
   const player = usePlayer()
   const live = usePlayerLive()
-  const { book, engine, speed, sleep, hint, chapter, choices, said, loading } = live
+  const { book, engine, speed, volume, sleep, hint, chapter, choices, said, loading } = live
   const [panel, setPanel] = useState<PanelKind | null>(null)
   const [drag, setDrag] = useState<number | null>(null)
   const root = useRef<HTMLDivElement>(null)
@@ -99,6 +100,8 @@ export function FullPlayer() {
   // the page of the book under it as well, and "/" does not go to a search field the player covers.
   const panelRef = useRef(panel)
   panelRef.current = panel
+  const volumeRef = useRef(volume)
+  volumeRef.current = volume
   useEffect(() => {
     const key = (event: KeyboardEvent) => {
       if (event.defaultPrevented) return
@@ -125,6 +128,14 @@ export function FullPlayer() {
         event.preventDefault()
         event.stopPropagation()
         player.skip(event.key === 'ArrowLeft' ? -choices.back : choices.ahead)
+      } else if ((event.key === 'ArrowUp' || event.key === 'ArrowDown') && volumeRef.current.settable) {
+        event.preventDefault()
+        event.stopPropagation()
+        const now = volumeRef.current.muted ? 0 : volumeRef.current.level
+        player.setVolume(now + (event.key === 'ArrowUp' ? VOLUME_STEP : -VOLUME_STEP))
+      } else if ((event.key === 'm' || event.key === 'M') && volumeRef.current.settable) {
+        event.stopPropagation()
+        player.toggleMute()
       }
     }
     window.addEventListener('keydown', key, true)
@@ -146,6 +157,7 @@ export function FullPlayer() {
   const inChapter = span ? Math.min(spanLength, Math.max(0, engine.position - span.start)) : 0
   const shownInChapter = drag ?? inChapter
   const bookLeft = heardIn(book.total - engine.position, speed)
+  const heard = volume.muted ? 0 : volume.level
   const percent = book.total > 0 ? Math.round((engine.position / book.total) * 100) : 0
   const authors = book.work.authors.map((author) => author.name).join(', ')
   const narrators = book.edition.narrators.join(', ')
@@ -251,6 +263,27 @@ export function FullPlayer() {
                 <ChevronsRight size={24} aria-hidden />
               </button>
             </div>
+
+            {volume.settable && (
+              <div className="pl-volume" data-testid="player-volume">
+                <button type="button" className="pl-icon" onClick={player.toggleMute} aria-label={heard === 0 ? t('player.volume.unmute') : t('player.volume.mute')} title={heard === 0 ? t('player.volume.unmute') : t('player.volume.mute')} aria-pressed={heard === 0} data-testid="volume-mute">
+                  <VolumeIcon level={volume.level} muted={volume.muted} size={18} />
+                </button>
+                <input
+                  type="range"
+                  min={0}
+                  max={1}
+                  step={VOLUME_STEP}
+                  value={heard}
+                  onChange={(event) => player.setVolume(Number(event.target.value))}
+                  aria-label={t('player.volume.title')}
+                  aria-valuetext={volumeText(heard, i18n.language)}
+                  style={{ '--done': `${heard * 100}%` } as CSSProperties}
+                  data-testid="volume-slider"
+                />
+                <output data-testid="volume-value">{volumeText(heard, i18n.language)}</output>
+              </div>
+            )}
 
             <div className="pl-book" aria-hidden>
               <span className="line" />

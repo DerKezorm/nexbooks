@@ -72,7 +72,9 @@ export class PlayerEngine {
   private pending: number | null = null
   private want = false
   private speed = 1
-  private volume = 1
+  /** The person's volume, and the fade of the sleep timer over it: the element plays at the two multiplied. */
+  private level = 1
+  private fade = 1
   private stateNow: EngineState = { position: 0, playing: false, waiting: false, finished: false, failure: null, failedPart: null, part: 0 }
   private loadTimer: unknown = null
   /** The part that failed while it loaded ahead: not asked for again until its turn comes (or a new place is chosen). */
@@ -224,10 +226,21 @@ export class PlayerEngine {
     }
   }
 
-  setVolume(volume: number): void {
+  /** The volume the person chose (0 is mute). */
+  setVolume(level: number): void {
+    this.level = Math.min(1, Math.max(0, level))
+    this.applyVolume()
+  }
+
+  /** The fade of the sleep timer over it (1 is none). */
+  setFade(fade: number): void {
+    this.fade = Math.min(1, Math.max(0, fade))
+    this.applyVolume()
+  }
+
+  private applyVolume(): void {
     // Only the playing element: the one that waits starts at the volume of the moment it takes over (`start`).
-    this.volume = Math.min(1, Math.max(0, volume))
-    this.slots[this.active].media.volume = this.volume
+    this.slots[this.active].media.volume = this.level * this.fade
   }
 
   /** Goes past the part that does not play, to the beginning of the next one (the person asked for it). */
@@ -273,7 +286,7 @@ export class PlayerEngine {
 
   private start(slot: Slot): void {
     slot.media.playbackRate = this.speed
-    slot.media.volume = this.volume
+    slot.media.volume = this.level * this.fade
     void slot.media.play().catch(() => {
       // Refused (no tap of the person yet) or broken off by a new place: the state follows the element's own events.
       if (slot === this.slots[this.active] && slot.media.paused) {

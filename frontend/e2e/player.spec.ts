@@ -3,7 +3,8 @@
  * (`backend/tools/make_audio_books.py`: silence a browser really plays). Opening from the card of a book, playing, jumping across
  * the border of two files, a reload that goes on where it was, a second device that is told, the small player that plays on
  * while the person moves between the pages, the sleep timer with the clock of the page moved by the test, the lock screen
- * (Media Session), a phone, light and dark, the speed and the bookmarks with a note, and a format the browser does not play.
+ * (Media Session), a phone, light and dark, the speed, the volume and the bookmarks with a note, and a format the browser does not
+ * play.
  *
  * **WebKit plays nothing here.** Playwright's WebKit for Windows fetches a recording through Windows Media Foundation, without the
  * cookies of the page (measured: the request comes as `NSPlayer/12 WMFSDK`, with no `Cookie`), so every recording of a signed-in
@@ -340,6 +341,42 @@ test.describe('around the player', () => {
     await expect.poll(async () => ((await (await page.request.get('/api/v1/auth/me')).json()) as { profile: { player_speed: number } }).profile.player_speed).toBe(200)
     await page.locator('[data-testid="speed-slider"]').fill('1.35')
     await expect(page.locator('[data-testid="speed-value"]')).toHaveText('1.35×')
+  })
+
+  test('the volume: the slider, mute, the arrow keys, and kept on this device after a reload', async ({ page, browserName }) => {
+    test.skip(browserName === 'webkit', WEBKIT_SILENT)
+    await page.addInitScript(() => {
+      if (!sessionStorage.getItem('e2e-volume')) {
+        localStorage.removeItem('nexbooks.player.volume')
+        sessionStorage.setItem('e2e-volume', '1')
+      }
+    })
+    await placeAt(page, 'The Lantern Keeper', 0)
+    await listen(page, 'The Lantern Keeper')
+    const heard = () => page.evaluate(() => [...document.querySelectorAll<HTMLAudioElement>('[data-testid="player-audio"]')].find((audio) => !audio.paused)?.volume ?? -1)
+    await expect(page.locator('[data-testid="volume-value"]')).toHaveText('100%')
+    await page.locator('[data-testid="volume-slider"]').fill('0.4')
+    await expect(page.locator('[data-testid="volume-value"]')).toHaveText('40%')
+    await expect.poll(heard).toBeCloseTo(0.4)
+    if (process.env.E2E_SHOT_DIR) await page.screenshot({ path: path.join(process.env.E2E_SHOT_DIR, `volume-${browserName}.png`) })
+    await page.locator('[data-testid="volume-mute"]').click()
+    await expect.poll(heard).toBe(0)
+    await expect(page.locator('[data-testid="volume-value"]')).toHaveText('0%')
+    await page.locator('[data-testid="volume-mute"]').click()
+    await expect.poll(heard).toBeCloseTo(0.4)
+    // Up and down on the player (not on a slider) change it by five.
+    await full(page).focus()
+    await page.keyboard.press('ArrowUp')
+    await expect(page.locator('[data-testid="volume-value"]')).toHaveText('45%')
+    await page.keyboard.press('m')
+    await expect(page.locator('[data-testid="volume-value"]')).toHaveText('0%')
+    await page.keyboard.press('m')
+    // After a reload the big player opens again, paused, at the volume of this device.
+    await page.reload()
+    await expect(page.locator('[data-testid="volume-value"]')).toHaveText('45%')
+    expect(await page.evaluate(() => document.querySelector<HTMLAudioElement>('[data-testid="player-audio"]')!.volume)).toBeCloseTo(0.45)
+    await page.locator('[data-testid="player-play"]').click()
+    await expect.poll(heard).toBeCloseTo(0.45)
   })
 
   test('a bookmark with a note, and deleting it asks first', async ({ page, browserName }) => {

@@ -1,11 +1,16 @@
 {
   "0.1.1": {
-    "lead": "Eine Liste für die Bücher in deinem Regal, die du noch lesen oder hören willst.",
+    "lead": "Eine Liste für die Bücher in deinem Regal, die du noch lesen oder hören willst, und eine Lautstärke im Player.",
     "sections": [
       {
         "title": "Für später",
         "body": "Auf der Seite eines Buchs legst du es auf die Liste „Für später“, in der Bibliothek findest du sie als eigenen Bereich. Es ist dieselbe Liste wie in den Apps, und ein Buch, das du zu Ende gelesen oder gehört hast, geht von selbst herunter. Die Liste gehört dir, der Betreiber sieht sie nicht.",
         "where": "Seite eines Buchs, Bibliothek"
+      },
+      {
+        "title": "Lautstärke im Player",
+        "body": "Unter den Knöpfen des großen Players stellst du die Lautstärke ein, ein Klick auf den Lautsprecher schaltet stumm. Pfeil hoch und runter ändern sie, M schaltet stumm. Jedes Gerät merkt sich seine eigene. Auf iPhone und iPad bestimmen nur die Tasten des Geräts die Lautstärke, dort fehlt der Regler.",
+        "where": "Player"
       }
     ],
     "smallTitle": "Außerdem",

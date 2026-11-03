@@ -2663,6 +2663,11 @@
       "faster": "Faster",
       "note": "Holds for all your audiobooks. The time left counts with it."
     },
+    "volume": {
+      "title": "Volume",
+      "mute": "Mute",
+      "unmute": "Unmute"
+    },
     "sleep": {
       "title": "Sleep timer",
       "minutes_one": "{{count}} min",

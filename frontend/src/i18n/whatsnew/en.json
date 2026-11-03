@@ -1,11 +1,16 @@
 {
   "0.1.1": {
-    "lead": "A list for the books on your shelves you still mean to read or hear.",
+    "lead": "A list for the books on your shelves you still mean to read or hear, and a volume in the player.",
     "sections": [
       {
         "title": "For later",
         "body": "From the page of a book you put it on the list “For later”, and the library has it as a section of its own. It is the same list as in the apps, and a book you finished reading or hearing leaves it by itself. The list is yours, the operator does not see it.",
         "where": "Page of a book, Library"
+      },
+      {
+        "title": "Volume in the player",
+        "body": "Below the buttons of the big player you set the volume, and a click on the loudspeaker mutes. The up and down arrows change it, M mutes. Every device keeps its own. On an iPhone and an iPad only the buttons of the device set the volume, so the slider is not shown there.",
+        "where": "Player"
       }
     ],
     "smallTitle": "Also",

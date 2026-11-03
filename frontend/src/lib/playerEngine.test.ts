@@ -262,6 +262,27 @@ describe('the engine of the player', () => {
     expect(b.defaultPlaybackRate).toBe(1.5)
   })
 
+  it('plays at the volume of the person times the fade of the sleep timer, and the next part takes it over', () => {
+    const { engine, a, b } = setup()
+    engine.setVolume(0.6)
+    engine.load(partsOf(files), 0)
+    a.known(100)
+    engine.play()
+    expect(a.volume).toBeCloseTo(0.6)
+    engine.setFade(0.5)
+    expect(a.volume).toBeCloseTo(0.3)
+    engine.setFade(1)
+    engine.setVolume(0.8)
+    expect(a.volume).toBeCloseTo(0.8)
+    a.run(60)
+    b.known(100)
+    // The element that waited starts at the volume of the moment it takes over.
+    expect(b.volume).toBe(1)
+    a.run(40)
+    expect(b.paused).toBe(false)
+    expect(b.volume).toBeCloseTo(0.8)
+  })
+
   it('a part the browser does not load in time is given up, with the reason', () => {
     const { engine, timers } = setup()
     engine.load(partsOf(files), 0)

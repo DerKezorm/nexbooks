@@ -334,6 +334,28 @@ describe('in the big player', () => {
     expect(server.called('PUT', '/api/v1/me/preferences')?.body).toEqual({ player_speed: 150 })
   })
 
+  it('keeps the volume on this device, mutes and comes back at the level it had, and asks the server nothing', async () => {
+    serve()
+    await show()
+    await click(document.querySelector('[data-testid="listen"]'))
+    const slider = document.querySelector<HTMLInputElement>('[data-testid="volume-slider"]')!
+    await act(async () => {
+      Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')!.set!.call(slider, '0.4')
+      slider.dispatchEvent(new Event('input', { bubbles: true }))
+    })
+    expect(audios()[0].volume).toBeCloseTo(0.4)
+    expect(document.querySelector('[data-testid="volume-value"]')!.textContent).toBe('40 %')
+    expect(JSON.parse(kept.get('nexbooks.player.volume') ?? '{}')).toEqual({ level: 0.4, muted: false })
+    await click(document.querySelector('[data-testid="volume-mute"]'))
+    expect(audios()[0].volume).toBe(0)
+    expect(document.querySelector('[data-testid="volume-value"]')!.textContent).toBe('0 %')
+    await click(document.querySelector('[data-testid="volume-mute"]'))
+    expect(audios()[0].volume).toBeCloseTo(0.4)
+    await act(async () => await new Promise((resolve) => setTimeout(resolve, 700)))
+    await idle()
+    expect(server.called('PUT', '/api/v1/me/preferences')).toBeUndefined()
+  })
+
   it('deletes a bookmark only after the question, and says that it cannot be undone', async () => {
     serve({ bookmarks: [mark(31, 1500, 'die Brücke')] })
     await show()

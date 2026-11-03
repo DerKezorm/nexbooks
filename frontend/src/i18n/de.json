@@ -2663,6 +2663,11 @@
       "faster": "Schneller",
       "note": "Gilt für alle deine Hörbücher. Die Restzeit rechnet mit."
     },
+    "volume": {
+      "title": "Lautstärke",
+      "mute": "Stumm",
+      "unmute": "Ton an"
+    },
     "sleep": {
       "title": "Schlaftimer",
       "minutes_one": "{{count}} Min",

@@ -394,6 +394,49 @@
     gap: clamp(6px, 2vw, 18px);
     margin: 18px 0 8px;
   }
+  /* The volume of this device, small under the buttons: the loudspeaker mutes. */
+  .pl-volume {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 300px;
+    margin: 0 auto 4px;
+    color: var(--muted);
+    font-size: 12.5px;
+    font-variant-numeric: tabular-nums;
+  }
+  .pl-volume .pl-icon {
+    width: 34px;
+    height: 34px;
+    border-color: transparent;
+    background: transparent;
+    color: var(--muted);
+  }
+  .pl-volume input[type='range'] {
+    flex: 1;
+    min-width: 0;
+    height: 22px;
+  }
+  .pl-volume input[type='range']::-webkit-slider-runnable-track {
+    height: 4px;
+  }
+  .pl-volume input[type='range']::-moz-range-track,
+  .pl-volume input[type='range']::-moz-range-progress {
+    height: 4px;
+  }
+  .pl-volume input[type='range']::-webkit-slider-thumb {
+    width: 14px;
+    height: 14px;
+    margin-top: -5px;
+  }
+  .pl-volume input[type='range']::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+  }
+  .pl-volume output {
+    min-width: 38px;
+    text-align: end;
+  }
   .pl-big {
     width: 56px;
     height: 56px;
