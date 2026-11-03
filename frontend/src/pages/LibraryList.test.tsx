@@ -285,7 +285,7 @@ describe('the authors', () => {
   it('are a section beside the books, kept in the profile', async () => {
     serveAuthors()
     await show()
-    expect([...document.querySelectorAll('#section button')].map((b) => plain(b.textContent))).toEqual(['Bücher', 'Autoren'])
+    expect([...document.querySelectorAll('#section button')].map((b) => plain(b.textContent))).toEqual(['Bücher', 'Autoren', 'Für später'])
     await page.click(page.button('Autoren'))
     expect(server.called('PUT', '/api/v1/me/preferences')!.body).toEqual({ library_section: 'authors' })
     expect(document.querySelector('[data-testid="authors"]')).toBeTruthy()
