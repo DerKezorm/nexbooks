@@ -1,4 +1,18 @@
 {
+  "0.2.0": {
+    "lead": "nexbooks has a new mark: a shelf of three books.",
+    "sections": [
+      {
+        "title": "New mark",
+        "body": "The shelf of three books, the middle one in colour, replaces the line drawing. The logo follows light and dark mode, the browser tab follows your system. The icons for the home screen and the badge of notifications are new as well.",
+        "where": "Header, sign-in, browser tab and home screen"
+      }
+    ],
+    "smallTitle": "Also",
+    "small": [
+      "The browser now asks before it uses the mark, the icons and the theme script again, and their addresses carry a version, so a new mark reaches an installed web app too."
+    ]
+  },
   "0.1.1": {
     "lead": "A list for the books on your shelves you still mean to read or hear, and a volume in the player.",
     "sections": [

@@ -1,4 +1,18 @@
 {
+  "0.2.0": {
+    "lead": "nexbooks hat ein neues Zeichen: ein Regal mit drei Büchern.",
+    "sections": [
+      {
+        "title": "Neues Zeichen",
+        "body": "Das Regal mit drei Büchern, das mittlere farbig, ersetzt die Strichzeichnung. Das Logo folgt dem hellen und dunklen Modus, der Browser-Tab folgt dem System. Auch die Symbole für den Home-Bildschirm und das Abzeichen der Mitteilungen sind neu.",
+        "where": "Kopfzeile, Anmeldung, Browser-Tab und Home-Bildschirm"
+      }
+    ],
+    "smallTitle": "Außerdem",
+    "small": [
+      "Zeichen, Symbole und das Skript für den Modus fragt der Browser jetzt vor dem Benutzen nach, und ihre Adressen tragen eine Fassung. So kommt ein neues Zeichen auch in einer installierten Web-App an."
+    ]
+  },
   "0.1.1": {
     "lead": "Eine Liste für die Bücher in deinem Regal, die du noch lesen oder hören willst, und eine Lautstärke im Player.",
     "sections": [
