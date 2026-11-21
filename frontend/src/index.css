@@ -720,3 +720,35 @@
     }
   }
 }
+
+/* The colours of the mark (components/Logo.tsx), light first like the app; dark as the system or the reader asks.
+   The same values are in public/logo.svg and scripts/app-icons.mjs. */
+:root {
+  --nb-logo-grund: #ffffff;
+  --nb-logo-rand: #8e3b46;
+  --nb-logo-rand-deckung: 0.35;
+  --nb-logo-verlauf-1: #d77f8b;
+  --nb-logo-verlauf-2: #a3404e;
+  --nb-logo-verlauf-3: #5e1f29;
+  --nb-logo-akzent: #c0283f;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --nb-logo-grund: #170b0e;
+    --nb-logo-rand: #d06a7a;
+    --nb-logo-rand-deckung: 0.45;
+    --nb-logo-verlauf-1: #f6cdd3;
+    --nb-logo-verlauf-2: #d06a7a;
+    --nb-logo-verlauf-3: #9b3a4a;
+    --nb-logo-akzent: #ff6b81;
+  }
+}
+:root[data-theme='dark'] {
+  --nb-logo-grund: #170b0e;
+  --nb-logo-rand: #d06a7a;
+  --nb-logo-rand-deckung: 0.45;
+  --nb-logo-verlauf-1: #f6cdd3;
+  --nb-logo-verlauf-2: #d06a7a;
+  --nb-logo-verlauf-3: #9b3a4a;
+  --nb-logo-akzent: #ff6b81;
+}
